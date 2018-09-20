@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5C106B5215408AF00947220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106B4215408AF00947220 /* AppDelegate.swift */; };
+		E5C106B7215408AF00947220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106B6215408AF00947220 /* ViewController.swift */; };
+		E5C106BA215408AF00947220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C106B8215408AF00947220 /* Main.storyboard */; };
+		E5C106BC215408B000947220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C106BB215408B000947220 /* Assets.xcassets */; };
+		E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C106BD215408B000947220 /* LaunchScreen.storyboard */; };
+		E5C106CA215408B100947220 /* Flipping_HellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106C9215408B100947220 /* Flipping_HellTests.swift */; };
+		E5C106D5215408B100947220 /* Flipping_HellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106D4215408B100947220 /* Flipping_HellUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5C106C6215408B100947220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5C106A9215408AF00947220 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5C106B0215408AF00947220;
+			remoteInfo = "Flipping Hell";
+		};
+		E5C106D1215408B100947220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5C106A9215408AF00947220 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5C106B0215408AF00947220;
+			remoteInfo = "Flipping Hell";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E5C106B1215408AF00947220 /* Flipping Hell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flipping Hell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C106B4215408AF00947220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E5C106B6215408AF00947220 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5C106B9215408AF00947220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E5C106BB215408B000947220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E5C106BE215408B000947220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E5C106C0215408B000947220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5C106C5215408B100947220 /* Flipping HellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flipping HellTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C106C9215408B100947220 /* Flipping_HellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flipping_HellTests.swift; sourceTree = "<group>"; };
+		E5C106CB215408B100947220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5C106D0215408B100947220 /* Flipping HellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flipping HellUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C106D4215408B100947220 /* Flipping_HellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flipping_HellUITests.swift; sourceTree = "<group>"; };
+		E5C106D6215408B100947220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5C106AE215408AF00947220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C106C2215408B100947220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C106CD215408B100947220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5C106A8215408AF00947220 = {
+			isa = PBXGroup;
+			children = (
+				E5C106B3215408AF00947220 /* Flipping Hell */,
+				E5C106C8215408B100947220 /* Flipping HellTests */,
+				E5C106D3215408B100947220 /* Flipping HellUITests */,
+				E5C106B2215408AF00947220 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5C106B2215408AF00947220 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5C106B1215408AF00947220 /* Flipping Hell.app */,
+				E5C106C5215408B100947220 /* Flipping HellTests.xctest */,
+				E5C106D0215408B100947220 /* Flipping HellUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5C106B3215408AF00947220 /* Flipping Hell */ = {
+			isa = PBXGroup;
+			children = (
+				E5C106B4215408AF00947220 /* AppDelegate.swift */,
+				E5C106B6215408AF00947220 /* ViewController.swift */,
+				E5C106B8215408AF00947220 /* Main.storyboard */,
+				E5C106BB215408B000947220 /* Assets.xcassets */,
+				E5C106BD215408B000947220 /* LaunchScreen.storyboard */,
+				E5C106C0215408B000947220 /* Info.plist */,
+			);
+			path = "Flipping Hell";
+			sourceTree = "<group>";
+		};
+		E5C106C8215408B100947220 /* Flipping HellTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5C106C9215408B100947220 /* Flipping_HellTests.swift */,
+				E5C106CB215408B100947220 /* Info.plist */,
+			);
+			path = "Flipping HellTests";
+			sourceTree = "<group>";
+		};
+		E5C106D3215408B100947220 /* Flipping HellUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E5C106D4215408B100947220 /* Flipping_HellUITests.swift */,
+				E5C106D6215408B100947220 /* Info.plist */,
+			);
+			path = "Flipping HellUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5C106B0215408AF00947220 /* Flipping Hell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5C106D9215408B100947220 /* Build configuration list for PBXNativeTarget "Flipping Hell" */;
+			buildPhases = (
+				E5C106AD215408AF00947220 /* Sources */,
+				E5C106AE215408AF00947220 /* Frameworks */,
+				E5C106AF215408AF00947220 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flipping Hell";
+			productName = "Flipping Hell";
+			productReference = E5C106B1215408AF00947220 /* Flipping Hell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5C106C4215408B100947220 /* Flipping HellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5C106DC215408B100947220 /* Build configuration list for PBXNativeTarget "Flipping HellTests" */;
+			buildPhases = (
+				E5C106C1215408B100947220 /* Sources */,
+				E5C106C2215408B100947220 /* Frameworks */,
+				E5C106C3215408B100947220 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5C106C7215408B100947220 /* PBXTargetDependency */,
+			);
+			name = "Flipping HellTests";
+			productName = "Flipping HellTests";
+			productReference = E5C106C5215408B100947220 /* Flipping HellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E5C106CF215408B100947220 /* Flipping HellUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5C106DF215408B100947220 /* Build configuration list for PBXNativeTarget "Flipping HellUITests" */;
+			buildPhases = (
+				E5C106CC215408B100947220 /* Sources */,
+				E5C106CD215408B100947220 /* Frameworks */,
+				E5C106CE215408B100947220 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5C106D2215408B100947220 /* PBXTargetDependency */,
+			);
+			name = "Flipping HellUITests";
+			productName = "Flipping HellUITests";
+			productReference = E5C106D0215408B100947220 /* Flipping HellUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5C106A9215408AF00947220 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Hans Guntersson Ltd";
+				TargetAttributes = {
+					E5C106B0215408AF00947220 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					E5C106C4215408B100947220 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E5C106B0215408AF00947220;
+					};
+					E5C106CF215408B100947220 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E5C106B0215408AF00947220;
+					};
+				};
+			};
+			buildConfigurationList = E5C106AC215408AF00947220 /* Build configuration list for PBXProject "Flipping Hell" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E5C106A8215408AF00947220;
+			productRefGroup = E5C106B2215408AF00947220 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5C106B0215408AF00947220 /* Flipping Hell */,
+				E5C106C4215408B100947220 /* Flipping HellTests */,
+				E5C106CF215408B100947220 /* Flipping HellUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5C106AF215408AF00947220 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */,
+				E5C106BC215408B000947220 /* Assets.xcassets in Resources */,
+				E5C106BA215408AF00947220 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C106C3215408B100947220 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C106CE215408B100947220 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5C106AD215408AF00947220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C106B7215408AF00947220 /* ViewController.swift in Sources */,
+				E5C106B5215408AF00947220 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C106C1215408B100947220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C106CA215408B100947220 /* Flipping_HellTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C106CC215408B100947220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5C106D5215408B100947220 /* Flipping_HellUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5C106C7215408B100947220 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5C106B0215408AF00947220 /* Flipping Hell */;
+			targetProxy = E5C106C6215408B100947220 /* PBXContainerItemProxy */;
+		};
+		E5C106D2215408B100947220 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5C106B0215408AF00947220 /* Flipping Hell */;
+			targetProxy = E5C106D1215408B100947220 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E5C106B8215408AF00947220 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5C106B9215408AF00947220 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E5C106BD215408B000947220 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5C106BE215408B000947220 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5C106D7215408B100947220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E5C106D8215408B100947220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E5C106DA215408B100947220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NCTH68755D;
+				INFOPLIST_FILE = "Flipping Hell/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-Hell";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5C106DB215408B100947220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NCTH68755D;
+				INFOPLIST_FILE = "Flipping Hell/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-Hell";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E5C106DD215408B100947220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NCTH68755D;
+				INFOPLIST_FILE = "Flipping HellTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-HellTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flipping Hell.app/Flipping Hell";
+			};
+			name = Debug;
+		};
+		E5C106DE215408B100947220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NCTH68755D;
+				INFOPLIST_FILE = "Flipping HellTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-HellTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flipping Hell.app/Flipping Hell";
+			};
+			name = Release;
+		};
+		E5C106E0215408B100947220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NCTH68755D;
+				INFOPLIST_FILE = "Flipping HellUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-HellUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flipping Hell";
+			};
+			name = Debug;
+		};
+		E5C106E1215408B100947220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NCTH68755D;
+				INFOPLIST_FILE = "Flipping HellUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-HellUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flipping Hell";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5C106AC215408AF00947220 /* Build configuration list for PBXProject "Flipping Hell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5C106D7215408B100947220 /* Debug */,
+				E5C106D8215408B100947220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5C106D9215408B100947220 /* Build configuration list for PBXNativeTarget "Flipping Hell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5C106DA215408B100947220 /* Debug */,
+				E5C106DB215408B100947220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5C106DC215408B100947220 /* Build configuration list for PBXNativeTarget "Flipping HellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5C106DD215408B100947220 /* Debug */,
+				E5C106DE215408B100947220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5C106DF215408B100947220 /* Build configuration list for PBXNativeTarget "Flipping HellUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5C106E0215408B100947220 /* Debug */,
+				E5C106E1215408B100947220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5C106A9215408AF00947220 /* Project object */;
+}
