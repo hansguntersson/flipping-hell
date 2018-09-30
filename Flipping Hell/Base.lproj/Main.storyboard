@@ -27,6 +27,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0E-Pc-qrA">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="me7-We-tw6"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="wEo-it-T7I"/>
@@ -43,6 +44,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tl5-up-NKW">
                                                 <rect key="frame" x="58" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="Ymf-cG-JHw"/>
                                                 </constraints>
@@ -58,6 +60,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tj-dc-59E">
                                                 <rect key="frame" x="116" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="2"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="VeD-D4-83k"/>
                                                 </constraints>
@@ -73,6 +76,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gp3-4w-Bjd">
                                                 <rect key="frame" x="174" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="UcP-xF-yey"/>
                                                 </constraints>
@@ -88,6 +92,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8C-kD-HJZ">
                                                 <rect key="frame" x="232" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="4"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="TvS-Zt-B4U"/>
                                                 </constraints>
@@ -108,6 +113,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYU-H4-qzM">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="J1s-JN-DY2"/>
                                                     <constraint firstAttribute="width" constant="50" id="htB-9a-tMd"/>
@@ -124,6 +130,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spZ-Ex-7Ub">
                                                 <rect key="frame" x="58" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="6"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="yfy-PS-7tA"/>
                                                 </constraints>
@@ -139,6 +146,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77o-fZ-IEQ">
                                                 <rect key="frame" x="116" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="7"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="rSf-nM-Nwc"/>
                                                 </constraints>
@@ -154,6 +162,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVP-jl-phz">
                                                 <rect key="frame" x="174" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="uLv-XU-zMP"/>
                                                 </constraints>
@@ -169,6 +178,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3U-5P-g39">
                                                 <rect key="frame" x="232" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="9"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="IdO-DV-Qyd"/>
                                                 </constraints>
@@ -189,6 +199,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6on-je-hfI">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="ryx-Qh-fsl"/>
                                                     <constraint firstAttribute="height" constant="50" id="ydB-i9-dud"/>
@@ -205,6 +216,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRq-FW-rvW">
                                                 <rect key="frame" x="58" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="11"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="xy8-AZ-N7k"/>
                                                 </constraints>
@@ -220,6 +232,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vA6-zQ-q5F">
                                                 <rect key="frame" x="116" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="12"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="mLC-6f-hif"/>
                                                 </constraints>
@@ -235,6 +248,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DD7-kh-YXO">
                                                 <rect key="frame" x="174" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="13"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="UJb-fh-2R6"/>
                                                 </constraints>
@@ -250,6 +264,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRo-fS-PNa">
                                                 <rect key="frame" x="232" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="zUc-ti-TjP"/>
                                                 </constraints>
@@ -270,6 +285,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUm-EI-YPO">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="6vj-5b-PWu"/>
                                                     <constraint firstAttribute="width" constant="50" id="bNG-hv-4Ta"/>
@@ -286,6 +302,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaL-09-dyq">
                                                 <rect key="frame" x="58" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="Dkf-Ah-s7u"/>
                                                 </constraints>
@@ -301,6 +318,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5S7-f6-4ld">
                                                 <rect key="frame" x="116" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="kdB-TD-Nvn"/>
                                                 </constraints>
@@ -316,6 +334,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdK-F2-Ip4">
                                                 <rect key="frame" x="174" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="lpe-Ym-0SZ"/>
                                                 </constraints>
@@ -331,6 +350,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgt-3A-CBl">
                                                 <rect key="frame" x="232" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="xdu-Ga-Fc8"/>
                                                 </constraints>
@@ -351,6 +371,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENB-Me-WVa">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="m8O-x1-Uy6"/>
                                                     <constraint firstAttribute="width" constant="50" id="pbF-d0-0iU"/>
@@ -367,6 +388,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViT-fZ-fL7">
                                                 <rect key="frame" x="58" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="54N-UU-AYU"/>
                                                 </constraints>
@@ -382,6 +404,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb5-Sv-x5a">
                                                 <rect key="frame" x="116" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="itY-bt-LEl"/>
                                                 </constraints>
@@ -397,6 +420,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0P-RE-bnu">
                                                 <rect key="frame" x="174" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="Rh7-8x-KKs"/>
                                                 </constraints>
@@ -412,6 +436,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qS8-2D-3YO">
                                                 <rect key="frame" x="232" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="mx1-iA-Qi9"/>
                                                 </constraints>
@@ -428,8 +453,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP">
-                                <rect key="frame" x="189.33333333333334" y="665.66666666666663" width="35.666666666666657" height="20.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP">
+                                <rect key="frame" x="175.66666666666666" y="665.66666666666663" width="63" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -446,6 +471,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="flipCount" destination="CtB-2T-XqP" id="70C-Hm-3ma"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
