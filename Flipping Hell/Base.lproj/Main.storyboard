@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zSS-ky-ncw">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zSS-ky-ncw">
                                 <rect key="frame" x="66" y="70" width="282" height="286"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QJ7-ec-QhO">
@@ -428,8 +428,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Flips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP">
-                                <rect key="frame" x="186" y="672" width="36" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP">
+                                <rect key="frame" x="189.33333333333334" y="665.66666666666663" width="35.666666666666657" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -440,6 +440,7 @@
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uPP-2Z-rBU" secondAttribute="bottom" constant="50" id="0qL-uJ-0Vz"/>
                             <constraint firstItem="zSS-ky-ncw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="4Dx-QE-aMe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CtB-2T-XqP" secondAttribute="bottom" constant="50" id="HFQ-og-lhO"/>
+                            <constraint firstItem="QJ7-ec-QhO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zl5-HV-XdI"/>
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lTt-jJ-Saz"/>
                             <constraint firstItem="zSS-ky-ncw" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sLX-Zj-6oa"/>
                         </constraints>
