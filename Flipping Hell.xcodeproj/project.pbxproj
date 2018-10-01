@@ -14,6 +14,7 @@
 		E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C106BD215408B000947220 /* LaunchScreen.storyboard */; };
 		E5C106CA215408B100947220 /* Flipping_HellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106C9215408B100947220 /* Flipping_HellTests.swift */; };
 		E5C106D5215408B100947220 /* Flipping_HellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106D4215408B100947220 /* Flipping_HellUITests.swift */; };
+		E5F37EB12162AE720051A8EB /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = E5F37EB02162AE720051A8EB /* fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E5C106D0215408B100947220 /* Flipping HellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flipping HellUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C106D4215408B100947220 /* Flipping_HellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flipping_HellUITests.swift; sourceTree = "<group>"; };
 		E5C106D6215408B100947220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5F37EB02162AE720051A8EB /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +102,10 @@
 				E5C106B4215408AF00947220 /* AppDelegate.swift */,
 				E5C106B6215408AF00947220 /* ViewController.swift */,
 				E5C106B8215408AF00947220 /* Main.storyboard */,
-				E5C106BB215408B000947220 /* Assets.xcassets */,
 				E5C106BD215408B000947220 /* LaunchScreen.storyboard */,
 				E5C106C0215408B000947220 /* Info.plist */,
+				E5F37EB02162AE720051A8EB /* fonts */,
+				E5C106BB215408B000947220 /* Assets.xcassets */,
 			);
 			path = "Flipping Hell";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */,
 				E5C106BC215408B000947220 /* Assets.xcassets in Resources */,
 				E5C106BA215408AF00947220 /* Main.storyboard in Resources */,
+				E5F37EB12162AE720051A8EB /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
