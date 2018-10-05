@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E543F3F52162B77200329519 /* Orbitron-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F02162B77200329519 /* Orbitron-Black.ttf */; };
+		E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F12162B77200329519 /* Orbitron-Medium.ttf */; };
+		E543F3F72162B77200329519 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F22162B77200329519 /* Orbitron-Regular.ttf */; };
+		E543F3F82162B77200329519 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F32162B77200329519 /* OFL.txt */; };
+		E543F3F92162B77200329519 /* Orbitron-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F42162B77200329519 /* Orbitron-Bold.ttf */; };
 		E5C106B5215408AF00947220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106B4215408AF00947220 /* AppDelegate.swift */; };
 		E5C106B7215408AF00947220 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106B6215408AF00947220 /* ViewController.swift */; };
 		E5C106BA215408AF00947220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C106B8215408AF00947220 /* Main.storyboard */; };
@@ -14,7 +19,6 @@
 		E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C106BD215408B000947220 /* LaunchScreen.storyboard */; };
 		E5C106CA215408B100947220 /* Flipping_HellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106C9215408B100947220 /* Flipping_HellTests.swift */; };
 		E5C106D5215408B100947220 /* Flipping_HellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106D4215408B100947220 /* Flipping_HellUITests.swift */; };
-		E5F37EB12162AE720051A8EB /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = E5F37EB02162AE720051A8EB /* fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E543F3F02162B77200329519 /* Orbitron-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Black.ttf"; sourceTree = "<group>"; };
+		E543F3F12162B77200329519 /* Orbitron-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Medium.ttf"; sourceTree = "<group>"; };
+		E543F3F22162B77200329519 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
+		E543F3F32162B77200329519 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		E543F3F42162B77200329519 /* Orbitron-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Bold.ttf"; sourceTree = "<group>"; };
 		E5C106B1215408AF00947220 /* Flipping Hell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flipping Hell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C106B4215408AF00947220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C106B6215408AF00947220 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +57,6 @@
 		E5C106D0215408B100947220 /* Flipping HellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flipping HellUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C106D4215408B100947220 /* Flipping_HellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flipping_HellUITests.swift; sourceTree = "<group>"; };
 		E5C106D6215408B100947220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5F37EB02162AE720051A8EB /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E543F3EF2162B77200329519 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				E543F3F02162B77200329519 /* Orbitron-Black.ttf */,
+				E543F3F12162B77200329519 /* Orbitron-Medium.ttf */,
+				E543F3F22162B77200329519 /* Orbitron-Regular.ttf */,
+				E543F3F42162B77200329519 /* Orbitron-Bold.ttf */,
+				E543F3F32162B77200329519 /* OFL.txt */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		E5C106A8215408AF00947220 = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +124,7 @@
 				E5C106B8215408AF00947220 /* Main.storyboard */,
 				E5C106BD215408B000947220 /* LaunchScreen.storyboard */,
 				E5C106C0215408B000947220 /* Info.plist */,
-				E5F37EB02162AE720051A8EB /* fonts */,
+				E543F3EF2162B77200329519 /* resources */,
 				E5C106BB215408B000947220 /* Assets.xcassets */,
 			);
 			path = "Flipping Hell";
@@ -234,8 +254,12 @@
 			files = (
 				E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */,
 				E5C106BC215408B000947220 /* Assets.xcassets in Resources */,
+				E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */,
 				E5C106BA215408AF00947220 /* Main.storyboard in Resources */,
-				E5F37EB12162AE720051A8EB /* fonts in Resources */,
+				E543F3F52162B77200329519 /* Orbitron-Black.ttf in Resources */,
+				E543F3F92162B77200329519 /* Orbitron-Bold.ttf in Resources */,
+				E543F3F82162B77200329519 /* OFL.txt in Resources */,
+				E543F3F72162B77200329519 /* Orbitron-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

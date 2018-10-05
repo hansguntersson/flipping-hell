@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,14 +20,112 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP">
+                                <rect key="frame" x="129.5" y="592" width="116.5" height="25"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
+                                <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING HELL" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-aJ-FAB">
+                                <rect key="frame" x="49.5" y="60" width="276.5" height="32"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zSS-ky-ncw">
-                                <rect key="frame" x="66" y="89" width="282" height="227"/>
+                                <rect key="frame" x="46.5" y="122" width="282" height="286"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cVc-y0-2hY">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gwq-aK-eyh">
                                         <rect key="frame" x="0.0" y="0.0" width="282" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waB-eJ-BGj">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="l61-M8-M2F"/>
+                                                    <constraint firstAttribute="width" constant="50" id="sb3-LN-mIR"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wt8-sR-6V9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-Oj-FW8">
+                                                <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="aMv-Ua-y2U"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0Q-aK-KSl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-fT-9cj">
+                                                <rect key="frame" x="116" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="2"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="mUb-Am-03j"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AUl-IV-KI2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rZ-OT-kCg">
+                                                <rect key="frame" x="174" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="wwe-dp-i6z"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jcp-22-Z7t"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htV-9l-66A">
+                                                <rect key="frame" x="232" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="4"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="7AS-ll-hdo"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvK-tW-cdE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cVc-y0-2hY">
+                                        <rect key="frame" x="0.0" y="59" width="282" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYU-H4-qzM">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -113,7 +211,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-7d-6ri">
-                                        <rect key="frame" x="0.0" y="59" width="282" height="50"/>
+                                        <rect key="frame" x="0.0" y="118" width="282" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6on-je-hfI">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -199,7 +297,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-zP-Nz2">
-                                        <rect key="frame" x="0.0" y="118" width="282" height="50"/>
+                                        <rect key="frame" x="0.0" y="177" width="282" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUm-EI-YPO">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -285,7 +383,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uPP-2Z-rBU">
-                                        <rect key="frame" x="0.0" y="177" width="282" height="50"/>
+                                        <rect key="frame" x="0.0" y="236" width="282" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENB-Me-WVa">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -372,34 +470,47 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP">
-                                <rect key="frame" x="141.66666666666669" y="658" width="130.66666666666669" height="28"/>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
-                                <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING HELL" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-aJ-FAB">
-                                <rect key="frame" x="69" y="30" width="276.33333333333331" height="32"/>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uPP-2Z-rBU" secondAttribute="bottom" constant="50" id="0qL-uJ-0Vz"/>
-                            <constraint firstItem="pYV-aJ-FAB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="1tG-y0-7XQ"/>
+                            <constraint firstItem="pYV-aJ-FAB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="1tG-y0-7XQ"/>
                             <constraint firstItem="pYV-aJ-FAB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2bl-zw-9s6"/>
                             <constraint firstItem="cVc-y0-2hY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Bzr-Ba-s9P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CtB-2T-XqP" secondAttribute="bottom" constant="50" id="HFQ-og-lhO"/>
-                            <constraint firstItem="zSS-ky-ncw" firstAttribute="top" secondItem="pYV-aJ-FAB" secondAttribute="bottom" constant="27" id="jsv-5W-ojx"/>
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lTt-jJ-Saz"/>
+                            <constraint firstItem="zSS-ky-ncw" firstAttribute="top" secondItem="pYV-aJ-FAB" secondAttribute="bottom" constant="30" id="nfh-TH-r0J"/>
                             <constraint firstItem="zSS-ky-ncw" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sLX-Zj-6oa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="flipCount" destination="CtB-2T-XqP" id="70C-Hm-3ma"/>
+                        <outletCollection property="buttonCollection" destination="waB-eJ-BGj" collectionClass="NSMutableArray" id="V2d-Xv-aK3"/>
+                        <outletCollection property="buttonCollection" destination="RbO-Oj-FW8" collectionClass="NSMutableArray" id="W5T-tZ-fSx"/>
+                        <outletCollection property="buttonCollection" destination="MqL-fT-9cj" collectionClass="NSMutableArray" id="4HT-IY-mjm"/>
+                        <outletCollection property="buttonCollection" destination="9rZ-OT-kCg" collectionClass="NSMutableArray" id="Snn-ax-1B0"/>
+                        <outletCollection property="buttonCollection" destination="htV-9l-66A" collectionClass="NSMutableArray" id="1gQ-LF-W9q"/>
+                        <outletCollection property="buttonCollection" destination="QYU-H4-qzM" collectionClass="NSMutableArray" id="md5-lp-7qh"/>
+                        <outletCollection property="buttonCollection" destination="spZ-Ex-7Ub" collectionClass="NSMutableArray" id="EVg-Ya-fo8"/>
+                        <outletCollection property="buttonCollection" destination="77o-fZ-IEQ" collectionClass="NSMutableArray" id="FjN-EZ-MQx"/>
+                        <outletCollection property="buttonCollection" destination="FVP-jl-phz" collectionClass="NSMutableArray" id="Ctc-Vx-oVh"/>
+                        <outletCollection property="buttonCollection" destination="r3U-5P-g39" collectionClass="NSMutableArray" id="1KX-J3-BjF"/>
+                        <outletCollection property="buttonCollection" destination="6on-je-hfI" collectionClass="NSMutableArray" id="jdN-8b-fIi"/>
+                        <outletCollection property="buttonCollection" destination="QRq-FW-rvW" collectionClass="NSMutableArray" id="hOc-cX-0q9"/>
+                        <outletCollection property="buttonCollection" destination="vA6-zQ-q5F" collectionClass="NSMutableArray" id="WgB-Yr-jys"/>
+                        <outletCollection property="buttonCollection" destination="DD7-kh-YXO" collectionClass="NSMutableArray" id="mIm-T4-YLe"/>
+                        <outletCollection property="buttonCollection" destination="cRo-fS-PNa" collectionClass="NSMutableArray" id="6qf-de-Iom"/>
+                        <outletCollection property="buttonCollection" destination="wUm-EI-YPO" collectionClass="NSMutableArray" id="bfC-vB-8vm"/>
+                        <outletCollection property="buttonCollection" destination="KaL-09-dyq" collectionClass="NSMutableArray" id="Zej-Hs-Tpk"/>
+                        <outletCollection property="buttonCollection" destination="5S7-f6-4ld" collectionClass="NSMutableArray" id="1Vk-So-cUw"/>
+                        <outletCollection property="buttonCollection" destination="HdK-F2-Ip4" collectionClass="NSMutableArray" id="U1w-84-OfF"/>
+                        <outletCollection property="buttonCollection" destination="cgt-3A-CBl" collectionClass="NSMutableArray" id="dZB-Ez-80P"/>
+                        <outletCollection property="buttonCollection" destination="ENB-Me-WVa" collectionClass="NSMutableArray" id="N7Y-AC-igX"/>
+                        <outletCollection property="buttonCollection" destination="ViT-fZ-fL7" collectionClass="NSMutableArray" id="0yh-Ti-icn"/>
+                        <outletCollection property="buttonCollection" destination="cb5-Sv-x5a" collectionClass="NSMutableArray" id="IIu-Px-sF0"/>
+                        <outletCollection property="buttonCollection" destination="q0P-RE-bnu" collectionClass="NSMutableArray" id="lkf-Jm-dKg"/>
+                        <outletCollection property="buttonCollection" destination="qS8-2D-3YO" collectionClass="NSMutableArray" id="Xu2-dJ-oDr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
