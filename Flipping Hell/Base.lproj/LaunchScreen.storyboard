@@ -8,11 +8,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Orbitron-Regular.ttf">
-            <string>Orbitron-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -21,31 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING" textAlignment="center" lineBreakMode="headTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzT-qi-9uO">
-                                <rect key="frame" x="45" y="136" width="285" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="29X-Vd-gh1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="50"/>
-                                <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELL" textAlignment="center" lineBreakMode="headTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctO-hr-1Qg">
-                                <rect key="frame" x="108" y="199" width="159" height="50"/>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="50"/>
-                                <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
-                        <constraints>
-                            <constraint firstItem="GzT-qi-9uO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="9MG-f5-NGx"/>
-                            <constraint firstItem="GzT-qi-9uO" firstAttribute="centerX" secondItem="ctO-hr-1Qg" secondAttribute="centerX" id="PuX-td-kjW"/>
-                            <constraint firstItem="ctO-hr-1Qg" firstAttribute="top" secondItem="GzT-qi-9uO" secondAttribute="bottom" constant="7" id="l3c-98-saN"/>
-                            <constraint firstItem="GzT-qi-9uO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="lfG-mp-1BQ"/>
-                            <constraint firstItem="ctO-hr-1Qg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sIn-PQ-Bjk"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

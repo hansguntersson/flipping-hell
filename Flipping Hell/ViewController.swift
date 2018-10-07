@@ -15,6 +15,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    // var game = FlippingHell()
+    // Need to move functions to model from view controller and also update the view from the model
+    
     var flipNum = 0 {
         didSet {
             flipCount.text = "FLIPS: \(flipNum)"
@@ -77,6 +80,7 @@ class ViewController: UIViewController {
             }
             flipperOrientation = 0
         }
+        flipNum += 1
     }
     
     
@@ -96,8 +100,6 @@ class ViewController: UIViewController {
             baseColour = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
             buttonStatus[buttonIndex] = 0
         }
-        
-        flipNum += 1
         
         if (flipperOrientation == 0) {
             UIView.animate(withDuration: animTime, animations:  {
