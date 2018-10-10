@@ -43,14 +43,27 @@ class Level {
 class FlippingHell {
     
     var levels = [Level]()
-    var currentLevel = Level(sequence: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+    var currentLevel = Level(sequence:
+        [0, 0, 0, 0, 0,
+         0, 0, 1, 0, 0,
+         0, 1, 0, 1, 0,
+         0, 0, 1, 0, 0,
+         0, 0, 0, 0, 0])
+    
+    var flipperOrientation = 0
     
     func clickButton(at index: Int) {
-
+        // Complete Level
+        if(flipperOrientation == 0) {
+            flipperOrientation = 1
+        } else {
+            flipperOrientation = 0
+        }
     }
     
-    // Load Level
-    // Complete Level
-    // Reset Level
+    func loadLevel() {
+        // Load Level
+        // Reset Level
+    }
     
 }

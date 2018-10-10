@@ -13,6 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        updateWinDisplay()
+        
+        buttonFlipperCollection[1].layer.cornerRadius = buttonFlipperCollection[1].frame.size.width / 2
+        buttonFlipperCollection[3].layer.cornerRadius = buttonFlipperCollection[3].frame.size.width / 2
+        buttonFlipperCollection[4].layer.cornerRadius = buttonFlipperCollection[4].frame.size.width / 2
+        buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
+        buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
     }
     
     // var game = FlippingHell()
@@ -32,6 +39,12 @@ class ViewController: UIViewController {
                         0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0]
     
+    var currentLevel = [0, 0, 0, 0, 0,
+                        0, 0, 1, 0, 0,
+                        0, 1, 0, 1, 0,
+                        0, 0, 1, 0, 0,
+                        0, 0, 0, 0, 0]
+    
     var leftValidNums = [1, 2, 3, 4,
                          6, 7, 8, 9,
                          11, 12, 13, 14,
@@ -47,7 +60,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var flipCount: UILabel!
     @IBOutlet var buttonCollection: [UIButton]!
-
+    @IBOutlet var buttonWinCollection: [UIButton]!
+    @IBOutlet var buttonFlipperCollection: [UIButton]!
+    
+    
+    
     @IBAction func clickButton(_ sender: UIButton) {
         let button = sender
         
@@ -66,7 +83,7 @@ class ViewController: UIViewController {
                 let buttonRight = buttonCollection[idNumRight]
                 flipButton(buttonRight, buttonIndex: idNumRight)
             }
-            flipperOrientation = 1
+            updateFlipperDisplay()
         } else {
             if (idNum! > 4) {
                 let idNumTop = idNum! - 5
@@ -78,9 +95,40 @@ class ViewController: UIViewController {
                 let buttonBottom = buttonCollection[idNumBottom]
                 flipButton(buttonBottom, buttonIndex: idNumBottom)
             }
-            flipperOrientation = 0
+            updateFlipperDisplay()
         }
         flipNum += 1
+    }
+    
+    func updateWinDisplay() {
+        for winVal in 0 ..< currentLevel.count {
+            if(currentLevel[winVal] == 0) {
+                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
+                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
+            } else {
+                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
+            }
+        }
+    }
+    
+    func updateFlipperDisplay() {
+        
+        
+        
+        if(flipperOrientation == 0) {
+            buttonFlipperCollection[3].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
+            buttonFlipperCollection[5].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
+            buttonFlipperCollection[1].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
+            buttonFlipperCollection[7].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
+            flipperOrientation = 1
+        } else {
+            buttonFlipperCollection[1].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
+            buttonFlipperCollection[7].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
+            buttonFlipperCollection[3].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
+            buttonFlipperCollection[5].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
+            flipperOrientation = 0
+        }
     }
     
     
@@ -110,7 +158,7 @@ class ViewController: UIViewController {
             
             UIView.animate(withDuration: animTime, delay: animTime, animations: {
                 button.frame.size = CGSize(width: 50.0, height: 50.0)
-                button.layer.cornerRadius = 25
+                button.layer.cornerRadius = button.frame.size.width / 2
                 button.backgroundColor = baseColour
                 button.center = CGPoint(x: xVal, y: yVal)
             })
@@ -123,7 +171,7 @@ class ViewController: UIViewController {
             
             UIView.animate(withDuration: animTime, delay: animTime, animations: {
                 button.frame.size = CGSize(width: 50.0, height: 50.0)
-                button.layer.cornerRadius = 25
+                button.layer.cornerRadius = button.frame.size.width / 2
                 button.backgroundColor = baseColour
                 button.center = CGPoint(x: xVal, y: yVal)
             })
