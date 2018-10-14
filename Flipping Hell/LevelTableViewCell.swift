@@ -16,8 +16,6 @@ class LevelTableViewCell: UITableViewCell {
         return myarray[section]
     }*/
     
-    @IBOutlet weak var LevelCellView: UIView!
-    @IBOutlet weak var levelButton: UIButton!
     @IBOutlet weak var levelStars: UILabel!
     
     override func awakeFromNib() {

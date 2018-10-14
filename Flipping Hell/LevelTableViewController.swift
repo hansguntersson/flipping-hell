@@ -14,6 +14,11 @@ class LevelTableViewController: UITableViewController {
     
     var levels = [Level]()
     
+    
+    @IBAction func unwindToLevelView(segue:UIStoryboardSegue) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +49,7 @@ class LevelTableViewController: UITableViewController {
         let cellIdentifier = "LevelTableViewCell"
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LevelTableViewCell  else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+            fatalError("The dequeued cell is not an instance of LevelTableViewCell.")
         }
     
         let level = levels[indexPath.row]

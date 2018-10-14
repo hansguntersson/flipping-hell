@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Flipping Hell
 //
 //  Created by Daniel Harlos on 20/09/2018.
@@ -63,6 +63,9 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonWinCollection: [UIButton]!
     @IBOutlet var buttonFlipperCollection: [UIButton]!
     
+    @IBAction func backToLevelView(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindToLevelView", sender: self)
+    }
     
     
     @IBAction func clickButton(_ sender: UIButton) {

@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlainCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hef-C9-cRa" id="saT-tj-Esw">
@@ -47,7 +47,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="okh-Dt-wLC"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="loadLevelSegue" id="okh-Dt-wLC"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD">
@@ -74,8 +74,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="LevelCellView" destination="saT-tj-Esw" id="ogW-iF-qw4"/>
-                                    <outlet property="levelButton" destination="Zxa-HP-flf" id="jgl-5u-kWt"/>
                                     <outlet property="levelStars" destination="uJU-xP-I9D" id="7fG-sX-bqw"/>
                                 </connections>
                             </tableViewCell>
@@ -985,6 +983,10 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <connections>
+                                    <action selector="backToLevelSelect:" destination="kWS-v8-6Ho" eventType="touchUpInside" id="yEh-JD-mEp"/>
+                                    <action selector="backToLevelView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLc-8u-pby"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1072,9 +1074,11 @@
                         <outletCollection property="buttonFlipperCollection" destination="1sT-bc-Y7Z" collectionClass="NSMutableArray" id="lFp-Kl-2bw"/>
                         <outletCollection property="buttonFlipperCollection" destination="547-E3-8o4" collectionClass="NSMutableArray" id="iW8-HK-Ocq"/>
                         <outletCollection property="buttonFlipperCollection" destination="T8W-O8-K0x" collectionClass="NSMutableArray" id="PyO-ua-KNb"/>
+                        <segue destination="kWS-v8-6Ho" kind="unwind" identifier="unwindToLevelView" unwindAction="unwindToLevelViewWithSegue:" id="ok2-TB-Utd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="kWS-v8-6Ho" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="140" y="138"/>
         </scene>
