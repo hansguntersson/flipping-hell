@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9K6-qu-tf3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,10 +15,85 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Level Table View Controller-->
+        <scene sceneID="HW2-aE-ejK">
+            <objects>
+                <tableViewController id="9K6-qu-tf3" customClass="LevelTableViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LwH-pP-zzk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlainCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hef-C9-cRa" id="saT-tj-Esw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-HP-flf">
+                                            <rect key="frame" x="16" y="9.5" width="50.5" height="50.5"/>
+                                            <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Zxa-HP-flf" secondAttribute="height" multiplier="1:1" id="AR4-Eh-jCy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
+                                            <state key="normal" title="1">
+                                                <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="okh-Dt-wLC"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD">
+                                            <rect key="frame" x="88.5" y="22" width="131.5" height="26"/>
+                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="26"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJU-xP-I9D">
+                                            <rect key="frame" x="243" y="11" width="107" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                            <color key="textColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="uJU-xP-I9D" secondAttribute="trailing" constant="25" id="4g8-49-MUh"/>
+                                        <constraint firstItem="5tq-9a-9hD" firstAttribute="centerY" secondItem="saT-tj-Esw" secondAttribute="centerY" id="LkF-mZ-fGv"/>
+                                        <constraint firstItem="uJU-xP-I9D" firstAttribute="leading" secondItem="5tq-9a-9hD" secondAttribute="trailing" constant="23" id="OSy-xD-t8b"/>
+                                        <constraint firstItem="Zxa-HP-flf" firstAttribute="centerY" secondItem="saT-tj-Esw" secondAttribute="centerY" id="Tfb-5t-5hS"/>
+                                        <constraint firstItem="5tq-9a-9hD" firstAttribute="leading" secondItem="Zxa-HP-flf" secondAttribute="trailing" constant="22" id="d2z-Ls-dU1"/>
+                                        <constraint firstItem="uJU-xP-I9D" firstAttribute="centerY" secondItem="saT-tj-Esw" secondAttribute="centerY" id="emO-oy-4qt"/>
+                                        <constraint firstItem="Zxa-HP-flf" firstAttribute="leading" secondItem="saT-tj-Esw" secondAttribute="leading" constant="16" id="ftz-H5-RTL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="LevelCellView" destination="saT-tj-Esw" id="ogW-iF-qw4"/>
+                                    <outlet property="levelButton" destination="Zxa-HP-flf" id="jgl-5u-kWt"/>
+                                    <outlet property="levelStars" destination="uJU-xP-I9D" id="7fG-sX-bqw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9K6-qu-tf3" id="kDZ-ar-stG"/>
+                            <outlet property="delegate" destination="9K6-qu-tf3" id="35h-bi-JB8"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxm-um-npz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584" y="131"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -904,11 +979,20 @@
                                 <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="FTb-oN-8i8">
+                                <rect key="frame" x="22" y="617.5" width="56" height="29"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="FTb-oN-8i8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="0bs-ej-ewV"/>
                             <constraint firstItem="pYV-aJ-FAB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="1tG-y0-7XQ"/>
                             <constraint firstItem="pYV-aJ-FAB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2bl-zw-9s6"/>
+                            <constraint firstItem="CtB-2T-XqP" firstAttribute="leading" secondItem="FTb-oN-8i8" secondAttribute="trailing" constant="51.5" id="5tv-mq-Ys0"/>
                             <constraint firstItem="zSS-ky-ncw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="9Ff-np-DCf"/>
                             <constraint firstItem="cVc-y0-2hY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Bzr-Ba-s9P"/>
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="edz-eu-b6a" secondAttribute="bottom" constant="15" id="CSp-nl-WMK"/>
@@ -917,6 +1001,7 @@
                             <constraint firstItem="edz-eu-b6a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="UoB-yo-djA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zSS-ky-ncw" secondAttribute="trailing" constant="15" id="cJi-7k-C2f"/>
                             <constraint firstItem="edz-eu-b6a" firstAttribute="top" secondItem="zSS-ky-ncw" secondAttribute="bottom" constant="50" id="e7W-fc-d0h"/>
+                            <constraint firstItem="FTb-oN-8i8" firstAttribute="centerY" secondItem="CtB-2T-XqP" secondAttribute="centerY" constant="-2.5" id="gwA-6u-O71"/>
                             <constraint firstItem="WBP-0A-RtF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="edz-eu-b6a" secondAttribute="trailing" constant="19" id="hkF-zO-CYS"/>
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lTt-jJ-Saz"/>
                             <constraint firstItem="WBP-0A-RtF" firstAttribute="top" secondItem="zSS-ky-ncw" secondAttribute="bottom" constant="55" id="nPi-PE-KKl"/>
@@ -991,7 +1076,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="132.68365817091455"/>
+            <point key="canvasLocation" x="140" y="138"/>
         </scene>
     </scenes>
 </document>
