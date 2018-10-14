@@ -10,13 +10,8 @@ import UIKit
 
 class LevelTableViewCell: UITableViewCell {
     
-    // let myarray = ["item1", "item2", "item3"]
-    
-    /* func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return myarray[section]
-    }*/
-    
     @IBOutlet weak var levelStars: UILabel!
+    @IBOutlet weak var levelIndex: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

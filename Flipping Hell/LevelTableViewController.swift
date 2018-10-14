@@ -54,7 +54,8 @@ class LevelTableViewController: UITableViewController {
     
         let level = levels[indexPath.row]
         
-        cell.levelStars.text = level.stars
+        cell.levelStars.text = level.levelstars
+        cell.levelIndex.setTitle(String(level.levelIndex), for: .normal)
 
         return cell
     }
@@ -128,8 +129,13 @@ class LevelTableViewController: UITableViewController {
                                       1, 0, 0, 0, 1,
                                       1, 1, 1, 1, 1,
                                       0, 0, 0, 0, 0])
+        let level5 = Level(sequence: [0, 0, 0, 0, 0,
+                                      0, 0, 1, 0, 0,
+                                      0, 1, 0, 1, 0,
+                                      0, 0, 1, 0, 0,
+                                      0, 0, 0, 0, 0])
 
-        levels += [level1, level2, level3, level4]
+        levels += [level1, level2, level3, level4, level5]
         
     }
 

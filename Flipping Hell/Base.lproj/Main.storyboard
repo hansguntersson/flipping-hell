@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hef-C9-cRa" id="saT-tj-Esw">
@@ -37,8 +37,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Zxa-HP-flf" secondAttribute="height" multiplier="1:1" id="AR4-Eh-jCy"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
-                                            <state key="normal" title="1">
+                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="26"/>
+                                            <state key="normal" title="0">
                                                 <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -63,6 +63,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="uJU-xP-I9D" secondAttribute="trailing" constant="25" id="4g8-49-MUh"/>
                                         <constraint firstItem="5tq-9a-9hD" firstAttribute="centerY" secondItem="saT-tj-Esw" secondAttribute="centerY" id="LkF-mZ-fGv"/>
@@ -74,6 +75,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="levelIndex" destination="Zxa-HP-flf" id="WcM-bb-VDy"/>
                                     <outlet property="levelStars" destination="uJU-xP-I9D" id="7fG-sX-bqw"/>
                                 </connections>
                             </tableViewCell>

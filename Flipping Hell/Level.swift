@@ -16,11 +16,19 @@ class Level {
     var minMoves: Array<Int> = [0]
     let sequence: Array<Int>
     
-    let stars = "★★★"
-    let index = 0
+    let levelstars = "★★"
+    let levelIndex: Int
+    
+    static var levelsIndices = 0
     
     init(sequence: Array<Int>) {
         self.sequence = sequence
+        levelIndex = Level.getLevelNumber()
+    }
+    
+    static func getLevelNumber() -> Int {
+        levelsIndices += 1
+        return levelsIndices
     }
     
     func completeLevel(levelCompleted: Level, completeSequence: Array<Int>) { // Include moves, sequence of moves
