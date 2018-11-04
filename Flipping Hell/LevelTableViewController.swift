@@ -56,68 +56,68 @@ class LevelTableViewController: UITableViewController {
     }
     
     private func loadSampleLevels() {
-        let level1 = Level(sequence: [0, 0, 0, 0, 0,
-                                      0, 0, 0, 0, 0,
-                                      0, 1, 1, 1, 0,
-                                      0, 0, 0, 0, 0,
-                                      0, 0, 0, 0, 0],
-                           goalFlips: 1)
-        let level2 = Level(sequence: [0, 0, 0, 0, 0,
-                                      0, 1, 1, 1, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0],
-                           goalFlips: 2)
-        let level3 = Level(sequence: [1, 1, 1, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 1, 1],
-                           goalFlips: 3)
-        let level4 = Level(sequence: [0, 0, 0, 0, 0,
-                                      1, 1, 1, 1, 1,
-                                      1, 0, 0, 0, 1,
-                                      1, 1, 1, 1, 1,
-                                      0, 0, 0, 0, 0],
-                           goalFlips: 4)
-        let level5 = Level(sequence: [0, 0, 0, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 1, 0, 1, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 0, 0, 0],
-                           goalFlips: 2)
-        let level6 = Level(sequence: [0, 0, 0, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      1, 1, 1, 1, 1,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 0, 0, 0],
-                           goalFlips: 3)
-        let level7 = Level(sequence: [0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      1, 1, 0, 1, 1,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0],
-                           goalFlips: 4)
-        let level8 = Level(sequence: [0, 1, 1, 1, 0,
-                                      0, 0, 0, 0, 0,
-                                      0, 0, 0, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0],
-                           goalFlips: 2)
-        let level9 = Level(sequence: [1, 1, 0, 0, 1,
-                                      0, 0, 0, 0, 1,
-                                      0, 0, 0, 0, 0,
-                                      1, 0, 0, 0, 0,
-                                      1, 0, 0, 1, 1],
-                           goalFlips: 4)
-        let level10 = Level(sequence: [0, 1, 0, 1, 0,
+        let level_1 = Level(sequence: [0, 0, 0, 0, 0,
+                                       0, 0, 0, 0, 0,
+                                       0, 1, 1, 1, 0,
+                                       0, 0, 0, 0, 0,
+                                       0, 0, 0, 0, 0],
+                            goalFlips: 1)
+        let level_2 = Level(sequence: [0, 0, 0, 0, 0,
+                                       0, 1, 1, 1, 0,
+                                       0, 0, 1, 0, 0,
+                                       0, 0, 1, 0, 0,
+                                       0, 0, 1, 0, 0],
+                            goalFlips: 2)
+        let level_3 = Level(sequence: [1, 1, 1, 0, 0,
+                                       0, 0, 1, 0, 0,
+                                       0, 0, 1, 0, 0,
+                                       0, 0, 1, 0, 0,
+                                       0, 0, 1, 1, 1],
+                            goalFlips: 3)
+        let level_4 = Level(sequence: [0, 0, 0, 0, 0,
+                                       1, 1, 1, 1, 1,
+                                       1, 0, 0, 0, 1,
+                                       1, 1, 1, 1, 1,
+                                       0, 0, 0, 0, 0],
+                            goalFlips: 4)
+        let level_5 = Level(sequence: [0, 0, 0, 0, 0,
+                                       0, 0, 1, 0, 0,
                                        0, 1, 0, 1, 0,
-                                       0, 1, 0, 1, 0,
-                                       0, 1, 0, 1, 0,
-                                       0, 1, 0, 1, 0],
-                            goalFlips: 6)
+                                       0, 0, 1, 0, 0,
+                                       0, 0, 0, 0, 0],
+                            goalFlips: 2)
+        let level_6 = Level(sequence: [0, 0, 0, 0, 0,
+                                       0, 0, 1, 0, 0,
+                                       1, 1, 1, 1, 1,
+                                       0, 0, 1, 0, 0,
+                                       0, 0, 0, 0, 0],
+                            goalFlips: 3)
+        let level_7 = Level(sequence: [0, 0, 1, 0, 0,
+                                       0, 0, 1, 0, 0,
+                                       1, 1, 0, 1, 1,
+                                       0, 0, 1, 0, 0,
+                                       0, 0, 1, 0, 0],
+                            goalFlips: 4)
+        let level_8 = Level(sequence: [0, 1, 1, 1, 0,
+                                       0, 0, 0, 0, 0,
+                                       0, 0, 0, 0, 0,
+                                       0, 0, 1, 0, 0,
+                                       0, 0, 1, 0, 0],
+                            goalFlips: 2)
+        let level_9 = Level(sequence: [1, 1, 0, 0, 1,
+                                       0, 0, 0, 0, 1,
+                                       0, 0, 0, 0, 0,
+                                       1, 0, 0, 0, 0,
+                                       1, 0, 0, 1, 1],
+                            goalFlips: 4)
+        let level_10 = Level(sequence: [0, 1, 0, 1, 0,
+                                        0, 1, 0, 1, 0,
+                                        0, 1, 0, 1, 0,
+                                        0, 1, 0, 1, 0,
+                                        0, 1, 0, 1, 0],
+                             goalFlips: 6)
         
-        levels += [level1, level2, level3, level4, level5, level6, level7, level8, level9, level10]
+        levels += [level_1, level_2, level_3, level_4, level_5, level_6, level_7, level_8, level_9, level_10]
     }
     
     
