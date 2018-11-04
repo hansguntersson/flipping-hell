@@ -9,20 +9,22 @@
 import Foundation
 
 class Level {
-    var isUnlocked = false
-    var isComplete = false
-    var attempts = 0
-    var minFlips: Int? = nil
-    var minMoves: Array<Int> = [0]
-    let sequence: Array<Int>
+    let sequence: Array<Int> // The array sequence for the level
+    var goalFlips: Int // The goal flips for the level
     
-    let levelstars = "★★"
-    let levelIndex: Int
+    var isUnlocked = false // Whether the level is unlocked
+    var isComplete = false // Whether the level has been completed
+    var attempts = 0 // Hpw many attempts were made
+    var minFlips: Int? = nil // The minimum number of flips the level has been completed in
+    var minMoves: Array<Int> = [0] // The minimum moves the level has been completed in
+    var levelstars = "" // The star sequence for the level
     
-    static var levelsIndices = 0
+    let levelIndex: Int // Which index the level is at
+    static var levelsIndices = 0 // The class index for the levels
     
-    init(sequence: Array<Int>) {
+    init(sequence: Array<Int>, goalFlips: Int) {
         self.sequence = sequence
+        self.goalFlips = goalFlips
         levelIndex = Level.getLevelNumber()
     }
     
@@ -39,6 +41,15 @@ class Level {
             if(moveCount < flipExists) {
                 minFlips = moveCount
                 minMoves = completeSequence
+                if (moveCount - goalFlips >= 2) {
+                    levelstars = "★"
+                } else if (moveCount - goalFlips > 0) {
+                    levelstars = "★★"
+                } else if (moveCount - goalFlips == 0) {
+                    levelstars = "★★★"
+                } else if (moveCount - goalFlips < 0) {
+                    levelstars = "✮✮✮"
+                }
             }
         } else {
             minFlips = moveCount

@@ -64,9 +64,10 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonFlipperCollection: [UIButton]!
     
     @IBAction func backToLevelView(_ sender: UIButton) {
-        performSegue(withIdentifier: "unwindToLevelView", sender: self)
+        // performSegue(withIdentifier: "unwindToLevelView", sender: self)
+        self.dismiss(animated: true, completion: nil)
+        //self.navigationController?.dismiss(animated: true, completion: nil)
     }
-    
     
     @IBAction func clickButton(_ sender: UIButton) {
         let button = sender

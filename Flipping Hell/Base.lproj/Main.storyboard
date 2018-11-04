@@ -31,15 +31,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-HP-flf">
-                                            <rect key="frame" x="16" y="9.5" width="50.5" height="50.5"/>
-                                            <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-HP-flf">
+                                            <rect key="frame" x="15" y="9.5" width="50.5" height="50.5"/>
+                                            <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Zxa-HP-flf" secondAttribute="height" multiplier="1:1" id="AR4-Eh-jCy"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="26"/>
+                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                             <state key="normal" title="0">
-                                                <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -50,28 +50,30 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" identifier="loadLevelSegue" id="okh-Dt-wLC"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD">
-                                            <rect key="frame" x="88.5" y="22" width="131.5" height="26"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 10" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD">
+                                            <rect key="frame" x="80.5" y="22" width="131.5" height="26"/>
                                             <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="26"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJU-xP-I9D">
-                                            <rect key="frame" x="243" y="11" width="107" height="48"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★ ★ ★ " lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJU-xP-I9D">
+                                            <rect key="frame" x="227" y="11" width="132" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
                                             <color key="textColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="uJU-xP-I9D" secondAttribute="trailing" constant="25" id="4g8-49-MUh"/>
+                                        <constraint firstItem="Zxa-HP-flf" firstAttribute="top" secondItem="saT-tj-Esw" secondAttribute="top" constant="9.5" id="1Lo-b9-oBN"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uJU-xP-I9D" secondAttribute="trailing" constant="5" id="Fp2-3P-Ha2"/>
                                         <constraint firstItem="5tq-9a-9hD" firstAttribute="centerY" secondItem="saT-tj-Esw" secondAttribute="centerY" id="LkF-mZ-fGv"/>
-                                        <constraint firstItem="uJU-xP-I9D" firstAttribute="leading" secondItem="5tq-9a-9hD" secondAttribute="trailing" constant="23" id="OSy-xD-t8b"/>
+                                        <constraint firstItem="uJU-xP-I9D" firstAttribute="leading" secondItem="5tq-9a-9hD" secondAttribute="trailing" constant="15" id="OSy-xD-t8b"/>
                                         <constraint firstItem="Zxa-HP-flf" firstAttribute="centerY" secondItem="saT-tj-Esw" secondAttribute="centerY" id="Tfb-5t-5hS"/>
-                                        <constraint firstItem="5tq-9a-9hD" firstAttribute="leading" secondItem="Zxa-HP-flf" secondAttribute="trailing" constant="22" id="d2z-Ls-dU1"/>
+                                        <constraint firstItem="5tq-9a-9hD" firstAttribute="leading" secondItem="Zxa-HP-flf" secondAttribute="trailing" constant="15" id="d2z-Ls-dU1"/>
                                         <constraint firstItem="uJU-xP-I9D" firstAttribute="centerY" secondItem="saT-tj-Esw" secondAttribute="centerY" id="emO-oy-4qt"/>
-                                        <constraint firstItem="Zxa-HP-flf" firstAttribute="leading" secondItem="saT-tj-Esw" secondAttribute="leading" constant="16" id="ftz-H5-RTL"/>
+                                        <constraint firstItem="Zxa-HP-flf" firstAttribute="leading" secondItem="saT-tj-Esw" secondAttribute="leading" constant="15" id="ftz-H5-RTL"/>
+                                        <constraint firstAttribute="bottom" secondItem="Zxa-HP-flf" secondAttribute="bottom" constant="9.5" id="jfr-8f-1dt"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -88,7 +90,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxm-um-npz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-584" y="131"/>
+            <point key="canvasLocation" x="-584.79999999999995" y="130.88455772113943"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -983,11 +985,11 @@
                                 <rect key="frame" x="22" y="617.5" width="56" height="29"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
                                 <state key="normal" title="Back">
-                                    <color key="titleColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="backToLevelSelect:" destination="kWS-v8-6Ho" eventType="touchUpInside" id="yEh-JD-mEp"/>
-                                    <action selector="backToLevelView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLc-8u-pby"/>
+                                    <action selector="backToLevelView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VM8-hp-Wi0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1042,31 +1044,6 @@
                         <outletCollection property="buttonCollection" destination="cb5-Sv-x5a" collectionClass="NSMutableArray" id="IIu-Px-sF0"/>
                         <outletCollection property="buttonCollection" destination="q0P-RE-bnu" collectionClass="NSMutableArray" id="lkf-Jm-dKg"/>
                         <outletCollection property="buttonCollection" destination="qS8-2D-3YO" collectionClass="NSMutableArray" id="Xu2-dJ-oDr"/>
-                        <outletCollection property="buttonWinCollection" destination="Tbd-ON-gcY" collectionClass="NSMutableArray" id="APx-2L-FGd"/>
-                        <outletCollection property="buttonWinCollection" destination="z9C-aC-qoL" collectionClass="NSMutableArray" id="U3s-5H-Keu"/>
-                        <outletCollection property="buttonWinCollection" destination="OvJ-0y-Mw3" collectionClass="NSMutableArray" id="USX-xN-FYb"/>
-                        <outletCollection property="buttonWinCollection" destination="ijr-uX-XIt" collectionClass="NSMutableArray" id="Oed-jH-8O6"/>
-                        <outletCollection property="buttonWinCollection" destination="HpI-oc-jHg" collectionClass="NSMutableArray" id="SWx-gC-uZM"/>
-                        <outletCollection property="buttonWinCollection" destination="18b-3k-K5t" collectionClass="NSMutableArray" id="FaL-1S-8A1"/>
-                        <outletCollection property="buttonWinCollection" destination="Y09-mU-OQZ" collectionClass="NSMutableArray" id="4G7-VP-aVq"/>
-                        <outletCollection property="buttonWinCollection" destination="312-jO-oHj" collectionClass="NSMutableArray" id="GmH-Mh-gP0"/>
-                        <outletCollection property="buttonWinCollection" destination="6xZ-iz-7DS" collectionClass="NSMutableArray" id="JDP-em-hoM"/>
-                        <outletCollection property="buttonWinCollection" destination="LCz-vt-kh3" collectionClass="NSMutableArray" id="dgk-LV-7le"/>
-                        <outletCollection property="buttonWinCollection" destination="MWE-D7-Mq4" collectionClass="NSMutableArray" id="dmc-IU-c5x"/>
-                        <outletCollection property="buttonWinCollection" destination="A6F-TK-50C" collectionClass="NSMutableArray" id="6il-6G-88N"/>
-                        <outletCollection property="buttonWinCollection" destination="VVL-kf-Uu1" collectionClass="NSMutableArray" id="Ieh-G8-Yrs"/>
-                        <outletCollection property="buttonWinCollection" destination="jFw-io-kbj" collectionClass="NSMutableArray" id="Bgp-YD-z7g"/>
-                        <outletCollection property="buttonWinCollection" destination="itI-jE-ox6" collectionClass="NSMutableArray" id="jTC-PK-E9f"/>
-                        <outletCollection property="buttonWinCollection" destination="Wc0-QE-osK" collectionClass="NSMutableArray" id="imJ-SL-y99"/>
-                        <outletCollection property="buttonWinCollection" destination="6hT-hP-ea0" collectionClass="NSMutableArray" id="7SA-vB-Yty"/>
-                        <outletCollection property="buttonWinCollection" destination="2LD-es-h0A" collectionClass="NSMutableArray" id="jGK-He-Cdo"/>
-                        <outletCollection property="buttonWinCollection" destination="Svu-Ti-vgJ" collectionClass="NSMutableArray" id="k86-sT-GUZ"/>
-                        <outletCollection property="buttonWinCollection" destination="3Lw-Gg-gze" collectionClass="NSMutableArray" id="a39-es-CXY"/>
-                        <outletCollection property="buttonWinCollection" destination="U7G-1H-yWh" collectionClass="NSMutableArray" id="1i2-im-yrO"/>
-                        <outletCollection property="buttonWinCollection" destination="tq7-1V-2r9" collectionClass="NSMutableArray" id="xzl-Or-abo"/>
-                        <outletCollection property="buttonWinCollection" destination="cOl-9d-I0D" collectionClass="NSMutableArray" id="iTz-Ls-Z5O"/>
-                        <outletCollection property="buttonWinCollection" destination="c54-wW-MW1" collectionClass="NSMutableArray" id="em2-BQ-1Yz"/>
-                        <outletCollection property="buttonWinCollection" destination="m9s-Fe-xxs" collectionClass="NSMutableArray" id="RVK-oV-bUb"/>
                         <outletCollection property="buttonFlipperCollection" destination="lra-1Y-C0C" collectionClass="NSMutableArray" id="Hte-v0-ovA"/>
                         <outletCollection property="buttonFlipperCollection" destination="3vo-gL-scq" collectionClass="NSMutableArray" id="mNa-2U-UGr"/>
                         <outletCollection property="buttonFlipperCollection" destination="9ui-xS-BR4" collectionClass="NSMutableArray" id="htb-iK-Pyk"/>
@@ -1076,6 +1053,31 @@
                         <outletCollection property="buttonFlipperCollection" destination="1sT-bc-Y7Z" collectionClass="NSMutableArray" id="lFp-Kl-2bw"/>
                         <outletCollection property="buttonFlipperCollection" destination="547-E3-8o4" collectionClass="NSMutableArray" id="iW8-HK-Ocq"/>
                         <outletCollection property="buttonFlipperCollection" destination="T8W-O8-K0x" collectionClass="NSMutableArray" id="PyO-ua-KNb"/>
+                        <outletCollection property="buttonWinCollection" destination="HpI-oc-jHg" collectionClass="NSMutableArray" id="dY4-5N-9rI"/>
+                        <outletCollection property="buttonWinCollection" destination="ijr-uX-XIt" collectionClass="NSMutableArray" id="mjr-qU-Xkh"/>
+                        <outletCollection property="buttonWinCollection" destination="OvJ-0y-Mw3" collectionClass="NSMutableArray" id="bs7-1O-IBd"/>
+                        <outletCollection property="buttonWinCollection" destination="z9C-aC-qoL" collectionClass="NSMutableArray" id="86t-39-zai"/>
+                        <outletCollection property="buttonWinCollection" destination="Tbd-ON-gcY" collectionClass="NSMutableArray" id="Gde-bV-UDg"/>
+                        <outletCollection property="buttonWinCollection" destination="18b-3k-K5t" collectionClass="NSMutableArray" id="fzz-VQ-KvU"/>
+                        <outletCollection property="buttonWinCollection" destination="Y09-mU-OQZ" collectionClass="NSMutableArray" id="YXL-oX-l2T"/>
+                        <outletCollection property="buttonWinCollection" destination="312-jO-oHj" collectionClass="NSMutableArray" id="jld-x6-zjc"/>
+                        <outletCollection property="buttonWinCollection" destination="6xZ-iz-7DS" collectionClass="NSMutableArray" id="MEz-3S-R0L"/>
+                        <outletCollection property="buttonWinCollection" destination="LCz-vt-kh3" collectionClass="NSMutableArray" id="4fW-Iy-1Rd"/>
+                        <outletCollection property="buttonWinCollection" destination="MWE-D7-Mq4" collectionClass="NSMutableArray" id="F6X-Ar-dhZ"/>
+                        <outletCollection property="buttonWinCollection" destination="A6F-TK-50C" collectionClass="NSMutableArray" id="Tmd-OK-Rdf"/>
+                        <outletCollection property="buttonWinCollection" destination="VVL-kf-Uu1" collectionClass="NSMutableArray" id="WS3-mg-jba"/>
+                        <outletCollection property="buttonWinCollection" destination="jFw-io-kbj" collectionClass="NSMutableArray" id="eci-qn-dXH"/>
+                        <outletCollection property="buttonWinCollection" destination="itI-jE-ox6" collectionClass="NSMutableArray" id="cor-Oq-XKa"/>
+                        <outletCollection property="buttonWinCollection" destination="Wc0-QE-osK" collectionClass="NSMutableArray" id="9N5-GW-ccD"/>
+                        <outletCollection property="buttonWinCollection" destination="6hT-hP-ea0" collectionClass="NSMutableArray" id="TUd-Li-mAr"/>
+                        <outletCollection property="buttonWinCollection" destination="2LD-es-h0A" collectionClass="NSMutableArray" id="TpP-JV-yTt"/>
+                        <outletCollection property="buttonWinCollection" destination="Svu-Ti-vgJ" collectionClass="NSMutableArray" id="5fl-DD-vvp"/>
+                        <outletCollection property="buttonWinCollection" destination="3Lw-Gg-gze" collectionClass="NSMutableArray" id="ST1-Wu-qfP"/>
+                        <outletCollection property="buttonWinCollection" destination="U7G-1H-yWh" collectionClass="NSMutableArray" id="PWb-Wx-fin"/>
+                        <outletCollection property="buttonWinCollection" destination="tq7-1V-2r9" collectionClass="NSMutableArray" id="Toc-5j-ys9"/>
+                        <outletCollection property="buttonWinCollection" destination="cOl-9d-I0D" collectionClass="NSMutableArray" id="kzk-9k-ZXO"/>
+                        <outletCollection property="buttonWinCollection" destination="c54-wW-MW1" collectionClass="NSMutableArray" id="pJr-XW-bvJ"/>
+                        <outletCollection property="buttonWinCollection" destination="m9s-Fe-xxs" collectionClass="NSMutableArray" id="5cl-iE-0MT"/>
                         <segue destination="kWS-v8-6Ho" kind="unwind" identifier="unwindToLevelView" unwindAction="unwindToLevelViewWithSegue:" id="ok2-TB-Utd"/>
                     </connections>
                 </viewController>

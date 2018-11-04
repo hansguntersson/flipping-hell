@@ -14,11 +14,6 @@ class LevelTableViewController: UITableViewController {
     
     var levels = [Level]()
     
-    
-    @IBAction func unwindToLevelView(segue:UIStoryboardSegue) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,7 +55,72 @@ class LevelTableViewController: UITableViewController {
         return cell
     }
     
-
+    private func loadSampleLevels() {
+        let level1 = Level(sequence: [0, 0, 0, 0, 0,
+                                      0, 0, 0, 0, 0,
+                                      0, 1, 1, 1, 0,
+                                      0, 0, 0, 0, 0,
+                                      0, 0, 0, 0, 0],
+                           goalFlips: 1)
+        let level2 = Level(sequence: [0, 0, 0, 0, 0,
+                                      0, 1, 1, 1, 0,
+                                      0, 0, 1, 0, 0,
+                                      0, 0, 1, 0, 0,
+                                      0, 0, 1, 0, 0],
+                           goalFlips: 2)
+        let level3 = Level(sequence: [1, 1, 1, 0, 0,
+                                      0, 0, 1, 0, 0,
+                                      0, 0, 1, 0, 0,
+                                      0, 0, 1, 0, 0,
+                                      0, 0, 1, 1, 1],
+                           goalFlips: 3)
+        let level4 = Level(sequence: [0, 0, 0, 0, 0,
+                                      1, 1, 1, 1, 1,
+                                      1, 0, 0, 0, 1,
+                                      1, 1, 1, 1, 1,
+                                      0, 0, 0, 0, 0],
+                           goalFlips: 4)
+        let level5 = Level(sequence: [0, 0, 0, 0, 0,
+                                      0, 0, 1, 0, 0,
+                                      0, 1, 0, 1, 0,
+                                      0, 0, 1, 0, 0,
+                                      0, 0, 0, 0, 0],
+                           goalFlips: 2)
+        let level6 = Level(sequence: [0, 0, 0, 0, 0,
+                                      0, 0, 1, 0, 0,
+                                      1, 1, 1, 1, 1,
+                                      0, 0, 1, 0, 0,
+                                      0, 0, 0, 0, 0],
+                           goalFlips: 3)
+        let level7 = Level(sequence: [0, 0, 1, 0, 0,
+                                      0, 0, 1, 0, 0,
+                                      1, 1, 0, 1, 1,
+                                      0, 0, 1, 0, 0,
+                                      0, 0, 1, 0, 0],
+                           goalFlips: 4)
+        let level8 = Level(sequence: [0, 1, 1, 1, 0,
+                                      0, 0, 0, 0, 0,
+                                      0, 0, 0, 0, 0,
+                                      0, 0, 1, 0, 0,
+                                      0, 0, 1, 0, 0],
+                           goalFlips: 2)
+        let level9 = Level(sequence: [1, 1, 0, 0, 1,
+                                      0, 0, 0, 0, 1,
+                                      0, 0, 0, 0, 0,
+                                      1, 0, 0, 0, 0,
+                                      1, 0, 0, 1, 1],
+                           goalFlips: 4)
+        let level10 = Level(sequence: [0, 1, 0, 1, 0,
+                                       0, 1, 0, 1, 0,
+                                       0, 1, 0, 1, 0,
+                                       0, 1, 0, 1, 0,
+                                       0, 1, 0, 1, 0],
+                            goalFlips: 6)
+        
+        levels += [level1, level2, level3, level4, level5, level6, level7, level8, level9, level10]
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -96,47 +156,18 @@ class LevelTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-    
-    private func loadSampleLevels() {
-        let level1 = Level(sequence: [0, 0, 0, 0, 0,
-                                      0, 0, 0, 0, 0,
-                                      0, 1, 1, 1, 0,
-                                      0, 0, 0, 0, 0,
-                                      0, 0, 0, 0, 0])
-        let level2 = Level(sequence: [0, 0, 0, 0, 0,
-                                      0, 1, 1, 1, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0])
-        let level3 = Level(sequence: [1, 1, 1, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 1, 1, 1])
-        let level4 = Level(sequence: [0, 0, 0, 0, 0,
-                                      1, 1, 1, 1, 1,
-                                      1, 0, 0, 0, 1,
-                                      1, 1, 1, 1, 1,
-                                      0, 0, 0, 0, 0])
-        let level5 = Level(sequence: [0, 0, 0, 0, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 1, 0, 1, 0,
-                                      0, 0, 1, 0, 0,
-                                      0, 0, 0, 0, 0])
-
-        levels += [level1, level2, level3, level4, level5]
-        
+        if segue.identifier == "loadLevelSegue" {
+            if let levelIndex = Int((sender as! UIButton).currentTitle ?? "1") {
+                let level = levels[levelIndex - 1]
+                if let mvc = segue.destination as? MainViewController {
+                    mvc.currentLevel = level.sequence
+                }
+            }
+        }
     }
 
 }

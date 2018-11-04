@@ -16,7 +16,7 @@ class FlippingHell {
          0, 0, 1, 0, 0,
          0, 1, 0, 1, 0,
          0, 0, 1, 0, 0,
-         0, 0, 0, 0, 0])
+         0, 0, 0, 0, 0], goalFlips: 2)
     
     var flipperOrientation = 0
     
