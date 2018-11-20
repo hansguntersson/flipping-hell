@@ -20,7 +20,7 @@ class FlippingHell {
     
     var flipperOrientation = 0
     
-    func clickButton(at index: Int) {
+    func flipButton(at index: Int) {
         // Complete Level
         if(flipperOrientation == 0) {
             flipperOrientation = 1

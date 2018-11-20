@@ -62,11 +62,21 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonCollection: [UIButton]!
     @IBOutlet var buttonWinCollection: [UIButton]!
     @IBOutlet var buttonFlipperCollection: [UIButton]!
+    @IBOutlet var winScreen: UIView!
     
     @IBAction func backToLevelView(_ sender: UIButton) {
         // performSegue(withIdentifier: "unwindToLevelView", sender: self)
         self.dismiss(animated: true, completion: nil)
         //self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func resetLevel(_ sender: UIButton) {
+        self.view.addSubview(winScreen)
+        winScreen.center = self.view.center
+        // Reset flips
+        // Reset buttons
+        // Reset button array
+        // Reset current arrays etc
     }
     
     @IBAction func clickButton(_ sender: UIButton) {
@@ -117,9 +127,6 @@ class MainViewController: UIViewController {
     }
     
     func updateFlipperDisplay() {
-        
-        
-        
         if(flipperOrientation == 0) {
             buttonFlipperCollection[3].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
             buttonFlipperCollection[5].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
@@ -144,6 +151,8 @@ class MainViewController: UIViewController {
         var baseColour = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
         
         let buttonState = buttonStatus[buttonIndex]
+        
+        // THIS IS THE GAME BIT WE NEED TO MOVE TO THE MODEL
         
         if (buttonState == 0) {
             baseColour = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)

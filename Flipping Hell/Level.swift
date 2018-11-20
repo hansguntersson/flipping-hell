@@ -11,6 +11,8 @@ import Foundation
 class Level {
     let sequence: Array<Int> // The array sequence for the level
     var goalFlips: Int // The goal flips for the level
+    var currentFlips: Int = 0 // The current flip count
+    let currentSequence: Array<Int> // The array sequence for the level
     
     var isUnlocked = false // Whether the level is unlocked
     var isComplete = false // Whether the level has been completed
@@ -24,6 +26,7 @@ class Level {
     
     init(sequence: Array<Int>, goalFlips: Int) {
         self.sequence = sequence
+        self.currentSequence = sequence
         self.goalFlips = goalFlips
         levelIndex = Level.getLevelNumber()
     }
