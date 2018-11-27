@@ -16,16 +16,18 @@ class WinScreenController: UIViewController {
     }
     
     @IBAction func replayLevel(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        // reset level on view controller then segue to it
+        self.performSegue(withIdentifier: "unwindToMainViewController", sender: self)
     }
     
     @IBAction func nextLevel(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
     @IBAction func backToLevelView(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        // update the level screen with win values
+        //unwind all the way back to level screen
+        self.performSegue(withIdentifier: "unwindToLevelViewController", sender: self)
     }
     
     

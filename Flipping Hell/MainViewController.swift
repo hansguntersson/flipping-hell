@@ -37,25 +37,25 @@ class MainViewController: UIViewController {
                         0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0]
+                        0, 0, 0, 0, 0] // what the current status of the buttons is
     
     var currentLevel = [0, 0, 0, 0, 0,
                         0, 0, 1, 0, 0,
                         0, 1, 0, 1, 0,
                         0, 0, 1, 0, 0,
-                        0, 0, 0, 0, 0]
+                        0, 0, 0, 0, 0] // The level array loaded
     
     var leftValidNums = [1, 2, 3, 4,
                          6, 7, 8, 9,
                          11, 12, 13, 14,
                          16, 17, 18, 19,
-                         21, 22, 23, 24]
+                         21, 22, 23, 24] // List to define when left button is flipped
     
     var rightValidNums = [0, 1, 2, 3,
                           5, 6, 7, 8,
                           10, 11, 12, 13,
                           15, 16, 17, 18,
-                          20, 21, 22, 23]
+                          20, 21, 22, 23] // List to define when right button is flipped
     
     
     @IBOutlet weak var flipCount: UILabel!
@@ -65,22 +65,42 @@ class MainViewController: UIViewController {
     @IBOutlet var winScreen: UIView!
     
     @IBAction func backToLevelView(_ sender: UIButton) {
-        // performSegue(withIdentifier: "unwindToLevelView", sender: self)
         self.dismiss(animated: true, completion: nil)
-        //self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func unwindToMainViewController(segue:UIStoryboardSegue) {
+        resetButtons()
     }
     
     @IBAction func resetLevel(_ sender: UIButton) {
-        self.view.addSubview(winScreen)
-        winScreen.center = self.view.center
-        // Reset flips
-        // Reset buttons
-        // Reset button array
-        // Reset current arrays etc
+        // Reset flip and flipper
+        flipperOrientation = 1
+        updateFlipperDisplay()
+        flipNum = 0
+        
+        // Reset buttons and array
+        for buttonIndex in 0 ..< buttonStatus.count {
+            buttonStatus[buttonIndex] = 0
+            buttonCollection[buttonIndex].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
+        }
+        
+    }
+    
+    func resetButtons() {
+        flipperOrientation = 1
+        updateFlipperDisplay()
+        flipNum = 0
+        
+        // Reset buttons and array
+        for buttonIndex in 0 ..< buttonStatus.count {
+            buttonStatus[buttonIndex] = 0
+            buttonCollection[buttonIndex].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
+        }
     }
     
     @IBAction func clickButton(_ sender: UIButton) {
         let button = sender
+        var WinVal = false
         
         let idNum = Int(button.accessibilityIdentifier ?? "0")
         
@@ -97,7 +117,6 @@ class MainViewController: UIViewController {
                 let buttonRight = buttonCollection[idNumRight]
                 flipButton(buttonRight, buttonIndex: idNumRight)
             }
-            updateFlipperDisplay()
         } else {
             if (idNum! > 4) {
                 let idNumTop = idNum! - 5
@@ -109,9 +128,16 @@ class MainViewController: UIViewController {
                 let buttonBottom = buttonCollection[idNumBottom]
                 flipButton(buttonBottom, buttonIndex: idNumBottom)
             }
-            updateFlipperDisplay()
         }
+        updateFlipperDisplay()
         flipNum += 1
+        
+        WinVal = checkWin()
+        
+        if (WinVal == true) {
+            performSegue(withIdentifier: "GameWonSegue", sender: self)
+        }
+        
     }
     
     func updateWinDisplay() {
@@ -141,7 +167,6 @@ class MainViewController: UIViewController {
             flipperOrientation = 0
         }
     }
-    
     
     func flipButton(_ sender: UIButton, buttonIndex: Int) {
         let button = sender
@@ -190,6 +215,18 @@ class MainViewController: UIViewController {
             })
         }
     }
+    
+    func checkWin() -> Bool {
+        var WinTrue: Bool = true
+        for CheckIndex in 0 ..< currentLevel.count {
+            if (currentLevel[CheckIndex] != buttonStatus[CheckIndex]) {
+                WinTrue = false
+                break
+            }
+        }
+        return WinTrue
+    }
+    
 }
 
 
