@@ -73,20 +73,11 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func resetLevel(_ sender: UIButton) {
-        // Reset flip and flipper
-        flipperOrientation = 1
-        updateFlipperDisplay()
-        flipNum = 0
-        
-        // Reset buttons and array
-        for buttonIndex in 0 ..< buttonStatus.count {
-            buttonStatus[buttonIndex] = 0
-            buttonCollection[buttonIndex].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
-        }
-        
+        resetButtons()
     }
     
     func resetButtons() {
+        // Reset flip and flipper
         flipperOrientation = 1
         updateFlipperDisplay()
         flipNum = 0
