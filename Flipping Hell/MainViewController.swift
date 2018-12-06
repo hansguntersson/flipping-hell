@@ -22,8 +22,18 @@ class MainViewController: UIViewController {
         buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
     }
     
-    // var game = FlippingHell()
-    // Need to move functions to model from view controller and also update the view from the model
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let vc = segue.destination as? WinScreenController
+        {
+            vc.WinFlipsString = "FLIPS: \(flipNum)"
+            vc.GoalFlipsString = "GOAL: \(GoalFlips)"
+            vc.WinStarsString = "★"
+            vc.WinStarColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+        }
+    }
+    
+    var GoalFlips = 0
     
     var flipNum = 0 {
         didSet {
@@ -218,17 +228,4 @@ class MainViewController: UIViewController {
         return WinTrue
     }
     
-}
-
-
-@IBDesignable extension UIButton {
-    
-    @IBInspectable var cornerRadius: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-        }
-        get {
-            return layer.cornerRadius
-        }
-    }
 }

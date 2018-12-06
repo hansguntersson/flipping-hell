@@ -1,20 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9K6-qu-tf3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uD3-vk-K03">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Orbitron-Bold.ttf">
+            <string>Orbitron-Bold</string>
+        </array>
         <array key="Orbitron-Regular.ttf">
             <string>Orbitron-Regular</string>
         </array>
     </customFonts>
     <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="4J1-sb-DXs">
+            <objects>
+                <viewController storyboardIdentifier="TitleScreen" id="uD3-vk-K03" customClass="GameViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rii-wp-hff">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZV-gN-Gxi">
+                                <rect key="frame" x="58" y="146" width="259.5" height="100"/>
+                                <string key="text">FLIPPING
+HELL</string>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="50"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orf-sz-7tJ">
+                                <rect key="frame" x="96" y="346" width="183" height="183"/>
+                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="orf-sz-7tJ" secondAttribute="height" multiplier="1:1" id="p8F-ry-MXo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Orbitron-Bold" family="Orbitron" pointSize="40"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9K6-qu-tf3" kind="show" id="tH7-wT-wSm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hZV-gN-Gxi" firstAttribute="centerX" secondItem="GGX-Sn-9PO" secondAttribute="centerX" id="5ff-rv-NeT"/>
+                            <constraint firstItem="hZV-gN-Gxi" firstAttribute="top" secondItem="GGX-Sn-9PO" secondAttribute="top" constant="126" id="Gc2-1a-mwj"/>
+                            <constraint firstItem="orf-sz-7tJ" firstAttribute="top" secondItem="hZV-gN-Gxi" secondAttribute="bottom" constant="100" id="j1e-LF-cZ0"/>
+                            <constraint firstItem="orf-sz-7tJ" firstAttribute="centerX" secondItem="GGX-Sn-9PO" secondAttribute="centerX" id="wyt-3r-CcG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GGX-Sn-9PO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cij-IX-Epf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1290.4000000000001" y="130.88455772113943"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="1rw-iI-qPN">
             <objects>
@@ -162,7 +210,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5y-BO-pNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1295.2" y="131.78410794602701"/>
+            <point key="canvasLocation" x="-585" y="812"/>
         </scene>
         <!--Level Table View Controller-->
         <scene sceneID="HW2-aE-ejK">
@@ -1284,9 +1332,9 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-Qv-J5a">
-                                        <rect key="frame" x="73" y="217" width="147" height="28"/>
-                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="16"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-Qv-J5a">
+                                        <rect key="frame" x="45.5" y="220" width="202" height="34"/>
+                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="REPLAY LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                         </state>
@@ -1299,9 +1347,9 @@
                                             <action selector="replayLevel:" destination="Wpg-a9-9ol" eventType="touchUpInside" id="u7t-Yn-CsX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSY-zI-X61">
-                                        <rect key="frame" x="86" y="259" width="121" height="28"/>
-                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="16"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSY-zI-X61">
+                                        <rect key="frame" x="63.5" y="264" width="166" height="34"/>
+                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="NEXT LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                         </state>
@@ -1320,17 +1368,21 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V16-oz-6bC">
-                                        <rect key="frame" x="82.5" y="129" width="130" height="56"/>
-                                        <string key="text">FLIPS: X
-GOAL: X</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V16-oz-6bC">
+                                        <rect key="frame" x="82.5" y="129" width="130" height="28"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB6-oi-Bbx">
-                                        <rect key="frame" x="73.5" y="302" width="146" height="28"/>
-                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
+                                        <rect key="frame" x="82.5" y="169" width="128" height="28"/>
+                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB6-oi-Bbx">
+                                        <rect key="frame" x="46.5" y="308" width="200" height="34"/>
+                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="LEVEL SELECT">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                         </state>
@@ -1346,16 +1398,18 @@ GOAL: X</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="zl1-co-VyD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JB6-oi-Bbx" secondAttribute="bottom" constant="29" id="4gS-BE-yPg"/>
-                                    <constraint firstItem="JB6-oi-Bbx" firstAttribute="top" secondItem="qSY-zI-X61" secondAttribute="bottom" constant="15" id="Bi1-ej-Lko"/>
+                                    <constraint firstItem="zl1-co-VyD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JB6-oi-Bbx" secondAttribute="bottom" constant="20" id="4gS-BE-yPg"/>
+                                    <constraint firstItem="JB6-oi-Bbx" firstAttribute="top" secondItem="qSY-zI-X61" secondAttribute="bottom" constant="10" id="Bi1-ej-Lko"/>
                                     <constraint firstItem="DoV-Og-XyQ" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="D5p-K2-Aig"/>
                                     <constraint firstItem="qSY-zI-X61" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="Ecl-NM-CD3"/>
                                     <constraint firstItem="V16-oz-6bC" firstAttribute="top" secondItem="DoV-Og-XyQ" secondAttribute="bottom" constant="20" id="FIY-Zl-Fzm"/>
                                     <constraint firstItem="znf-6u-XMq" firstAttribute="top" secondItem="zl1-co-VyD" secondAttribute="top" constant="26" id="I0n-Ud-TLM"/>
                                     <constraint firstItem="V16-oz-6bC" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" constant="1" id="KxJ-5i-88u"/>
-                                    <constraint firstItem="4r9-Qv-J5a" firstAttribute="top" secondItem="V16-oz-6bC" secondAttribute="bottom" constant="32" id="QNg-2w-hfJ"/>
                                     <constraint firstItem="znf-6u-XMq" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="SiX-SV-T0K"/>
-                                    <constraint firstItem="qSY-zI-X61" firstAttribute="top" secondItem="4r9-Qv-J5a" secondAttribute="bottom" constant="14" id="khE-WX-NB7"/>
+                                    <constraint firstItem="4r9-Qv-J5a" firstAttribute="top" secondItem="kO0-9R-1J9" secondAttribute="bottom" constant="23" id="Zgw-UC-JTm"/>
+                                    <constraint firstItem="kO0-9R-1J9" firstAttribute="top" secondItem="V16-oz-6bC" secondAttribute="bottom" constant="12" id="e1f-RE-6RV"/>
+                                    <constraint firstItem="kO0-9R-1J9" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="hrd-CB-khY"/>
+                                    <constraint firstItem="qSY-zI-X61" firstAttribute="top" secondItem="4r9-Qv-J5a" secondAttribute="bottom" constant="10" id="khE-WX-NB7"/>
                                     <constraint firstItem="JB6-oi-Bbx" firstAttribute="centerX" secondItem="qSY-zI-X61" secondAttribute="centerX" id="w01-Tg-7j0"/>
                                     <constraint firstItem="4r9-Qv-J5a" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="xVm-Gy-aLw"/>
                                     <constraint firstItem="DoV-Og-XyQ" firstAttribute="top" secondItem="znf-6u-XMq" secondAttribute="bottom" constant="19" id="yrM-ui-lqN"/>
@@ -1373,6 +1427,9 @@ GOAL: X</string>
                         <viewLayoutGuide key="safeArea" id="FLo-TF-OdD"/>
                     </view>
                     <connections>
+                        <outlet property="GoalFlips" destination="kO0-9R-1J9" id="FiP-s3-dzS"/>
+                        <outlet property="WinFlips" destination="V16-oz-6bC" id="2W6-im-OP4"/>
+                        <outlet property="WinStars" destination="DoV-Og-XyQ" id="1Sd-21-LFK"/>
                         <segue destination="L3x-7Q-pU7" kind="unwind" identifier="unwindToMainViewController" unwindAction="unwindToMainViewControllerWithSegue:" id="CqW-Y4-H4p"/>
                         <segue destination="L3x-7Q-pU7" kind="unwind" identifier="unwindToLevelViewController" unwindAction="unwindToLevelViewControllerWithSegue:" id="py9-Ii-DcC"/>
                     </connections>
@@ -1380,7 +1437,7 @@ GOAL: X</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBG-7t-jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="L3x-7Q-pU7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="850" y="132"/>
+            <point key="canvasLocation" x="848.79999999999995" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>
