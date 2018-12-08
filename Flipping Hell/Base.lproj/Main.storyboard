@@ -300,6 +300,7 @@ HELL</string>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="levelGoal" destination="5tq-9a-9hD" id="IcG-Wx-z5O"/>
                                     <outlet property="levelIndex" destination="Zxa-HP-flf" id="WcM-bb-VDy"/>
                                     <outlet property="levelStars" destination="uJU-xP-I9D" id="7fG-sX-bqw"/>
                                 </connections>
