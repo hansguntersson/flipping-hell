@@ -32,13 +32,13 @@ class MainViewController: UIViewController {
                     vc.WinStarsString = "★"
                     vc.WinStarColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
                 } else if (flipNum - GoalFlips > 0) {
-                    vc.WinStarsString = "★★"
+                    vc.WinStarsString = "★ ★"
                     vc.WinStarColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
                 } else if (flipNum - GoalFlips == 0) {
-                    vc.WinStarsString = "★★★"
+                    vc.WinStarsString = "★ ★ ★"
                     vc.WinStarColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
                 } else if (flipNum - GoalFlips < 0) {
-                    vc.WinStarsString = "✮✮✮"
+                    vc.WinStarsString = "✮ ✮ ✮"
                     vc.WinStarColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
                 }
         }

@@ -12,6 +12,7 @@ class LevelTableViewCell: UITableViewCell {
     
     @IBOutlet var levelStars: UILabel!
     @IBOutlet var levelIndex: UIButton!
+    @IBOutlet var levelGoal: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

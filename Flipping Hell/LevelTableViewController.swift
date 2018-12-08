@@ -48,8 +48,9 @@ class LevelTableViewController: UITableViewController {
         
         let level = levels[indexPath.row]
         
-        cell.levelStars.text = level.levelstars
         cell.levelIndex.setTitle(String(level.levelIndex), for: .normal)
+        cell.levelGoal.text = "GOAL: " + "\(level.goalFlips)"
+        cell.levelStars.text = level.levelstars
 
         return cell
     }

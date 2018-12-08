@@ -19,7 +19,7 @@ class Level {
     var attempts = 0 // Hpw many attempts were made
     var minFlips: Int? = nil // The minimum number of flips the level has been completed in
     var minMoves: Array<Int> = [0] // The minimum moves the level has been completed in
-    var levelstars = "" // The star sequence for the level
+    var levelstars = "☆ ☆ ☆" // The star sequence for the level
     
     let levelIndex: Int // Which index the level is at
     static var levelsIndices = -1 // The class index for the levels
@@ -47,11 +47,11 @@ class Level {
                 if (moveCount - goalFlips >= 2) {
                     levelstars = "★"
                 } else if (moveCount - goalFlips > 0) {
-                    levelstars = "★★"
+                    levelstars = "★ ★"
                 } else if (moveCount - goalFlips == 0) {
-                    levelstars = "★★★"
+                    levelstars = "★ ★ ★"
                 } else if (moveCount - goalFlips < 0) {
-                    levelstars = "✮✮✮"
+                    levelstars = "✮ ✮ ✮"
                 }
             }
         } else {
