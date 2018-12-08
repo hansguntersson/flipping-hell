@@ -22,7 +22,7 @@ class Level {
     var levelstars = "" // The star sequence for the level
     
     let levelIndex: Int // Which index the level is at
-    static var levelsIndices = 0 // The class index for the levels
+    static var levelsIndices = -1 // The class index for the levels
     
     init(sequence: Array<Int>, goalFlips: Int) {
         self.sequence = sequence

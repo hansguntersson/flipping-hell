@@ -28,8 +28,19 @@ class MainViewController: UIViewController {
         {
             vc.WinFlipsString = "FLIPS: \(flipNum)"
             vc.GoalFlipsString = "GOAL: \(GoalFlips)"
-            vc.WinStarsString = "★"
-            vc.WinStarColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+                if (flipNum - GoalFlips > 2) {
+                    vc.WinStarsString = "★"
+                    vc.WinStarColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+                } else if (flipNum - GoalFlips > 0) {
+                    vc.WinStarsString = "★★"
+                    vc.WinStarColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+                } else if (flipNum - GoalFlips == 0) {
+                    vc.WinStarsString = "★★★"
+                    vc.WinStarColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+                } else if (flipNum - GoalFlips < 0) {
+                    vc.WinStarsString = "✮✮✮"
+                    vc.WinStarColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+                }
         }
     }
     
@@ -92,6 +103,8 @@ class MainViewController: UIViewController {
         updateFlipperDisplay()
         flipNum = 0
         
+        // add 1 to attemps on the level
+        
         // Reset buttons and array
         for buttonIndex in 0 ..< buttonStatus.count {
             buttonStatus[buttonIndex] = 0
@@ -136,9 +149,10 @@ class MainViewController: UIViewController {
         WinVal = checkWin()
         
         if (WinVal == true) {
-            performSegue(withIdentifier: "GameWonSegue", sender: self)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.performSegue(withIdentifier: "GameWonSegue", sender: self)
+            }
         }
-        
     }
     
     func updateWinDisplay() {
