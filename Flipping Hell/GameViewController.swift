@@ -10,16 +10,9 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    var game = FlippingHell()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        game.loadLevels()
-        
-        // Sync of game info etc
-        // Load levels accessible, settings, data behind model etc
-        // Need to move functions to model from view controller and also update the view from the model
     }
     
 
@@ -32,19 +25,18 @@ class GameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "loadTableSegue" {
-            if let mvc = segue.destination as? LevelTableViewController {
-                mvc.levels = game.levels
-            }
-        }
-    }
 
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    
 }
 
 @IBDesignable extension UIButton {

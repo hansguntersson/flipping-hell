@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uD3-vk-K03">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,17 +23,17 @@
             <objects>
                 <viewController storyboardIdentifier="TitleScreen" id="uD3-vk-K03" customClass="GameViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rii-wp-hff">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING HELL" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZV-gN-Gxi">
-                                <rect key="frame" x="117.5" y="30" width="432" height="50"/>
+                                <rect key="frame" x="70.666666666666686" y="145" width="273" height="100"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="50"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orf-sz-7tJ">
-                                <rect key="frame" x="233.5" y="110" width="200" height="200"/>
+                                <rect key="frame" x="107" y="295" width="200" height="200"/>
                                 <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="NSE-x4-Mok"/>
@@ -49,7 +49,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="9K6-qu-tf3" kind="show" identifier="loadTableSegue" id="tH7-wT-wSm"/>
+                                    <segue destination="Tc8-Sv-Aei" kind="show" identifier="loadMenu" id="7bc-vo-k3l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,22 +71,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cij-IX-Epf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1290.4047976011996" y="130.40000000000001"/>
+            <point key="canvasLocation" x="-3746" y="-143"/>
         </scene>
-        <!--Level Table View Controller-->
+        <!--Item-->
         <scene sceneID="HW2-aE-ejK">
             <objects>
                 <tableViewController storyboardIdentifier="LevelScreen" id="9K6-qu-tf3" customClass="LevelTableViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="70" sectionFooterHeight="28" id="LwH-pP-zzk">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="KZR-tU-vRX">
-                            <rect key="frame" x="0.0" y="0.0" width="667" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PICK A LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYG-Rb-8jv">
-                                    <rect key="frame" x="0.0" y="10" width="667" height="50"/>
+                                    <rect key="frame" x="0.0" y="10" width="414" height="50"/>
                                     <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,14 +103,14 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="130" width="667" height="70"/>
+                                <rect key="frame" x="0.0" y="130" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hef-C9-cRa" id="saT-tj-Esw">
-                                    <rect key="frame" x="0.0" y="0.0" width="667" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="69.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-HP-flf">
-                                            <rect key="frame" x="15" y="9.5" width="50.5" height="50.5"/>
+                                            <rect key="frame" x="14.999999999999996" y="9.6666666666666679" width="50.666666666666657" height="50.666666666666657"/>
                                             <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Zxa-HP-flf" secondAttribute="height" multiplier="1:1" id="AR4-Eh-jCy"/>
@@ -129,13 +129,13 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: 10" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD">
-                                            <rect key="frame" x="80.5" y="22" width="130" height="26"/>
+                                            <rect key="frame" x="80.666666666666686" y="22" width="130" height="26"/>
                                             <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="26"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆ ☆ ☆" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJU-xP-I9D">
-                                            <rect key="frame" x="523" y="11" width="124" height="48"/>
+                                            <rect key="frame" x="270" y="11" width="124" height="48"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
                                             <color key="textColor" white="0.80428617294520544" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -166,21 +166,22 @@
                             <outlet property="delegate" destination="9K6-qu-tf3" id="35h-bi-JB8"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="5gM-7J-EaH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxm-um-npz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-586.39999999999998" y="130.88455772113943"/>
+            <point key="canvasLocation" x="-1833" y="-143"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MainScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING HELL" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-aJ-FAB">
-                                <rect key="frame" x="20" y="20" width="216" height="25"/>
+                                <rect key="frame" x="69" y="40" width="276.33333333333331" height="32"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -189,7 +190,7 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zSS-ky-ncw">
-                                <rect key="frame" x="192.5" y="60" width="282" height="282"/>
+                                <rect key="frame" x="66" y="102" width="282" height="282"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gwq-aK-eyh">
                                         <rect key="frame" x="0.0" y="0.0" width="282" height="50"/>
@@ -623,7 +624,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WBP-0A-RtF">
-                                <rect key="frame" x="531" y="134.5" width="106" height="106"/>
+                                <rect key="frame" x="248" y="434" width="106" height="106"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T7D-V6-QQc">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
@@ -673,13 +674,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP">
-                                <rect key="frame" x="530.5" y="20" width="116.5" height="25"/>
+                                <rect key="frame" x="148.66666666666666" y="691" width="116.66666666666666" height="25"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
                                 <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FTb-oN-8i8">
-                                <rect key="frame" x="22" y="328" width="49" height="29"/>
+                                <rect key="frame" x="22" y="689" width="49" height="29"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -690,7 +691,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="edz-eu-b6a">
-                                <rect key="frame" x="30" y="129.5" width="116" height="116"/>
+                                <rect key="frame" x="60" y="434" width="116" height="116"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FBu-sj-7N8">
                                         <rect key="frame" x="0.0" y="0.0" width="116" height="20"/>
@@ -1075,13 +1076,33 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="right" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xx4-Kh-rey">
-                                <rect key="frame" x="589" y="328" width="56" height="29"/>
+                                <rect key="frame" x="336" y="689" width="56" height="29"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="resetLevel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2pA-jG-7f5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Goj-hu-oHh">
+                                <rect key="frame" x="374" y="30" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="AFF-qY-EyQ"/>
+                                    <constraint firstAttribute="width" secondItem="Goj-hu-oHh" secondAttribute="height" multiplier="1:1" id="zP1-y4-hAe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="ℹ︎">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="xvK-cP-GKh" kind="presentation" identifier="GameHelpSegue" animates="NO" modalPresentationStyle="overFullScreen" id="TbB-AH-8GU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1099,9 +1120,11 @@
                             </constraint>
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="edz-eu-b6a" secondAttribute="bottom" constant="15" id="CSp-nl-WMK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FTb-oN-8i8" secondAttribute="bottom" constant="18" id="EQ2-Ow-SzJ"/>
+                            <constraint firstItem="Goj-hu-oHh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Gsg-Kg-FWi"/>
                             <constraint firstItem="xx4-Kh-rey" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zSS-ky-ncw" secondAttribute="trailing" constant="50" id="GvS-UE-awW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CtB-2T-XqP" secondAttribute="bottom" constant="20" id="HFQ-og-lhO"/>
                             <constraint firstItem="edz-eu-b6a" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HNY-dK-R8g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Goj-hu-oHh" secondAttribute="trailing" constant="10" id="JBQ-Y4-gJS"/>
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WBP-0A-RtF" secondAttribute="bottom" constant="20" id="QKH-qq-0Sb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CtB-2T-XqP" secondAttribute="trailing" constant="20" id="QcN-PR-fzr"/>
                             <constraint firstItem="edz-eu-b6a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="UoB-yo-djA">
@@ -1134,12 +1157,12 @@
                                 <exclude reference="QcN-PR-fzr"/>
                                 <exclude reference="bW9-eh-aMP"/>
                                 <exclude reference="CAb-bu-JTQ"/>
-                                <exclude reference="HNY-dK-R8g"/>
                                 <exclude reference="AJp-IU-aXf"/>
                                 <exclude reference="xx9-Sz-dxd"/>
+                                <exclude reference="HNY-dK-R8g"/>
+                                <exclude reference="Zok-bb-UYd"/>
                                 <exclude reference="3C9-Xg-9np"/>
                                 <exclude reference="pNY-s5-pFA"/>
-                                <exclude reference="Zok-bb-UYd"/>
                                 <exclude reference="GvS-UE-awW"/>
                             </mask>
                         </variation>
@@ -1151,11 +1174,13 @@
                                 <include reference="bW9-eh-aMP"/>
                                 <exclude reference="2bl-zw-9s6"/>
                                 <include reference="CAb-bu-JTQ"/>
-                                <include reference="HNY-dK-R8g"/>
-                                <exclude reference="gpA-89-d43"/>
                                 <include reference="AJp-IU-aXf"/>
                                 <exclude reference="nfh-TH-r0J"/>
                                 <include reference="xx9-Sz-dxd"/>
+                                <include reference="HNY-dK-R8g"/>
+                                <exclude reference="gpA-89-d43"/>
+                                <include reference="Zok-bb-UYd"/>
+                                <exclude reference="ePV-Fz-SQg"/>
                                 <exclude reference="gwA-6u-O71"/>
                                 <include reference="3C9-Xg-9np"/>
                                 <exclude reference="CSp-nl-WMK"/>
@@ -1163,8 +1188,6 @@
                                 <exclude reference="lTt-jJ-Saz"/>
                                 <exclude reference="mJS-8c-DDg"/>
                                 <include reference="pNY-s5-pFA"/>
-                                <include reference="Zok-bb-UYd"/>
-                                <exclude reference="ePV-Fz-SQg"/>
                                 <include reference="GvS-UE-awW"/>
                                 <exclude reference="vam-GC-oGH"/>
                                 <exclude reference="y0Y-DR-AZT"/>
@@ -1240,39 +1263,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="kWS-v8-6Ho" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="120.8" y="129.98500749625188"/>
+            <point key="canvasLocation" x="-972" y="-143"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nYe-xn-huK">
+            <objects>
+                <viewController storyboardIdentifier="HelpScreen" id="xvK-cP-GKh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L8M-qs-L85">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0k-6l-oIe">
+                                <rect key="frame" x="40" y="40" width="334" height="656"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO PLAY" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-hX-03X">
+                                        <rect key="frame" x="36" y="62" width="262" height="32"/>
+                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-Gc-qAn">
+                                        <rect key="frame" x="630" y="5" width="30" height="33"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="✕">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text and pictures" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-s0-jGw">
+                                        <rect key="frame" x="31.666666666666686" y="114" width="271" height="28"/>
+                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Fd7-s0-jGw" firstAttribute="centerX" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="9vY-MY-4MD"/>
+                                    <constraint firstItem="4qe-Gc-qAn" firstAttribute="trailing" secondItem="BlO-zn-FaH" secondAttribute="trailing" constant="326" id="T6g-M0-hyL"/>
+                                    <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="4qe-Gc-qAn" secondAttribute="bottom" constant="24" id="abb-rq-BS1"/>
+                                    <constraint firstItem="4qe-Gc-qAn" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="5" id="ohX-R2-JI7"/>
+                                    <constraint firstItem="sBf-hX-03X" firstAttribute="centerX" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="pxr-5K-voQ"/>
+                                    <constraint firstItem="Fd7-s0-jGw" firstAttribute="top" secondItem="sBf-hX-03X" secondAttribute="bottom" constant="20" id="sCQ-qt-qb9"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="BlO-zn-FaH"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D0k-6l-oIe" firstAttribute="centerX" secondItem="zbE-dd-AW7" secondAttribute="centerX" id="4JL-d0-4rN"/>
+                            <constraint firstItem="D0k-6l-oIe" firstAttribute="top" secondItem="zbE-dd-AW7" secondAttribute="top" constant="20" id="Y6D-k8-abA"/>
+                            <constraint firstItem="D0k-6l-oIe" firstAttribute="leading" secondItem="zbE-dd-AW7" secondAttribute="leading" constant="40" id="anw-TI-W7F"/>
+                            <constraint firstItem="zbE-dd-AW7" firstAttribute="bottom" secondItem="D0k-6l-oIe" secondAttribute="bottom" constant="40" id="aua-E5-VVV"/>
+                            <constraint firstItem="zbE-dd-AW7" firstAttribute="trailing" secondItem="D0k-6l-oIe" secondAttribute="trailing" constant="40" id="ntt-Ib-Dek"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zbE-dd-AW7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rl9-fO-5Xq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="-547"/>
         </scene>
         <!--Win Screen Controller-->
         <scene sceneID="qiU-yJ-KnD">
             <objects>
                 <viewController storyboardIdentifier="WinScreen" id="Wpg-a9-9ol" customClass="WinScreenController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="XaS-0q-XV9">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeR-sp-2XO">
-                                <rect key="frame" x="40" y="25" width="587" height="325"/>
+                                <rect key="frame" x="40" y="130" width="334" height="496"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELL DONE!" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znf-6u-XMq">
-                                        <rect key="frame" x="177.5" y="25" width="232.5" height="32"/>
+                                        <rect key="frame" x="50.666666666666686" y="25" width="233" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★ ★ ★ " textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoV-Og-XyQ">
-                                        <rect key="frame" x="232" y="67" width="123" height="32"/>
+                                        <rect key="frame" x="105.66666666666666" y="77" width="123" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V16-oz-6bC">
-                                        <rect key="frame" x="138.5" y="119" width="130" height="28"/>
+                                        <rect key="frame" x="102" y="129" width="130" height="28"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-Qv-J5a">
-                                        <rect key="frame" x="192.5" y="167" width="202" height="34"/>
+                                        <rect key="frame" x="66" y="217" width="202" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="REPLAY LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1287,7 +1374,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSY-zI-X61">
-                                        <rect key="frame" x="210.5" y="211" width="166" height="34"/>
+                                        <rect key="frame" x="84" y="271" width="166" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="NEXT LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1302,7 +1389,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB6-oi-Bbx">
-                                        <rect key="frame" x="193.5" y="255" width="200" height="34"/>
+                                        <rect key="frame" x="67" y="325" width="200" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="LEVEL SELECT">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1317,7 +1404,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
-                                        <rect key="frame" x="318" y="119" width="128" height="28"/>
+                                        <rect key="frame" x="103" y="169" width="128" height="28"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1390,6 +1477,7 @@
                             <constraint firstItem="FLo-TF-OdD" firstAttribute="bottom" secondItem="CeR-sp-2XO" secondAttribute="bottom" constant="110" id="ugM-Zb-Uyt">
                                 <variation key="heightClass=compact-widthClass=compact" constant="25"/>
                             </constraint>
+                            <constraint firstItem="FLo-TF-OdD" firstAttribute="trailing" secondItem="CeR-sp-2XO" secondAttribute="trailing" constant="40" id="vfz-2b-a9D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FLo-TF-OdD"/>
                     </view>
@@ -1404,7 +1492,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBG-7t-jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="L3x-7Q-pU7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="848.72563718140941" y="130.40000000000001"/>
+            <point key="canvasLocation" x="48" y="148"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="I4D-1F-eud">
+            <objects>
+                <viewController storyboardIdentifier="AboutScreen" id="jkW-6U-c8q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eka-SJ-DvV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="y1s-Uj-UOi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="D9W-tp-KLI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1833" y="-829"/>
+        </scene>
+        <!--Menu Tab Bar Controller-->
+        <scene sceneID="nun-pZ-KZb">
+            <objects>
+                <tabBarController storyboardIdentifier="MenuScreen" id="Tc8-Sv-Aei" customClass="MenuTabBarController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ofg-tj-kcs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9K6-qu-tf3" kind="relationship" relationship="viewControllers" id="Ri1-rm-r2b"/>
+                        <segue destination="Pdg-KA-KTV" kind="relationship" relationship="viewControllers" id="oF1-i3-eIy"/>
+                        <segue destination="jkW-6U-c8q" kind="relationship" relationship="viewControllers" id="oJA-aA-oYf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kh-Hs-I1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2942" y="-143"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="GF7-We-ak0">
+            <objects>
+                <viewController storyboardIdentifier="OptionsScreen" id="Pdg-KA-KTV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7IK-jt-HHT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hSq-6s-dx7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="hoc-hG-2L5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-hG-WfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1833" y="571"/>
         </scene>
     </scenes>
 </document>

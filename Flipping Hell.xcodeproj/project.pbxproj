@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508CECC216FD98C0029408A /* LevelTableViewCell.swift */; };
+		E50CBC0B21DD0CF600BA46DF /* MenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50CBC0A21DD0CF600BA46DF /* MenuTabBarController.swift */; };
 		E543F3F52162B77200329519 /* Orbitron-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F02162B77200329519 /* Orbitron-Black.ttf */; };
 		E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F12162B77200329519 /* Orbitron-Medium.ttf */; };
 		E543F3F72162B77200329519 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F22162B77200329519 /* Orbitron-Regular.ttf */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		E508CECC216FD98C0029408A /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
+		E50CBC0A21DD0CF600BA46DF /* MenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarController.swift; sourceTree = "<group>"; };
 		E543F3F02162B77200329519 /* Orbitron-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Black.ttf"; sourceTree = "<group>"; };
 		E543F3F12162B77200329519 /* Orbitron-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Medium.ttf"; sourceTree = "<group>"; };
 		E543F3F22162B77200329519 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				E5C106B4215408AF00947220 /* AppDelegate.swift */,
 				E5C106BD215408B000947220 /* LaunchScreen.storyboard */,
 				E5C106B8215408AF00947220 /* Main.storyboard */,
+				E50CBC0A21DD0CF600BA46DF /* MenuTabBarController.swift */,
 				E5F12CC021B94949004D0176 /* GameViewController.swift */,
 				E56E325B2173612500A16788 /* LevelTableViewController.swift */,
 				E508CECC216FD98C0029408A /* LevelTableViewCell.swift */,
@@ -307,6 +310,7 @@
 				E5C106B7215408AF00947220 /* MainViewController.swift in Sources */,
 				E54E2957219A0F120042934E /* WinScreenController.swift in Sources */,
 				E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */,
+				E50CBC0B21DD0CF600BA46DF /* MenuTabBarController.swift in Sources */,
 				E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */,
 				E56E325A21735E8200A16788 /* Level.swift in Sources */,
 				E5C106B5215408AF00947220 /* AppDelegate.swift in Sources */,
