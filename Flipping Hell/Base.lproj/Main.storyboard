@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uD3-vk-K03">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,17 +23,17 @@
             <objects>
                 <viewController storyboardIdentifier="TitleScreen" id="uD3-vk-K03" customClass="GameViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rii-wp-hff">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING HELL" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZV-gN-Gxi">
-                                <rect key="frame" x="70.666666666666686" y="145" width="273" height="100"/>
+                                <rect key="frame" x="51" y="145" width="273" height="100"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="50"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orf-sz-7tJ">
-                                <rect key="frame" x="107" y="295" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="295" width="200" height="200"/>
                                 <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="NSE-x4-Mok"/>
@@ -73,20 +73,20 @@
             </objects>
             <point key="canvasLocation" x="-3746" y="-143"/>
         </scene>
-        <!--Item-->
+        <!--Levels-->
         <scene sceneID="HW2-aE-ejK">
             <objects>
                 <tableViewController storyboardIdentifier="LevelScreen" id="9K6-qu-tf3" customClass="LevelTableViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="70" sectionFooterHeight="28" id="LwH-pP-zzk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="KZR-tU-vRX">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PICK A LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYG-Rb-8jv">
-                                    <rect key="frame" x="0.0" y="10" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="10" width="375" height="50"/>
                                     <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,14 +103,14 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="130" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hef-C9-cRa" id="saT-tj-Esw">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="69.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-HP-flf">
-                                            <rect key="frame" x="14.999999999999996" y="9.6666666666666679" width="50.666666666666657" height="50.666666666666657"/>
+                                            <rect key="frame" x="15" y="9.5" width="50.5" height="50.5"/>
                                             <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Zxa-HP-flf" secondAttribute="height" multiplier="1:1" id="AR4-Eh-jCy"/>
@@ -129,13 +129,13 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: 10" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD">
-                                            <rect key="frame" x="80.666666666666686" y="22" width="130" height="26"/>
+                                            <rect key="frame" x="80.5" y="22" width="130" height="26"/>
                                             <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="26"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆ ☆ ☆" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJU-xP-I9D">
-                                            <rect key="frame" x="270" y="11" width="124" height="48"/>
+                                            <rect key="frame" x="231" y="11" width="124" height="48"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
                                             <color key="textColor" white="0.80428617294520544" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -166,7 +166,10 @@
                             <outlet property="delegate" destination="9K6-qu-tf3" id="35h-bi-JB8"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="5gM-7J-EaH"/>
+                    <tabBarItem key="tabBarItem" title="Levels" id="5gM-7J-EaH">
+                        <color key="badgeColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxm-um-npz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,11 +180,11 @@
             <objects>
                 <viewController storyboardIdentifier="MainScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING HELL" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-aJ-FAB">
-                                <rect key="frame" x="69" y="40" width="276.33333333333331" height="32"/>
+                                <rect key="frame" x="49.5" y="40" width="276.5" height="32"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -190,7 +193,7 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zSS-ky-ncw">
-                                <rect key="frame" x="66" y="102" width="282" height="282"/>
+                                <rect key="frame" x="46.5" y="102" width="282" height="282"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gwq-aK-eyh">
                                         <rect key="frame" x="0.0" y="0.0" width="282" height="50"/>
@@ -624,7 +627,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WBP-0A-RtF">
-                                <rect key="frame" x="248" y="434" width="106" height="106"/>
+                                <rect key="frame" x="209" y="434" width="106" height="106"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T7D-V6-QQc">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
@@ -673,14 +676,27 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP">
-                                <rect key="frame" x="148.66666666666666" y="691" width="116.66666666666666" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP">
+                                <rect key="frame" x="129.5" y="622" width="116.5" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="jqt-Hr-bNX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
                                 <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jqt-Hr-bNX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="jqt-Hr-bNX"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FTb-oN-8i8">
-                                <rect key="frame" x="22" y="689" width="49" height="29"/>
+                                <rect key="frame" x="22" y="620" width="49" height="29"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1076,7 +1092,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="right" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xx4-Kh-rey">
-                                <rect key="frame" x="336" y="689" width="56" height="29"/>
+                                <rect key="frame" x="297" y="620" width="56" height="29"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1086,7 +1102,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Goj-hu-oHh">
-                                <rect key="frame" x="374" y="30" width="30" height="30"/>
+                                <rect key="frame" x="335" y="30" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="AFF-qY-EyQ"/>
@@ -1113,6 +1129,7 @@
                             <constraint firstItem="pYV-aJ-FAB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2bl-zw-9s6"/>
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pYV-aJ-FAB" secondAttribute="trailing" constant="20" id="3C9-Xg-9np"/>
                             <constraint firstItem="zSS-ky-ncw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="9Ff-np-DCf"/>
+                            <constraint firstItem="Goj-hu-oHh" firstAttribute="trailing" secondItem="CtB-2T-XqP" secondAttribute="trailing" id="A2x-e1-izC"/>
                             <constraint firstItem="zSS-ky-ncw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FTb-oN-8i8" secondAttribute="trailing" constant="50" id="AJp-IU-aXf"/>
                             <constraint firstItem="cVc-y0-2hY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Bzr-Ba-s9P"/>
                             <constraint firstItem="pYV-aJ-FAB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CAb-bu-JTQ">
@@ -1130,6 +1147,7 @@
                             <constraint firstItem="edz-eu-b6a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="UoB-yo-djA">
                                 <variation key="heightClass=compact-widthClass=compact" constant="30"/>
                             </constraint>
+                            <constraint firstItem="CtB-2T-XqP" firstAttribute="baseline" secondItem="Goj-hu-oHh" secondAttribute="top" constant="-14" id="Z3i-OV-iHY"/>
                             <constraint firstItem="WBP-0A-RtF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Zok-bb-UYd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xx4-Kh-rey" secondAttribute="bottom" constant="18" id="bW9-eh-aMP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zSS-ky-ncw" secondAttribute="trailing" constant="15" id="cJi-7k-C2f"/>
@@ -1157,12 +1175,14 @@
                                 <exclude reference="QcN-PR-fzr"/>
                                 <exclude reference="bW9-eh-aMP"/>
                                 <exclude reference="CAb-bu-JTQ"/>
+                                <exclude reference="HNY-dK-R8g"/>
                                 <exclude reference="AJp-IU-aXf"/>
                                 <exclude reference="xx9-Sz-dxd"/>
-                                <exclude reference="HNY-dK-R8g"/>
-                                <exclude reference="Zok-bb-UYd"/>
                                 <exclude reference="3C9-Xg-9np"/>
+                                <exclude reference="Z3i-OV-iHY"/>
                                 <exclude reference="pNY-s5-pFA"/>
+                                <exclude reference="Zok-bb-UYd"/>
+                                <exclude reference="A2x-e1-izC"/>
                                 <exclude reference="GvS-UE-awW"/>
                             </mask>
                         </variation>
@@ -1170,24 +1190,28 @@
                             <mask key="constraints">
                                 <include reference="EQ2-Ow-SzJ"/>
                                 <exclude reference="HFQ-og-lhO"/>
+                                <exclude reference="JBQ-Y4-gJS"/>
                                 <include reference="QcN-PR-fzr"/>
                                 <include reference="bW9-eh-aMP"/>
                                 <exclude reference="2bl-zw-9s6"/>
                                 <include reference="CAb-bu-JTQ"/>
+                                <include reference="HNY-dK-R8g"/>
+                                <exclude reference="gpA-89-d43"/>
                                 <include reference="AJp-IU-aXf"/>
                                 <exclude reference="nfh-TH-r0J"/>
                                 <include reference="xx9-Sz-dxd"/>
-                                <include reference="HNY-dK-R8g"/>
-                                <exclude reference="gpA-89-d43"/>
-                                <include reference="Zok-bb-UYd"/>
-                                <exclude reference="ePV-Fz-SQg"/>
                                 <exclude reference="gwA-6u-O71"/>
                                 <include reference="3C9-Xg-9np"/>
                                 <exclude reference="CSp-nl-WMK"/>
                                 <exclude reference="QKH-qq-0Sb"/>
+                                <include reference="Z3i-OV-iHY"/>
                                 <exclude reference="lTt-jJ-Saz"/>
                                 <exclude reference="mJS-8c-DDg"/>
                                 <include reference="pNY-s5-pFA"/>
+                                <include reference="Zok-bb-UYd"/>
+                                <exclude reference="ePV-Fz-SQg"/>
+                                <include reference="A2x-e1-izC"/>
+                                <exclude reference="Gsg-Kg-FWi"/>
                                 <include reference="GvS-UE-awW"/>
                                 <exclude reference="vam-GC-oGH"/>
                                 <exclude reference="y0Y-DR-AZT"/>
@@ -1263,27 +1287,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="kWS-v8-6Ho" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-972" y="-143"/>
+            <point key="canvasLocation" x="-972.86356821589209" y="-143.19999999999999"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nYe-xn-huK">
             <objects>
                 <viewController storyboardIdentifier="HelpScreen" id="xvK-cP-GKh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L8M-qs-L85">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0k-6l-oIe">
-                                <rect key="frame" x="40" y="40" width="334" height="656"/>
+                                <rect key="frame" x="40" y="40" width="295" height="587"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO PLAY" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-hX-03X">
-                                        <rect key="frame" x="36" y="62" width="262" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text and pictures" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-s0-jGw">
+                                        <rect key="frame" x="5" y="114" width="285" height="28"/>
+                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO PLAY" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-hX-03X">
+                                        <rect key="frame" x="16.5" y="62" width="262" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-Gc-qAn">
-                                        <rect key="frame" x="630" y="5" width="30" height="33"/>
+                                        <rect key="frame" x="260" y="5" width="30" height="33"/>
                                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="✕">
@@ -1295,18 +1325,16 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text and pictures" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-s0-jGw">
-                                        <rect key="frame" x="31.666666666666686" y="114" width="271" height="28"/>
-                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Fd7-s0-jGw" firstAttribute="centerX" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="9vY-MY-4MD"/>
-                                    <constraint firstItem="4qe-Gc-qAn" firstAttribute="trailing" secondItem="BlO-zn-FaH" secondAttribute="trailing" constant="326" id="T6g-M0-hyL"/>
-                                    <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="4qe-Gc-qAn" secondAttribute="bottom" constant="24" id="abb-rq-BS1"/>
+                                    <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="62" id="ObE-mt-2z3"/>
+                                    <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fd7-s0-jGw" secondAttribute="trailing" constant="5" id="QmZ-l8-tgh"/>
+                                    <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" secondItem="4qe-Gc-qAn" secondAttribute="trailing" constant="5" id="YMM-0g-z34"/>
+                                    <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sBf-hX-03X" secondAttribute="trailing" constant="5" id="fXj-2W-J6m"/>
+                                    <constraint firstItem="sBf-hX-03X" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="5" id="kqP-dW-ZPC"/>
+                                    <constraint firstItem="Fd7-s0-jGw" firstAttribute="leading" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="5" id="oD6-6c-jqd"/>
                                     <constraint firstItem="4qe-Gc-qAn" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="5" id="ohX-R2-JI7"/>
                                     <constraint firstItem="sBf-hX-03X" firstAttribute="centerX" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="pxr-5K-voQ"/>
                                     <constraint firstItem="Fd7-s0-jGw" firstAttribute="top" secondItem="sBf-hX-03X" secondAttribute="bottom" constant="20" id="sCQ-qt-qb9"/>
@@ -1334,32 +1362,32 @@
             <objects>
                 <viewController storyboardIdentifier="WinScreen" id="Wpg-a9-9ol" customClass="WinScreenController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="XaS-0q-XV9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeR-sp-2XO">
-                                <rect key="frame" x="40" y="130" width="334" height="496"/>
+                                <rect key="frame" x="40" y="130" width="295" height="427"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELL DONE!" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znf-6u-XMq">
-                                        <rect key="frame" x="50.666666666666686" y="25" width="233" height="32"/>
+                                        <rect key="frame" x="31" y="25" width="233" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★ ★ ★ " textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoV-Og-XyQ">
-                                        <rect key="frame" x="105.66666666666666" y="77" width="123" height="32"/>
+                                        <rect key="frame" x="86" y="77" width="123" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V16-oz-6bC">
-                                        <rect key="frame" x="102" y="129" width="130" height="28"/>
+                                        <rect key="frame" x="82.5" y="129" width="130" height="28"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-Qv-J5a">
-                                        <rect key="frame" x="66" y="217" width="202" height="34"/>
+                                        <rect key="frame" x="46.5" y="217" width="202" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="REPLAY LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1374,7 +1402,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSY-zI-X61">
-                                        <rect key="frame" x="84" y="271" width="166" height="34"/>
+                                        <rect key="frame" x="64.5" y="271" width="166" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="NEXT LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1389,7 +1417,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB6-oi-Bbx">
-                                        <rect key="frame" x="67" y="325" width="200" height="34"/>
+                                        <rect key="frame" x="47.5" y="325" width="200" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="LEVEL SELECT">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1404,7 +1432,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
-                                        <rect key="frame" x="103" y="169" width="128" height="28"/>
+                                        <rect key="frame" x="83.5" y="169" width="128" height="28"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1494,17 +1522,41 @@
             </objects>
             <point key="canvasLocation" x="48" y="148"/>
         </scene>
-        <!--Item-->
+        <!--About-->
         <scene sceneID="I4D-1F-eud">
             <objects>
                 <viewController storyboardIdentifier="AboutScreen" id="jkW-6U-c8q" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eka-SJ-DvV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bok-ms-Jpf">
+                                <rect key="frame" x="122" y="80" width="131" height="32"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the game" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-eT-Jzb">
+                                <rect key="frame" x="67" y="157" width="241" height="28"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DRB-eT-Jzb" firstAttribute="top" secondItem="bok-ms-Jpf" secondAttribute="bottom" constant="45" id="11A-dR-T5W"/>
+                            <constraint firstItem="bok-ms-Jpf" firstAttribute="top" secondItem="y1s-Uj-UOi" secondAttribute="top" constant="60" id="7cp-Yc-Mmy"/>
+                            <constraint firstItem="bok-ms-Jpf" firstAttribute="centerX" secondItem="y1s-Uj-UOi" secondAttribute="centerX" id="8hD-6t-R0G"/>
+                            <constraint firstItem="bok-ms-Jpf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y1s-Uj-UOi" secondAttribute="leading" constant="10" id="9hl-be-W6B"/>
+                            <constraint firstItem="y1s-Uj-UOi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bok-ms-Jpf" secondAttribute="trailing" constant="10" id="IV6-9Y-PW0"/>
+                            <constraint firstItem="DRB-eT-Jzb" firstAttribute="centerX" secondItem="y1s-Uj-UOi" secondAttribute="centerX" id="MFu-Sc-fQc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y1s-Uj-UOi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="D9W-tp-KLI"/>
+                    <tabBarItem key="tabBarItem" title="About" id="D9W-tp-KLI">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1529,17 +1581,44 @@
             </objects>
             <point key="canvasLocation" x="-2942" y="-143"/>
         </scene>
-        <!--Item-->
+        <!--Options-->
         <scene sceneID="GF7-We-ak0">
             <objects>
                 <viewController storyboardIdentifier="OptionsScreen" id="Pdg-KA-KTV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7IK-jt-HHT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change options" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-Fc-V6b">
+                                <rect key="frame" x="67.5" y="171" width="240" height="28"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPTIONS" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzC-h7-VTD">
+                                <rect key="frame" x="106" y="79" width="163" height="32"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hSq-6s-dx7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mA2-Fc-V6b" secondAttribute="trailing" constant="10" id="3j9-Ap-J5a"/>
+                            <constraint firstItem="mA2-Fc-V6b" firstAttribute="centerX" secondItem="hSq-6s-dx7" secondAttribute="centerX" id="8Jb-sK-6t8"/>
+                            <constraint firstItem="wzC-h7-VTD" firstAttribute="centerX" secondItem="hSq-6s-dx7" secondAttribute="centerX" id="9Ah-t1-t5h"/>
+                            <constraint firstItem="mA2-Fc-V6b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hSq-6s-dx7" secondAttribute="leading" constant="10" id="BfX-iH-wRw"/>
+                            <constraint firstItem="wzC-h7-VTD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hSq-6s-dx7" secondAttribute="leading" constant="50" id="FqV-xU-lJB"/>
+                            <constraint firstItem="mA2-Fc-V6b" firstAttribute="top" secondItem="wzC-h7-VTD" secondAttribute="bottom" constant="60" id="OJ6-Bk-LlN"/>
+                            <constraint firstItem="wzC-h7-VTD" firstAttribute="top" secondItem="hSq-6s-dx7" secondAttribute="top" constant="59" id="XG7-hR-77W"/>
+                            <constraint firstItem="hSq-6s-dx7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wzC-h7-VTD" secondAttribute="trailing" constant="50" id="wXk-lS-eGj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hSq-6s-dx7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="hoc-hG-2L5"/>
+                    <tabBarItem key="tabBarItem" title="Options" id="RES-UQ-5eX">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-hG-WfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
