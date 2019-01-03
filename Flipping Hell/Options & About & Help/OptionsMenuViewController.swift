@@ -17,7 +17,6 @@ class OptionsMenuViewController: UINavigationController {
     }
     
     @IBAction func unwindToMainMenuOptions(segue: UIStoryboardSegue) {
-        print("TEST OF ABOUT SEGUE")
         self.dismiss(animated: true, completion: nil)
     }
 

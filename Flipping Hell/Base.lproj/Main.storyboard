@@ -1343,7 +1343,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-Gc-qAn">
                                         <rect key="frame" x="260" y="10" width="30" height="33"/>
-                                        <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="✕">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1402,25 +1402,25 @@
                                 <rect key="frame" x="40" y="130" width="295" height="427"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELL DONE!" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znf-6u-XMq">
-                                        <rect key="frame" x="31" y="25" width="233" height="32"/>
+                                        <rect key="frame" x="52" y="25" width="191.5" height="37.5"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★ ★ ★ " textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoV-Og-XyQ">
-                                        <rect key="frame" x="86" y="77" width="123" height="32"/>
+                                        <rect key="frame" x="86" y="82.5" width="123" height="37.5"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V16-oz-6bC">
-                                        <rect key="frame" x="82.5" y="129" width="130" height="28"/>
+                                        <rect key="frame" x="93.5" y="140" width="108" height="33"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-Qv-J5a">
-                                        <rect key="frame" x="46.5" y="217" width="202" height="34"/>
+                                        <rect key="frame" x="71" y="238" width="153" height="38"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="REPLAY LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1435,7 +1435,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSY-zI-X61">
-                                        <rect key="frame" x="64.5" y="271" width="166" height="34"/>
+                                        <rect key="frame" x="84" y="296" width="127" height="38"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="NEXT LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1450,7 +1450,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB6-oi-Bbx">
-                                        <rect key="frame" x="47.5" y="325" width="200" height="34"/>
+                                        <rect key="frame" x="71" y="354" width="153" height="38"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="LEVEL SELECT">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1465,7 +1465,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
-                                        <rect key="frame" x="83.5" y="169" width="128" height="28"/>
+                                        <rect key="frame" x="93" y="185" width="109" height="33"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1578,18 +1578,10 @@
                         <viewLayoutGuide key="safeArea" id="y1s-Uj-UOi"/>
                     </view>
                     <navigationItem key="navigationItem" title="ABOUT" id="w1Y-Qd-o7n">
-                        <barButtonItem key="leftBarButtonItem" title="⮐ " id="BuX-mH-Jbp">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NM4-cy-Hv2">
-                                <rect key="frame" x="16" y="4" width="30" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="⮐ ">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="⮐ " id="4b5-vX-UUF">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="8j5-t2-JYO" kind="unwind" unwindAction="unwindToMainMenuAboutWithSegue:" id="69T-hV-t5t"/>
+                                <segue destination="8j5-t2-JYO" kind="unwind" unwindAction="unwindToMainMenuAboutWithSegue:" id="KJ8-DK-GNC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1597,7 +1589,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8j5-t2-JYO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1402" y="626"/>
+            <point key="canvasLocation" x="-1598" y="626"/>
         </scene>
         <!--OPTIONS-->
         <scene sceneID="GF7-We-ak0">
@@ -1624,18 +1616,10 @@
                         <viewLayoutGuide key="safeArea" id="hSq-6s-dx7"/>
                     </view>
                     <navigationItem key="navigationItem" title="OPTIONS" id="VxS-rn-A4h">
-                        <barButtonItem key="leftBarButtonItem" title="⮐ " id="Yzh-RG-ocy">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iHp-b7-pIE">
-                                <rect key="frame" x="16" y="4" width="30" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="⮐ ">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="⮐ " id="ysV-cq-4pF">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="EGm-BU-mjS" kind="unwind" identifier="unwindToMainMenuOptions" unwindAction="unwindToMainMenuOptionsWithSegue:" id="TTA-3D-AR2"/>
+                                <segue destination="EGm-BU-mjS" kind="unwind" unwindAction="unwindToMainMenuOptionsWithSegue:" id="6iN-Cc-get"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1644,7 +1628,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-hG-WfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EGm-BU-mjS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3106" y="1469"/>
+            <point key="canvasLocation" x="-3106" y="1383"/>
         </scene>
         <!--Levels-->
         <scene sceneID="wRx-LU-J6y">
@@ -1698,7 +1682,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcO-WM-9Kn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3106" y="697"/>
+            <point key="canvasLocation" x="-3106" y="626"/>
         </scene>
         <!--About-->
         <scene sceneID="XjH-fb-bau">
@@ -1724,7 +1708,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCx-NK-2zT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2196" y="626"/>
+            <point key="canvasLocation" x="-2372" y="626"/>
         </scene>
     </scenes>
 </document>
