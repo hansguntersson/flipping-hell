@@ -10,9 +10,12 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    var game = FlippingHell()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        game.loadLevels()
     }
     
 
@@ -25,16 +28,17 @@ class GameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "loadLevelsSegue" {
+            if let mvc = segue.destination as? LevelTableViewController {
+            mvc.levels = game.levels
+            }
+        }
+    }
     
     
 }
