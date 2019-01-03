@@ -20,6 +20,8 @@ class MainViewController: UIViewController {
         buttonFlipperCollection[4].layer.cornerRadius = buttonFlipperCollection[4].frame.size.width / 2
         buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
         buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
+        
+        levelTitle.text = "LEVEL \(levelNum)"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -52,6 +54,8 @@ class MainViewController: UIViewController {
         }
     }
     
+    var levelNum = 0
+    
     var flipperOrientation = 0
     
     var buttonStatus = [0, 0, 0, 0, 0,
@@ -79,7 +83,8 @@ class MainViewController: UIViewController {
                           20, 21, 22, 23] // List to define when right button is flipped
     
     
-    @IBOutlet weak var flipCount: UILabel!
+    @IBOutlet var flipCount: UILabel!
+    @IBOutlet var levelTitle: UILabel!
     @IBOutlet var buttonCollection: [UIButton]!
     @IBOutlet var buttonWinCollection: [UIButton]!
     @IBOutlet var buttonFlipperCollection: [UIButton]!

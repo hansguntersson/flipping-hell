@@ -100,6 +100,7 @@ class LevelTableViewController: UITableViewController {
                 if let mvc = segue.destination as? MainViewController {
                     mvc.currentLevel = level.sequence
                     mvc.GoalFlips = level.goalFlips
+                    mvc.levelNum = levelIndex
                 }
             }
         }
