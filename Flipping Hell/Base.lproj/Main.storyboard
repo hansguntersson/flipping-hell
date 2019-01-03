@@ -49,7 +49,47 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="9K6-qu-tf3" kind="presentation" identifier="loadLevelSegue" id="uyu-d4-LQA"/>
+                                    <segue destination="9K6-qu-tf3" kind="presentation" identifier="loadLevelsSegue" id="uyu-d4-LQA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chs-VK-OcS">
+                                <rect key="frame" x="15" y="602" width="50" height="50"/>
+                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="chs-VK-OcS" secondAttribute="height" multiplier="1:1" id="3w0-Eq-Ms2"/>
+                                    <constraint firstAttribute="width" constant="50" id="6JK-zQ-xC9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="⚙︎">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Pdg-KA-KTV" kind="presentation" id="uDK-am-t5z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ7-xP-76S">
+                                <rect key="frame" x="310" y="602" width="50" height="50"/>
+                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3fp-9J-SNe"/>
+                                    <constraint firstAttribute="width" secondItem="EZ7-xP-76S" secondAttribute="height" multiplier="1:1" id="42A-hU-lhf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="ℹ︎">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="jkW-6U-c8q" kind="presentation" id="uiw-uL-PA2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,11 +99,16 @@
                             <constraint firstItem="hZV-gN-Gxi" firstAttribute="top" secondItem="GGX-Sn-9PO" secondAttribute="top" constant="125" id="Gc2-1a-mwj">
                                 <variation key="heightClass=compact-widthClass=compact" constant="30"/>
                             </constraint>
+                            <constraint firstItem="EZ7-xP-76S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="chs-VK-OcS" secondAttribute="trailing" constant="50" id="KSM-kQ-vxJ"/>
                             <constraint firstItem="GGX-Sn-9PO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hZV-gN-Gxi" secondAttribute="trailing" constant="20" id="WmD-kQ-k8f"/>
+                            <constraint firstItem="GGX-Sn-9PO" firstAttribute="bottom" secondItem="EZ7-xP-76S" secondAttribute="bottom" constant="15" id="ZU9-iT-V1Q"/>
+                            <constraint firstItem="GGX-Sn-9PO" firstAttribute="trailing" secondItem="EZ7-xP-76S" secondAttribute="trailing" constant="15" id="Zqi-Tl-3QO"/>
                             <constraint firstItem="orf-sz-7tJ" firstAttribute="top" secondItem="hZV-gN-Gxi" secondAttribute="bottom" constant="50" id="j1e-LF-cZ0">
                                 <variation key="heightClass=compact-widthClass=compact" constant="30"/>
                             </constraint>
+                            <constraint firstItem="chs-VK-OcS" firstAttribute="leading" secondItem="GGX-Sn-9PO" secondAttribute="leading" constant="15" id="lbl-NE-8Pv"/>
                             <constraint firstItem="hZV-gN-Gxi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GGX-Sn-9PO" secondAttribute="leading" constant="20" id="rTh-lJ-kHT"/>
+                            <constraint firstItem="GGX-Sn-9PO" firstAttribute="bottom" secondItem="chs-VK-OcS" secondAttribute="bottom" constant="15" id="tAy-aA-NYu"/>
                             <constraint firstItem="orf-sz-7tJ" firstAttribute="centerX" secondItem="GGX-Sn-9PO" secondAttribute="centerX" id="wyt-3r-CcG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GGX-Sn-9PO"/>
@@ -71,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cij-IX-Epf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3746" y="-143"/>
+            <point key="canvasLocation" x="-2730.4000000000001" y="-143.47826086956522"/>
         </scene>
         <!--Levels-->
         <scene sceneID="HW2-aE-ejK">
@@ -100,6 +145,36 @@
                                 <constraint firstItem="LYG-Rb-8jv" firstAttribute="top" secondItem="KZR-tU-vRX" secondAttribute="top" constant="10" id="SKF-xC-0Qj"/>
                                 <constraint firstItem="LYG-Rb-8jv" firstAttribute="width" secondItem="KZR-tU-vRX" secondAttribute="width" id="SKa-ch-iKc"/>
                             </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="fnD-ec-mlK">
+                            <rect key="frame" x="0.0" y="200" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNU-TX-lPZ">
+                                    <rect key="frame" x="10" y="5" width="100" height="29"/>
+                                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Eq0-3t-rzJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="18"/>
+                                    <state key="normal" title="◀︎ BACK">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hNU-TX-lPZ" secondAttribute="trailing" constant="100" id="16m-ck-oR6"/>
+                                <constraint firstAttribute="bottom" secondItem="hNU-TX-lPZ" secondAttribute="bottom" constant="10" id="ZAr-Ov-wKp"/>
+                                <constraint firstItem="hNU-TX-lPZ" firstAttribute="top" secondItem="fnD-ec-mlK" secondAttribute="top" constant="5" id="ehb-RK-01j"/>
+                                <constraint firstItem="hNU-TX-lPZ" firstAttribute="leading" secondItem="fnD-ec-mlK" secondAttribute="leading" constant="10" id="iPz-94-ziW"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
@@ -173,7 +248,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxm-um-npz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1833" y="-143"/>
+            <point key="canvasLocation" x="-1834.4000000000001" y="-143.47826086956522"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1542,6 +1617,22 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mf-7J-ewy">
+                                <rect key="frame" x="16" y="30" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Ei1-lv-vCb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="18"/>
+                                <state key="normal" title="◀︎ BACK">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1550,7 +1641,11 @@
                             <constraint firstItem="bok-ms-Jpf" firstAttribute="centerX" secondItem="y1s-Uj-UOi" secondAttribute="centerX" id="8hD-6t-R0G"/>
                             <constraint firstItem="bok-ms-Jpf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y1s-Uj-UOi" secondAttribute="leading" constant="10" id="9hl-be-W6B"/>
                             <constraint firstItem="y1s-Uj-UOi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bok-ms-Jpf" secondAttribute="trailing" constant="10" id="IV6-9Y-PW0"/>
+                            <constraint firstItem="y1s-Uj-UOi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9mf-7J-ewy" secondAttribute="trailing" constant="100" id="JUS-xz-gJc"/>
                             <constraint firstItem="DRB-eT-Jzb" firstAttribute="centerX" secondItem="y1s-Uj-UOi" secondAttribute="centerX" id="MFu-Sc-fQc"/>
+                            <constraint firstItem="bok-ms-Jpf" firstAttribute="top" secondItem="9mf-7J-ewy" secondAttribute="bottom" constant="20" id="U5R-Ld-kt8"/>
+                            <constraint firstItem="9mf-7J-ewy" firstAttribute="top" secondItem="y1s-Uj-UOi" secondAttribute="top" constant="10" id="q9h-YU-Cr1"/>
+                            <constraint firstItem="9mf-7J-ewy" firstAttribute="leading" secondItem="y1s-Uj-UOi" secondAttribute="leading" constant="16" id="qEH-ym-Wec"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y1s-Uj-UOi"/>
                     </view>
@@ -1560,7 +1655,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1833" y="-829"/>
+            <point key="canvasLocation" x="-2353" y="710"/>
         </scene>
         <!--Options-->
         <scene sceneID="GF7-We-ak0">
@@ -1582,16 +1677,36 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJZ-Uy-vQ4">
+                                <rect key="frame" x="16" y="30" width="100" height="29"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Ql9-ZQ-kSf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="18"/>
+                                <state key="normal" title="◀︎ BACK">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vJZ-Uy-vQ4" firstAttribute="top" secondItem="hSq-6s-dx7" secondAttribute="top" constant="10" id="16w-gd-uvO"/>
                             <constraint firstItem="hSq-6s-dx7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mA2-Fc-V6b" secondAttribute="trailing" constant="10" id="3j9-Ap-J5a"/>
                             <constraint firstItem="mA2-Fc-V6b" firstAttribute="centerX" secondItem="hSq-6s-dx7" secondAttribute="centerX" id="8Jb-sK-6t8"/>
                             <constraint firstItem="wzC-h7-VTD" firstAttribute="centerX" secondItem="hSq-6s-dx7" secondAttribute="centerX" id="9Ah-t1-t5h"/>
                             <constraint firstItem="mA2-Fc-V6b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hSq-6s-dx7" secondAttribute="leading" constant="10" id="BfX-iH-wRw"/>
+                            <constraint firstItem="vJZ-Uy-vQ4" firstAttribute="leading" secondItem="hSq-6s-dx7" secondAttribute="leading" constant="16" id="FEX-q5-uTd"/>
                             <constraint firstItem="wzC-h7-VTD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hSq-6s-dx7" secondAttribute="leading" constant="50" id="FqV-xU-lJB"/>
+                            <constraint firstItem="hSq-6s-dx7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vJZ-Uy-vQ4" secondAttribute="trailing" constant="100" id="MEE-vl-lNb"/>
                             <constraint firstItem="mA2-Fc-V6b" firstAttribute="top" secondItem="wzC-h7-VTD" secondAttribute="bottom" constant="60" id="OJ6-Bk-LlN"/>
                             <constraint firstItem="wzC-h7-VTD" firstAttribute="top" secondItem="hSq-6s-dx7" secondAttribute="top" constant="59" id="XG7-hR-77W"/>
+                            <constraint firstItem="wzC-h7-VTD" firstAttribute="top" secondItem="vJZ-Uy-vQ4" secondAttribute="bottom" constant="20" id="gDR-Yv-G6K"/>
                             <constraint firstItem="hSq-6s-dx7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wzC-h7-VTD" secondAttribute="trailing" constant="50" id="wXk-lS-eGj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hSq-6s-dx7"/>
@@ -1603,7 +1718,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-hG-WfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1833" y="571"/>
+            <point key="canvasLocation" x="-3106.4000000000001" y="710.19490254872574"/>
         </scene>
     </scenes>
 </document>
