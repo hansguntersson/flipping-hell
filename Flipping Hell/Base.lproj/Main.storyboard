@@ -1589,7 +1589,7 @@
                             </button>
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="8j5-t2-JYO" kind="unwind" identifier="unwindToMainMenuAbout" unwindAction="unwindToMainMenuAboutWithSegue:" id="BPk-DI-FPe"/>
+                                <segue destination="8j5-t2-JYO" kind="unwind" unwindAction="unwindToMainMenuAboutWithSegue:" id="69T-hV-t5t"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

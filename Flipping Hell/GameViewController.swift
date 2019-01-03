@@ -37,9 +37,12 @@ class GameViewController: UIViewController {
                 let lvc = mvc.children[0] as! LevelTableViewController
                 lvc.levels  = game.levels
             }
+        } else if segue.identifier == "loadOptionsSegue" {
+            print("Options Segue")
+        } else if segue.identifier == "loadAboutSegue" {
+            print("About Segue")
         }
     }
-    
     
 }
 
