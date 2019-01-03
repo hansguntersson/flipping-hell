@@ -193,7 +193,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="PICK A LEVEL" id="k66-6K-qoY">
                         <barButtonItem key="leftBarButtonItem" title="⮐ " id="R1D-y8-LZy">
-                            <color key="tintColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="FsX-Ox-auq" kind="unwind" identifier="unwindToMainMenu" unwindAction="unwindToMainMenuWithSegue:" id="o8x-ZX-mJI"/>
                             </connections>
@@ -1542,8 +1542,8 @@
                         <outlet property="GoalFlips" destination="kO0-9R-1J9" id="FiP-s3-dzS"/>
                         <outlet property="WinFlips" destination="V16-oz-6bC" id="2W6-im-OP4"/>
                         <outlet property="WinStars" destination="DoV-Og-XyQ" id="1Sd-21-LFK"/>
-                        <segue destination="L3x-7Q-pU7" kind="unwind" identifier="unwindToMainViewController" unwindAction="unwindToMainViewControllerWithSegue:" id="CqW-Y4-H4p"/>
-                        <segue destination="L3x-7Q-pU7" kind="unwind" identifier="unwindToLevelViewController" unwindAction="unwindToLevelViewControllerWithSegue:" id="py9-Ii-DcC"/>
+                        <segue destination="L3x-7Q-pU7" kind="unwind" identifier="unwindToMainView" unwindAction="unwindToMainViewControllerWithSegue:" id="CqW-Y4-H4p"/>
+                        <segue destination="L3x-7Q-pU7" kind="unwind" identifier="unwindToLevelView" unwindAction="unwindToLevelViewControllerWithSegue:" id="py9-Ii-DcC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBG-7t-jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1554,7 +1554,7 @@
         <!--About-->
         <scene sceneID="I4D-1F-eud">
             <objects>
-                <viewController storyboardIdentifier="AboutScreen" id="jkW-6U-c8q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutScreen" id="jkW-6U-c8q" customClass="AboutViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eka-SJ-DvV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1586,6 +1586,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backToMain:" destination="jkW-6U-c8q" eventType="touchUpInside" id="E5s-lz-eWN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1610,12 +1613,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2353" y="710"/>
+            <point key="canvasLocation" x="-2276" y="710"/>
         </scene>
-        <!--Options-->
+        <!--Options View Controller-->
         <scene sceneID="GF7-We-ak0">
             <objects>
-                <viewController storyboardIdentifier="OptionsScreen" id="Pdg-KA-KTV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OptionsScreen" id="Pdg-KA-KTV" customClass="OptionsViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7IK-jt-HHT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1647,6 +1650,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backToMainScreen:" destination="Pdg-KA-KTV" eventType="touchUpInside" id="3Wi-vM-PlN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1666,9 +1672,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hSq-6s-dx7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Options" id="RES-UQ-5eX">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
-                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-hG-WfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
