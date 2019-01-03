@@ -19,6 +19,7 @@
 		E5AB86E021DE4AD700337825 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB86DF21DE4AD700337825 /* MenuViewController.swift */; };
 		E5AB86E221DE625300337825 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB86E121DE625300337825 /* OptionsViewController.swift */; };
 		E5AB86E421DE627400337825 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB86E321DE627400337825 /* AboutViewController.swift */; };
+		E5AB86E621DE634900337825 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB86E521DE634900337825 /* HelpViewController.swift */; };
 		E5B2FB6E216A8A8400A13D18 /* FlippingHell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2FB6D216A8A8400A13D18 /* FlippingHell.swift */; };
 		E5C106B5215408AF00947220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106B4215408AF00947220 /* AppDelegate.swift */; };
 		E5C106B7215408AF00947220 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106B6215408AF00947220 /* MainViewController.swift */; };
@@ -60,6 +61,7 @@
 		E5AB86DF21DE4AD700337825 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E5AB86E121DE625300337825 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		E5AB86E321DE627400337825 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		E5AB86E521DE634900337825 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		E5B2FB6D216A8A8400A13D18 /* FlippingHell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippingHell.swift; sourceTree = "<group>"; };
 		E5C106B1215408AF00947220 /* Flipping Hell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flipping Hell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C106B4215408AF00947220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				E5C106B4215408AF00947220 /* AppDelegate.swift */,
 				E5C106BD215408B000947220 /* LaunchScreen.storyboard */,
 				E5C106B8215408AF00947220 /* Main.storyboard */,
+				E5AB86E521DE634900337825 /* HelpViewController.swift */,
 				E5AB86E321DE627400337825 /* AboutViewController.swift */,
 				E5AB86E121DE625300337825 /* OptionsViewController.swift */,
 				E5AB86DF21DE4AD700337825 /* MenuViewController.swift */,
@@ -318,6 +321,7 @@
 				E54E2957219A0F120042934E /* WinScreenController.swift in Sources */,
 				E5AB86E021DE4AD700337825 /* MenuViewController.swift in Sources */,
 				E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */,
+				E5AB86E621DE634900337825 /* HelpViewController.swift in Sources */,
 				E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */,
 				E56E325A21735E8200A16788 /* Level.swift in Sources */,
 				E5C106B5215408AF00947220 /* AppDelegate.swift in Sources */,

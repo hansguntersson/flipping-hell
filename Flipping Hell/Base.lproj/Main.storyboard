@@ -69,7 +69,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Pdg-KA-KTV" kind="presentation" identifier="loadOptionsSegue" id="uDK-am-t5z"/>
+                                    <segue destination="Zv2-p0-ya7" kind="presentation" identifier="loadOptionsSegue" id="uDK-am-t5z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ7-xP-76S">
@@ -89,7 +89,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="jkW-6U-c8q" kind="presentation" identifier="loadAboutSegue" id="uiw-uL-PA2"/>
+                                    <segue destination="X2v-9n-Ee6" kind="presentation" identifier="loadAboutSegue" id="uiw-uL-PA2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cij-IX-Epf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2730.4000000000001" y="-143.47826086956522"/>
+            <point key="canvasLocation" x="-3106" y="-143"/>
         </scene>
         <!--PICK A LEVEL-->
         <scene sceneID="HW2-aE-ejK">
@@ -1318,10 +1318,10 @@
             </objects>
             <point key="canvasLocation" x="-34.399999999999999" y="-143.47826086956522"/>
         </scene>
-        <!--View Controller-->
+        <!--Help View Controller-->
         <scene sceneID="nYe-xn-huK">
             <objects>
-                <viewController storyboardIdentifier="HelpScreen" id="xvK-cP-GKh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpScreen" id="xvK-cP-GKh" customClass="HelpViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L8M-qs-L85">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1330,20 +1330,20 @@
                                 <rect key="frame" x="40" y="40" width="295" height="587"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text and pictures" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-s0-jGw">
-                                        <rect key="frame" x="5" y="114" width="285" height="28"/>
+                                        <rect key="frame" x="5" y="82" width="285" height="28"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO PLAY" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-hX-03X">
-                                        <rect key="frame" x="16.5" y="62" width="262" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELP" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-hX-03X">
+                                        <rect key="frame" x="96.5" y="30" width="102" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-Gc-qAn">
-                                        <rect key="frame" x="260" y="5" width="30" height="33"/>
-                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="260" y="10" width="30" height="33"/>
+                                        <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="✕">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1353,18 +1353,22 @@
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="backToMainGameScreen:" destination="xvK-cP-GKh" eventType="touchUpInside" id="kf4-4B-6KO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Fd7-s0-jGw" firstAttribute="centerX" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="9vY-MY-4MD"/>
-                                    <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="62" id="ObE-mt-2z3"/>
+                                    <constraint firstItem="4qe-Gc-qAn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sBf-hX-03X" secondAttribute="trailing" constant="10" id="Lxf-KE-AAq"/>
+                                    <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="30" id="ObE-mt-2z3"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fd7-s0-jGw" secondAttribute="trailing" constant="5" id="QmZ-l8-tgh"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" secondItem="4qe-Gc-qAn" secondAttribute="trailing" constant="5" id="YMM-0g-z34"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sBf-hX-03X" secondAttribute="trailing" constant="5" id="fXj-2W-J6m"/>
                                     <constraint firstItem="sBf-hX-03X" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="5" id="kqP-dW-ZPC"/>
                                     <constraint firstItem="Fd7-s0-jGw" firstAttribute="leading" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="5" id="oD6-6c-jqd"/>
-                                    <constraint firstItem="4qe-Gc-qAn" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="5" id="ohX-R2-JI7"/>
+                                    <constraint firstItem="4qe-Gc-qAn" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="10" id="ohX-R2-JI7"/>
                                     <constraint firstItem="sBf-hX-03X" firstAttribute="centerX" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="pxr-5K-voQ"/>
                                     <constraint firstItem="Fd7-s0-jGw" firstAttribute="top" secondItem="sBf-hX-03X" secondAttribute="bottom" constant="20" id="sCQ-qt-qb9"/>
                                 </constraints>
@@ -1549,9 +1553,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBG-7t-jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="L3x-7Q-pU7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="986.39999999999998" y="147.97601199400302"/>
+            <point key="canvasLocation" x="2864.8000000000002" y="147.97601199400302"/>
         </scene>
-        <!--About-->
+        <!--ABOUT-->
         <scene sceneID="I4D-1F-eud">
             <objects>
                 <viewController storyboardIdentifier="AboutScreen" id="jkW-6U-c8q" customClass="AboutViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
@@ -1559,124 +1563,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bok-ms-Jpf">
-                                <rect key="frame" x="122" y="80" width="131" height="32"/>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the game" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-eT-Jzb">
-                                <rect key="frame" x="67" y="157" width="241" height="28"/>
+                                <rect key="frame" x="67" y="84" width="241" height="28"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mf-7J-ewy">
-                                <rect key="frame" x="16" y="30" width="100" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Ei1-lv-vCb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="18"/>
-                                <state key="normal" title="◀︎ BACK">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="backToMain:" destination="jkW-6U-c8q" eventType="touchUpInside" id="E5s-lz-eWN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DRB-eT-Jzb" firstAttribute="top" secondItem="bok-ms-Jpf" secondAttribute="bottom" constant="45" id="11A-dR-T5W"/>
-                            <constraint firstItem="bok-ms-Jpf" firstAttribute="top" secondItem="y1s-Uj-UOi" secondAttribute="top" constant="60" id="7cp-Yc-Mmy"/>
-                            <constraint firstItem="bok-ms-Jpf" firstAttribute="centerX" secondItem="y1s-Uj-UOi" secondAttribute="centerX" id="8hD-6t-R0G"/>
-                            <constraint firstItem="bok-ms-Jpf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y1s-Uj-UOi" secondAttribute="leading" constant="10" id="9hl-be-W6B"/>
-                            <constraint firstItem="y1s-Uj-UOi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bok-ms-Jpf" secondAttribute="trailing" constant="10" id="IV6-9Y-PW0"/>
-                            <constraint firstItem="y1s-Uj-UOi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9mf-7J-ewy" secondAttribute="trailing" constant="100" id="JUS-xz-gJc"/>
+                            <constraint firstItem="DRB-eT-Jzb" firstAttribute="top" secondItem="y1s-Uj-UOi" secondAttribute="top" constant="20" id="4Sx-nI-i9t"/>
                             <constraint firstItem="DRB-eT-Jzb" firstAttribute="centerX" secondItem="y1s-Uj-UOi" secondAttribute="centerX" id="MFu-Sc-fQc"/>
-                            <constraint firstItem="bok-ms-Jpf" firstAttribute="top" secondItem="9mf-7J-ewy" secondAttribute="bottom" constant="20" id="U5R-Ld-kt8"/>
-                            <constraint firstItem="9mf-7J-ewy" firstAttribute="top" secondItem="y1s-Uj-UOi" secondAttribute="top" constant="10" id="q9h-YU-Cr1"/>
-                            <constraint firstItem="9mf-7J-ewy" firstAttribute="leading" secondItem="y1s-Uj-UOi" secondAttribute="leading" constant="16" id="qEH-ym-Wec"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y1s-Uj-UOi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="D9W-tp-KLI">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" id="w1Y-Qd-o7n"/>
+                    <navigationItem key="navigationItem" title="ABOUT" id="w1Y-Qd-o7n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2276" y="710"/>
+            <point key="canvasLocation" x="-1402" y="626"/>
         </scene>
-        <!--Options View Controller-->
+        <!--OPTIONS-->
         <scene sceneID="GF7-We-ak0">
             <objects>
                 <viewController storyboardIdentifier="OptionsScreen" id="Pdg-KA-KTV" customClass="OptionsViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7IK-jt-HHT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change options" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-Fc-V6b">
-                                <rect key="frame" x="67.5" y="171" width="240" height="28"/>
+                                <rect key="frame" x="67.5" y="20" width="240" height="28"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPTIONS" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzC-h7-VTD">
-                                <rect key="frame" x="106" y="79" width="163" height="32"/>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJZ-Uy-vQ4">
-                                <rect key="frame" x="16" y="30" width="100" height="29"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Ql9-ZQ-kSf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="18"/>
-                                <state key="normal" title="◀︎ BACK">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="backToMainScreen:" destination="Pdg-KA-KTV" eventType="touchUpInside" id="3Wi-vM-PlN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vJZ-Uy-vQ4" firstAttribute="top" secondItem="hSq-6s-dx7" secondAttribute="top" constant="10" id="16w-gd-uvO"/>
                             <constraint firstItem="hSq-6s-dx7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mA2-Fc-V6b" secondAttribute="trailing" constant="10" id="3j9-Ap-J5a"/>
+                            <constraint firstItem="mA2-Fc-V6b" firstAttribute="top" secondItem="hSq-6s-dx7" secondAttribute="top" constant="20" id="4r9-95-06h"/>
                             <constraint firstItem="mA2-Fc-V6b" firstAttribute="centerX" secondItem="hSq-6s-dx7" secondAttribute="centerX" id="8Jb-sK-6t8"/>
-                            <constraint firstItem="wzC-h7-VTD" firstAttribute="centerX" secondItem="hSq-6s-dx7" secondAttribute="centerX" id="9Ah-t1-t5h"/>
                             <constraint firstItem="mA2-Fc-V6b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hSq-6s-dx7" secondAttribute="leading" constant="10" id="BfX-iH-wRw"/>
-                            <constraint firstItem="vJZ-Uy-vQ4" firstAttribute="leading" secondItem="hSq-6s-dx7" secondAttribute="leading" constant="16" id="FEX-q5-uTd"/>
-                            <constraint firstItem="wzC-h7-VTD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hSq-6s-dx7" secondAttribute="leading" constant="50" id="FqV-xU-lJB"/>
-                            <constraint firstItem="hSq-6s-dx7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vJZ-Uy-vQ4" secondAttribute="trailing" constant="100" id="MEE-vl-lNb"/>
-                            <constraint firstItem="mA2-Fc-V6b" firstAttribute="top" secondItem="wzC-h7-VTD" secondAttribute="bottom" constant="60" id="OJ6-Bk-LlN"/>
-                            <constraint firstItem="wzC-h7-VTD" firstAttribute="top" secondItem="hSq-6s-dx7" secondAttribute="top" constant="59" id="XG7-hR-77W"/>
-                            <constraint firstItem="wzC-h7-VTD" firstAttribute="top" secondItem="vJZ-Uy-vQ4" secondAttribute="bottom" constant="20" id="gDR-Yv-G6K"/>
-                            <constraint firstItem="hSq-6s-dx7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wzC-h7-VTD" secondAttribute="trailing" constant="50" id="wXk-lS-eGj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hSq-6s-dx7"/>
                     </view>
+                    <navigationItem key="navigationItem" title="OPTIONS" id="VxS-rn-A4h">
+                        <barButtonItem key="leftBarButtonItem" title="⮐ " id="Yzh-RG-ocy">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iHp-b7-pIE">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="⮐ ">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="EGm-BU-mjS" kind="unwind" unwindAction="unwindToMainMenuWithSegue:" id="iZr-qt-oGe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-hG-WfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EGm-BU-mjS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3106.4000000000001" y="710.19490254872574"/>
+            <point key="canvasLocation" x="-3106" y="1343"/>
         </scene>
         <!--Levels-->
         <scene sceneID="wRx-LU-J6y">
@@ -1707,7 +1658,56 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5j-AZ-hZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1834.4000000000001" y="-143.47826086956522"/>
+            <point key="canvasLocation" x="-2196" y="-143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lqo-MW-2sm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zv2-p0-ya7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="cvU-ba-4B1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pdg-KA-KTV" kind="relationship" relationship="rootViewController" id="lfh-Cc-Jsp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcO-WM-9Kn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3106" y="626"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="XjH-fb-bau">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X2v-9n-Ee6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" id="D9W-tp-KLI">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EWi-Hq-6I9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jkW-6U-c8q" kind="relationship" relationship="rootViewController" id="YpB-0E-b8D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCx-NK-2zT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2196" y="626"/>
         </scene>
     </scenes>
 </document>
