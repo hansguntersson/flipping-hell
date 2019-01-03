@@ -33,9 +33,10 @@ class GameViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "loadLevelsSegue" {
-            if let mvc = segue.destination as? LevelTableViewController {
-            mvc.levels = game.levels
+        if segue.identifier == "loadMenuSegue" {
+            if let mvc = segue.destination as? UINavigationController {
+                let lvc = mvc.children[0] as! LevelTableViewController
+                lvc.levels  = game.levels
             }
         }
     }
