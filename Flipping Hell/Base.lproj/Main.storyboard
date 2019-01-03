@@ -69,7 +69,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Zv2-p0-ya7" kind="presentation" identifier="loadOptionsSegue" id="uDK-am-t5z"/>
+                                    <segue destination="Zv2-p0-ya7" kind="show" identifier="loadOptionsSegue" id="uDK-am-t5z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ7-xP-76S">
@@ -89,7 +89,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="X2v-9n-Ee6" kind="presentation" identifier="loadAboutSegue" id="uiw-uL-PA2"/>
+                                    <segue destination="X2v-9n-Ee6" kind="show" identifier="loadAboutSegue" id="uiw-uL-PA2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1553,7 +1553,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBG-7t-jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="L3x-7Q-pU7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2864.8000000000002" y="147.97601199400302"/>
+            <point key="canvasLocation" x="988" y="171"/>
         </scene>
         <!--ABOUT-->
         <scene sceneID="I4D-1F-eud">
@@ -1577,9 +1577,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y1s-Uj-UOi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ABOUT" id="w1Y-Qd-o7n"/>
+                    <navigationItem key="navigationItem" title="ABOUT" id="w1Y-Qd-o7n">
+                        <barButtonItem key="leftBarButtonItem" title="⮐ " id="BuX-mH-Jbp">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NM4-cy-Hv2">
+                                <rect key="frame" x="16" y="4" width="30" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="⮐ ">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="8j5-t2-JYO" kind="unwind" identifier="unwindToMainMenuAbout" unwindAction="unwindToMainMenuAboutWithSegue:" id="BPk-DI-FPe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8j5-t2-JYO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1402" y="626"/>
         </scene>
@@ -1610,15 +1626,16 @@
                     <navigationItem key="navigationItem" title="OPTIONS" id="VxS-rn-A4h">
                         <barButtonItem key="leftBarButtonItem" title="⮐ " id="Yzh-RG-ocy">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iHp-b7-pIE">
-                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <rect key="frame" x="16" y="4" width="30" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="⮐ ">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="EGm-BU-mjS" kind="unwind" unwindAction="unwindToMainMenuWithSegue:" id="iZr-qt-oGe"/>
+                                <segue destination="EGm-BU-mjS" kind="unwind" identifier="unwindToMainMenuOptions" unwindAction="unwindToMainMenuOptionsWithSegue:" id="TTA-3D-AR2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1627,12 +1644,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-hG-WfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EGm-BU-mjS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3106" y="1343"/>
+            <point key="canvasLocation" x="-3106" y="1469"/>
         </scene>
         <!--Levels-->
         <scene sceneID="wRx-LU-J6y">
             <objects>
-                <navigationController storyboardIdentifier="MenuScreen" automaticallyAdjustsScrollViewInsets="NO" id="rAM-QS-TNW" customClass="MenuViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LevelMenuScreen" automaticallyAdjustsScrollViewInsets="NO" id="rAM-QS-TNW" customClass="LevelMenuViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Levels" id="5gM-7J-EaH">
                         <color key="badgeColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
@@ -1660,10 +1677,10 @@
             </objects>
             <point key="canvasLocation" x="-2196" y="-143"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Options Menu View Controller-->
         <scene sceneID="Lqo-MW-2sm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zv2-p0-ya7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="OptionsMenuScreen" automaticallyAdjustsScrollViewInsets="NO" id="Zv2-p0-ya7" customClass="OptionsMenuViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="cvU-ba-4B1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1681,12 +1698,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcO-WM-9Kn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3106" y="626"/>
+            <point key="canvasLocation" x="-3106" y="697"/>
         </scene>
         <!--About-->
         <scene sceneID="XjH-fb-bau">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X2v-9n-Ee6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AboutMenuScreen" automaticallyAdjustsScrollViewInsets="NO" id="X2v-9n-Ee6" customClass="AboutMenuViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About" id="D9W-tp-KLI">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
                     </tabBarItem>

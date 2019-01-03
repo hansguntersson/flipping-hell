@@ -1,5 +1,5 @@
 //
-//  MenuViewController.swift
+//  OptionsMenuViewController.swift
 //  Flipping Hell
 //
 //  Created by Daniel Harlos on 03/01/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewController: UINavigationController {
+class OptionsMenuViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +16,10 @@ class MenuViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func unwindToMainMenu(segue: UIStoryboardSegue) {
-         self.dismiss(animated: true, completion: nil)
+    @IBAction func unwindToMainMenuOptions(segue: UIStoryboardSegue) {
+        self.dismiss(animated: true, completion: nil)
     }
-    
+
     /*
     // MARK: - Navigation
 
