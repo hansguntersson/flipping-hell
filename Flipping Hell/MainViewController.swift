@@ -28,6 +28,7 @@ class MainViewController: UIViewController {
     {
         if let vc = segue.destination as? WinScreenController
         {
+            vc.ResetButtonsDelegate = self
             vc.WinFlipsString = "FLIPS: \(flipNum)"
             vc.GoalFlipsString = "GOAL: \(GoalFlips)"
                 if (flipNum - GoalFlips > 2) {
@@ -108,7 +109,7 @@ class MainViewController: UIViewController {
         updateFlipperDisplay()
         flipNum = 0
         
-        // add 1 to attemps on the level
+        // add 1 to attemps on the level if flips are greater than 0
         
         // Reset buttons and array
         for buttonIndex in 0 ..< buttonStatus.count {
@@ -246,5 +247,19 @@ class MainViewController: UIViewController {
         }
         return WinTrue
     }
-    
+}
+
+extension MainViewController: ResetDelegate {
+    func ResetToLevel(NextLevel: Bool) {
+        if(NextLevel == false) {
+            resetButtons()
+            print("Reset this level")
+        } else if(NextLevel == true) {
+            resetButtons()
+            // move to the next level
+            print("Reset next level")
+        } else {
+            print("Delegate error on resetting function")
+        }
+    }
 }

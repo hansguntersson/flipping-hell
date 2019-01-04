@@ -16,6 +16,9 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         game.loadLevels()
+        
+        // Can use the following functionality for sizing:
+        // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
     }
     
     /*

@@ -1335,8 +1335,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0k-6l-oIe">
                                 <rect key="frame" x="20" y="40" width="335" height="587"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text and pictures" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-s0-jGw">
-                                        <rect key="frame" x="5" y="82" width="325" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-s0-jGw">
+                                        <rect key="frame" x="10" y="82" width="315" height="252"/>
+                                        <string key="text">The goal is to flip the buttons in the main screen to create the shape on the left hand side, the shape of the flipper changes each flip, and can be seen on the right hand side</string>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1366,14 +1367,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Fd7-s0-jGw" firstAttribute="centerX" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="9vY-MY-4MD"/>
+                                    <constraint firstItem="Fd7-s0-jGw" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="9vY-MY-4MD"/>
                                     <constraint firstItem="4qe-Gc-qAn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sBf-hX-03X" secondAttribute="trailing" constant="10" id="Lxf-KE-AAq"/>
                                     <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="30" id="ObE-mt-2z3"/>
-                                    <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fd7-s0-jGw" secondAttribute="trailing" constant="5" id="QmZ-l8-tgh"/>
+                                    <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fd7-s0-jGw" secondAttribute="trailing" constant="10" id="QmZ-l8-tgh"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" secondItem="4qe-Gc-qAn" secondAttribute="trailing" constant="5" id="YMM-0g-z34"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sBf-hX-03X" secondAttribute="trailing" constant="5" id="fXj-2W-J6m"/>
                                     <constraint firstItem="sBf-hX-03X" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="5" id="kqP-dW-ZPC"/>
-                                    <constraint firstItem="Fd7-s0-jGw" firstAttribute="leading" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="5" id="oD6-6c-jqd"/>
+                                    <constraint firstItem="BlO-zn-FaH" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fd7-s0-jGw" secondAttribute="bottom" constant="20" id="o6V-uw-yBk"/>
+                                    <constraint firstItem="Fd7-s0-jGw" firstAttribute="leading" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="10" id="oD6-6c-jqd"/>
                                     <constraint firstItem="4qe-Gc-qAn" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="10" id="ohX-R2-JI7"/>
                                     <constraint firstItem="sBf-hX-03X" firstAttribute="centerX" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="pxr-5K-voQ"/>
                                     <constraint firstItem="Fd7-s0-jGw" firstAttribute="top" secondItem="sBf-hX-03X" secondAttribute="bottom" constant="20" id="sCQ-qt-qb9"/>
@@ -1569,8 +1571,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the game" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-eT-Jzb">
-                                <rect key="frame" x="67" y="84" width="241" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING HELL is a simple  puzzle game made by Hans Guntersson @hansguntersson" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-eT-Jzb">
+                                <rect key="frame" x="20" y="84" width="335" height="140"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1579,7 +1581,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DRB-eT-Jzb" firstAttribute="top" secondItem="y1s-Uj-UOi" secondAttribute="top" constant="20" id="4Sx-nI-i9t"/>
-                            <constraint firstItem="DRB-eT-Jzb" firstAttribute="centerX" secondItem="y1s-Uj-UOi" secondAttribute="centerX" id="MFu-Sc-fQc"/>
+                            <constraint firstItem="DRB-eT-Jzb" firstAttribute="leading" secondItem="y1s-Uj-UOi" secondAttribute="leading" constant="20" id="8V8-Zf-iUV"/>
+                            <constraint firstItem="y1s-Uj-UOi" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DRB-eT-Jzb" secondAttribute="bottom" constant="20" id="rNg-s6-91Z"/>
+                            <constraint firstItem="y1s-Uj-UOi" firstAttribute="trailing" secondItem="DRB-eT-Jzb" secondAttribute="trailing" constant="20" id="ziL-A5-H63"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y1s-Uj-UOi"/>
                     </view>
@@ -1595,7 +1599,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8j5-t2-JYO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1598" y="626"/>
+            <point key="canvasLocation" x="-1599.2" y="625.63718140929541"/>
         </scene>
         <!--OPTIONS-->
         <scene sceneID="GF7-We-ak0">
@@ -1605,8 +1609,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change options" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-Fc-V6b">
-                                <rect key="frame" x="67.5" y="20" width="240" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change options for colours, full reset,  " textAlignment="center" lineBreakMode="clip" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-Fc-V6b">
+                                <rect key="frame" x="20" y="20" width="335" height="56"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1614,10 +1618,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hSq-6s-dx7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mA2-Fc-V6b" secondAttribute="trailing" constant="10" id="3j9-Ap-J5a"/>
+                            <constraint firstItem="hSq-6s-dx7" firstAttribute="trailing" secondItem="mA2-Fc-V6b" secondAttribute="trailing" constant="20" id="3j9-Ap-J5a"/>
                             <constraint firstItem="mA2-Fc-V6b" firstAttribute="top" secondItem="hSq-6s-dx7" secondAttribute="top" constant="20" id="4r9-95-06h"/>
-                            <constraint firstItem="mA2-Fc-V6b" firstAttribute="centerX" secondItem="hSq-6s-dx7" secondAttribute="centerX" id="8Jb-sK-6t8"/>
-                            <constraint firstItem="mA2-Fc-V6b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hSq-6s-dx7" secondAttribute="leading" constant="10" id="BfX-iH-wRw"/>
+                            <constraint firstItem="mA2-Fc-V6b" firstAttribute="leading" secondItem="hSq-6s-dx7" secondAttribute="leading" constant="20" id="BfX-iH-wRw"/>
+                            <constraint firstItem="hSq-6s-dx7" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mA2-Fc-V6b" secondAttribute="bottom" constant="20" id="Jrw-BJ-mLa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hSq-6s-dx7"/>
                     </view>
@@ -1629,7 +1633,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-hG-WfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EGm-BU-mjS" userLabel="Exit" sceneMemberID="exit"/>

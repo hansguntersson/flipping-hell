@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol ResetDelegate {
+    func ResetToLevel(NextLevel: Bool)
+}
+
 class WinScreenController: UIViewController {
+    
+    var ResetButtonsDelegate: ResetDelegate!
     
     @IBOutlet var WinStars: UILabel!
     @IBOutlet var WinFlips: UILabel!
@@ -29,12 +35,14 @@ class WinScreenController: UIViewController {
     }
     
     @IBAction func replayLevel(_ sender: UIButton) {
+        ResetButtonsDelegate.ResetToLevel(NextLevel: false)
         self.dismiss(animated: true, completion: nil)
         // reset level on view controller then segue to it
         //self.performSegue(withIdentifier: "unwindToMainViewController", sender: self)
     }
     
     @IBAction func nextLevel(_ sender: UIButton) {
+        ResetButtonsDelegate.ResetToLevel(NextLevel: true)
         self.dismiss(animated: true, completion: nil)
     }
     
