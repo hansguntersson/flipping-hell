@@ -98,12 +98,21 @@ class LevelTableViewController: UITableViewController {
             if let levelIndex = Int((sender as! UIButton).currentTitle ?? "1") {
                 let level = levels[levelIndex - 1]
                 if let mvc = segue.destination as? MainViewController {
+                    mvc.UpdateLevelsDelegate = self
                     mvc.currentLevel = level.sequence
                     mvc.GoalFlips = level.goalFlips
-                    mvc.levelNum = levelIndex
+                    mvc.LevelNum = levelIndex
                 }
             }
         }
+    }
+
+}
+
+extension LevelTableViewController: UpdateLevelsScreenDelegate {
+    func updateLevels(WinStars: String, WinColour: UIColor, WinFlips: Int) {
+        print(WinStars)
+        // Update cells as appropriate
     }
 
 }

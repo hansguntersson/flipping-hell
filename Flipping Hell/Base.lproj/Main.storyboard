@@ -706,7 +706,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP" userLabel="FlipsLabel">
                                 <rect key="frame" x="129.5" y="622" width="116.5" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="jqt-Hr-bNX"/>
@@ -1336,9 +1336,9 @@
                                 <rect key="frame" x="20" y="40" width="335" height="587"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-s0-jGw">
-                                        <rect key="frame" x="10" y="82" width="315" height="252"/>
+                                        <rect key="frame" x="20" y="82" width="295" height="140"/>
                                         <string key="text">The goal is to flip the buttons in the main screen to create the shape on the left hand side, the shape of the flipper changes each flip, and can be seen on the right hand side</string>
-                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
+                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="20"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1367,15 +1367,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Fd7-s0-jGw" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="9vY-MY-4MD"/>
                                     <constraint firstItem="4qe-Gc-qAn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sBf-hX-03X" secondAttribute="trailing" constant="10" id="Lxf-KE-AAq"/>
                                     <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="30" id="ObE-mt-2z3"/>
-                                    <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fd7-s0-jGw" secondAttribute="trailing" constant="10" id="QmZ-l8-tgh"/>
+                                    <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fd7-s0-jGw" secondAttribute="trailing" constant="20" id="QmZ-l8-tgh"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" secondItem="4qe-Gc-qAn" secondAttribute="trailing" constant="5" id="YMM-0g-z34"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sBf-hX-03X" secondAttribute="trailing" constant="5" id="fXj-2W-J6m"/>
                                     <constraint firstItem="sBf-hX-03X" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="5" id="kqP-dW-ZPC"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fd7-s0-jGw" secondAttribute="bottom" constant="20" id="o6V-uw-yBk"/>
-                                    <constraint firstItem="Fd7-s0-jGw" firstAttribute="leading" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="10" id="oD6-6c-jqd"/>
+                                    <constraint firstItem="Fd7-s0-jGw" firstAttribute="leading" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="20" id="oD6-6c-jqd"/>
                                     <constraint firstItem="4qe-Gc-qAn" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="10" id="ohX-R2-JI7"/>
                                     <constraint firstItem="sBf-hX-03X" firstAttribute="centerX" secondItem="BlO-zn-FaH" secondAttribute="centerX" id="pxr-5K-voQ"/>
                                     <constraint firstItem="Fd7-s0-jGw" firstAttribute="top" secondItem="sBf-hX-03X" secondAttribute="bottom" constant="20" id="sCQ-qt-qb9"/>
@@ -1469,7 +1468,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="backToLevelView:" destination="Wpg-a9-9ol" eventType="touchUpInside" id="rSS-mP-Zjx"/>
+                                            <segue destination="L3x-7Q-pU7" kind="unwind" unwindAction="unwindToLevelViewControllerWithSegue:" id="huQ-Ap-gWm"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
@@ -1572,8 +1571,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING HELL is a simple  puzzle game made by Hans Guntersson @hansguntersson" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-eT-Jzb">
-                                <rect key="frame" x="20" y="84" width="335" height="140"/>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
+                                <rect key="frame" x="20" y="84" width="335" height="80"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1610,8 +1609,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change options for colours, full reset,  " textAlignment="center" lineBreakMode="clip" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-Fc-V6b">
-                                <rect key="frame" x="20" y="20" width="335" height="56"/>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
+                                <rect key="frame" x="20" y="20" width="335" height="40"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>

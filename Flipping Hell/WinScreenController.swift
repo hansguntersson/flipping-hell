@@ -8,9 +8,13 @@
 
 import UIKit
 
+// ********************************** PROTOCOLS ********************************** //
+
 protocol ResetDelegate {
-    func ResetToLevel(NextLevel: Bool)
+    func resetToLevel(NextLevel: Bool)
 }
+
+// ********************************** CLASS DEFINITION ********************************** //
 
 class WinScreenController: UIViewController {
     
@@ -35,20 +39,18 @@ class WinScreenController: UIViewController {
     }
     
     @IBAction func replayLevel(_ sender: UIButton) {
-        ResetButtonsDelegate.ResetToLevel(NextLevel: false)
+        // resets level buttons etc and segues to it
+        ResetButtonsDelegate.resetToLevel(NextLevel: false)
         self.dismiss(animated: true, completion: nil)
-        // reset level on view controller then segue to it
-        //self.performSegue(withIdentifier: "unwindToMainViewController", sender: self)
     }
     
     @IBAction func nextLevel(_ sender: UIButton) {
-        ResetButtonsDelegate.ResetToLevel(NextLevel: true)
+        ResetButtonsDelegate.resetToLevel(NextLevel: true)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func backToLevelView(_ sender: UIButton) {
-        // update the level screen with win values
-        //unwind all the way back to level screen
+        // unwind all the way back to level screen
         self.performSegue(withIdentifier: "unwindToLevelViewController", sender: self)
     }
     
