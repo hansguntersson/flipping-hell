@@ -153,8 +153,8 @@
                                                 <segue destination="BYZ-38-t0r" kind="presentation" identifier="loadLevelSegue" id="okh-Dt-wLC"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: 10" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD">
-                                            <rect key="frame" x="80.5" y="22" width="130" height="26"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: X" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
+                                            <rect key="frame" x="80.5" y="22" width="99" height="26"/>
                                             <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="26"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -180,8 +180,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="levelGoal" destination="5tq-9a-9hD" id="IcG-Wx-z5O"/>
-                                    <outlet property="levelIndex" destination="Zxa-HP-flf" id="WcM-bb-VDy"/>
+                                    <outlet property="levelGoal" destination="5tq-9a-9hD" id="p2Y-Df-EKW"/>
+                                    <outlet property="levelIndex" destination="Zxa-HP-flf" id="GqY-gL-hqo"/>
                                     <outlet property="levelStars" destination="uJU-xP-I9D" id="7fG-sX-bqw"/>
                                 </connections>
                             </tableViewCell>
