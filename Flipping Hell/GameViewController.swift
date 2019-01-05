@@ -38,7 +38,7 @@ class GameViewController: UIViewController {
         if segue.identifier == "loadMenuSegue" {
             if let mvc = segue.destination as? UINavigationController {
                 let lvc = mvc.children[0] as! LevelTableViewController
-                lvc.levels  = game.levels
+                lvc.levels = game.levels
             }
         } else if segue.identifier == "loadOptionsSegue" {
             print("Options Segue")

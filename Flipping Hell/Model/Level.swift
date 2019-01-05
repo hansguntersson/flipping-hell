@@ -19,6 +19,7 @@ class Level {
     var attempts = 0 // Hpw many attempts were made
     var minFlips: Int? = nil // The minimum number of flips the level has been completed in
     var minMoves: Array<Int> = [0] // The minimum moves the level has been completed in
+    var LevelScore = 0
     var levelstars = "☆ ☆ ☆" // The star sequence for the level
     
     let levelIndex: Int // Which index the level is at

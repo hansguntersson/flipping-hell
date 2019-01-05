@@ -12,6 +12,7 @@ class LevelTableViewController: UITableViewController {
 
     //MARK: Properties
     var levels = [Level]()
+    var CurrentLevel = 0;
     
     @IBAction func unwindToLevelViewController(segue:UIStoryboardSegue) {
         print("change level info")
@@ -102,16 +103,15 @@ class LevelTableViewController: UITableViewController {
                     mvc.currentLevel = level.sequence
                     mvc.GoalFlips = level.goalFlips
                     mvc.LevelNum = levelIndex
+                    CurrentLevel = levelIndex
                 }
             }
         }
     }
-
 }
 
 extension LevelTableViewController: UpdateLevelsScreenDelegate {
     func updateLevels(WinStars: String, WinColour: UIColor, WinFlips: Int) {
-        print(WinStars)
         // Update cells as appropriate
     }
 
