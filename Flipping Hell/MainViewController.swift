@@ -18,8 +18,6 @@ protocol UpdateLevelsScreenDelegate {
 
 class MainViewController: UIViewController {
     
-    var UpdateLevelsDelegate: UpdateLevelsScreenDelegate!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,15 +35,8 @@ class MainViewController: UIViewController {
     // ********************************** VARIABLES ********************************** //
     
     var GoalFlips = 0
-    
-    var FlipCount = 0 {
-        didSet {
-            FlipsLabel.text = "FLIPS: \(FlipCount)"
-        }
-    }
-    
+    var FlipCount = 0
     var LevelNum = 0
-    
     var FlipperOrientation = 0
     
     var buttonStatus = [0, 0, 0, 0, 0,
@@ -83,6 +74,8 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonWinCollection: [UIButton]!
     @IBOutlet var buttonFlipperCollection: [UIButton]!
     @IBOutlet var winScreen: UIView!
+    
+    var UpdateLevelsDelegate: UpdateLevelsScreenDelegate!
     
     // ********************************** FUNCTIONS ********************************** //
     
@@ -146,6 +139,7 @@ class MainViewController: UIViewController {
         }
         updateFlipperDisplay()
         FlipCount += 1
+        FlipsLabel.text = "FLIPS: \(FlipCount)"
         
         WinVal = checkWin()
         

@@ -1253,7 +1253,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="flipCount" destination="CtB-2T-XqP" id="70C-Hm-3ma"/>
+                        <outlet property="FlipsLabel" destination="CtB-2T-XqP" id="Jzw-Yh-XLn"/>
                         <outlet property="levelTitle" destination="pYV-aJ-FAB" id="mql-ln-aHg"/>
                         <outlet property="winScreen" destination="CeR-sp-2XO" id="2SH-9d-hzr"/>
                         <outletCollection property="buttonCollection" destination="waB-eJ-BGj" collectionClass="NSMutableArray" id="V2d-Xv-aK3"/>
