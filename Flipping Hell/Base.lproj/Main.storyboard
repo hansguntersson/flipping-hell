@@ -49,7 +49,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="rAM-QS-TNW" kind="show" identifier="loadMenuSegue" id="uyu-d4-LQA"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="bDq-G4-XfU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chs-VK-OcS">
@@ -149,9 +149,6 @@
                                                     <real key="value" value="25"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="loadLevelSegue" id="okh-Dt-wLC"/>
-                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: X" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
                                             <rect key="frame" x="80.5" y="22" width="99" height="26"/>
@@ -194,16 +191,12 @@
                     <navigationItem key="navigationItem" title="PICK A LEVEL" id="k66-6K-qoY">
                         <barButtonItem key="leftBarButtonItem" title="⮐ " id="R1D-y8-LZy">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="FsX-Ox-auq" kind="unwind" identifier="unwindToMainMenu" unwindAction="unwindToMainMenuWithSegue:" id="o8x-ZX-mJI"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxm-um-npz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="FsX-Ox-auq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1420" y="-143"/>
+            <point key="canvasLocation" x="-804" y="-891"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -726,9 +719,9 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FTb-oN-8i8">
-                                <rect key="frame" x="20" y="620" width="49" height="29"/>
+                                <rect key="frame" x="20" y="620" width="66" height="29"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
-                                <state key="normal" title="Back">
+                                <state key="normal" title="Levels">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1150,11 +1143,32 @@
                                     <action selector="resetLevel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2pA-jG-7f5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HZN-KQ-Hfh">
+                                <rect key="frame" x="10" y="30" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="V2q-ha-yFv"/>
+                                    <constraint firstAttribute="width" secondItem="HZN-KQ-Hfh" secondAttribute="height" multiplier="1:1" id="jOi-Oc-Y7A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="12"/>
+                                <state key="normal" title="⮐ ">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backToMain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Co0-vY-ppu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zSS-ky-ncw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xx4-Kh-rey" secondAttribute="trailing" constant="10" id="0XI-08-TiP"/>
                             <constraint firstItem="FTb-oN-8i8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0bs-ej-ewV"/>
+                            <constraint firstItem="HZN-KQ-Hfh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="1Fp-tN-Xu9"/>
                             <constraint firstItem="xx4-Kh-rey" firstAttribute="leading" secondItem="FTb-oN-8i8" secondAttribute="trailing" constant="20" id="1dV-6S-KWL"/>
                             <constraint firstItem="pYV-aJ-FAB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="1tG-y0-7XQ"/>
                             <constraint firstItem="pYV-aJ-FAB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2bl-zw-9s6"/>
@@ -1167,6 +1181,7 @@
                             </constraint>
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="edz-eu-b6a" secondAttribute="bottom" constant="15" id="CSp-nl-WMK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FTb-oN-8i8" secondAttribute="bottom" constant="18" id="EQ2-Ow-SzJ"/>
+                            <constraint firstItem="HZN-KQ-Hfh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="GHT-zH-dsc"/>
                             <constraint firstItem="Goj-hu-oHh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Gsg-Kg-FWi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CtB-2T-XqP" secondAttribute="bottom" constant="20" id="HFQ-og-lhO"/>
                             <constraint firstItem="edz-eu-b6a" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HNY-dK-R8g"/>
@@ -1322,7 +1337,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="kWS-v8-6Ho" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-546" y="-156"/>
+            <point key="canvasLocation" x="-2302" y="-143"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="nYe-xn-huK">
@@ -1395,7 +1410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rl9-fO-5Xq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1415.2" y="-560.86956521739137"/>
+            <point key="canvasLocation" x="-1532" y="626"/>
         </scene>
         <!--Win Screen Controller-->
         <scene sceneID="qiU-yJ-KnD">
@@ -1560,7 +1575,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBG-7t-jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="L3x-7Q-pU7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="476" y="158"/>
+            <point key="canvasLocation" x="-1532" y="-143"/>
         </scene>
         <!--ABOUT-->
         <scene sceneID="I4D-1F-eud">
@@ -1598,7 +1613,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8j5-t2-JYO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1599.2" y="625.63718140929541"/>
+            <point key="canvasLocation" x="-2372" y="1382"/>
         </scene>
         <!--OPTIONS-->
         <scene sceneID="GF7-We-ak0">
@@ -1672,6 +1687,9 @@
                                             <state key="normal" title="☆">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="rAM-QS-TNW" kind="presentation" id="7O6-k0-FJF"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -1759,11 +1777,15 @@
                             <outlet property="delegate" destination="Olf-Uu-t1n" id="ogi-6i-X5a"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="PICK A STAGE" id="O3u-lp-g9E"/>
+                    <navigationItem key="navigationItem" title="PICK A STAGE" id="O3u-lp-g9E">
+                        <barButtonItem key="leftBarButtonItem" title="⮐ " id="MBr-Mb-YLW">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqL-VB-UbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2167.1999999999998" y="-842.42878560719646"/>
+            <point key="canvasLocation" x="-2303" y="-891"/>
         </scene>
         <!--Levels-->
         <scene sceneID="wRx-LU-J6y">
@@ -1794,7 +1816,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5j-AZ-hZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2263" y="-143"/>
+            <point key="canvasLocation" x="-1532" y="-891"/>
         </scene>
         <!--Options Menu View Controller-->
         <scene sceneID="Lqo-MW-2sm">
@@ -1869,7 +1891,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaV-BO-BUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3106.4000000000001" y="-842.42878560719646"/>
+            <point key="canvasLocation" x="-3106" y="-891"/>
         </scene>
     </scenes>
 </document>

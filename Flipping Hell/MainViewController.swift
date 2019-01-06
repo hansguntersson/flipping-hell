@@ -68,6 +68,7 @@ class MainViewController: UIViewController {
     
     // ********************************** OUTLETS ********************************** //
     
+    
     @IBOutlet var FlipsLabel: UILabel!
     @IBOutlet var levelTitle: UILabel!
     @IBOutlet var buttonCollection: [UIButton]!
@@ -80,6 +81,10 @@ class MainViewController: UIViewController {
     // ********************************** FUNCTIONS ********************************** //
     
     @IBAction func backToLevelView(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func backToMain(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -15,7 +15,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        game.loadLevels()
+        game.LevelStages.loadLevels()
         
         // Can use the following functionality for sizing:
         // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
@@ -38,7 +38,7 @@ class GameViewController: UIViewController {
         if segue.identifier == "loadMenuSegue" {
             if let mvc = segue.destination as? UINavigationController {
                 let lvc = mvc.children[0] as! LevelTableViewController
-                lvc.levels = game.levels
+                lvc.levels = game.LevelStages.levels
             }
         } else if segue.identifier == "loadOptionsSegue" {
             print("Options Segue")

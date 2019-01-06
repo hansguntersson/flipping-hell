@@ -13,6 +13,7 @@ class FlippingHell {
     var LevelStages = LevelSet()
     var flipperOrientation = 0
     
+    /*
     func flipButton(at index: Int) {
         // Complete Level
         if(flipperOrientation == 0) {
@@ -21,5 +22,6 @@ class FlippingHell {
             flipperOrientation = 0
         }
     }
+ */
     
 }
