@@ -1,14 +1,14 @@
 //
-//  MenuViewController.swift
+//  StageMenuViewController.swift
 //  Flipping Hell
 //
-//  Created by Daniel Harlos on 03/01/2019.
+//  Created by Daniel Harlos on 07/01/2019.
 //  Copyright © 2019 Hans Guntersson Ltd. All rights reserved.
 //
 
 import UIKit
 
-class LevelMenuViewController: UINavigationController {
+class StageMenuViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +16,10 @@ class LevelMenuViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func unwindToMainMenu(segue: UIStoryboardSegue) {
+    @IBAction func unwindToMainMenuFromStages(segue: UIStoryboardSegue) {
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     /*
     // MARK: - Navigation
 
