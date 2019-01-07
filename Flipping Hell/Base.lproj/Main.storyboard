@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="-3106" y="-143"/>
         </scene>
-        <!--PICK A LEVEL-->
+        <!--STAGE 1-->
         <scene sceneID="HW2-aE-ejK">
             <objects>
                 <tableViewController storyboardIdentifier="LevelScreen" id="9K6-qu-tf3" customClass="LevelTableViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,18 +163,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" preservesSuperviewLayoutMargins="YES" text="STAGE 1" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="none" adjustsFontSizeToFit="NO" id="zHh-0z-Kny">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
-                            <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hef-C9-cRa" id="saT-tj-Esw">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
@@ -234,7 +225,7 @@
                             <outlet property="delegate" destination="9K6-qu-tf3" id="35h-bi-JB8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="PICK A LEVEL" largeTitleDisplayMode="never" id="k66-6K-qoY">
+                    <navigationItem key="navigationItem" title="STAGE 1" largeTitleDisplayMode="never" id="k66-6K-qoY">
                         <barButtonItem key="leftBarButtonItem" title="⮐ " id="R1D-y8-LZy">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -1163,7 +1154,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Goj-hu-oHh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Goj-hu-oHh">
                                 <rect key="frame" x="335" y="30" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1193,11 +1184,10 @@
                                     <action selector="resetLevel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2pA-jG-7f5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HZN-KQ-Hfh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HZN-KQ-Hfh">
                                 <rect key="frame" x="10" y="30" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="V2q-ha-yFv"/>
                                     <constraint firstAttribute="width" secondItem="HZN-KQ-Hfh" secondAttribute="height" multiplier="1:1" id="jOi-Oc-Y7A"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="10"/>
@@ -1719,7 +1709,7 @@
         <!--PICK A STAGE-->
         <scene sceneID="xbY-IO-c4b">
             <objects>
-                <collectionViewController id="Olf-Uu-t1n" sceneMemberID="viewController">
+                <collectionViewController id="Olf-Uu-t1n" customClass="StageCollectionViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JWR-s6-c03">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1933,10 +1923,10 @@
             </objects>
             <point key="canvasLocation" x="-2302" y="882"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Stage Menu View Controller-->
         <scene sceneID="b6Q-jg-eOr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x35-2D-G5I" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x35-2D-G5I" customClass="StageMenuViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4sN-6v-8xy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

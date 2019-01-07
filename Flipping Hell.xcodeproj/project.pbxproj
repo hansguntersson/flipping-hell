@@ -18,6 +18,7 @@
 		E56E325A21735E8200A16788 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E325921735E8200A16788 /* Level.swift */; };
 		E56E325C2173612500A16788 /* LevelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E325B2173612500A16788 /* LevelTableViewController.swift */; };
 		E578732B21E3602400A13231 /* StageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578732A21E3602400A13231 /* StageMenuViewController.swift */; };
+		E5A1C1F121E36925001E8D90 /* StageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */; };
 		E5AB86E021DE4AD700337825 /* LevelMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB86DF21DE4AD700337825 /* LevelMenuViewController.swift */; };
 		E5AB86E221DE625300337825 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB86E121DE625300337825 /* OptionsViewController.swift */; };
 		E5AB86E421DE627400337825 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB86E321DE627400337825 /* AboutViewController.swift */; };
@@ -64,6 +65,7 @@
 		E56E325921735E8200A16788 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		E56E325B2173612500A16788 /* LevelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewController.swift; sourceTree = "<group>"; };
 		E578732A21E3602400A13231 /* StageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageMenuViewController.swift; sourceTree = "<group>"; };
+		E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCollectionViewController.swift; sourceTree = "<group>"; };
 		E5AB86DF21DE4AD700337825 /* LevelMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelMenuViewController.swift; sourceTree = "<group>"; };
 		E5AB86E121DE625300337825 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		E5AB86E321DE627400337825 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -124,17 +126,6 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
-		E578732C21E3603700A13231 /* Levels & Stages */ = {
-			isa = PBXGroup;
-			children = (
-				E578732A21E3602400A13231 /* StageMenuViewController.swift */,
-				E5AB86DF21DE4AD700337825 /* LevelMenuViewController.swift */,
-				E56E325B2173612500A16788 /* LevelTableViewController.swift */,
-				E508CECC216FD98C0029408A /* LevelTableViewCell.swift */,
-			);
-			path = "Levels & Stages";
-			sourceTree = "<group>";
-		};
 		E5AB86EB21DE6C3800337825 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,7 +176,11 @@
 				E5C106BD215408B000947220 /* LaunchScreen.storyboard */,
 				E5C106B8215408AF00947220 /* Main.storyboard */,
 				E5F12CC021B94949004D0176 /* GameViewController.swift */,
-				E578732C21E3603700A13231 /* Levels & Stages */,
+				E578732A21E3602400A13231 /* StageMenuViewController.swift */,
+				E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */,
+				E5AB86DF21DE4AD700337825 /* LevelMenuViewController.swift */,
+				E56E325B2173612500A16788 /* LevelTableViewController.swift */,
+				E508CECC216FD98C0029408A /* LevelTableViewCell.swift */,
 				E5C106B6215408AF00947220 /* MainViewController.swift */,
 				E54E2956219A0F120042934E /* WinScreenController.swift */,
 				E5AB86EC21DE6C4F00337825 /* Options & About & Help */,
@@ -360,6 +355,7 @@
 				E54E2957219A0F120042934E /* WinScreenController.swift in Sources */,
 				E5AB86E021DE4AD700337825 /* LevelMenuViewController.swift in Sources */,
 				E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */,
+				E5A1C1F121E36925001E8D90 /* StageCollectionViewController.swift in Sources */,
 				E5AB86E621DE634900337825 /* HelpViewController.swift in Sources */,
 				E5AB86EA21DE6A5400337825 /* AboutMenuViewController.swift in Sources */,
 				E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */,
