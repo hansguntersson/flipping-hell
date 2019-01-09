@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cij-IX-Epf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3106" y="-143"/>
+            <point key="canvasLocation" x="-3158" y="-644"/>
         </scene>
         <!--STAGE 1-->
         <scene sceneID="HW2-aE-ejK">
@@ -232,12 +232,15 @@
                                 <segue destination="YkQ-pC-3dB" kind="unwind" unwindAction="unwindToStageMenuWithSegue:" id="XQT-Jn-JmI"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="★" id="6tT-wl-5OA">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxm-um-npz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YkQ-pC-3dB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-778" y="-143"/>
+            <point key="canvasLocation" x="265" y="-143"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -766,7 +769,7 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="backToLevelView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VM8-hp-Wi0"/>
+                                    <segue destination="x35-2D-G5I" kind="show" id="Q4V-zq-PhL"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="edz-eu-b6a">
@@ -1389,7 +1392,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="kWS-v8-6Ho" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2302" y="-143"/>
+            <point key="canvasLocation" x="-2303" y="-278"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="nYe-xn-huK">
@@ -1462,7 +1465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rl9-fO-5Xq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1532" y="881"/>
+            <point key="canvasLocation" x="-2303" y="452"/>
         </scene>
         <!--Win Screen Controller-->
         <scene sceneID="qiU-yJ-KnD">
@@ -1481,8 +1484,8 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★ ★ ★ " textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoV-Og-XyQ">
-                                        <rect key="frame" x="86" y="77" width="123" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆ ☆ ☆" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoV-Og-XyQ">
+                                        <rect key="frame" x="90.5" y="77" width="114" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1535,7 +1538,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="L3x-7Q-pU7" kind="unwind" unwindAction="unwindToLevelViewControllerWithSegue:" id="huQ-Ap-gWm"/>
+                                            <segue destination="x35-2D-G5I" kind="show" id="DYy-m1-tfD"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
@@ -1627,7 +1630,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBG-7t-jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="L3x-7Q-pU7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1532" y="-143"/>
+            <point key="canvasLocation" x="-1540" y="84"/>
         </scene>
         <!--ABOUT-->
         <scene sceneID="I4D-1F-eud">
@@ -1665,7 +1668,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8j5-t2-JYO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2302" y="1689"/>
+            <point key="canvasLocation" x="-3159" y="768"/>
         </scene>
         <!--OPTIONS-->
         <scene sceneID="GF7-We-ak0">
@@ -1704,7 +1707,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-hG-WfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EGm-BU-mjS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3107" y="1689"/>
+            <point key="canvasLocation" x="-3887" y="768"/>
         </scene>
         <!--PICK A STAGE-->
         <scene sceneID="xbY-IO-c4b">
@@ -1730,14 +1733,14 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-RO-ckO">
                                             <rect key="frame" x="12.5" y="12.5" width="75" height="75"/>
-                                            <color key="backgroundColor" white="0.80428617290000004" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="7gf-RO-ckO" secondAttribute="height" multiplier="1:1" id="F8Y-7Z-4oi"/>
                                                 <constraint firstAttribute="width" constant="75" id="acB-Yy-1Mz"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="40"/>
                                             <state key="normal" title="☆">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
                                                 <segue destination="rAM-QS-TNW" kind="presentation" id="7O6-k0-FJF"/>
@@ -1841,7 +1844,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqL-VB-UbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hud-ee-eOC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1532" y="-922"/>
+            <point key="canvasLocation" x="265" y="-922"/>
         </scene>
         <!--Levels-->
         <scene sceneID="wRx-LU-J6y">
@@ -1872,7 +1875,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5j-AZ-hZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-779" y="-922"/>
+            <point key="canvasLocation" x="-550" y="-143"/>
         </scene>
         <!--Options Menu View Controller-->
         <scene sceneID="Lqo-MW-2sm">
@@ -1895,7 +1898,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcO-WM-9Kn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3107" y="881"/>
+            <point key="canvasLocation" x="-3886" y="85"/>
         </scene>
         <!--About-->
         <scene sceneID="XjH-fb-bau">
@@ -1921,7 +1924,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCx-NK-2zT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2302" y="882"/>
+            <point key="canvasLocation" x="-3159" y="84"/>
         </scene>
         <!--Stage Menu View Controller-->
         <scene sceneID="b6Q-jg-eOr">
@@ -1947,7 +1950,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaV-BO-BUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2302" y="-922"/>
+            <point key="canvasLocation" x="-551" y="-922"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DYy-m1-tfD"/>
+    </inferredMetricsTieBreakers>
 </document>

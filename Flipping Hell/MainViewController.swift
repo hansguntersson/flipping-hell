@@ -164,7 +164,7 @@ class MainViewController: UIViewController {
                 StarsColour = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
             }
             
-            UpdateLevelsDelegate.updateLevels(WinStars: StarsString, WinColour: StarsColour, WinFlips: FlipCount)
+            // UpdateLevelsDelegate.updateLevels(WinStars: StarsString, WinColour: StarsColour, WinFlips: FlipCount)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.performSegue(withIdentifier: "GameWonSegue", sender: self)
             }
