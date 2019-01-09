@@ -101,6 +101,7 @@ class MainViewController: UIViewController {
         FlipperOrientation = 1
         updateFlipperDisplay()
         FlipCount = 0
+        FlipsLabel.text = "FLIPS: \(FlipCount)"
         
         // add 1 to attemps on the level if flips are greater than 0
         

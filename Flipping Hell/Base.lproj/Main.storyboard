@@ -242,13 +242,16 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="★" id="6tT-wl-5OA">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="x35-2D-G5I" kind="presentation" modalTransitionStyle="flipHorizontal" id="86N-Sm-9dh"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxm-um-npz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YkQ-pC-3dB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="265" y="-143"/>
+            <point key="canvasLocation" x="-578" y="-1356"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -777,7 +780,7 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="x35-2D-G5I" kind="presentation" modalTransitionStyle="flipHorizontal" id="Q4V-zq-PhL"/>
+                                    <segue destination="rAM-QS-TNW" kind="presentation" modalTransitionStyle="flipHorizontal" id="JdO-Ve-BpG"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="edz-eu-b6a">
@@ -1473,7 +1476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rl9-fO-5Xq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2303" y="452"/>
+            <point key="canvasLocation" x="-2303" y="542"/>
         </scene>
         <!--Win Screen Controller-->
         <scene sceneID="qiU-yJ-KnD">
@@ -1546,7 +1549,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="rAM-QS-TNW" kind="show" id="IYV-QO-7Yk"/>
+                                            <segue destination="rAM-QS-TNW" kind="presentation" modalTransitionStyle="coverVertical" id="IYV-QO-7Yk"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
@@ -1638,7 +1641,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBG-7t-jyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="L3x-7Q-pU7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1540" y="84"/>
+            <point key="canvasLocation" x="-1481" y="451"/>
         </scene>
         <!--ABOUT-->
         <scene sceneID="I4D-1F-eud">
@@ -1751,7 +1754,7 @@
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <segue destination="rAM-QS-TNW" kind="presentation" id="7O6-k0-FJF"/>
+                                                <segue destination="rAM-QS-TNW" kind="presentation" modalTransitionStyle="flipHorizontal" id="7O6-k0-FJF"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -1852,7 +1855,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqL-VB-UbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hud-ee-eOC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="265" y="-922"/>
+            <point key="canvasLocation" x="-1482" y="-781"/>
         </scene>
         <!--Levels-->
         <scene sceneID="wRx-LU-J6y">
@@ -1883,7 +1886,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5j-AZ-hZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-550" y="-143"/>
+            <point key="canvasLocation" x="-577" y="-420"/>
         </scene>
         <!--Options Menu View Controller-->
         <scene sceneID="Lqo-MW-2sm">
@@ -1958,11 +1961,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaV-BO-BUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-551" y="-922"/>
+            <point key="canvasLocation" x="-2303" y="-1038"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ydf-jf-VSv"/>
-        <segue reference="IYV-QO-7Yk"/>
+        <segue reference="86N-Sm-9dh"/>
+        <segue reference="7O6-k0-FJF"/>
     </inferredMetricsTieBreakers>
 </document>
