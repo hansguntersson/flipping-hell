@@ -54,7 +54,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="bDq-G4-XfU"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="bDq-G4-XfU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chs-VK-OcS">
@@ -109,7 +109,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="x35-2D-G5I" kind="presentation" id="Ydf-jf-VSv"/>
+                                    <segue destination="x35-2D-G5I" kind="presentation" modalTransitionStyle="coverVertical" id="Ydf-jf-VSv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -155,17 +155,25 @@
             </objects>
             <point key="canvasLocation" x="-3158" y="-644"/>
         </scene>
-        <!--STAGE 1-->
+        <!--PICK A LEVEL-->
         <scene sceneID="HW2-aE-ejK">
             <objects>
-                <tableViewController storyboardIdentifier="LevelScreen" id="9K6-qu-tf3" customClass="LevelTableViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LevelScreen" modalTransitionStyle="flipHorizontal" id="9K6-qu-tf3" customClass="LevelTableViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" id="LwH-pP-zzk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAGE 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h9y-hy-PwS">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="24"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hef-C9-cRa" id="saT-tj-Esw">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
@@ -225,7 +233,7 @@
                             <outlet property="delegate" destination="9K6-qu-tf3" id="35h-bi-JB8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="STAGE 1" largeTitleDisplayMode="never" id="k66-6K-qoY">
+                    <navigationItem key="navigationItem" title="PICK A LEVEL" largeTitleDisplayMode="never" id="k66-6K-qoY">
                         <barButtonItem key="leftBarButtonItem" title="⮐ " id="R1D-y8-LZy">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -769,7 +777,7 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="x35-2D-G5I" kind="show" id="Q4V-zq-PhL"/>
+                                    <segue destination="x35-2D-G5I" kind="presentation" modalTransitionStyle="flipHorizontal" id="Q4V-zq-PhL"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="edz-eu-b6a">
@@ -1538,7 +1546,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="x35-2D-G5I" kind="show" id="DYy-m1-tfD"/>
+                                            <segue destination="rAM-QS-TNW" kind="show" id="IYV-QO-7Yk"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
@@ -1668,7 +1676,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-BI-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8j5-t2-JYO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3159" y="768"/>
+            <point key="canvasLocation" x="-3159" y="814"/>
         </scene>
         <!--OPTIONS-->
         <scene sceneID="GF7-We-ak0">
@@ -1707,7 +1715,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-hG-WfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EGm-BU-mjS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3887" y="768"/>
+            <point key="canvasLocation" x="-3887" y="814"/>
         </scene>
         <!--PICK A STAGE-->
         <scene sceneID="xbY-IO-c4b">
@@ -1954,6 +1962,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DYy-m1-tfD"/>
+        <segue reference="Ydf-jf-VSv"/>
+        <segue reference="IYV-QO-7Yk"/>
     </inferredMetricsTieBreakers>
 </document>
