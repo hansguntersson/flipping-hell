@@ -102,7 +102,7 @@
                         <constraints>
                             <constraint firstItem="hZV-gN-Gxi" firstAttribute="centerX" secondItem="GGX-Sn-9PO" secondAttribute="centerX" id="5ff-rv-NeT"/>
                             <constraint firstItem="hZV-gN-Gxi" firstAttribute="top" secondItem="GGX-Sn-9PO" secondAttribute="top" constant="100" id="Gc2-1a-mwj">
-                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=compact-widthClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstItem="EZ7-xP-76S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="chs-VK-OcS" secondAttribute="trailing" constant="50" id="KSM-kQ-vxJ"/>
                             <constraint firstItem="GGX-Sn-9PO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hZV-gN-Gxi" secondAttribute="trailing" constant="20" id="WmD-kQ-k8f"/>
@@ -1196,8 +1196,6 @@
                             <constraint firstItem="pYV-aJ-FAB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2bl-zw-9s6"/>
                             <constraint firstItem="CtB-2T-XqP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pYV-aJ-FAB" secondAttribute="trailing" constant="20" id="3C9-Xg-9np"/>
                             <constraint firstItem="zSS-ky-ncw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="9Ff-np-DCf"/>
-                            <constraint firstItem="zSS-ky-ncw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FTb-oN-8i8" secondAttribute="trailing" constant="50" id="AJp-IU-aXf"/>
-                            <constraint firstItem="cVc-y0-2hY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Bzr-Ba-s9P"/>
                             <constraint firstItem="pYV-aJ-FAB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CAb-bu-JTQ">
                                 <variation key="heightClass=compact-widthClass=compact" constant="20"/>
                             </constraint>
@@ -1251,7 +1249,6 @@
                                 <exclude reference="xw0-9F-BLy"/>
                                 <exclude reference="CAb-bu-JTQ"/>
                                 <exclude reference="0XI-08-TiP"/>
-                                <exclude reference="AJp-IU-aXf"/>
                                 <exclude reference="xx9-Sz-dxd"/>
                                 <exclude reference="OFD-DS-0Zr"/>
                                 <exclude reference="WqW-jf-1jc"/>
@@ -1269,6 +1266,7 @@
                                 <include reference="QcN-PR-fzr"/>
                                 <exclude reference="VNr-Gs-VVs"/>
                                 <include reference="bW9-eh-aMP"/>
+                                <exclude reference="cJi-7k-C2f"/>
                                 <exclude reference="1Fp-tN-Xu9"/>
                                 <exclude reference="GHT-zH-dsc"/>
                                 <include reference="Y4H-wR-EQn"/>
@@ -1277,7 +1275,7 @@
                                 <include reference="CAb-bu-JTQ"/>
                                 <exclude reference="EOW-yk-bek"/>
                                 <include reference="0XI-08-TiP"/>
-                                <include reference="AJp-IU-aXf"/>
+                                <exclude reference="9Ff-np-DCf"/>
                                 <exclude reference="fR1-Cz-K5U"/>
                                 <exclude reference="nfh-TH-r0J"/>
                                 <include reference="xx9-Sz-dxd"/>
@@ -1933,6 +1931,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IYV-QO-7Yk"/>
+        <segue reference="JdO-Ve-BpG"/>
     </inferredMetricsTieBreakers>
 </document>
