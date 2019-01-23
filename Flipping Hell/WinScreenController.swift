@@ -20,22 +20,35 @@ class WinScreenController: UIViewController {
     
     var ResetButtonsDelegate: ResetDelegate!
     
-    @IBOutlet var WinStars: UILabel!
-    @IBOutlet var WinFlips: UILabel!
-    @IBOutlet var GoalFlips: UILabel!
+    var WinFlips = 0
+    var GoalFlips = 0
+    
+    @IBOutlet var WinStarsText: UILabel!
+    @IBOutlet var WinFlipsText: UILabel!
+    @IBOutlet var GoalFlipsText: UILabel!
 
     var WinStarsString: String = "TBD"
-    var GoalFlipsString: String = "FLIPS: 0"
-    var WinFlipsString: String = "GOAL: 0"
     var WinStarColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        GoalFlips.text = GoalFlipsString
-        WinFlips.text = WinFlipsString
-        WinStars.text = WinStarsString
-        WinStars.textColor = WinStarColor
+        GoalFlipsText.text = "GOAL: \(GoalFlips)"
+        WinFlipsText.text = "FLIPS: \(WinFlips)"
+        
+        if (WinFlips - GoalFlips > 2) {
+            WinStarsText.text = "★"
+            WinStarsText.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
+        } else if (WinFlips - GoalFlips > 0) {
+            WinStarsText.text = "★ ★"
+            WinStarsText.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        } else if (WinFlips - GoalFlips == 0) {
+            WinStarsText.text = "★ ★ ★"
+            WinStarsText.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+        } else if (WinFlips - GoalFlips < 0) {
+            WinStarsText.text = "✮ ✮ ✮"
+            WinStarsText.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        }
     }
     
     @IBAction func replayLevel(_ sender: UIButton) {
@@ -53,7 +66,6 @@ class WinScreenController: UIViewController {
         // unwind all the way back to level screen
         self.performSegue(withIdentifier: "unwindToLevelViewController", sender: self)
     }
-    
     
     /*
     // Only override draw() if you perform custom drawing.

@@ -1600,8 +1600,11 @@
                     </view>
                     <connections>
                         <outlet property="GoalFlips" destination="kO0-9R-1J9" id="FiP-s3-dzS"/>
+                        <outlet property="GoalFlipsText" destination="kO0-9R-1J9" id="Ht8-JK-35Y"/>
                         <outlet property="WinFlips" destination="V16-oz-6bC" id="2W6-im-OP4"/>
+                        <outlet property="WinFlipsText" destination="V16-oz-6bC" id="nYE-sJ-aOC"/>
                         <outlet property="WinStars" destination="DoV-Og-XyQ" id="1Sd-21-LFK"/>
+                        <outlet property="WinStarsText" destination="DoV-Og-XyQ" id="mQf-1T-lxJ"/>
                         <segue destination="L3x-7Q-pU7" kind="unwind" identifier="unwindToMainView" unwindAction="unwindToMainViewControllerWithSegue:" id="CqW-Y4-H4p"/>
                         <segue destination="L3x-7Q-pU7" kind="unwind" identifier="unwindToLevelView" unwindAction="unwindToLevelViewControllerWithSegue:" id="py9-Ii-DcC"/>
                     </connections>
@@ -1933,7 +1936,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="A4U-Mf-kiJ"/>
-        <segue reference="7O6-k0-FJF"/>
+        <segue reference="IYV-QO-7Yk"/>
     </inferredMetricsTieBreakers>
 </document>

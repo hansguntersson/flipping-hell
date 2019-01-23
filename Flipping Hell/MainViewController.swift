@@ -151,19 +151,7 @@ class MainViewController: UIViewController {
         
         if (WinVal == true) {
             
-            if (FlipCount - GoalFlips > 2) {
-                StarsString = "★"
-                StarsColour = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
-            } else if (FlipCount - GoalFlips > 0) {
-                StarsString = "★ ★"
-                StarsColour = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-            } else if (FlipCount - GoalFlips == 0) {
-                StarsString = "★ ★ ★"
-                StarsColour = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-            } else if (FlipCount - GoalFlips < 0) {
-                StarsString = "✮ ✮ ✮"
-                StarsColour = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-            }
+           
             
             // UpdateLevelsDelegate.updateLevels(WinStars: StarsString, WinColour: StarsColour, WinFlips: FlipCount)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -262,10 +250,8 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? WinScreenController {
             vc.ResetButtonsDelegate = self
-            vc.WinFlipsString = "FLIPS: \(FlipCount)"
-            vc.GoalFlipsString = "GOAL: \(GoalFlips)"
-            vc.WinStarsString = StarsString
-            vc.WinStarColor = StarsColour
+            vc.WinFlips = FlipCount
+            vc.GoalFlips = GoalFlips
         }
     }
     
