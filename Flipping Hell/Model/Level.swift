@@ -21,7 +21,7 @@ class Level {
     
     // Move to game
     var attempts = 0 // Hpw many attempts were made
-    var minFlips: Int? = nil // The minimum number of flips the level has been completed in
+    var minFlips: Int = 0 // The minimum number of flips the level has been completed in
     var minMoves: Array<Int> = [0] // The minimum moves the level has been completed in
     var isComplete = false // Whether the level has been completed
     var isUnlocked = false // Whether the level is unlocked
@@ -34,7 +34,7 @@ class Level {
 
  
 
-    // FUNCT
+    
     
     
     init(sequence: Array<Int>, goalFlips: Int) {
@@ -52,24 +52,18 @@ class Level {
     func completeLevel(levelCompleted: Level, completeSequence: Array<Int>) { // Include moves, sequence of moves
         isComplete = true
         let moveCount = completeSequence.count
-        
-        if let flipExists = minFlips {
-            if(moveCount < flipExists) {
-                minFlips = moveCount
-                minMoves = completeSequence
-                if (moveCount - goalFlips >= 2) {
-                    levelstars = "★"
-                } else if (moveCount - goalFlips > 0) {
-                    levelstars = "★ ★"
-                } else if (moveCount - goalFlips == 0) {
-                    levelstars = "★ ★ ★"
-                } else if (moveCount - goalFlips < 0) {
-                    levelstars = "✮ ✮ ✮"
-                }
-            }
-        } else {
+        if(moveCount < minFlips) {
             minFlips = moveCount
             minMoves = completeSequence
+            if (moveCount - goalFlips >= 2) {
+                levelstars = "★"
+            } else if (moveCount - goalFlips > 0) {
+                levelstars = "★ ★"
+            } else if (moveCount - goalFlips == 0) {
+                levelstars = "★ ★ ★"
+            } else if (moveCount - goalFlips < 0) {
+                levelstars = "✮ ✮ ✮"
+            }
         }
         attempts += 1
         // Unlock next level when not yet unlocked

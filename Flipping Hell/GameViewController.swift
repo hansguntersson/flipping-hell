@@ -10,12 +10,9 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    var game = FlippingHell()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        game.LevelStages.loadLevels()
         
         // Can use the following functionality for sizing:
         // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
@@ -30,22 +27,6 @@ class GameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        
-        if segue.identifier == "loadMenuSegue" {
-            if let mvc = segue.destination as? UINavigationController {
-                let lvc = mvc.children[0] as! LevelTableViewController
-                lvc.levels = game.LevelStages.levels
-            }
-        } else if segue.identifier == "loadOptionsSegue" {
-            print("Options Segue")
-        } else if segue.identifier == "loadAboutSegue" {
-            print("About Segue")
-        }
-    }
     
 }
 

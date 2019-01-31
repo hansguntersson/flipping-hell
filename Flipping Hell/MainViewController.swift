@@ -18,25 +18,14 @@ protocol UpdateLevelsScreenDelegate {
 
 class MainViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        updateWinDisplay()
-        
-        buttonFlipperCollection[1].layer.cornerRadius = buttonFlipperCollection[1].frame.size.width / 2
-        buttonFlipperCollection[3].layer.cornerRadius = buttonFlipperCollection[3].frame.size.width / 2
-        buttonFlipperCollection[4].layer.cornerRadius = buttonFlipperCollection[4].frame.size.width / 2
-        buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
-        buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
-        
-        levelTitle.text = "LEVEL \(LevelNum)"
-    }
-    
     // ********************************** VARIABLES ********************************** //
+    
+    var game = FlippingHell()
     
     var GoalFlips = 0
     var FlipCount = 0
     var LevelNum = 0
+    var StageNum = 0
     var FlipperOrientation = 0
     
     var buttonStatus = [0, 0, 0, 0, 0,
@@ -63,9 +52,6 @@ class MainViewController: UIViewController {
                           15, 16, 17, 18,
                           20, 21, 22, 23] // List to define when right button is flipped
     
-    var StarsString = "★"
-    var StarsColour = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
-    
     // ********************************** OUTLETS ********************************** //
     
     
@@ -78,25 +64,34 @@ class MainViewController: UIViewController {
     
     var UpdateLevelsDelegate: UpdateLevelsScreenDelegate!
     
+    
     // ********************************** FUNCTIONS ********************************** //
     
-    @IBAction func backToLevelView(_ sender: UIButton) {
+    @IBAction func backToMain(_ sender: UIButton) { // Dismisses view controller back to the title screen
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func backToMain(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func unwindToMainViewController(segue:UIStoryboardSegue) {
+    @IBAction func resetLevel(_ sender: UIButton) { //Resets the level from the main screen
         resetButtons()
     }
     
-    @IBAction func resetLevel(_ sender: UIButton) {
-        resetButtons()
+    
+    override func viewDidLoad() { // Sets up game on load
+        super.viewDidLoad()
+        game.LevelStages.loadLevels()
+        // Do any additional setup after loading the view, typically from a nib.
+        updateWinDisplay()
+        
+        buttonFlipperCollection[1].layer.cornerRadius = buttonFlipperCollection[1].frame.size.width / 2
+        buttonFlipperCollection[3].layer.cornerRadius = buttonFlipperCollection[3].frame.size.width / 2
+        buttonFlipperCollection[4].layer.cornerRadius = buttonFlipperCollection[4].frame.size.width / 2
+        buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
+        buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
+        
+        levelTitle.text = "LEVEL \(StageNum + 1) ★ \(LevelNum + 1)"
     }
     
-    func resetButtons() {
+    func resetButtons() { // Resets buttons
         // Reset flip and flipper
         FlipperOrientation = 1
         updateFlipperDisplay()
@@ -112,7 +107,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    @IBAction func clickButton(_ sender: UIButton) {
+    @IBAction func clickButton(_ sender: UIButton) { // Flips buttons based on the button clicked
         let button = sender
         var WinVal = false
         
@@ -150,45 +145,13 @@ class MainViewController: UIViewController {
         WinVal = checkWin()
         
         if (WinVal == true) {
-            
-           
-            
-            // UpdateLevelsDelegate.updateLevels(WinStars: StarsString, WinColour: StarsColour, WinFlips: FlipCount)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.performSegue(withIdentifier: "GameWonSegue", sender: self)
             }
         }
     }
     
-    func updateWinDisplay() {
-        for winVal in 0 ..< currentLevel.count {
-            if(currentLevel[winVal] == 0) {
-                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
-                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
-            } else {
-                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
-            }
-        }
-    }
-    
-    func updateFlipperDisplay() {
-        if(FlipperOrientation == 0) {
-            buttonFlipperCollection[3].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
-            buttonFlipperCollection[5].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
-            buttonFlipperCollection[1].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
-            buttonFlipperCollection[7].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
-            FlipperOrientation = 1
-        } else {
-            buttonFlipperCollection[1].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
-            buttonFlipperCollection[7].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
-            buttonFlipperCollection[3].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
-            buttonFlipperCollection[5].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
-            FlipperOrientation = 0
-        }
-    }
-    
-    func flipButton(_ sender: UIButton, buttonIndex: Int) {
+    func flipButton(_ sender: UIButton, buttonIndex: Int) { // Flips the corresponding button
         let button = sender
         let animTime = 0.2
         let xVal = button.center.x
@@ -236,7 +199,35 @@ class MainViewController: UIViewController {
         }
     }
     
-    func checkWin() -> Bool {
+    func updateWinDisplay() { // Updates the win display based on the button array
+        for winVal in 0 ..< currentLevel.count {
+            if(currentLevel[winVal] == 0) {
+                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
+                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
+            } else {
+                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
+            }
+        }
+    }
+    
+    func updateFlipperDisplay() { // Updates the flipper based on the orientation
+        if(FlipperOrientation == 0) {
+            buttonFlipperCollection[3].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
+            buttonFlipperCollection[5].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
+            buttonFlipperCollection[1].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
+            buttonFlipperCollection[7].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
+            FlipperOrientation = 1
+        } else {
+            buttonFlipperCollection[1].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
+            buttonFlipperCollection[7].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
+            buttonFlipperCollection[3].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
+            buttonFlipperCollection[5].backgroundColor = #colorLiteral(red: 0.8000000119, green: 0.8000000119, blue: 0.8000000119, alpha: 1)
+            FlipperOrientation = 0
+        }
+    }
+    
+    func checkWin() -> Bool { // Checks if the win condition is met
         var WinTrue: Bool = true
         for CheckIndex in 0 ..< currentLevel.count {
             if (currentLevel[CheckIndex] != buttonStatus[CheckIndex]) {
@@ -247,11 +238,24 @@ class MainViewController: UIViewController {
         return WinTrue
     }
     
+     // ********************************** SEGUES ********************************** //
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? WinScreenController {
-            vc.ResetButtonsDelegate = self
-            vc.WinFlips = FlipCount
-            vc.GoalFlips = GoalFlips
+        if segue.identifier == "loadMenuSegue" {
+            if let vc = segue.destination as? WinScreenController {
+                vc.ResetButtonsDelegate = self
+                vc.WinFlips = FlipCount
+                vc.GoalFlips = GoalFlips
+            }
+        } else if segue.identifier == "loadLevelsSegue" {
+            if let vc = segue.destination as? UINavigationController {
+                let lvc = vc.children[0] as! LevelTableViewController
+                lvc.levels = game.LevelStages.levels
+            }
+        } else if segue.identifier == "loadOptionsSegue" {
+            print("Options Segue")
+        } else if segue.identifier == "loadAboutSegue" {
+            print("About Segue")
         }
     }
     
@@ -259,7 +263,7 @@ class MainViewController: UIViewController {
 
  // ********************************** EXTENSIONS ********************************** //
 
-extension MainViewController: ResetDelegate {
+extension MainViewController: ResetDelegate { // Resets level to current or next level
     func resetToLevel(NextLevel: Bool) {
         if(NextLevel == false) {
             resetButtons()

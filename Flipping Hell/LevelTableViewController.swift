@@ -52,6 +52,24 @@ class LevelTableViewController: UITableViewController {
         cell.levelIndex.setTitle(String(level.levelIndex), for: .normal)
         cell.levelGoal.text = "GOAL: " + "\(level.goalFlips)"
         cell.levelStars.text = level.levelstars
+        
+        if(level.minFlips == 0) {
+            cell.levelStars.text = "☆ ☆ ☆"
+            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        } else if (level.minFlips - level.goalFlips > 2) {
+            cell.levelStars.text = "★"
+            cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
+        } else if (level.minFlips - level.goalFlips > 0) {
+            cell.levelStars.text = "★ ★"
+            cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        } else if (level.minFlips - level.goalFlips == 0) {
+            cell.levelStars.text = "★ ★ ★"
+            cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+        } else if (level.minFlips - level.goalFlips < 0) {
+            cell.levelStars.text = "✮ ✮ ✮"
+           cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        }
+        
 
         return cell
     }
