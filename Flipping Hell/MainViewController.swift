@@ -88,7 +88,7 @@ class MainViewController: UIViewController {
         buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
         buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
         
-        levelTitle.text = "LEVEL \(StageNum + 1) ★ \(LevelNum + 1)"
+        levelTitle.text = "★ \(StageNum + 1) - LEVEL \(LevelNum + 1)"
     }
     
     func resetButtons() { // Resets buttons
