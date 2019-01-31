@@ -205,7 +205,7 @@
                         <barButtonItem key="leftBarButtonItem" title="⮐ " id="R1D-y8-LZy">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="YkQ-pC-3dB" kind="unwind" unwindAction="unwindToStageMenuWithSegue:" id="XQT-Jn-JmI"/>
+                                <segue destination="YkQ-pC-3dB" kind="unwind" unwindAction="unwindToMainMenuWithSegue:" id="MvN-PO-Zd6"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="★" id="6tT-wl-5OA">

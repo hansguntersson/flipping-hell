@@ -16,7 +16,7 @@ class LevelMenuViewController: UINavigationController {
         // self.navigationBar.frame.size.height = self.navigationBar.frame.size.height + 50
     }
     
-    @IBAction func unwindToStageMenu(segue: UIStoryboardSegue) {
+    @IBAction func unwindToMainMenu(segue: UIStoryboardSegue) {
         self.dismiss(animated: true, completion: nil)
     }
     

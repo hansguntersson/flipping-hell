@@ -14,12 +14,6 @@ class LevelTableViewController: UITableViewController {
     var levels = [Level]()
     var CurrentLevel = 0;
     
-    @IBAction func unwindToLevelViewController(segue:UIStoryboardSegue) {
-        print("change level info")
-        // update stars for level completed
-        // unlock new levels?
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -49,19 +43,24 @@ class LevelTableViewController: UITableViewController {
         
         let level = levels[indexPath.row]
         
-        cell.levelIndex.setTitle(String(level.levelIndex), for: .normal)
+        if (level.levelIndex == 20) {
+            cell.levelIndex.setTitle("★", for: .normal)
+        } else {
+            cell.levelIndex.setTitle(String(level.levelIndex), for: .normal)
+        }
+        
         cell.levelGoal.text = "GOAL: " + "\(level.goalFlips)"
         cell.levelStars.text = level.levelstars
         
         if(level.minFlips == 0) {
             cell.levelStars.text = "☆ ☆ ☆"
-            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         } else if (level.minFlips - level.goalFlips > 2) {
             cell.levelStars.text = "★"
             cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
         } else if (level.minFlips - level.goalFlips > 0) {
             cell.levelStars.text = "★ ★"
-            cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            cell.levelStars.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         } else if (level.minFlips - level.goalFlips == 0) {
             cell.levelStars.text = "★ ★ ★"
             cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
@@ -69,8 +68,6 @@ class LevelTableViewController: UITableViewController {
             cell.levelStars.text = "✮ ✮ ✮"
            cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
-        
-
         return cell
     }
     
