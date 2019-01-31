@@ -82,6 +82,9 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         updateWinDisplay()
         
+        // Can use the following functionality for sizing:
+        // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
+        
         buttonFlipperCollection[1].layer.cornerRadius = buttonFlipperCollection[1].frame.size.width / 2
         buttonFlipperCollection[3].layer.cornerRadius = buttonFlipperCollection[3].frame.size.width / 2
         buttonFlipperCollection[4].layer.cornerRadius = buttonFlipperCollection[4].frame.size.width / 2
@@ -241,13 +244,13 @@ class MainViewController: UIViewController {
      // ********************************** SEGUES ********************************** //
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "loadMenuSegue" {
+        if segue.identifier == "GameWonSegue" {
             if let vc = segue.destination as? WinScreenController {
                 vc.ResetButtonsDelegate = self
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
             }
-        } else if segue.identifier == "loadLevelsSegue" {
+        } else if segue.identifier == "LoadLevelsSegue" {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.levels = game.LevelStages.levels

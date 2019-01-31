@@ -62,9 +62,9 @@ class WinScreenController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func backToLevelView(_ sender: UIButton) {
-        // unwind all the way back to level screen
-        self.performSegue(withIdentifier: "unwindToLevelViewController", sender: self)
+    @IBAction func selectLevel(_ sender: UIButton) {
+        // Segue to Level, ensure that win screen is dismissed when level is selected
+        self.performSegue(withIdentifier: "WinSelectLevelSegue", sender: self)
     }
     
     /*
