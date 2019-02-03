@@ -69,4 +69,35 @@ class Level {
         // Unlock next level when not yet unlocked
     }
     
+    
+    
+    func arrayToNumber(ArrayInput: [Int]) -> Int { // Take in an array and converts it to a number
+        var TextString: String = ""
+        for Digit in ArrayInput {
+        TextString += String(Digit)
+        }
+        return Int(TextString, radix: 2) ?? 0
+    }
+    
+    
+    func numberToArray(NumberInput: Int) -> [Int] { // Take a number and converts it to an array
+        var IntOutput: [Int] = []
+        let BinaryOutput = String(NumberInput, radix: 2)
+        let BinaryArray = Array(BinaryOutput)
+        
+        let AdditionalElements = 25 - BinaryArray.count
+        
+        for _ in 0..<AdditionalElements {
+        IntOutput.append(0)
+        }
+        
+        for index in 0..<BinaryArray.count {
+        IntOutput.append(Int(String(BinaryArray[index]))!)
+        }
+        
+        return IntOutput
+    }
+    
+    
+    
 }
