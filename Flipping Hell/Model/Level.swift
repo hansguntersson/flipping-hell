@@ -16,42 +16,32 @@ class Level {
     var goalFlips: Int // The goal flips for the level
     var currentFlips: Int = 0 // The current flip count
     let levelIndex: Int // Which index the level is at
-
-    static var levelsIndices = -1 // The class index for the levels
-    
-    // Move to game
     var attempts = 0 // Hpw many attempts were made
     var minFlips: Int = 0 // The minimum number of flips the level has been completed in
     var minMoves: Array<Int> = [0] // The minimum moves the level has been completed in
     var isComplete = false // Whether the level has been completed
-    var isUnlocked = false // Whether the level is unlocked
 
+    static var levelsIndices = -1 // The class index for the levels
     
     // Passed to Win
-    var LevelScore = 0
-    var levelstars = "☆ ☆ ☆" // The star sequence for the level
-
-
- 
-
+    // var LevelScore = 0
     
     
-    
-    init(sequence: Array<Int>, goalFlips: Int) {
+    init(sequence: Array<Int>, goalFlips: Int) { // Initialiser
         self.sequence = sequence
         self.sequence = sequence
         self.goalFlips = goalFlips
         levelIndex = Level.getLevelNumber()
     }
     
-    static func getLevelNumber() -> Int {
+    static func getLevelNumber() -> Int { // Get level for display on table etc
         levelsIndices += 1
         return levelsIndices
     }
     
-    func completeLevel(levelCompleted: Level, completeSequence: Array<Int>) { // Include moves, sequence of moves
+    func completeLevel(levelCompleted: Level, completeSequence: Array<Int>) { // What happens when level is completed
         isComplete = true
-        let moveCount = completeSequence.count
+        /*  let moveCount = completeSequence.count
         if(moveCount < minFlips) {
             minFlips = moveCount
             minMoves = completeSequence
@@ -64,9 +54,10 @@ class Level {
             } else if (moveCount - goalFlips < 0) {
                 levelstars = "✮ ✮ ✮"
             }
-        }
+        }*/
         attempts += 1
         // Unlock next level when not yet unlocked
+        // Include moves, sequence of moves
     }
     
     

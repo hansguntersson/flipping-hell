@@ -50,7 +50,6 @@ class LevelTableViewController: UITableViewController {
         }
         
         cell.levelGoal.text = "GOAL: " + "\(level.goalFlips)"
-        cell.levelStars.text = level.levelstars
         
         if(level.minFlips == 0) {
             cell.levelStars.text = "☆ ☆ ☆"

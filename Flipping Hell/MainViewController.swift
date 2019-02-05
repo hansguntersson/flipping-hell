@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     
     // ********************************** VARIABLES ********************************** //
     
-    var game = FlippingHell()
+    var game = FlippingHell(levelToLoad: 0)
     
     var GoalFlips = 0
     var FlipCount = 0
@@ -78,7 +78,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() { // Sets up game on load
         super.viewDidLoad()
-        game.LevelStages.loadLevels()
+        // game.LevelStages.loadLevels()
         // Do any additional setup after loading the view, typically from a nib.
         updateWinDisplay()
         
@@ -253,7 +253,7 @@ class MainViewController: UIViewController {
         } else if segue.identifier == "LoadLevelsSegue" {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
-                lvc.levels = game.LevelStages.levels
+                lvc.levels = game.levels
             }
         } else if segue.identifier == "loadOptionsSegue" {
             print("Options Segue")
