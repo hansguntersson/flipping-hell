@@ -9,11 +9,10 @@
 import Foundation
 
 class Level {
-    
-    // Core data
+
     var sequenceID: Int = 0 // The unique sequence ID
     var sequence: Array<Int> // The array sequence for the level
-    var goalFlips: Int // The goal flips for the level
+    var GoalFlips: Int // The goal flips for the level
     var currentFlips: Int = 0 // The current flip count
     let levelIndex: Int // Which index the level is at
     var attempts = 0 // Hpw many attempts were made
@@ -21,16 +20,12 @@ class Level {
     var minMoves: Array<Int> = [0] // The minimum moves the level has been completed in
     var isComplete = false // Whether the level has been completed
 
-    static var levelsIndices = -1 // The class index for the levels
-    
-    // Passed to Win
-    // var LevelScore = 0
-    
+    static var levelsIndices = 0 // The class index for the levels    
     
     init(sequence: Array<Int>, goalFlips: Int) { // Initialiser
         self.sequence = sequence
         self.sequence = sequence
-        self.goalFlips = goalFlips
+        self.GoalFlips = goalFlips
         levelIndex = Level.getLevelNumber()
     }
     
@@ -41,26 +36,10 @@ class Level {
     
     func completeLevel(levelCompleted: Level, completeSequence: Array<Int>) { // What happens when level is completed
         isComplete = true
-        /*  let moveCount = completeSequence.count
-        if(moveCount < minFlips) {
-            minFlips = moveCount
-            minMoves = completeSequence
-            if (moveCount - goalFlips >= 2) {
-                levelstars = "★"
-            } else if (moveCount - goalFlips > 0) {
-                levelstars = "★ ★"
-            } else if (moveCount - goalFlips == 0) {
-                levelstars = "★ ★ ★"
-            } else if (moveCount - goalFlips < 0) {
-                levelstars = "✮ ✮ ✮"
-            }
-        }*/
         attempts += 1
         // Unlock next level when not yet unlocked
         // Include moves, sequence of moves
     }
-    
-    
     
     func arrayToNumber(ArrayInput: [Int]) -> Int { // Take in an array and converts it to a number
         var TextString: String = ""

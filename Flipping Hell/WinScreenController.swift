@@ -22,6 +22,10 @@ class WinScreenController: UIViewController {
     
     var WinFlips = 0
     var GoalFlips = 0
+    var LevelNumber = 0
+   
+    @IBOutlet weak var WinPopup: UIView!
+    @IBOutlet weak var NextLevelButton: UIButton!
     
     @IBOutlet var WinStarsText: UILabel!
     @IBOutlet var WinFlipsText: UILabel!
@@ -48,6 +52,12 @@ class WinScreenController: UIViewController {
         } else if (WinFlips - GoalFlips < 0) {
             WinStarsText.text = "✮ ✮ ✮"
             WinStarsText.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        }
+        
+        if(LevelNumber == 4) {
+            NextLevelButton.isHidden = true
+        } else {
+             NextLevelButton.isHidden = false
         }
     }
     

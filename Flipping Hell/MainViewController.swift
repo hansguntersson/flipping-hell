@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     
     // ********************************** VARIABLES ********************************** //
     
-    var game = FlippingHell(levelToLoad: 0)
+    var game = FlippingHell()
     
     var GoalFlips = 0
     var FlipCount = 0
@@ -34,10 +34,10 @@ class MainViewController: UIViewController {
                         0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0] // what the current status of the buttons is
     
-    var currentLevel = [0, 0, 0, 0, 0,
-                        0, 0, 1, 0, 0,
-                        0, 1, 0, 1, 0,
-                        0, 0, 1, 0, 0,
+    var CurrentLevel = [0, 0, 0, 0, 0,
+                        0, 0, 0, 0, 0,
+                        0, 0, 0, 0, 0,
+                        0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0] // The level array loaded
     
     var leftValidNums = [1, 2, 3, 4,
@@ -67,6 +67,24 @@ class MainViewController: UIViewController {
     
     // ********************************** FUNCTIONS ********************************** //
     
+    func loadLevel(levelToLoad: Int) { // Loads level, updates win display and title
+        CurrentLevel = game.levels[levelToLoad].sequence
+        GoalFlips = game.levels[levelToLoad].GoalFlips
+        LevelNum = levelToLoad
+        
+        for winVal in 0 ..< CurrentLevel.count {
+            if(CurrentLevel[winVal] == 0) {
+                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
+                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
+            } else {
+                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
+            }
+        }
+        levelTitle.text = "★ \(StageNum + 1) - LEVEL \(LevelNum + 1)"
+    }
+    
+    
     @IBAction func backToMain(_ sender: UIButton) { // Dismisses view controller back to the title screen
         self.dismiss(animated: true, completion: nil)
     }
@@ -80,10 +98,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // game.LevelStages.loadLevels()
         // Do any additional setup after loading the view, typically from a nib.
-        updateWinDisplay()
-        
-        // Can use the following functionality for sizing:
-        // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
         
         buttonFlipperCollection[1].layer.cornerRadius = buttonFlipperCollection[1].frame.size.width / 2
         buttonFlipperCollection[3].layer.cornerRadius = buttonFlipperCollection[3].frame.size.width / 2
@@ -91,7 +105,10 @@ class MainViewController: UIViewController {
         buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
         buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
         
-        levelTitle.text = "★ \(StageNum + 1) - LEVEL \(LevelNum + 1)"
+        loadLevel(levelToLoad: 0)
+        
+        // Can use the following functionality for sizing:
+        // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
     }
     
     func resetButtons() { // Resets buttons
@@ -202,18 +219,6 @@ class MainViewController: UIViewController {
         }
     }
     
-    func updateWinDisplay() { // Updates the win display based on the button array
-        for winVal in 0 ..< currentLevel.count {
-            if(currentLevel[winVal] == 0) {
-                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
-                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
-            } else {
-                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
-            }
-        }
-    }
-    
     func updateFlipperDisplay() { // Updates the flipper based on the orientation
         if(FlipperOrientation == 0) {
             buttonFlipperCollection[3].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 0)
@@ -232,8 +237,8 @@ class MainViewController: UIViewController {
     
     func checkWin() -> Bool { // Checks if the win condition is met
         var WinTrue: Bool = true
-        for CheckIndex in 0 ..< currentLevel.count {
-            if (currentLevel[CheckIndex] != buttonStatus[CheckIndex]) {
+        for CheckIndex in 0 ..< CurrentLevel.count {
+            if (CurrentLevel[CheckIndex] != buttonStatus[CheckIndex]) {
                 WinTrue = false
                 break
             }
@@ -249,6 +254,7 @@ class MainViewController: UIViewController {
                 vc.ResetButtonsDelegate = self
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
+                vc.LevelNumber = LevelNum
             }
         } else if segue.identifier == "LoadLevelsSegue" {
             if let vc = segue.destination as? UINavigationController {
@@ -273,6 +279,7 @@ extension MainViewController: ResetDelegate { // Resets level to current or next
             print("Reset this level")
         } else if(NextLevel == true) {
             resetButtons()
+            loadLevel(levelToLoad: LevelNum + 1)
             // move to the next level
             print("Reset next level")
         } else {

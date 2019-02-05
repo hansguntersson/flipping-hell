@@ -49,21 +49,21 @@ class LevelTableViewController: UITableViewController {
             cell.levelIndex.setTitle(String(level.levelIndex), for: .normal)
         }
         
-        cell.levelGoal.text = "GOAL: " + "\(level.goalFlips)"
+        cell.levelGoal.text = "GOAL: " + "\(level.GoalFlips)"
         
         if(level.minFlips == 0) {
             cell.levelStars.text = "☆ ☆ ☆"
             cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        } else if (level.minFlips - level.goalFlips > 2) {
+        } else if (level.minFlips - level.GoalFlips > 2) {
             cell.levelStars.text = "★"
             cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
-        } else if (level.minFlips - level.goalFlips > 0) {
+        } else if (level.minFlips - level.GoalFlips > 0) {
             cell.levelStars.text = "★ ★"
             cell.levelStars.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        } else if (level.minFlips - level.goalFlips == 0) {
+        } else if (level.minFlips - level.GoalFlips == 0) {
             cell.levelStars.text = "★ ★ ★"
             cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-        } else if (level.minFlips - level.goalFlips < 0) {
+        } else if (level.minFlips - level.GoalFlips < 0) {
             cell.levelStars.text = "✮ ✮ ✮"
            cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
@@ -114,8 +114,8 @@ class LevelTableViewController: UITableViewController {
                 let level = levels[levelIndex - 1]
                 if let mvc = segue.destination as? MainViewController {
                     mvc.UpdateLevelsDelegate = self
-                    mvc.currentLevel = level.sequence
-                    mvc.GoalFlips = level.goalFlips
+                    mvc.CurrentLevel = level.sequence
+                    mvc.GoalFlips = level.GoalFlips
                     mvc.LevelNum = levelIndex
                     CurrentLevel = levelIndex
                 }

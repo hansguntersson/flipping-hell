@@ -1598,7 +1598,9 @@
                     </view>
                     <connections>
                         <outlet property="GoalFlipsText" destination="kO0-9R-1J9" id="WhU-vj-Apt"/>
+                        <outlet property="NextLevelButton" destination="qSY-zI-X61" id="RE9-GJ-H7N"/>
                         <outlet property="WinFlipsText" destination="V16-oz-6bC" id="b1d-C5-rVu"/>
+                        <outlet property="WinPopup" destination="CeR-sp-2XO" id="ePB-mD-nH9"/>
                         <outlet property="WinStarsText" destination="DoV-Og-XyQ" id="ZmT-KE-nef"/>
                         <segue destination="L3x-7Q-pU7" kind="unwind" identifier="unwindToMainView" unwindAction="unwindToMainViewControllerWithSegue:" id="CqW-Y4-H4p"/>
                         <segue destination="L3x-7Q-pU7" kind="unwind" identifier="unwindToLevelView" unwindAction="unwindToLevelViewControllerWithSegue:" id="py9-Ii-DcC"/>
