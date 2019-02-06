@@ -63,8 +63,8 @@ class FlippingHell {
                                        0, 0, 1, 0, 0,
                                        0, 0, 1, 0, 0],
                             goalFlips: 4)
-        let level_8 = Level(sequence: [0, 1, 1, 1, 0,
-                                       0, 0, 0, 0, 0,
+        let level_8 = Level(sequence: [0, 0, 0, 0, 0,
+                                       0, 1, 1, 1, 0,
                                        0, 0, 0, 0, 0,
                                        0, 0, 1, 0, 0,
                                        0, 0, 1, 0, 0],

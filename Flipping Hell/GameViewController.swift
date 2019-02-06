@@ -24,7 +24,6 @@ class GameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
 }
 
 @IBDesignable extension UIButton {

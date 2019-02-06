@@ -131,7 +131,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAGE 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h9y-hy-PwS">
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="STAGE 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h9y-hy-PwS">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -229,8 +229,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAGE 40 ★20" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-aJ-FAB">
-                                <rect key="frame" x="55.5" y="40" width="264" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★20 - LEVEL 19" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-aJ-FAB">
+                                <rect key="frame" x="48" y="40" width="279.5" height="30"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1236,7 +1236,7 @@
                             <constraint firstItem="zSS-ky-ncw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sLX-Zj-6oa"/>
                             <constraint firstItem="xx4-Kh-rey" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CtB-2T-XqP" secondAttribute="trailing" constant="20" id="vam-GC-oGH"/>
                             <constraint firstItem="HZN-KQ-Hfh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zSS-ky-ncw" secondAttribute="trailing" constant="10" id="xw0-9F-BLy"/>
-                            <constraint firstItem="zSS-ky-ncw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="xx9-Sz-dxd"/>
+                            <constraint firstItem="zSS-ky-ncw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="xx9-Sz-dxd"/>
                             <constraint firstItem="xx4-Kh-rey" firstAttribute="centerY" secondItem="CtB-2T-XqP" secondAttribute="centerY" id="y0Y-DR-AZT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -1474,7 +1474,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-Qv-J5a">
-                                        <rect key="frame" x="46.5" y="185" width="202" height="34"/>
+                                        <rect key="frame" x="46.5" y="195" width="202" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="REPLAY LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1488,8 +1488,14 @@
                                             <action selector="replayLevel:" destination="Wpg-a9-9ol" eventType="touchUpInside" id="u7t-Yn-CsX"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
+                                        <rect key="frame" x="83.5" y="137" width="128" height="28"/>
+                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSY-zI-X61">
-                                        <rect key="frame" x="64.5" y="239" width="166" height="34"/>
+                                        <rect key="frame" x="64.5" y="293" width="166" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="NEXT LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1503,8 +1509,8 @@
                                             <action selector="nextLevel:" destination="Wpg-a9-9ol" eventType="touchUpInside" id="h4x-7T-igg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB6-oi-Bbx">
-                                        <rect key="frame" x="47.5" y="293" width="200" height="34"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB6-oi-Bbx">
+                                        <rect key="frame" x="47.5" y="244" width="200" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="LEVEL SELECT">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1518,28 +1524,23 @@
                                             <segue destination="rAM-QS-TNW" kind="presentation" identifier="WinSelectLevelSegue" modalTransitionStyle="coverVertical" id="IYV-QO-7Yk"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
-                                        <rect key="frame" x="83.5" y="137" width="128" height="28"/>
-                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="zl1-co-VyD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JB6-oi-Bbx" secondAttribute="bottom" constant="10" id="4gS-BE-yPg">
+                                    <constraint firstItem="zl1-co-VyD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qSY-zI-X61" secondAttribute="bottom" constant="10" id="4gS-BE-yPg">
                                         <variation key="heightClass=compact-widthClass=compact" constant="5"/>
                                     </constraint>
-                                    <constraint firstItem="JB6-oi-Bbx" firstAttribute="top" secondItem="qSY-zI-X61" secondAttribute="bottom" constant="20" id="Bi1-ej-Lko">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="10"/>
-                                    </constraint>
+                                    <constraint firstItem="JB6-oi-Bbx" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="CAv-Vo-P6k"/>
                                     <constraint firstItem="DoV-Og-XyQ" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="D5p-K2-Aig"/>
                                     <constraint firstItem="qSY-zI-X61" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="Ecl-NM-CD3"/>
                                     <constraint firstItem="V16-oz-6bC" firstAttribute="top" secondItem="DoV-Og-XyQ" secondAttribute="bottom" constant="20" id="FIY-Zl-Fzm"/>
                                     <constraint firstItem="znf-6u-XMq" firstAttribute="top" secondItem="zl1-co-VyD" secondAttribute="top" constant="25" id="I0n-Ud-TLM"/>
+                                    <constraint firstItem="qSY-zI-X61" firstAttribute="top" secondItem="JB6-oi-Bbx" secondAttribute="bottom" constant="15" id="ORI-a2-zuz">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                                    </constraint>
                                     <constraint firstItem="znf-6u-XMq" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="SiX-SV-T0K"/>
                                     <constraint firstItem="zl1-co-VyD" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kO0-9R-1J9" secondAttribute="trailing" constant="100" id="W0g-rK-SjS"/>
-                                    <constraint firstItem="4r9-Qv-J5a" firstAttribute="top" secondItem="kO0-9R-1J9" secondAttribute="bottom" constant="20" id="Zgw-UC-JTm"/>
+                                    <constraint firstItem="4r9-Qv-J5a" firstAttribute="top" secondItem="kO0-9R-1J9" secondAttribute="bottom" constant="30" id="Zgw-UC-JTm"/>
                                     <constraint firstItem="kO0-9R-1J9" firstAttribute="centerY" secondItem="V16-oz-6bC" secondAttribute="centerY" id="c1a-Kw-L4x"/>
                                     <constraint firstItem="V16-oz-6bC" firstAttribute="trailing" secondItem="zl1-co-VyD" secondAttribute="centerX" constant="-25" id="ceK-fI-Xj6"/>
                                     <constraint firstItem="V16-oz-6bC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zl1-co-VyD" secondAttribute="leading" constant="50" id="e1L-Xl-8cC"/>
@@ -1547,12 +1548,11 @@
                                     <constraint firstItem="kO0-9R-1J9" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="hrd-CB-khY">
                                         <variation key="heightClass=compact-widthClass=compact" constant="100"/>
                                     </constraint>
-                                    <constraint firstItem="qSY-zI-X61" firstAttribute="top" secondItem="4r9-Qv-J5a" secondAttribute="bottom" constant="20" id="khE-WX-NB7">
+                                    <constraint firstItem="JB6-oi-Bbx" firstAttribute="top" secondItem="4r9-Qv-J5a" secondAttribute="bottom" constant="15" id="khE-WX-NB7">
                                         <variation key="heightClass=compact-widthClass=compact" constant="10"/>
                                     </constraint>
                                     <constraint firstItem="V16-oz-6bC" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="n0s-3g-Jh8"/>
                                     <constraint firstItem="kO0-9R-1J9" firstAttribute="leading" secondItem="zl1-co-VyD" secondAttribute="centerX" constant="25" id="tJj-zH-eiF"/>
-                                    <constraint firstItem="JB6-oi-Bbx" firstAttribute="centerX" secondItem="qSY-zI-X61" secondAttribute="centerX" id="w01-Tg-7j0"/>
                                     <constraint firstItem="4r9-Qv-J5a" firstAttribute="centerX" secondItem="zl1-co-VyD" secondAttribute="centerX" id="xVm-Gy-aLw"/>
                                     <constraint firstItem="DoV-Og-XyQ" firstAttribute="top" secondItem="znf-6u-XMq" secondAttribute="bottom" constant="20" id="yrM-ui-lqN">
                                         <variation key="heightClass=compact-widthClass=compact" constant="10"/>

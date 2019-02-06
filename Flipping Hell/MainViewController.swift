@@ -254,7 +254,7 @@ class MainViewController: UIViewController {
                 vc.ResetButtonsDelegate = self
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
-                vc.LevelNumber = LevelNum
+                vc.LevelNumber = 0
             }
         } else if segue.identifier == "LoadLevelsSegue" {
             if let vc = segue.destination as? UINavigationController {
@@ -276,12 +276,10 @@ extension MainViewController: ResetDelegate { // Resets level to current or next
     func resetToLevel(NextLevel: Bool) {
         if(NextLevel == false) {
             resetButtons()
-            print("Reset this level")
         } else if(NextLevel == true) {
             resetButtons()
             loadLevel(levelToLoad: LevelNum + 1)
             // move to the next level
-            print("Reset next level")
         } else {
             print("Delegate error on resetting function")
         }

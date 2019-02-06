@@ -68,6 +68,4 @@ class Level {
         return IntOutput
     }
     
-    
-    
 }
