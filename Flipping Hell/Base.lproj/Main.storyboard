@@ -155,7 +155,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <segue destination="YkQ-pC-3dB" kind="unwind" unwindAction="unwindToMainMenuWithSegue:" id="ouY-0a-eY8"/>
+                                                <segue destination="YkQ-pC-3dB" kind="unwind" identifier="unwindFromLevel" unwindAction="unwindfromLevelWithSegue:" id="clt-9U-QgJ"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: X" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
@@ -200,7 +200,7 @@
                         <barButtonItem key="leftBarButtonItem" title="⮐ " id="R1D-y8-LZy">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="YkQ-pC-3dB" kind="unwind" unwindAction="unwindToMainMenuWithSegue:" id="MvN-PO-Zd6"/>
+                                <action selector="backToScreen:" destination="9K6-qu-tf3" id="1M6-P0-vtr"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="★" id="6tT-wl-5OA">
@@ -1928,7 +1928,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="86N-Sm-9dh"/>
-        <segue reference="7O6-k0-FJF"/>
+        <segue reference="JdO-Ve-BpG"/>
     </inferredMetricsTieBreakers>
 </document>

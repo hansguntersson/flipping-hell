@@ -9,7 +9,7 @@
 import UIKit
 
 class LevelTableViewController: UITableViewController {
-
+    
     //MARK: Properties
     var levels: [Level] = []
     var CurrentLevel = 0;
@@ -105,6 +105,10 @@ class LevelTableViewController: UITableViewController {
     }
     */
 
+    @IBAction func backToScreen(_ sender: Any) { // Back to Win or Msin screen from Level screen
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
@@ -123,6 +127,7 @@ class LevelTableViewController: UITableViewController {
                 }
             }
         }
+        
     }
 }
 

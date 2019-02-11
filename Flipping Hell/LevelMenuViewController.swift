@@ -11,17 +11,15 @@
 import UIKit
 
 class LevelMenuViewController: UINavigationController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // self.navigationBar.frame.size.height = self.navigationBar.frame.size.height + 50
     }
     
-    @IBAction func unwindToMainMenu(segue: UIStoryboardSegue) {
-        self.dismiss(animated: true, completion: nil)
-        // sort out delegate to trigger reset to level
-        // This should be a proper unwind to ensure that it dismisses the win screen too
+    @IBAction func goBackToOneButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindFromLevel", sender: self)
     }
     
     /*

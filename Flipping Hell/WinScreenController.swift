@@ -6,13 +6,13 @@
 //  Copyright © 2018 Hans Guntersson Ltd. All rights reserved.
 //
 
-import UIKit
-
 // ********************************** PROTOCOLS ********************************** //
 
 protocol ResetDelegate {
     func resetToLevel(Level: Int)
 }
+
+import UIKit
 
 // ********************************** CLASS DEFINITION ********************************** //
 
