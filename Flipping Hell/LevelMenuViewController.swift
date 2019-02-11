@@ -6,6 +6,8 @@
 //  Copyright © 2019 Hans Guntersson Ltd. All rights reserved.
 //
 
+// ********************************** CLASS DEFINITION ********************************** //
+
 import UIKit
 
 class LevelMenuViewController: UINavigationController {
@@ -18,6 +20,7 @@ class LevelMenuViewController: UINavigationController {
     
     @IBAction func unwindToMainMenu(segue: UIStoryboardSegue) {
         self.dismiss(animated: true, completion: nil)
+        // sort out delegate to trigger reset to level
         // This should be a proper unwind to ensure that it dismisses the win screen too
     }
     

@@ -27,6 +27,7 @@ class Level {
         self.sequence = sequence
         self.GoalFlips = goalFlips
         levelIndex = Level.getLevelNumber()
+        self.sequenceID = arrayToNumber(ArrayInput: sequence)
     }
     
     static func getLevelNumber() -> Int { // Get level for display on table etc

@@ -81,7 +81,7 @@ class MainViewController: UIViewController {
                 buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
             }
         }
-        levelTitle.text = "LEVEL \(LevelNum + 1) ★\(StageNum + 1)"
+        levelTitle.text = "LEVEL \(LevelNum + 1)"
     }
     
     
@@ -254,7 +254,7 @@ class MainViewController: UIViewController {
                 vc.ResetButtonsDelegate = self
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
-                vc.LevelNumber = 0
+                vc.LevelNumber = LevelNum
             }
         } else if segue.identifier == "LoadLevelsSegue" {
             if let vc = segue.destination as? UINavigationController {
@@ -273,15 +273,8 @@ class MainViewController: UIViewController {
  // ********************************** EXTENSIONS ********************************** //
 
 extension MainViewController: ResetDelegate { // Resets level to current or next level
-    func resetToLevel(NextLevel: Bool) {
-        if(NextLevel == false) {
+    func resetToLevel(Level: Int) {
             resetButtons()
-        } else if(NextLevel == true) {
-            resetButtons()
-            loadLevel(levelToLoad: LevelNum + 1)
-            // move to the next level
-        } else {
-            print("Delegate error on resetting function")
-        }
+            loadLevel(levelToLoad: Level)
     }
 }

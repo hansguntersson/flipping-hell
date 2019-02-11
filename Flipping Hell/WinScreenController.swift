@@ -11,7 +11,7 @@ import UIKit
 // ********************************** PROTOCOLS ********************************** //
 
 protocol ResetDelegate {
-    func resetToLevel(NextLevel: Bool)
+    func resetToLevel(Level: Int)
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -63,12 +63,12 @@ class WinScreenController: UIViewController {
     
     @IBAction func replayLevel(_ sender: UIButton) {
         // resets level buttons etc and segues to it
-        ResetButtonsDelegate.resetToLevel(NextLevel: false)
+        ResetButtonsDelegate.resetToLevel(Level: LevelNumber)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func nextLevel(_ sender: UIButton) {
-        ResetButtonsDelegate.resetToLevel(NextLevel: true)
+        ResetButtonsDelegate.resetToLevel(Level: LevelNumber + 1)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -84,5 +84,4 @@ class WinScreenController: UIViewController {
         // Drawing code
     }
     */
-
 }
