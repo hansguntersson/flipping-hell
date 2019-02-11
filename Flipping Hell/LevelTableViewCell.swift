@@ -10,9 +10,9 @@ import UIKit
 
 class LevelTableViewCell: UITableViewCell {
     
-    @IBOutlet var levelStars: UILabel!
     @IBOutlet var levelIndex: UIButton!
     @IBOutlet var levelGoal: UILabel!
+    @IBOutlet var levelStars: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

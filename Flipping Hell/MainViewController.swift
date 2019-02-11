@@ -81,7 +81,7 @@ class MainViewController: UIViewController {
                 buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
             }
         }
-        levelTitle.text = "★ \(StageNum + 1) - LEVEL \(LevelNum + 1)"
+        levelTitle.text = "LEVEL \(LevelNum + 1) ★\(StageNum + 1)"
     }
     
     

@@ -11,7 +11,7 @@ import UIKit
 class LevelTableViewController: UITableViewController {
 
     //MARK: Properties
-    var levels = [Level]()
+    var levels: [Level] = []
     var CurrentLevel = 0;
     
     override func viewDidLoad() {
@@ -43,10 +43,10 @@ class LevelTableViewController: UITableViewController {
         
         let level = levels[indexPath.row]
         
-        if (level.levelIndex == 20) {
+        if (indexPath.row == 19) {
             cell.levelIndex.setTitle("★", for: .normal)
         } else {
-            cell.levelIndex.setTitle(String(level.levelIndex), for: .normal)
+            cell.levelIndex.setTitle(String(indexPath.row + 1), for: .normal)
         }
         
         cell.levelGoal.text = "GOAL: " + "\(level.GoalFlips)"
