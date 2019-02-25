@@ -114,6 +114,8 @@ class LevelTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
+        
+        /*
         // Fsctor in dismissal of Win screen if the segue came from the win screen
         if segue.identifier == "loadLevelSegue" {
             if let levelIndex = Int((sender as! UIButton).currentTitle ?? "1") {
@@ -126,7 +128,7 @@ class LevelTableViewController: UITableViewController {
                     CurrentLevel = levelIndex
                 }
             }
-        }
+        } */
         
     }
 }

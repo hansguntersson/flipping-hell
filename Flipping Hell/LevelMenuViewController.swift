@@ -12,6 +12,8 @@ import UIKit
 
 class LevelMenuViewController: UINavigationController {
     
+    var LevelSelected = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,6 +21,7 @@ class LevelMenuViewController: UINavigationController {
     }
     
     @IBAction func goBackToOneButtonTapped(_ sender: UIButton) {
+        LevelSelected = Int(sender.currentTitle ?? "0")! - 1
         performSegue(withIdentifier: "unwindFromLevel", sender: self)
     }
     

@@ -268,8 +268,9 @@ class MainViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindfromLevel(segue:UIStoryboardSegue) {
-        
+    @IBAction func unwindfromLevel(sender: UIStoryboardSegue) {
+        resetButtons()
+        loadLevel(levelToLoad: 5)
     }
     
 }
