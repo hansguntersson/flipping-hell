@@ -12,7 +12,8 @@ class LevelTableViewController: UITableViewController {
     
     //MARK: Properties
     var levels: [Level] = []
-    var CurrentLevel = 0;
+    var CurrentLevel = 0; //
+    var LevelSelected = 0; // Segue level number
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +71,11 @@ class LevelTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func selectLevel(_ sender: Any) {
+        LevelSelected = Int((sender as AnyObject).currentTitle ?? "0")! - 1
+        performSegue(withIdentifier: "unwindFromLevel", sender: self)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -104,8 +110,8 @@ class LevelTableViewController: UITableViewController {
         return true
     }
     */
-
-    @IBAction func backToScreen(_ sender: Any) { // Back to Win or Msin screen from Level screen
+    
+    @IBAction func backToScreen(_ sender: Any) { // Back to Win or Main screen from Level screen
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -113,7 +119,13 @@ class LevelTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        
+    
+        if segue.identifier == "unwindFromLevel" {
+            if let vc = segue.destination as? MainViewController {
+                print(vc.LevelNum)
+                vc.LevelNum = 3
+            }
+        }
         
         /*
         // Fsctor in dismissal of Win screen if the segue came from the win screen

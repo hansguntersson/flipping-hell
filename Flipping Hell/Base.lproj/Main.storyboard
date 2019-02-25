@@ -155,7 +155,8 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <segue destination="YkQ-pC-3dB" kind="unwind" unwindAction="unwindfromLevelWithSender:" id="E2J-Km-J7R"/>
+                                                <action selector="clickLevelButton:" destination="hef-C9-cRa" eventType="touchUpInside" id="x5j-Fj-c0e"/>
+                                                <action selector="selectLevel:" destination="YkQ-pC-3dB" eventType="touchUpInside" id="rFQ-G1-VcC"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: X" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
@@ -1242,9 +1243,9 @@
                                 <exclude reference="bW9-eh-aMP"/>
                                 <exclude reference="Y4H-wR-EQn"/>
                                 <exclude reference="xw0-9F-BLy"/>
-                                <exclude reference="CAb-bu-JTQ"/>
                                 <exclude reference="0XI-08-TiP"/>
                                 <exclude reference="xx9-Sz-dxd"/>
+                                <exclude reference="CAb-bu-JTQ"/>
                                 <exclude reference="OFD-DS-0Zr"/>
                                 <exclude reference="WqW-jf-1jc"/>
                                 <exclude reference="HNY-dK-R8g"/>
@@ -1266,14 +1267,14 @@
                                 <exclude reference="GHT-zH-dsc"/>
                                 <include reference="Y4H-wR-EQn"/>
                                 <include reference="xw0-9F-BLy"/>
-                                <exclude reference="2bl-zw-9s6"/>
-                                <include reference="CAb-bu-JTQ"/>
-                                <exclude reference="EOW-yk-bek"/>
                                 <include reference="0XI-08-TiP"/>
                                 <exclude reference="9Ff-np-DCf"/>
                                 <exclude reference="fR1-Cz-K5U"/>
                                 <exclude reference="nfh-TH-r0J"/>
                                 <include reference="xx9-Sz-dxd"/>
+                                <exclude reference="2bl-zw-9s6"/>
+                                <include reference="CAb-bu-JTQ"/>
+                                <exclude reference="EOW-yk-bek"/>
                                 <exclude reference="Gsg-Kg-FWi"/>
                                 <include reference="OFD-DS-0Zr"/>
                                 <include reference="WqW-jf-1jc"/>

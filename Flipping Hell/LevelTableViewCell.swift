@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SelectLevel {
+    func selectLevelFromButton(LevelSelected: Int)
+}
+
 class LevelTableViewCell: UITableViewCell {
     
     @IBOutlet var levelIndex: UIButton!
@@ -17,6 +21,10 @@ class LevelTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    @IBAction func clickLevelButton(_ sender: UIButton) {
+        print("clicked")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

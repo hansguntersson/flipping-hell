@@ -12,28 +12,10 @@ import UIKit
 
 class LevelMenuViewController: UINavigationController {
     
-    var LevelSelected = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // self.navigationBar.frame.size.height = self.navigationBar.frame.size.height + 50
-    }
-    
-    @IBAction func goBackToOneButtonTapped(_ sender: UIButton) {
-        LevelSelected = Int(sender.currentTitle ?? "0")! - 1
-        performSegue(withIdentifier: "unwindFromLevel", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(segue.destination)
-        if segue.identifier == "unwindFromLevel" {
-            print(segue.destination)
-            if let vc = segue.destination as? MainViewController {
-                print(vc.LevelNum)
-                vc.LevelNum = LevelSelected
-            }
-        }
     }
     
     
