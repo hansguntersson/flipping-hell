@@ -25,6 +25,18 @@ class LevelMenuViewController: UINavigationController {
         performSegue(withIdentifier: "unwindFromLevel", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(segue.destination)
+        if segue.identifier == "unwindFromLevel" {
+            print(segue.destination)
+            if let vc = segue.destination as? MainViewController {
+                print(vc.LevelNum)
+                vc.LevelNum = LevelSelected
+            }
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 

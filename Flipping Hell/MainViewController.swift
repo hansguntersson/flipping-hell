@@ -270,7 +270,7 @@ class MainViewController: UIViewController {
     
     @IBAction func unwindfromLevel(sender: UIStoryboardSegue) {
         resetButtons()
-        loadLevel(levelToLoad: 5)
+        loadLevel(levelToLoad: LevelNum)
     }
     
 }
