@@ -71,11 +71,6 @@ class LevelTableViewController: UITableViewController {
         return cell
     }
     
-    @IBAction func selectLevel(_ sender: Any) {
-        LevelSelected = Int((sender as AnyObject).currentTitle ?? "0")! - 1
-        performSegue(withIdentifier: "unwindFromLevel", sender: self)
-    }
-    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -122,6 +117,7 @@ class LevelTableViewController: UITableViewController {
     
         if segue.identifier == "unwindFromLevel" {
             if let vc = segue.destination as? MainViewController {
+                LevelSelected = Int((sender as AnyObject).currentTitle ?? "0")! - 1
                 print(vc.LevelNum)
                 vc.LevelNum = 3
             }
