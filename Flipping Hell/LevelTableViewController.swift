@@ -54,16 +54,16 @@ class LevelTableViewController: UITableViewController {
         
         if(level.minFlips == 0) {
             cell.levelStars.text = "☆ ☆ ☆"
-            cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            // cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         } else if (level.minFlips - level.GoalFlips > 2) {
             cell.levelStars.text = "★ ☆ ☆"
-            cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
+            // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
         } else if (level.minFlips - level.GoalFlips > 0) {
             cell.levelStars.text = "★ ★ ☆"
-            cell.levelStars.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            // cell.levelStars.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         } else if (level.minFlips - level.GoalFlips == 0) {
             cell.levelStars.text = "★ ★ ★"
-            cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+            // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
         } else if (level.minFlips - level.GoalFlips < 0) {
             cell.levelStars.text = "✮ ✮ ✮"
            cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
