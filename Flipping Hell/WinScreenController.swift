@@ -75,10 +75,8 @@ class WinScreenController: UIViewController {
     }
     
     @IBAction func selectLevel(_ sender: UIButton) {
-        // Segue to Level, ensure that win screen is dismissed when level is selected
         self.performSegue(withIdentifier: "WinSelectLevelSegue", sender: self)
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WinSelectLevelSegue" {
@@ -88,8 +86,6 @@ class WinScreenController: UIViewController {
             }
         }
     }
-    
-    
     
     /*
     // Only override draw() if you perform custom drawing.

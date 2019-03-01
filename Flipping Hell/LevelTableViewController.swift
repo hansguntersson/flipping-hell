@@ -56,10 +56,10 @@ class LevelTableViewController: UITableViewController {
             cell.levelStars.text = "☆ ☆ ☆"
             cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         } else if (level.minFlips - level.GoalFlips > 2) {
-            cell.levelStars.text = "★"
+            cell.levelStars.text = "★ ☆ ☆"
             cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
         } else if (level.minFlips - level.GoalFlips > 0) {
-            cell.levelStars.text = "★ ★"
+            cell.levelStars.text = "★ ★ ☆"
             cell.levelStars.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         } else if (level.minFlips - level.GoalFlips == 0) {
             cell.levelStars.text = "★ ★ ★"
@@ -114,6 +114,7 @@ class LevelTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "unwindFromLevel") {
             if let vc = segue.destination as? MainViewController {
                 let cellInput = (sender as AnyObject).currentTitle ?? "0"
                 if (cellInput == "★") {
@@ -123,6 +124,7 @@ class LevelTableViewController: UITableViewController {
                 }
                 vc.LevelNum = LevelSelected
             }
+        }
         
         /*
         // Fsctor in dismissal of Win screen if the segue came from the win screen

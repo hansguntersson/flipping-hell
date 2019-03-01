@@ -163,6 +163,9 @@ class MainViewController: UIViewController {
         WinVal = checkWin()
         
         if (WinVal == true) {
+            // min-val
+            game.levels[LevelNum].minFlips = FlipCount
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.performSegue(withIdentifier: "GameWonSegue", sender: self)
             }
