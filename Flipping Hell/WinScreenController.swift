@@ -23,6 +23,8 @@ class WinScreenController: UIViewController {
     var WinFlips = 0
     var GoalFlips = 0
     var LevelNumber = 0
+    
+    var levels: [Level] = []
    
     @IBOutlet weak var WinPopup: UIView!
     @IBOutlet weak var NextLevelButton: UIButton!
@@ -76,6 +78,18 @@ class WinScreenController: UIViewController {
         // Segue to Level, ensure that win screen is dismissed when level is selected
         self.performSegue(withIdentifier: "WinSelectLevelSegue", sender: self)
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "WinSelectLevelSegue" {
+            if let vc = segue.destination as? UINavigationController {
+                let lvc = vc.children[0] as! LevelTableViewController
+                lvc.levels = levels
+            }
+        }
+    }
+    
+    
     
     /*
     // Only override draw() if you perform custom drawing.

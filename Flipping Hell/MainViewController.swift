@@ -84,7 +84,6 @@ class MainViewController: UIViewController {
         levelTitle.text = "LEVEL \(LevelNum + 1)"
     }
     
-    
     @IBAction func backToMain(_ sender: UIButton) { // Dismisses view controller back to the title screen
         self.dismiss(animated: true, completion: nil)
     }
@@ -93,10 +92,9 @@ class MainViewController: UIViewController {
         resetButtons()
     }
     
-    
     override func viewDidLoad() { // Sets up game on load
         super.viewDidLoad()
-        // game.LevelStages.loadLevels()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         buttonFlipperCollection[1].layer.cornerRadius = buttonFlipperCollection[1].frame.size.width / 2
@@ -118,7 +116,7 @@ class MainViewController: UIViewController {
         FlipCount = 0
         FlipsLabel.text = "FLIPS: \(FlipCount)"
         
-        // add 1 to attemps on the level if flips are greater than 0
+        // TODO: add 1 to attemps on the level if flips are greater than 0
         
         // Reset buttons and array
         for buttonIndex in 0 ..< buttonStatus.count {
@@ -255,6 +253,7 @@ class MainViewController: UIViewController {
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum
+                vc.levels = game.levels
             }
         } else if segue.identifier == "LoadLevelsSegue" {
             if let vc = segue.destination as? UINavigationController {
