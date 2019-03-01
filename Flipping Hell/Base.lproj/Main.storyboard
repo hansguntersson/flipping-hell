@@ -155,8 +155,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="clickLevelButton:" destination="hef-C9-cRa" eventType="touchUpInside" id="x5j-Fj-c0e"/>
-                                                <action selector="selectLevel:" destination="YkQ-pC-3dB" eventType="touchUpInside" id="rFQ-G1-VcC"/>
+                                                <segue destination="YkQ-pC-3dB" kind="unwind" unwindAction="unwindfromLevelWithSender:" id="pxw-an-ThL"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: X" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
