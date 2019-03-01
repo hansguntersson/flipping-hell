@@ -165,16 +165,16 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆ ☆ ☆" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJU-xP-I9D">
-                                            <rect key="frame" x="231" y="11" width="124" height="48"/>
-                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="40"/>
-                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <rect key="frame" x="239" y="13.5" width="111" height="43"/>
+                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="36"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Zxa-HP-flf" firstAttribute="top" secondItem="saT-tj-Esw" secondAttribute="top" constant="9.5" id="1Lo-b9-oBN"/>
-                                        <constraint firstAttribute="trailing" secondItem="uJU-xP-I9D" secondAttribute="trailing" constant="20" id="Fp2-3P-Ha2"/>
+                                        <constraint firstAttribute="trailing" secondItem="uJU-xP-I9D" secondAttribute="trailing" constant="25" id="Fp2-3P-Ha2"/>
                                         <constraint firstItem="5tq-9a-9hD" firstAttribute="centerY" secondItem="saT-tj-Esw" secondAttribute="centerY" id="LkF-mZ-fGv"/>
                                         <constraint firstItem="uJU-xP-I9D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5tq-9a-9hD" secondAttribute="trailing" constant="10" id="OSy-xD-t8b"/>
                                         <constraint firstItem="Zxa-HP-flf" firstAttribute="centerY" secondItem="saT-tj-Esw" secondAttribute="centerY" id="Tfb-5t-5hS"/>
