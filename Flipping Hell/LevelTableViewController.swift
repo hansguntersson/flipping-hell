@@ -114,14 +114,15 @@ class LevelTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    
-        if segue.identifier == "unwindFromLevel" {
             if let vc = segue.destination as? MainViewController {
-                LevelSelected = Int((sender as AnyObject).currentTitle ?? "0")! - 1
-                print(vc.LevelNum)
-                vc.LevelNum = 3
+                let cellInput = (sender as AnyObject).currentTitle ?? "0"
+                if (cellInput == "★") {
+                    LevelSelected = 19
+                } else {
+                    LevelSelected = (Int(cellInput ?? "0") ?? 0) - 1
+                }
+                vc.LevelNum = LevelSelected
             }
-        }
         
         /*
         // Fsctor in dismissal of Win screen if the segue came from the win screen
