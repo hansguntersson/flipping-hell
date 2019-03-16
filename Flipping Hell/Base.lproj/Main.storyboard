@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uD3-vk-K03">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,11 +23,11 @@
             <objects>
                 <viewController storyboardIdentifier="TitleScreen" id="uD3-vk-K03" customClass="GameViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rii-wp-hff">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING HELL" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZV-gN-Gxi">
-                                <rect key="frame" x="51" y="120" width="273" height="100"/>
+                                <rect key="frame" x="70.5" y="144" width="273" height="100"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="50"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orf-sz-7tJ">
-                                <rect key="frame" x="87.5" y="270" width="200" height="200"/>
+                                <rect key="frame" x="107" y="294" width="200" height="200"/>
                                 <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="NSE-x4-Mok">
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chs-VK-OcS">
-                                <rect key="frame" x="15" y="602" width="50" height="50"/>
+                                <rect key="frame" x="15" y="797" width="50" height="50"/>
                                 <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="chs-VK-OcS" secondAttribute="height" multiplier="1:1" id="3w0-Eq-Ms2"/>
@@ -78,7 +78,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ7-xP-76S">
-                                <rect key="frame" x="310" y="602" width="50" height="50"/>
+                                <rect key="frame" x="349" y="797" width="50" height="50"/>
                                 <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3fp-9J-SNe"/>
@@ -128,15 +128,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="LevelScreen" modalTransitionStyle="flipHorizontal" id="9K6-qu-tf3" customClass="LevelTableViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" id="LwH-pP-zzk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LevelTableViewCell" rowHeight="70" id="hef-C9-cRa" customClass="LevelTableViewCell" customModule="Flipping_Hell" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hef-C9-cRa" id="saT-tj-Esw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-HP-flf">
@@ -159,13 +159,13 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: X" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
-                                            <rect key="frame" x="80.5" y="22" width="99" height="26"/>
+                                            <rect key="frame" x="80.5" y="19.5" width="85" height="30.5"/>
                                             <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="26"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆ ☆ ☆" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJU-xP-I9D">
-                                            <rect key="frame" x="239" y="13.5" width="111" height="43"/>
+                                            <rect key="frame" x="278" y="13.5" width="111" height="43"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="36"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -221,11 +221,11 @@
             <objects>
                 <viewController storyboardIdentifier="MainScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL 19" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-aJ-FAB">
-                                <rect key="frame" x="103.5" y="40" width="168" height="30"/>
+                                <rect key="frame" x="123" y="64" width="168" height="30"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -234,7 +234,7 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zSS-ky-ncw">
-                                <rect key="frame" x="46.5" y="100" width="282" height="282"/>
+                                <rect key="frame" x="66" y="124" width="282" height="282"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gwq-aK-eyh">
                                         <rect key="frame" x="0.0" y="0.0" width="282" height="50"/>
@@ -668,7 +668,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WBP-0A-RtF">
-                                <rect key="frame" x="209" y="432" width="106" height="106"/>
+                                <rect key="frame" x="248" y="456" width="106" height="106"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T7D-V6-QQc">
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
@@ -718,7 +718,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP" userLabel="FlipsLabel">
-                                <rect key="frame" x="129.5" y="622" width="116.5" height="25"/>
+                                <rect key="frame" x="149" y="817" width="116.5" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="jqt-Hr-bNX"/>
                                 </constraints>
@@ -737,7 +737,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FTb-oN-8i8">
-                                <rect key="frame" x="20" y="620" width="66" height="29"/>
+                                <rect key="frame" x="20" y="815" width="66" height="29"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
                                 <state key="normal" title="Levels">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -747,7 +747,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="edz-eu-b6a">
-                                <rect key="frame" x="60" y="432" width="116" height="116"/>
+                                <rect key="frame" x="60" y="456" width="116" height="116"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FBu-sj-7N8">
                                         <rect key="frame" x="0.0" y="0.0" width="116" height="20"/>
@@ -1132,7 +1132,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Goj-hu-oHh">
-                                <rect key="frame" x="335" y="30" width="30" height="30"/>
+                                <rect key="frame" x="374" y="54" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="AFF-qY-EyQ"/>
@@ -1152,7 +1152,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="right" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xx4-Kh-rey">
-                                <rect key="frame" x="299" y="620" width="56" height="29"/>
+                                <rect key="frame" x="338" y="815" width="56" height="29"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1162,7 +1162,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="HZN-KQ-Hfh">
-                                <rect key="frame" x="10" y="30" width="30" height="30"/>
+                                <rect key="frame" x="10" y="54" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HZN-KQ-Hfh" secondAttribute="height" multiplier="1:1" id="jOi-Oc-Y7A"/>
@@ -1242,9 +1242,9 @@
                                 <exclude reference="bW9-eh-aMP"/>
                                 <exclude reference="Y4H-wR-EQn"/>
                                 <exclude reference="xw0-9F-BLy"/>
+                                <exclude reference="CAb-bu-JTQ"/>
                                 <exclude reference="0XI-08-TiP"/>
                                 <exclude reference="xx9-Sz-dxd"/>
-                                <exclude reference="CAb-bu-JTQ"/>
                                 <exclude reference="OFD-DS-0Zr"/>
                                 <exclude reference="WqW-jf-1jc"/>
                                 <exclude reference="HNY-dK-R8g"/>
@@ -1266,14 +1266,14 @@
                                 <exclude reference="GHT-zH-dsc"/>
                                 <include reference="Y4H-wR-EQn"/>
                                 <include reference="xw0-9F-BLy"/>
+                                <exclude reference="2bl-zw-9s6"/>
+                                <include reference="CAb-bu-JTQ"/>
+                                <exclude reference="EOW-yk-bek"/>
                                 <include reference="0XI-08-TiP"/>
                                 <exclude reference="9Ff-np-DCf"/>
                                 <exclude reference="fR1-Cz-K5U"/>
                                 <exclude reference="nfh-TH-r0J"/>
                                 <include reference="xx9-Sz-dxd"/>
-                                <exclude reference="2bl-zw-9s6"/>
-                                <include reference="CAb-bu-JTQ"/>
-                                <exclude reference="EOW-yk-bek"/>
                                 <exclude reference="Gsg-Kg-FWi"/>
                                 <include reference="OFD-DS-0Zr"/>
                                 <include reference="WqW-jf-1jc"/>
@@ -1371,27 +1371,27 @@
             <objects>
                 <viewController storyboardIdentifier="HelpScreen" id="xvK-cP-GKh" customClass="HelpViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L8M-qs-L85">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0k-6l-oIe">
-                                <rect key="frame" x="20" y="40" width="335" height="587"/>
+                                <rect key="frame" x="20" y="64" width="374" height="758"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-s0-jGw">
-                                        <rect key="frame" x="20" y="82" width="295" height="140"/>
+                                        <rect key="frame" x="20" y="82" width="320.5" height="119.5"/>
                                         <string key="text">The goal is to flip the buttons in the main screen to create the shape on the left hand side, the shape of the flipper changes each flip, and can be seen on the right hand side</string>
-                                        <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELP" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-hX-03X">
-                                        <rect key="frame" x="116.5" y="30" width="102" height="32"/>
+                                        <rect key="frame" x="136" y="30" width="102" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-Gc-qAn">
-                                        <rect key="frame" x="300" y="10" width="30" height="33"/>
+                                        <rect key="frame" x="339" y="10" width="30" height="33"/>
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="✕">
@@ -1422,6 +1422,11 @@
                                     <constraint firstItem="Fd7-s0-jGw" firstAttribute="top" secondItem="sBf-hX-03X" secondAttribute="bottom" constant="20" id="sCQ-qt-qb9"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="BlO-zn-FaH"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusVIEW">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1444,32 +1449,32 @@
             <objects>
                 <viewController storyboardIdentifier="WinScreen" id="Wpg-a9-9ol" customClass="WinScreenController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="XaS-0q-XV9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeR-sp-2XO">
-                                <rect key="frame" x="40" y="130" width="295" height="427"/>
+                                <rect key="frame" x="40" y="154" width="334" height="598"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELL DONE!" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znf-6u-XMq">
-                                        <rect key="frame" x="31" y="25" width="233" height="32"/>
+                                        <rect key="frame" x="50.5" y="25" width="233" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoV-Og-XyQ">
-                                        <rect key="frame" x="147.5" y="77" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="167" y="77" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V16-oz-6bC">
-                                        <rect key="frame" x="82.5" y="97" width="130" height="28"/>
+                                        <rect key="frame" x="102" y="97" width="130" height="28"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-Qv-J5a">
-                                        <rect key="frame" x="46.5" y="195" width="202" height="34"/>
+                                        <rect key="frame" x="66" y="195" width="202" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="REPLAY LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1484,13 +1489,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL: X" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO0-9R-1J9">
-                                        <rect key="frame" x="83.5" y="137" width="128" height="28"/>
+                                        <rect key="frame" x="103" y="137" width="128" height="28"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSY-zI-X61">
-                                        <rect key="frame" x="64.5" y="293" width="166" height="34"/>
+                                        <rect key="frame" x="84" y="293" width="166" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="NEXT LEVEL">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1505,7 +1510,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB6-oi-Bbx">
-                                        <rect key="frame" x="47.5" y="244" width="200" height="34"/>
+                                        <rect key="frame" x="67" y="244" width="200" height="34"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="22"/>
                                         <state key="normal" title="LEVEL SELECT">
                                             <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1554,6 +1559,11 @@
                                     </constraint>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="zl1-co-VyD"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusVIEW">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="W0g-rK-SjS"/>
@@ -1611,12 +1621,12 @@
             <objects>
                 <viewController storyboardIdentifier="AboutScreen" id="jkW-6U-c8q" customClass="AboutViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eka-SJ-DvV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPPING HELL is a simple  puzzle game made by Hans Guntersson @hansguntersson" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRB-eT-Jzb">
-                                <rect key="frame" x="20" y="84" width="335" height="80"/>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="20"/>
+                                <rect key="frame" x="20" y="108" width="374" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1649,12 +1659,12 @@
             <objects>
                 <viewController storyboardIdentifier="OptionsScreen" id="Pdg-KA-KTV" customClass="OptionsViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7IK-jt-HHT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change options for colours, full reset,  " textAlignment="center" lineBreakMode="clip" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-Fc-V6b">
-                                <rect key="frame" x="20" y="20" width="335" height="40"/>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="20"/>
+                                <rect key="frame" x="20" y="20" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1688,7 +1698,7 @@
             <objects>
                 <collectionViewController id="Olf-Uu-t1n" customClass="StageCollectionViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JWR-s6-c03">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="ppO-xe-74s">
@@ -1734,11 +1744,11 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="StageCollectionViewHeader" id="1Tq-YM-uhA">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="bXx-ds-UaN">
-                                    <rect key="frame" x="45.5" y="10" width="284" height="23"/>
+                                    <rect key="frame" x="65" y="10" width="284" height="23"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKO-Ok-DAf">
                                             <rect key="frame" x="0.0" y="0.0" width="23" height="23"/>
@@ -1830,7 +1840,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="YKP-eg-aVV">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                         <textAttributes key="titleTextAttributes">
@@ -1857,7 +1867,7 @@
                 <navigationController storyboardIdentifier="OptionsMenuScreen" automaticallyAdjustsScrollViewInsets="NO" id="Zv2-p0-ya7" customClass="OptionsMenuViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="cvU-ba-4B1">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -1883,7 +1893,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EWi-Hq-6I9">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -1906,7 +1916,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x35-2D-G5I" customClass="StageMenuViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4sN-6v-8xy">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                         <textAttributes key="titleTextAttributes">
@@ -1928,6 +1938,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JdO-Ve-BpG"/>
+        <segue reference="IYV-QO-7Yk"/>
     </inferredMetricsTieBreakers>
 </document>

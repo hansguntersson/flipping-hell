@@ -83,6 +83,7 @@ class WinScreenController: UIViewController {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.levels = levels
+                lvc.CurrentLevel = LevelNumber
             }
         }
     }

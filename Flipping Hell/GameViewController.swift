@@ -36,3 +36,14 @@ class GameViewController: UIViewController {
         }
     }
 }
+
+@IBDesignable extension UIView {
+    @IBInspectable var cornerRadiusVIEW: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+}

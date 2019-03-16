@@ -262,6 +262,7 @@ class MainViewController: UIViewController {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.levels = game.levels
+                lvc.CurrentLevel = LevelNum
             }
         } else if segue.identifier == "loadOptionsSegue" {
             print("Options Segue")
