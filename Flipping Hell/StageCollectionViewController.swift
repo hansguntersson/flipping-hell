@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 class StageCollectionViewController: UICollectionViewController {
 
     var Stages: [Int] = [5, 4, 2]
-    let cellIdentifier = "StageCollectionViewCellID"
+    let cellIdentifier = "StageCollectionViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class StageCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -47,14 +47,15 @@ class StageCollectionViewController: UICollectionViewController {
         return self.Stages.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> StageCollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+        let cell: StageCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! StageCollectionViewCell
     
         // Configure the cell
         
         // cell.subviews[0].backgroundColor = UIColor.cyan
-        cell.cellButton2.text = "1"
+        cell.cellButton.setTitle("★", for: .normal)
+        cell.cellLabel.text = "2000"
         
         // StageCollectionViewCell
         
