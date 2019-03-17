@@ -33,6 +33,7 @@
 		E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C106BD215408B000947220 /* LaunchScreen.storyboard */; };
 		E5C106CA215408B100947220 /* Flipping_HellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106C9215408B100947220 /* Flipping_HellTests.swift */; };
 		E5C106D5215408B100947220 /* Flipping_HellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106D4215408B100947220 /* Flipping_HellUITests.swift */; };
+		E5EB0F0A223E47330012EEFD /* FlippingHell.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */; };
 		E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F12CC021B94949004D0176 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		E5C106D0215408B100947220 /* Flipping HellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flipping HellUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C106D4215408B100947220 /* Flipping_HellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flipping_HellUITests.swift; sourceTree = "<group>"; };
 		E5C106D6215408B100947220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5EB0F09223E47330012EEFD /* FlippingHell.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlippingHell.xcdatamodel; sourceTree = "<group>"; };
 		E5F12CC021B94949004D0176 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +176,7 @@
 				E5C106B4215408AF00947220 /* AppDelegate.swift */,
 				E5C106BD215408B000947220 /* LaunchScreen.storyboard */,
 				E5C106B8215408AF00947220 /* Main.storyboard */,
+				E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */,
 				E5F12CC021B94949004D0176 /* GameViewController.swift */,
 				E578732A21E3602400A13231 /* StageMenuViewController.swift */,
 				E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */,
@@ -348,6 +351,7 @@
 				E578732B21E3602400A13231 /* StageMenuViewController.swift in Sources */,
 				E5AB86E821DE6A4000337825 /* OptionsMenuViewController.swift in Sources */,
 				E56E325C2173612500A16788 /* LevelTableViewController.swift in Sources */,
+				E5EB0F0A223E47330012EEFD /* FlippingHell.xcdatamodeld in Sources */,
 				E5B2FB6E216A8A8400A13D18 /* FlippingHell.swift in Sources */,
 				E5A1C1F321E6292C001E8D90 /* StageCollectionViewCell.swift in Sources */,
 				E5AB86E421DE627400337825 /* AboutViewController.swift in Sources */,
@@ -690,6 +694,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E5EB0F09223E47330012EEFD /* FlippingHell.xcdatamodel */,
+			);
+			currentVersion = E5EB0F09223E47330012EEFD /* FlippingHell.xcdatamodel */;
+			path = FlippingHell.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E5C106A9215408AF00947220 /* Project object */;
 }

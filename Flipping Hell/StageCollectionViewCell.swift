@@ -9,5 +9,6 @@
 import UIKit
 
 class StageCollectionViewCell: UICollectionViewCell {
-    
+    var cellButton2 = "1"
+    @IBOutlet var cellButton: UIButton!
 }

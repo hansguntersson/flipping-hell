@@ -12,6 +12,9 @@ private let reuseIdentifier = "Cell"
 
 class StageCollectionViewController: UICollectionViewController {
 
+    var Stages: [Int] = [5, 4, 2]
+    let cellIdentifier = "StageCollectionViewCellID"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +22,7 @@ class StageCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -37,19 +40,54 @@ class StageCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return self.Stages.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
     
         // Configure the cell
+        
+        // cell.subviews[0].backgroundColor = UIColor.cyan
+        cell.cellButton2.text = "1"
+        
+        // StageCollectionViewCell
+        
+        /* cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        cell.levelGoal.text = "GOAL: " + "\(level.GoalFlips)"
+        
+        if(level.minFlips == 0) {
+            cell.levelStars.text = "☆ ☆ ☆"
+            // cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        } else if (level.minFlips - level.GoalFlips > 2) {
+            cell.levelStars.text = "★ ☆ ☆"
+            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
+        } else if (level.minFlips - level.GoalFlips > 0) {
+            cell.levelStars.text = "★ ★ ☆"
+            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            // cell.levelStars.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        } else if (level.minFlips - level.GoalFlips == 0) {
+            cell.levelStars.text = "★ ★ ★"
+            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+        } else if (level.minFlips - level.GoalFlips < 0) {
+            cell.levelStars.text = "✮ ✮ ✮"
+            cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        }
+        
+        if (indexPath.row == CurrentLevel) {
+            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            cell.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        } */
+        
+        
     
         return cell
     }
