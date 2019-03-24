@@ -54,8 +54,9 @@ class StageCollectionViewController: UICollectionViewController {
         // Configure the cell
         
         // cell.subviews[0].backgroundColor = UIColor.cyan
-        cell.cellButton.setTitle("★", for: .normal)
-        cell.cellLabel.text = "2000"
+        cell.cellButton.setTitle("☆", for: .normal)
+        cell.cellButton.setTitleColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for:.normal)
+        cell.cellLabel.text = String(indexPath.count)
         
         // StageCollectionViewCell
         

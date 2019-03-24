@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 // ********************************** PROTOCOLS ********************************** //
 
@@ -21,6 +22,7 @@ class MainViewController: UIViewController {
     // ********************************** VARIABLES ********************************** //
     
     var game = FlippingHell()
+    var audioPlayer = AVAudioPlayer()
     
     var GoalFlips = 0
     var FlipCount = 0
