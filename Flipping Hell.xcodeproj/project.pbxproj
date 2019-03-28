@@ -286,13 +286,16 @@
 				TargetAttributes = {
 					E5C106B0215408AF00947220 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 					E5C106C4215408B100947220 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = E5C106B0215408AF00947220;
 					};
 					E5C106CF215408B100947220 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = E5C106B0215408AF00947220;
 					};
 				};
@@ -557,7 +560,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-Hell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -575,7 +578,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-Hell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -595,7 +598,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-HellTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flipping Hell.app/Flipping Hell";
 			};
@@ -616,7 +619,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-HellTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flipping Hell.app/Flipping Hell";
 			};
@@ -636,7 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-HellUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Flipping Hell";
 			};
@@ -656,7 +659,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-HellUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Flipping Hell";
 			};
