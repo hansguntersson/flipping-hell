@@ -16,7 +16,7 @@ class StageMenuViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func unwindToMainMenuFromStages(segue: UIStoryboardSegue) {
+    @IBAction func unwindToLevelMenuFromStages(segue: UIStoryboardSegue) {
         self.dismiss(animated: true, completion: nil)
     }
 

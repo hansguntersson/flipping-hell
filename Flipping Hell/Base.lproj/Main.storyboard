@@ -1848,7 +1848,7 @@
                         <barButtonItem key="leftBarButtonItem" title="⮐ " id="MBr-Mb-YLW">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="hud-ee-eOC" kind="unwind" unwindAction="unwindToMainMenuFromStagesWithSegue:" id="YQU-Qb-KQx"/>
+                                <segue destination="hud-ee-eOC" kind="unwind" unwindAction="unwindToLevelMenuFromStagesWithSegue:" id="qQY-Dy-xX8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
