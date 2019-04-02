@@ -266,10 +266,6 @@ class MainViewController: UIViewController {
                 lvc.levels = game.levels
                 lvc.CurrentLevel = LevelNum
             }
-        } else if segue.identifier == "loadOptionsSegue" {
-            print("Options Segue")
-        } else if segue.identifier == "loadAboutSegue" {
-            print("About Segue")
         }
     }
     

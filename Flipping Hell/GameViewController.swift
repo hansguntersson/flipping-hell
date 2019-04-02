@@ -10,6 +10,8 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    var game = FlippingHell()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,6 +26,20 @@ class GameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GameWonSegue" {
+            if let vc = segue.destination as? MainViewController {
+                vc.game = self.game
+            }
+        } else if segue.identifier == "loadOptionsSegue" {
+            print("Options Segue")
+        } else if segue.identifier == "loadAboutSegue" {
+            print("About Segue")
+        }
+    }
+    
 }
 
 @IBDesignable extension UIButton {
