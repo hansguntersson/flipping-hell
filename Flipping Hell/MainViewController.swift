@@ -25,10 +25,12 @@ class MainViewController: UIViewController {
     var audioPlayer = AVAudioPlayer()
     
     var GoalFlips = 0
+    var MinFlips = 0
     var FlipCount = 0
     var LevelNum = 0
     var StageNum = 0
     var FlipperOrientation = 0
+    var NextLevel = false
     
     var buttonStatus = [0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0,
@@ -42,13 +44,13 @@ class MainViewController: UIViewController {
                         0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0] // The level array loaded
     
-    var leftValidNums = [1, 2, 3, 4,
+    let leftValidNums = [1, 2, 3, 4,
                          6, 7, 8, 9,
                          11, 12, 13, 14,
                          16, 17, 18, 19,
                          21, 22, 23, 24] // List to define when left button is flipped
     
-    var rightValidNums = [0, 1, 2, 3,
+    let rightValidNums = [0, 1, 2, 3,
                           5, 6, 7, 8,
                           10, 11, 12, 13,
                           15, 16, 17, 18,
@@ -69,10 +71,13 @@ class MainViewController: UIViewController {
     
     // ********************************** FUNCTIONS ********************************** //
     
-    func loadLevel(levelToLoad: Int) { // Loads level, updates win display and title
-        CurrentLevel = game.levels[levelToLoad].sequence
-        GoalFlips = game.levels[levelToLoad].GoalFlips
-        LevelNum = levelToLoad
+    func loadLevel(loadLevelNum: Int) { // Loads level, updates win display and title
+        // call info from model, no need to initialise?
+        
+        CurrentLevel = game.levels[loadLevelNum].sequence
+        GoalFlips = game.levels[loadLevelNum].GoalFlips
+        LevelNum = loadLevelNum
+        //
         
         for winVal in 0 ..< CurrentLevel.count {
             if(CurrentLevel[winVal] == 0) {
@@ -84,6 +89,7 @@ class MainViewController: UIViewController {
             }
         }
         levelTitle.text = "LEVEL \(LevelNum + 1)"
+        resetButtons()
     }
     
     @IBAction func backToMain(_ sender: UIButton) { // Dismisses view controller back to the title screen
@@ -105,7 +111,7 @@ class MainViewController: UIViewController {
         buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
         buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
         
-        loadLevel(levelToLoad: 0)
+        loadLevel(loadLevelNum: 0)
         
         // Can use the following functionality for sizing:
         // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
@@ -113,7 +119,7 @@ class MainViewController: UIViewController {
     
     func resetButtons() { // Resets buttons
         // Reset flip and flipper
-        FlipperOrientation = 1
+        FlipperOrientation = 1 // set to 1 so that the update flipper display moves it back to 0
         updateFlipperDisplay()
         FlipCount = 0
         FlipsLabel.text = "FLIPS: \(FlipCount)"
@@ -165,8 +171,7 @@ class MainViewController: UIViewController {
         WinVal = checkWin()
         
         if (WinVal == true) {
-            // min-val
-            game.levels[LevelNum].minFlips = FlipCount
+            // feed back flips to model
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.performSegue(withIdentifier: "GameWonSegue", sender: self)
@@ -258,11 +263,13 @@ class MainViewController: UIViewController {
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum
+                // remove levels from this segue
                 vc.levels = game.levels
             }
         } else if segue.identifier == "LoadLevelsSegue" {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
+                // move to protocol via levels to model
                 lvc.levels = game.levels
                 lvc.CurrentLevel = LevelNum
             }
@@ -270,8 +277,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func unwindFromLevel(sender: UIStoryboardSegue) {
-        resetButtons()
-        loadLevel(levelToLoad: LevelNum)
+        // need to include stage number here?
+        loadLevel(loadLevelNum: LevelNum)
     }
     
 }
@@ -280,7 +287,6 @@ class MainViewController: UIViewController {
 
 extension MainViewController: ResetDelegate { // Resets level to current or next level
     func resetToLevel(Level: Int) {
-            resetButtons()
-            loadLevel(levelToLoad: Level)
+            loadLevel(loadLevelNum: Level)
     }
 }

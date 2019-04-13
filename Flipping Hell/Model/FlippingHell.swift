@@ -17,6 +17,9 @@ class FlippingHell {
     
     init() {
         loadLevels()
+        // synchronise
+        // load current level from memory
+        // unlocks and settings
     }
     
     

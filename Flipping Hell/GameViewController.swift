@@ -8,6 +8,8 @@
 
 import UIKit
 
+// ********************************** CLASS DEFINITION ********************************** //
+
 class GameViewController: UIViewController {
     
     var game = FlippingHell()

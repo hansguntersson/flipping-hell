@@ -11,9 +11,18 @@ import UIKit
 class LevelTableViewController: UITableViewController {
     
     //MARK: Properties
-    var levels: [Level] = []
-    var CurrentLevel = 0; //
-    var LevelSelected = 0; // Segue level number
+    
+    struct level {
+        let sequenceID: Int
+        let goalFlips: Int
+        let minFlips: Int
+    }
+    
+    var levels: [Level] = [] // structure for level
+    var CurrentStage = 0 // current stage for identification in
+    var CurrentLevel = 0; // current level for basic highlighting
+    
+    // What actual data do we need? List of IDs, goal, min, current,
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +51,7 @@ class LevelTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of LevelTableViewCell.")
         }
         
-        let level = levels[indexPath.row]
+        let thisLevel = levels[indexPath.row]
         
         if (indexPath.row == 19) {
             cell.levelIndex.setTitle("★", for: .normal)
@@ -51,25 +60,25 @@ class LevelTableViewController: UITableViewController {
         }
         
         cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.levelGoal.text = "GOAL: " + "\(level.GoalFlips)"
+        cell.levelGoal.text = "GOAL: " + "\(thisLevel.GoalFlips)"
         
-        if(level.minFlips == 0) {
+        if(thisLevel.minFlips == 0) {
             cell.levelStars.text = "☆ ☆ ☆"
             // cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        } else if (level.minFlips - level.GoalFlips > 2) {
+        } else if (thisLevel.minFlips - thisLevel.GoalFlips > 2) {
             cell.levelStars.text = "★ ☆ ☆"
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
-        } else if (level.minFlips - level.GoalFlips > 0) {
+        } else if (thisLevel.minFlips - thisLevel.GoalFlips > 0) {
             cell.levelStars.text = "★ ★ ☆"
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             // cell.levelStars.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        } else if (level.minFlips - level.GoalFlips == 0) {
+        } else if (thisLevel.minFlips - thisLevel.GoalFlips == 0) {
             cell.levelStars.text = "★ ★ ★"
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-        } else if (level.minFlips - level.GoalFlips < 0) {
+        } else if (thisLevel.minFlips - thisLevel.GoalFlips < 0) {
             cell.levelStars.text = "✮ ✮ ✮"
            cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
@@ -130,35 +139,11 @@ class LevelTableViewController: UITableViewController {
             if let vc = segue.destination as? MainViewController {
                 let cellInput = (sender as AnyObject).currentTitle ?? "0"
                 if (cellInput == "★") {
-                    LevelSelected = 19
+                    vc.LevelNum = 19
                 } else {
-                    LevelSelected = (Int(cellInput ?? "0") ?? 0) - 1
+                    vc.LevelNum = (Int(cellInput ?? "0") ?? 0) - 1
                 }
-                vc.LevelNum = LevelSelected
             }
         }
-        
-        /*
-        // Fsctor in dismissal of Win screen if the segue came from the win screen
-        if segue.identifier == "loadLevelSegue" {
-            if let levelIndex = Int((sender as! UIButton).currentTitle ?? "1") {
-                let level = levels[levelIndex - 1]
-                if let mvc = segue.destination as? MainViewController {
-                    mvc.UpdateLevelsDelegate = self
-                    mvc.CurrentLevel = level.sequence
-                    mvc.GoalFlips = level.GoalFlips
-                    mvc.LevelNum = levelIndex
-                    CurrentLevel = levelIndex
-                }
-            }
-        } */
-        
     }
-}
-
-extension LevelTableViewController: UpdateLevelsScreenDelegate {
-    func updateLevels(WinStars: String, WinColour: UIColor, WinFlips: Int) {
-        // Update cells as appropriate
-    }
-
 }
