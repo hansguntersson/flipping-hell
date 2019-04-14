@@ -11,8 +11,8 @@ import AVFoundation
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol UpdateLevelsScreenDelegate {
-    func updateLevels(WinStars: String, WinColour: UIColor, WinFlips: Int)
+protocol UpdateModelDelegate {
+    func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int])
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -30,7 +30,6 @@ class MainViewController: UIViewController {
     var LevelNum = 0
     var StageNum = 0
     var FlipperOrientation = 0
-    var NextLevel = false
     
     var buttonStatus = [0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0,
@@ -38,7 +37,7 @@ class MainViewController: UIViewController {
                         0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0] // what the current status of the buttons is
     
-    var CurrentLevel = [0, 0, 0, 0, 0,
+    var CurrentSequence = [0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0,
@@ -66,21 +65,22 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonFlipperCollection: [UIButton]!
     @IBOutlet var winScreen: UIView!
     
-    var UpdateLevelsDelegate: UpdateLevelsScreenDelegate!
+    // ********************************** DELEGATES ********************************** //
     
+    var UpdateModelDelegateInstance: UpdateModelDelegate!
     
     // ********************************** FUNCTIONS ********************************** //
     
     func loadLevel(loadLevelNum: Int) { // Loads level, updates win display and title
         // call info from model, no need to initialise?
         
-        CurrentLevel = game.levels[loadLevelNum].sequence
+        CurrentSequence = game.levels[loadLevelNum].sequence
         GoalFlips = game.levels[loadLevelNum].GoalFlips
         LevelNum = loadLevelNum
         //
         
-        for winVal in 0 ..< CurrentLevel.count {
-            if(CurrentLevel[winVal] == 0) {
+        for winVal in 0 ..< CurrentSequence.count {
+            if(CurrentSequence[winVal] == 0) {
                 buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
                 buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
             } else {
@@ -172,7 +172,7 @@ class MainViewController: UIViewController {
         
         if (WinVal == true) {
             // feed back flips to model
-            
+            UpdateModelDelegateInstance.gameWon(LevelID: LevelNum, Flips: FlipCount, ButtonsClicked: [1, 2, 3])
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.performSegue(withIdentifier: "GameWonSegue", sender: self)
             }
@@ -245,8 +245,8 @@ class MainViewController: UIViewController {
     
     func checkWin() -> Bool { // Checks if the win condition is met
         var WinTrue: Bool = true
-        for CheckIndex in 0 ..< CurrentLevel.count {
-            if (CurrentLevel[CheckIndex] != buttonStatus[CheckIndex]) {
+        for CheckIndex in 0 ..< CurrentSequence.count {
+            if (CurrentSequence[CheckIndex] != buttonStatus[CheckIndex]) {
                 WinTrue = false
                 break
             }
@@ -288,5 +288,13 @@ class MainViewController: UIViewController {
 extension MainViewController: ResetDelegate { // Resets level to current or next level
     func resetToLevel(Level: Int) {
             loadLevel(loadLevelNum: Level)
+    }
+}
+
+extension MainViewController: UpdateMainViewDelegate { // Updates main view via model
+    func loadLevel(LevelID: Int, GoalFlips: Int, Sequence: [Int]) {
+        CurrentSequence = Sequence
+        self.GoalFlips = GoalFlips
+        LevelNum = LevelID
     }
 }

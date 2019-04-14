@@ -56,10 +56,11 @@ class WinScreenController: UIViewController {
             WinStarsText.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
         
+        // New stage trigger
         if(LevelNumber == 19) {
             NextLevelButton.isHidden = true
         } else {
-             NextLevelButton.isHidden = false
+            NextLevelButton.isHidden = false
         }
     }
     

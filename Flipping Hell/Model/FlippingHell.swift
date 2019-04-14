@@ -8,12 +8,21 @@
 
 import Foundation
 
+// ********************************** PROTOCOLS ********************************** //
+
+protocol UpdateMainViewDelegate {
+    func loadLevel(LevelID: Int, GoalFlips: Int, Sequence: [Int])
+}
+
+// ********************************** CLASS DEFINITION ********************************** //
+
 class FlippingHell {
 
-    // var flipperOrientation = 0
+    // ********************************** VARIABLES ********************************** //
     
     var levels = [Level]()
     var currentLevel = 0
+    var currentStage = 0
     
     init() {
         loadLevels()
@@ -22,6 +31,9 @@ class FlippingHell {
         // unlocks and settings
     }
     
+    // ********************************** DELEGATES ********************************** //
+    
+    var UpdateMainViewDelegateInstance: UpdateMainViewDelegate!
     
     func loadLevels() { // Load levels into game
         let level_1 = Level(sequence: [0, 0, 0, 0, 0,
@@ -210,4 +222,21 @@ class FlippingHell {
         levels = [level_1, level_2, level_3, level_4, level_5, level_6, level_7, level_8, level_9, level_10, level_11, level_12, level_13, level_14, level_15, level_16, level_17, level_18, level_19, level_20, ] // level_21, level_22, level_23, level_24, level_25, level_26, level_27, level_28, level_29, level_30
     }
     
+}
+
+
+// ********************************** EXTENSIONS ********************************** //
+
+extension FlippingHell: UpdateModelDelegate { // Implements update of model
+    func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int]) {
+        // make sure level completion is marked as true
+        // check if the flips is less than min flips
+        // store buttons clicked if so
+    
+        if (currentLevel == 19) {
+            print("Stage completed")
+        } else {
+            currentLevel += 1
+        }
+    }
 }
