@@ -74,7 +74,10 @@ class WinScreenController: UIViewController {
     
     @IBAction func nextLevel(_ sender: UIButton) {
         if(LevelNumber != 19) {
-            ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber, Level: LevelNumber + 1)
+            ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber + 1, Level: LevelNumber + 1)
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber + 1, Level: 0)
             self.dismiss(animated: true, completion: nil)
         }
     }

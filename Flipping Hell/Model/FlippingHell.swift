@@ -231,9 +231,6 @@ class FlippingHell {
 
 extension FlippingHell: UpdateModelDelegate { // Implements update of model
     func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int]) {
-        // make sure level completion is marked as true
-        // check if the flips is less than min flips
-        // store buttons clicked if so
     
         levels[currentLevel].attempts += 1
         levels[currentLevel].isComplete = true
@@ -255,7 +252,9 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model
     }
     
     func requestLevel(StageID: Int, LevelID: Int) {
-        print("Level loaded")
+        currentLevel = LevelID
+        currentStage = StageID
+        
         UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: levels[currentLevel].GoalFlips, Sequence: levels[currentLevel].sequence)
     }
 }

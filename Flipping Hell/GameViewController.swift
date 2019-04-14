@@ -35,6 +35,7 @@ class GameViewController: UIViewController {
             if let vc = segue.destination as? MainViewController {
                 vc.game = self.game
                 vc.UpdateModelDelegateInstance = self.game
+                game.UpdateMainViewDelegateInstance = vc
             }
         } else if segue.identifier == "loadOptionsSegue" {
             print("Options Segue")
@@ -42,7 +43,6 @@ class GameViewController: UIViewController {
             print("About Segue")
         }
     }
-    
 }
 
 @IBDesignable extension UIButton {

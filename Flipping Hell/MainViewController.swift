@@ -177,8 +177,6 @@ class MainViewController: UIViewController {
         
         let buttonState = buttonStatus[buttonIndex]
         
-        // THIS IS THE GAME BIT WE NEED TO MOVE TO THE MODEL
-        
         if (buttonState == 0) {
             baseColour = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
             buttonStatus[buttonIndex] = 1
