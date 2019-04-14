@@ -24,7 +24,6 @@ class Level {
     
     init(sequence: Array<Int>, goalFlips: Int) { // Initialiser
         self.sequence = sequence
-        self.sequence = sequence
         self.GoalFlips = goalFlips
         levelIndex = Level.getLevelNumber()
         self.sequenceID = arrayToNumber(ArrayInput: sequence)

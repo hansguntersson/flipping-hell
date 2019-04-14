@@ -11,7 +11,7 @@ import Foundation
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateMainViewDelegate {
-    func loadLevel(LevelID: Int, GoalFlips: Int, Sequence: [Int])
+    func receiveLevel(LevelID: Int, GoalFlips: Int, Sequence: [Int])
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -252,5 +252,10 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model
     
     func gameReset(LevelID: Int) {
         levels[currentLevel].attempts += 1
+    }
+    
+    func requestLevel(StageID: Int, LevelID: Int) {
+        print("Level loaded")
+        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: levels[currentLevel].GoalFlips, Sequence: levels[currentLevel].sequence)
     }
 }

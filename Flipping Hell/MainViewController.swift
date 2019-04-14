@@ -14,6 +14,7 @@ import AVFoundation
 protocol UpdateModelDelegate {
     func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int])
     func gameReset(LevelID: Int)
+    func requestLevel(StageID: Int, LevelID: Int)
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -25,11 +26,13 @@ class MainViewController: UIViewController {
     var game = FlippingHell()
     var audioPlayer = AVAudioPlayer()
     
+    var StageNum = 0
+    var LevelNum = 0
+    
     var GoalFlips = 0
     var MinFlips = 0
+    
     var FlipCount = 0
-    var LevelNum = 0
-    var StageNum = 0
     var FlipperOrientation = 0
     
     var buttonStatus = [0, 0, 0, 0, 0,
@@ -39,10 +42,10 @@ class MainViewController: UIViewController {
                         0, 0, 0, 0, 0] // what the current status of the buttons is
     
     var CurrentSequence = [0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0] // The level array loaded
+                           0, 0, 0, 0, 0,
+                           0, 0, 0, 0, 0,
+                           0, 0, 0, 0, 0,
+                           0, 0, 0, 0, 0] // Current array sequence loaded
     
     var WinSequence: [Int] = [] // The sequence of moves
     
@@ -74,26 +77,6 @@ class MainViewController: UIViewController {
     
     // ********************************** FUNCTIONS ********************************** //
     
-    func loadLevel(loadLevelNum: Int) { // Loads level, updates win display and title
-        // call info from model, no need to initialise?
-        
-        CurrentSequence = game.levels[loadLevelNum].sequence
-        GoalFlips = game.levels[loadLevelNum].GoalFlips
-        LevelNum = loadLevelNum
-        
-        for winVal in 0 ..< CurrentSequence.count {
-            if(CurrentSequence[winVal] == 0) {
-                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
-                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
-            } else {
-                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
-            }
-        }
-        levelTitle.text = "LEVEL \(LevelNum + 1)"
-        resetButtons()
-    }
-    
     @IBAction func backToMain(_ sender: UIButton) { // Dismisses view controller back to the title screen
         self.dismiss(animated: true, completion: nil)
     }
@@ -114,7 +97,7 @@ class MainViewController: UIViewController {
         buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
         buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
         
-        loadLevel(loadLevelNum: 0)
+        UpdateModelDelegateInstance.requestLevel(StageID: StageNum, LevelID: LevelNum)
         
         // Can use the following functionality for sizing:
         // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
@@ -269,8 +252,6 @@ class MainViewController: UIViewController {
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum
-                // remove levels from this segue
-                vc.levels = game.levels
             }
         } else if segue.identifier == "LoadLevelsSegue" {
             if let vc = segue.destination as? UINavigationController {
@@ -282,25 +263,32 @@ class MainViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindFromLevel(sender: UIStoryboardSegue) {
-        // need to include stage number here?
-        loadLevel(loadLevelNum: LevelNum)
-    }
-    
 }
 
  // ********************************** EXTENSIONS ********************************** //
 
 extension MainViewController: ResetButtonsDelegate { // Resets level to current or next level
     func resetToLevel(Stage: Int, Level: Int) {
-            loadLevel(loadLevelNum: Level)
+        UpdateModelDelegateInstance.requestLevel(StageID: Stage, LevelID: Level)
     }
 }
 
 extension MainViewController: UpdateMainViewDelegate { // Updates main view via model
-    func loadLevel(LevelID: Int, GoalFlips: Int, Sequence: [Int]) {
+    func receiveLevel(LevelID: Int, GoalFlips: Int, Sequence: [Int]) {
         CurrentSequence = Sequence
         self.GoalFlips = GoalFlips
         LevelNum = LevelID
+        
+        for winVal in 0 ..< CurrentSequence.count {
+            if(CurrentSequence[winVal] == 0) {
+                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
+                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
+            } else {
+                buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
+            }
+        }
+        levelTitle.text = "LEVEL \(LevelNum + 1)"
+        resetButtons()
     }
 }

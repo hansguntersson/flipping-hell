@@ -16,6 +16,10 @@ class AboutViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func unwindToMainMenuAbout(segue: UIStoryboardSegue) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

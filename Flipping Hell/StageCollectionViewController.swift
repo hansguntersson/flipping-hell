@@ -90,6 +90,10 @@ class StageCollectionViewController: UICollectionViewController {
         
         return cell
     }
+    
+    @IBAction func unwindToLevelMenuFromStages(segue: UIStoryboardSegue) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     // MARK: UICollectionViewDelegate
 

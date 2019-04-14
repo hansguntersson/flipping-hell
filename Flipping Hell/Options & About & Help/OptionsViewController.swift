@@ -15,6 +15,10 @@ class OptionsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func unwindToMainMenuOptions(segue: UIStoryboardSegue) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
