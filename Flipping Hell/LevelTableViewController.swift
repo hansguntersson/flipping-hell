@@ -18,6 +18,8 @@ class LevelTableViewController: UITableViewController {
         let minFlips: Int
     }
     
+    var game = FlippingHell()
+    
     var levels: [Level] = [] // structure for level
     var CurrentStage = 0 // current stage for identification in
     var CurrentLevel = 0; // current level for basic highlighting
@@ -31,6 +33,11 @@ class LevelTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        levels = game.levels
+        CurrentStage = game.currentStage
+        CurrentLevel = game.currentLevel
+        
     }
 
     // MARK: - Table view data source
@@ -88,7 +95,6 @@ class LevelTableViewController: UITableViewController {
             cell.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.9372549057, blue: 0.9568627477, alpha: 1)
         }
         
-        
         return cell
     }
     
@@ -135,14 +141,13 @@ class LevelTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if (segue.identifier == "unwindFromLevel") {
-            if let vc = segue.destination as? MainViewController {
-                let cellInput = (sender as AnyObject).currentTitle ?? "0"
-                if (cellInput == "★") {
-                    vc.LevelNum = 19
-                } else {
-                    vc.LevelNum = (Int(cellInput ?? "0") ?? 0) - 1
-                }
+        if let vc = segue.destination as? MainViewController {
+            let cellInput = (sender as AnyObject).currentTitle ?? "0"
+            if (cellInput == "★") {
+                vc.UpdateModelDelegateInstance.requestLevel(StageID: CurrentStage, LevelID: 19)
+            } else {
+                let LevelNumber = (Int(cellInput ?? "0") ?? 0) - 1
+                vc.UpdateModelDelegateInstance.requestLevel(StageID: CurrentStage, LevelID: LevelNumber)
             }
         }
     }

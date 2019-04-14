@@ -33,8 +33,9 @@ class GameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameStartSegue" {
             if let vc = segue.destination as? MainViewController {
-                vc.game = self.game
                 vc.UpdateModelDelegateInstance = self.game
+                vc.StageNum = self.game.currentStage
+                vc.LevelNum = self.game.currentLevel
                 game.UpdateMainViewDelegateInstance = vc
             }
         } else if segue.identifier == "loadOptionsSegue" {

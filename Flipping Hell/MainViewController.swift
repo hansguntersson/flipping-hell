@@ -23,7 +23,6 @@ class MainViewController: UIViewController {
     
     // ********************************** VARIABLES ********************************** //
     
-    var game = FlippingHell()
     var audioPlayer = AVAudioPlayer()
     
     var StageNum = 0
@@ -79,6 +78,9 @@ class MainViewController: UIViewController {
     
     @IBAction func backToMain(_ sender: UIButton) { // Dismisses view controller back to the title screen
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func unwindFromLevels(segue:UIStoryboardSegue) { // Level selected and unwind
     }
     
     @IBAction func resetLevel(_ sender: UIButton) { //Resets the level from the main screen
@@ -250,13 +252,6 @@ class MainViewController: UIViewController {
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum
-            }
-        } else if segue.identifier == "LoadLevelsSegue" {
-            if let vc = segue.destination as? UINavigationController {
-                let lvc = vc.children[0] as! LevelTableViewController
-                // move to protocol via levels to model
-                lvc.levels = game.levels
-                lvc.CurrentLevel = LevelNum
             }
         }
     }
