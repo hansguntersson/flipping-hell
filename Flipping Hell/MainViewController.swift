@@ -13,6 +13,7 @@ import AVFoundation
 
 protocol UpdateModelDelegate {
     func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int])
+    func gameReset(LevelID: Int)
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -42,6 +43,8 @@ class MainViewController: UIViewController {
                         0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0,
                         0, 0, 0, 0, 0] // The level array loaded
+    
+    var WinSequence: [Int] = [] // The sequence of moves
     
     let leftValidNums = [1, 2, 3, 4,
                          6, 7, 8, 9,
@@ -77,7 +80,6 @@ class MainViewController: UIViewController {
         CurrentSequence = game.levels[loadLevelNum].sequence
         GoalFlips = game.levels[loadLevelNum].GoalFlips
         LevelNum = loadLevelNum
-        //
         
         for winVal in 0 ..< CurrentSequence.count {
             if(CurrentSequence[winVal] == 0) {
@@ -97,6 +99,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func resetLevel(_ sender: UIButton) { //Resets the level from the main screen
+        UpdateModelDelegateInstance.gameReset(LevelID: LevelNum)
         resetButtons()
     }
     
@@ -131,35 +134,38 @@ class MainViewController: UIViewController {
             buttonStatus[buttonIndex] = 0
             buttonCollection[buttonIndex].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
         }
+        
+        WinSequence = []
     }
     
     @IBAction func clickButton(_ sender: UIButton) { // Flips buttons based on the button clicked
         let button = sender
         var WinVal = false
         
-        let idNum = Int(button.accessibilityIdentifier ?? "0")
+        let idNum: Int = Int(button.accessibilityIdentifier ?? "0") ?? 0
+        WinSequence.append(idNum)
         
-        flipButton(button, buttonIndex: idNum!)
+        flipButton(button, buttonIndex: idNum)
 
         if (FlipperOrientation == 0) {
-            if (leftValidNums.contains(idNum!)) {
-                let idNumLeft = idNum! - 1
+            if (leftValidNums.contains(idNum)) {
+                let idNumLeft = idNum - 1
                 let buttonLeft = buttonCollection[idNumLeft]
                 flipButton(buttonLeft, buttonIndex: idNumLeft)
             }
-            if (rightValidNums.contains(idNum!)) {
-                let idNumRight = idNum! + 1
+            if (rightValidNums.contains(idNum)) {
+                let idNumRight = idNum + 1
                 let buttonRight = buttonCollection[idNumRight]
                 flipButton(buttonRight, buttonIndex: idNumRight)
             }
         } else {
-            if (idNum! > 4) {
-                let idNumTop = idNum! - 5
+            if (idNum > 4) {
+                let idNumTop = idNum - 5
                 let buttonTop = buttonCollection[idNumTop]
                 flipButton(buttonTop, buttonIndex: idNumTop)
             }
-            if (idNum! < 20) {
-                let idNumBottom = idNum! + 5
+            if (idNum < 20) {
+                let idNumBottom = idNum + 5
                 let buttonBottom = buttonCollection[idNumBottom]
                 flipButton(buttonBottom, buttonIndex: idNumBottom)
             }
@@ -172,7 +178,7 @@ class MainViewController: UIViewController {
         
         if (WinVal == true) {
             // feed back flips to model
-            UpdateModelDelegateInstance.gameWon(LevelID: LevelNum, Flips: FlipCount, ButtonsClicked: [1, 2, 3])
+            UpdateModelDelegateInstance.gameWon(LevelID: LevelNum, Flips: FlipCount, ButtonsClicked: WinSequence)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.performSegue(withIdentifier: "GameWonSegue", sender: self)
             }
@@ -259,7 +265,7 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameWonSegue" {
             if let vc = segue.destination as? WinScreenController {
-                vc.ResetButtonsDelegate = self
+                vc.ResetButtonsDelegateInstance = self
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum
@@ -285,8 +291,8 @@ class MainViewController: UIViewController {
 
  // ********************************** EXTENSIONS ********************************** //
 
-extension MainViewController: ResetDelegate { // Resets level to current or next level
-    func resetToLevel(Level: Int) {
+extension MainViewController: ResetButtonsDelegate { // Resets level to current or next level
+    func resetToLevel(Stage: Int, Level: Int) {
             loadLevel(loadLevelNum: Level)
     }
 }

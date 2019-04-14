@@ -35,6 +35,8 @@ class FlippingHell {
     
     var UpdateMainViewDelegateInstance: UpdateMainViewDelegate!
     
+    // ********************************** FUNCTIONS ********************************** //
+    
     func loadLevels() { // Load levels into game
         let level_1 = Level(sequence: [0, 0, 0, 0, 0,
                                        0, 0, 0, 0, 0,
@@ -233,10 +235,22 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model
         // check if the flips is less than min flips
         // store buttons clicked if so
     
+        levels[currentLevel].attempts += 1
+        levels[currentLevel].isComplete = true
+        
+        if (Flips < levels[currentLevel].minFlips) {
+            levels[currentLevel].minFlips = Flips
+            levels[currentLevel].minMoves = ButtonsClicked
+        }
+        
         if (currentLevel == 19) {
             print("Stage completed")
         } else {
-            currentLevel += 1
+            print("Level completed")
         }
+    }
+    
+    func gameReset(LevelID: Int) {
+        levels[currentLevel].attempts += 1
     }
 }

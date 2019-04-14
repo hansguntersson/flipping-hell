@@ -1763,6 +1763,7 @@
                                     <constraint firstItem="Nia-SX-Nx0" firstAttribute="leading" secondItem="62q-6C-QjB" secondAttribute="leading" constant="5" id="xXc-hO-t7m"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="cellButton" destination="7gf-RO-ckO" id="qQy-m9-ehD"/>
                                     <outlet property="cellLabel" destination="fPi-Gu-HaZ" id="i3y-R3-PIY"/>
                                 </connections>
                             </collectionViewCell>
@@ -1852,7 +1853,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqL-VB-UbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hud-ee-eOC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="169.56521739130437" y="-1017.1875"/>
+            <point key="canvasLocation" x="1764" y="-278"/>
         </scene>
         <!--Levels-->
         <scene sceneID="wRx-LU-J6y">
@@ -1958,7 +1959,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaV-BO-BUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="-278"/>
+            <point key="canvasLocation" x="982" y="-278"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

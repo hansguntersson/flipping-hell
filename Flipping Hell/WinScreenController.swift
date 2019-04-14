@@ -8,8 +8,8 @@
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol ResetDelegate {
-    func resetToLevel(Level: Int)
+protocol ResetButtonsDelegate {
+    func resetToLevel(Stage: Int, Level: Int)
 }
 
 import UIKit
@@ -18,16 +18,17 @@ import UIKit
 
 class WinScreenController: UIViewController {
     
-    var ResetButtonsDelegate: ResetDelegate!
+    var ResetButtonsDelegateInstance: ResetButtonsDelegate!
     
     var WinFlips = 0
     var GoalFlips = 0
     var LevelNumber = 0
+    var StageNumber = 0
     
     var levels: [Level] = []
    
-    @IBOutlet weak var WinPopup: UIView!
-    @IBOutlet weak var NextLevelButton: UIButton!
+    @IBOutlet var WinPopup: UIView!
+    @IBOutlet var NextLevelButton: UIButton!
     
     @IBOutlet var WinStarsText: UILabel!
     @IBOutlet var WinFlipsText: UILabel!
@@ -58,21 +59,24 @@ class WinScreenController: UIViewController {
         
         // New stage trigger
         if(LevelNumber == 19) {
-            NextLevelButton.isHidden = true
+            NextLevelButton.setTitle("NEXT STAGE", for: .normal)
+            // StageNumber += 1
         } else {
-            NextLevelButton.isHidden = false
+            NextLevelButton.setTitle("NEXT LEVEL", for: .normal)
         }
     }
     
     @IBAction func replayLevel(_ sender: UIButton) {
         // resets level buttons etc and segues to it
-        ResetButtonsDelegate.resetToLevel(Level: LevelNumber)
+        ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber, Level: LevelNumber)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func nextLevel(_ sender: UIButton) {
-        ResetButtonsDelegate.resetToLevel(Level: LevelNumber + 1)
-        self.dismiss(animated: true, completion: nil)
+        if(LevelNumber != 19) {
+            ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber, Level: LevelNumber + 1)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func selectLevel(_ sender: UIButton) {

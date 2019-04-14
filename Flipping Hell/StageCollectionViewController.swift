@@ -12,7 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class StageCollectionViewController: UICollectionViewController {
 
-    var Stages: [Int] = [5, 4, 2, 12, 40]
+    var Stages: [Int] = [5, 4, 2]
     let cellIdentifier = "StageCollectionViewCell"
     
     override func viewDidLoad() {
@@ -53,9 +53,8 @@ class StageCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         
-        // cell.subviews[0].backgroundColor = UIColor.cyan
         cell.cellButton.setTitle("☆", for: .normal)
-        cell.cellButton.setTitleColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for:.normal)
+        cell.cellButton.setTitleColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .normal)
         cell.cellLabel.text = String(indexPath.count)
         
         // StageCollectionViewCell
@@ -89,8 +88,6 @@ class StageCollectionViewController: UICollectionViewController {
             cell.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
         } */
         
-        
-    
         return cell
     }
 
