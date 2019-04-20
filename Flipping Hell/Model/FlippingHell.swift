@@ -39,7 +39,6 @@ class FlippingHell {
     // ********************************** DELEGATES ********************************** //
     
     var UpdateMainViewDelegateInstance: UpdateMainViewDelegate!
-    
     var UpdateLevelViewDelegateInstance: UpdateLevelViewDelegate!
     
     // ********************************** FUNCTIONS ********************************** //

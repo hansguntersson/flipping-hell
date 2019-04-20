@@ -23,6 +23,8 @@ class MainViewController: UIViewController {
     
     // ********************************** VARIABLES ********************************** //
     
+    weak var game = FlippingHell()
+    
     var audioPlayer = AVAudioPlayer()
     
     var StageNum = 0
@@ -246,17 +248,22 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameWonSegue" {
+            print("WinSegue")
             if let vc = segue.destination as? WinScreenController {
+                vc.game = self.game
                 vc.ResetButtonsDelegateInstance = self
-                vc.UpdateModelWinDelegateInstance = UpdateModelDelegateInstance
+                // vc.UpdateModelWinDelegateInstance = UpdateModelDelegateInstance
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum
             }
         } else if segue.identifier == "LoadLevelsSegue" {
+            print("LevelSegue")
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
-                lvc.UpdateModelLevelsDelegateInstance = UpdateModelDelegateInstance as? UpdateModelLevelsDelegate
+                lvc.game = self.game
+                game!.UpdateLevelViewDelegateInstance = lvc
+                // lvc.UpdateModelLevelsDelegateInstance = UpdateModelDelegateInstance as! UpdateModelLevelsDelegate
             }
         }
     }

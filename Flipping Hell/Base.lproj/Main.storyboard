@@ -128,7 +128,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="LevelScreen" modalTransitionStyle="flipHorizontal" id="9K6-qu-tf3" customClass="LevelTableViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" id="LwH-pP-zzk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <prototypes>
@@ -136,11 +136,11 @@
                                 <rect key="frame" x="0.0" y="50" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hef-C9-cRa" id="saT-tj-Esw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-HP-flf">
-                                            <rect key="frame" x="15" y="9.5" width="50.5" height="50.5"/>
+                                            <rect key="frame" x="14.999999999999996" y="9.6666666666666679" width="50.666666666666657" height="50.666666666666657"/>
                                             <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Zxa-HP-flf" secondAttribute="height" multiplier="1:1" id="AR4-Eh-jCy"/>
@@ -159,13 +159,13 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: X" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
-                                            <rect key="frame" x="80.5" y="22" width="99" height="26"/>
+                                            <rect key="frame" x="80.666666666666686" y="22" width="99" height="26"/>
                                             <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="26"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆ ☆ ☆" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJU-xP-I9D">
-                                            <rect key="frame" x="239" y="13.5" width="111" height="43"/>
+                                            <rect key="frame" x="239" y="13.333333333333336" width="111" height="43"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="36"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -1242,9 +1242,9 @@
                                 <exclude reference="bW9-eh-aMP"/>
                                 <exclude reference="Y4H-wR-EQn"/>
                                 <exclude reference="xw0-9F-BLy"/>
+                                <exclude reference="CAb-bu-JTQ"/>
                                 <exclude reference="0XI-08-TiP"/>
                                 <exclude reference="xx9-Sz-dxd"/>
-                                <exclude reference="CAb-bu-JTQ"/>
                                 <exclude reference="OFD-DS-0Zr"/>
                                 <exclude reference="WqW-jf-1jc"/>
                                 <exclude reference="HNY-dK-R8g"/>
@@ -1266,14 +1266,14 @@
                                 <exclude reference="GHT-zH-dsc"/>
                                 <include reference="Y4H-wR-EQn"/>
                                 <include reference="xw0-9F-BLy"/>
+                                <exclude reference="2bl-zw-9s6"/>
+                                <include reference="CAb-bu-JTQ"/>
+                                <exclude reference="EOW-yk-bek"/>
                                 <include reference="0XI-08-TiP"/>
                                 <exclude reference="9Ff-np-DCf"/>
                                 <exclude reference="fR1-Cz-K5U"/>
                                 <exclude reference="nfh-TH-r0J"/>
                                 <include reference="xx9-Sz-dxd"/>
-                                <exclude reference="2bl-zw-9s6"/>
-                                <include reference="CAb-bu-JTQ"/>
-                                <exclude reference="EOW-yk-bek"/>
                                 <exclude reference="Gsg-Kg-FWi"/>
                                 <include reference="OFD-DS-0Zr"/>
                                 <include reference="WqW-jf-1jc"/>
@@ -1766,7 +1766,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="StageCollectionViewHeader" id="1Tq-YM-uhA">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="StageCollectionViewHeader" id="1Tq-YM-uhA">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>

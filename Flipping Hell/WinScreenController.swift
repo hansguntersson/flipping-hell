@@ -22,6 +22,8 @@ import UIKit
 
 class WinScreenController: UIViewController {
     
+    weak var game = FlippingHell()
+    
     var WinFlips = 0
     var GoalFlips = 0
     var LevelNumber = 0
@@ -49,6 +51,9 @@ class WinScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        UpdateModelWinDelegateInstance = game
+        
         GoalFlipsText.text = "GOAL: \(GoalFlips)"
         WinFlipsText.text = "FLIPS: \(WinFlips)"
         
@@ -98,7 +103,8 @@ class WinScreenController: UIViewController {
         if segue.identifier == "WinSelectLevelSegue" {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
-                lvc.UpdateModelLevelsDelegateInstance = UpdateModelWinDelegateInstance as? UpdateModelLevelsDelegate
+                lvc.game = self.game
+                // lvc.UpdateModelLevelsDelegateInstance = UpdateModelWinDelegateInstance as? UpdateModelLevelsDelegate
                 lvc.levels = levels
                 lvc.CurrentLevel = LevelNumber
             }

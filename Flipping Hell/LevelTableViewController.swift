@@ -18,6 +18,8 @@ protocol UpdateModelLevelsDelegate {
 
 class LevelTableViewController: UITableViewController {
     
+    weak var game = FlippingHell()
+    
     //MARK: Properties
     // var game = FlippingHell()
     
@@ -26,24 +28,26 @@ class LevelTableViewController: UITableViewController {
     var DisplayedStage = 0 // Stage displayed on the level screen
     var CurrentLevel = 0; // current level for basic highlighting
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        UpdateModelLevelsDelegateInstance.requestLevelList(StageID: 0)
-        
-    }
-    
     // ********************************** DELEGATES ********************************** //
     
     var UpdateModelLevelsDelegateInstance: UpdateModelLevelsDelegate!
 
     // MARK: - Table view data source
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        UpdateModelLevelsDelegateInstance = game
+        
+        UpdateModelLevelsDelegateInstance.requestLevelList(StageID: 0)
+        
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
