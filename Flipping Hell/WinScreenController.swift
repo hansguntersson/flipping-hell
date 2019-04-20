@@ -12,13 +12,15 @@ protocol ResetButtonsDelegate {
     func resetToLevel(Stage: Int, Level: Int)
 }
 
+protocol UpdateModelWinDelegate {
+    func temporary()
+}
+
 import UIKit
 
 // ********************************** CLASS DEFINITION ********************************** //
 
 class WinScreenController: UIViewController {
-    
-    var ResetButtonsDelegateInstance: ResetButtonsDelegate!
     
     var WinFlips = 0
     var GoalFlips = 0
@@ -36,6 +38,13 @@ class WinScreenController: UIViewController {
 
     var WinStarsString: String = "TBD"
     var WinStarColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    
+    // ********************************** DELEGATES ********************************** //
+    
+    var ResetButtonsDelegateInstance: ResetButtonsDelegate!
+    var UpdateModelWinDelegateInstance: UpdateModelDelegate!
+    
+    // ********************************** FUNCTIONS ********************************** //
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +85,7 @@ class WinScreenController: UIViewController {
         if(LevelNumber == 19) {
             ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber + 1, Level: 0)
         } else {
-            ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber + 1, Level: LevelNumber + 1)
+            ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber, Level: LevelNumber + 1)
         }
         self.dismiss(animated: true, completion: nil)
     }
@@ -89,6 +98,7 @@ class WinScreenController: UIViewController {
         if segue.identifier == "WinSelectLevelSegue" {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
+                lvc.UpdateModelLevelsDelegateInstance = UpdateModelWinDelegateInstance as? UpdateModelLevelsDelegate
                 lvc.levels = levels
                 lvc.CurrentLevel = LevelNumber
             }

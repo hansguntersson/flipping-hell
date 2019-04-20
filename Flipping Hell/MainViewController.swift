@@ -162,7 +162,6 @@ class MainViewController: UIViewController {
         WinVal = checkWin()
         
         if (WinVal == true) {
-            // feed back flips to model
             UpdateModelDelegateInstance.gameWon(LevelID: LevelNum, Flips: FlipCount, ButtonsClicked: WinSequence)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.performSegue(withIdentifier: "GameWonSegue", sender: self)
@@ -249,9 +248,15 @@ class MainViewController: UIViewController {
         if segue.identifier == "GameWonSegue" {
             if let vc = segue.destination as? WinScreenController {
                 vc.ResetButtonsDelegateInstance = self
+                vc.UpdateModelWinDelegateInstance = UpdateModelDelegateInstance
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum
+            }
+        } else if segue.identifier == "LoadLevelsSegue" {
+            if let vc = segue.destination as? UINavigationController {
+                let lvc = vc.children[0] as! LevelTableViewController
+                lvc.UpdateModelLevelsDelegateInstance = UpdateModelDelegateInstance as? UpdateModelLevelsDelegate
             }
         }
     }

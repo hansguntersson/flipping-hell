@@ -14,6 +14,10 @@ protocol UpdateMainViewDelegate {
     func receiveLevel(LevelID: Int, GoalFlips: Int, Sequence: [Int])
 }
 
+protocol UpdateLevelViewDelegate {
+    func receiveLevelList(StageID: Int, LevelList: [Level])
+}
+
 // ********************************** CLASS DEFINITION ********************************** //
 
 class FlippingHell {
@@ -21,6 +25,7 @@ class FlippingHell {
     // ********************************** VARIABLES ********************************** //
     
     var levels = [Level]()
+    var levels2 = [Level]()
     var currentLevel = 0
     var currentStage = 0
     
@@ -34,6 +39,8 @@ class FlippingHell {
     // ********************************** DELEGATES ********************************** //
     
     var UpdateMainViewDelegateInstance: UpdateMainViewDelegate!
+    
+    var UpdateLevelViewDelegateInstance: UpdateLevelViewDelegate!
     
     // ********************************** FUNCTIONS ********************************** //
     
@@ -158,19 +165,18 @@ class FlippingHell {
                                         0, 1, 0, 1, 0,
                                         0, 1, 1, 1, 0],
                              goalFlips: 7)
-        /*
          let level_21 = Level(sequence: [0, 0, 1, 0, 0,
-         0, 1, 1, 1, 0,
-         1, 1, 1, 1, 1,
-         0, 1, 0, 1, 0,
-         0, 1, 1, 1, 0],
-         goalFlips: 7)
+                                         0, 1, 1, 1, 0,
+                                         1, 1, 1, 1, 1,
+                                         0, 1, 0, 1, 0,
+                                         0, 1, 1, 1, 0],
+                              goalFlips: 7)
          let level_22 = Level(sequence: [0, 1, 1, 1, 0,
-         0, 1, 0, 1, 0,
-         0, 1, 1, 1, 0,
-         0, 1, 0, 1, 0,
-         0, 1, 1, 1, 0],
-         goalFlips: 8)
+                                         0, 1, 0, 1, 0,
+                                         0, 1, 1, 1, 0,
+                                         0, 1, 0, 1, 0,
+                                         0, 1, 1, 1, 0],
+                              goalFlips: 8)
          let level_23 = Level(sequence: [1, 1, 1, 1, 1,
          0, 0, 0, 0, 1,
          0, 1, 1, 0, 1,
@@ -218,10 +224,12 @@ class FlippingHell {
          0, 0, 0, 0, 0,
          1, 0, 0, 0, 1,
          1, 1, 0, 1, 1],
-         goalFlips: 11) */
+         goalFlips: 11)
         
         
-        levels = [level_1, level_2, level_3, level_4, level_5, level_6, level_7, level_8, level_9, level_10, level_11, level_12, level_13, level_14, level_15, level_16, level_17, level_18, level_19, level_20, ] // level_21, level_22, level_23, level_24, level_25, level_26, level_27, level_28, level_29, level_30
+        levels = [level_1, level_2, level_3, level_4, level_5, level_6, level_7, level_8, level_9, level_10, level_11, level_12, level_13, level_14, level_15, level_16, level_17, level_18, level_19, level_20]
+        
+        levels2 = [level_21, level_22, level_23, level_24, level_25, level_26, level_27, level_28, level_29, level_30]
     }
     
 }
@@ -229,7 +237,7 @@ class FlippingHell {
 
 // ********************************** EXTENSIONS ********************************** //
 
-extension FlippingHell: UpdateModelDelegate { // Implements update of model
+extension FlippingHell: UpdateModelDelegate { // Implements update of model from main view
     func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int]) {
     
         levels[currentLevel].attempts += 1
@@ -256,5 +264,17 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model
         currentStage = StageID
         
         UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: levels[currentLevel].GoalFlips, Sequence: levels[currentLevel].sequence)
+    }
+}
+
+extension FlippingHell: UpdateModelWinDelegate { // Implements update of model from Win view
+    func temporary() {
+        // anything needed here?
+    }
+}
+
+extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Level screen for levels
+    func requestLevelList(StageID: Int) {
+        UpdateLevelViewDelegateInstance.receiveLevelList(StageID: 0, LevelList: levels)
     }
 }

@@ -19,21 +19,15 @@ class GameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    /*
-    // MARK: - Navigation
+    // ********************************** FUNCTIONS ********************************** //
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
-
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameStartSegue" {
             if let vc = segue.destination as? MainViewController {
                 vc.UpdateModelDelegateInstance = self.game
+                vc.game = self.game
                 vc.StageNum = self.game.currentStage
                 vc.LevelNum = self.game.currentLevel
                 game.UpdateMainViewDelegateInstance = vc

@@ -8,23 +8,23 @@
 
 import UIKit
 
+// ********************************** PROTOCOLS ********************************** //
+
+protocol UpdateModelLevelsDelegate {
+    func requestLevelList(StageID: Int)
+}
+
+// ********************************** CLASS DEFINITION ********************************** //
+
 class LevelTableViewController: UITableViewController {
     
     //MARK: Properties
-    
-    struct level {
-        let sequenceID: Int
-        let goalFlips: Int
-        let minFlips: Int
-    }
-    
-    var game = FlippingHell()
+    // var game = FlippingHell()
     
     var levels: [Level] = [] // structure for level
     var CurrentStage = 0 // current stage for identification in
+    var DisplayedStage = 0 // Stage displayed on the level screen
     var CurrentLevel = 0; // current level for basic highlighting
-    
-    // What actual data do we need? List of IDs, goal, min, current,
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +34,13 @@ class LevelTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        levels = game.levels
-        CurrentStage = game.currentStage
-        CurrentLevel = game.currentLevel
+        UpdateModelLevelsDelegateInstance.requestLevelList(StageID: 0)
         
     }
+    
+    // ********************************** DELEGATES ********************************** //
+    
+    var UpdateModelLevelsDelegateInstance: UpdateModelLevelsDelegate!
 
     // MARK: - Table view data source
 
@@ -90,7 +92,7 @@ class LevelTableViewController: UITableViewController {
            cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
         
-        if (indexPath.row == CurrentLevel) {
+        if (indexPath.row == CurrentLevel && CurrentStage == DisplayedStage) {
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             cell.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.9372549057, blue: 0.9568627477, alpha: 1)
         }
@@ -98,40 +100,7 @@ class LevelTableViewController: UITableViewController {
         return cell
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+    
     
     @IBAction func backToScreen(_ sender: Any) { // Back to Win or Main screen from Level screen
         self.dismiss(animated: true, completion: nil)
@@ -144,11 +113,22 @@ class LevelTableViewController: UITableViewController {
         if let vc = segue.destination as? MainViewController {
             let cellInput = (sender as AnyObject).currentTitle ?? "0"
             if (cellInput == "★") {
-                vc.UpdateModelDelegateInstance.requestLevel(StageID: CurrentStage, LevelID: 19)
+                vc.UpdateModelDelegateInstance.requestLevel(StageID: DisplayedStage, LevelID: 19)
             } else {
                 let LevelNumber = (Int(cellInput ?? "0") ?? 0) - 1
-                vc.UpdateModelDelegateInstance.requestLevel(StageID: CurrentStage, LevelID: LevelNumber)
+                vc.UpdateModelDelegateInstance.requestLevel(StageID: DisplayedStage, LevelID: LevelNumber)
             }
         }
+    }
+    
+}
+
+// ********************************** EXTENSIONS ********************************** //
+
+extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and processes level list
+    func receiveLevelList(StageID: Int, LevelList: [Level]) {
+        levels = LevelList
+        CurrentStage = 0
+        CurrentLevel = 0
     }
 }
