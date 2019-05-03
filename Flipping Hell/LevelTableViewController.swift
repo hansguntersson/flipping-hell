@@ -18,7 +18,7 @@ protocol UpdateModelLevelsDelegate {
 
 class LevelTableViewController: UITableViewController {
     
-    weak var game = FlippingHell()
+    weak var game: FlippingHell?
     
     //MARK: Properties
     // var game = FlippingHell()

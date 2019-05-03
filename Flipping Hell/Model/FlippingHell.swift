@@ -177,53 +177,53 @@ class FlippingHell {
                                          0, 1, 1, 1, 0],
                               goalFlips: 8)
          let level_23 = Level(sequence: [1, 1, 1, 1, 1,
-         0, 0, 0, 0, 1,
-         0, 1, 1, 0, 1,
-         0, 1, 0, 0, 1,
-         0, 1, 1, 1, 1],
-         goalFlips: 8)
+                                         0, 0, 0, 0, 1,
+                                         0, 1, 1, 0, 1,
+                                         0, 1, 0, 0, 1,
+                                         0, 1, 1, 1, 1],
+                              goalFlips: 8)
          let level_24 = Level(sequence: [1, 1, 0, 1, 1,
-         1, 1, 1, 1, 1,
-         0, 1, 0, 1, 0,
-         1, 1, 1, 1, 1,
-         1, 1, 0, 1, 1],
-         goalFlips: 8)
+                                         1, 1, 1, 1, 1,
+                                         0, 1, 0, 1, 0,
+                                         1, 1, 1, 1, 1,
+                                         1, 1, 0, 1, 1],
+                              goalFlips: 8)
          let level_25 = Level(sequence: [0, 1, 0, 1, 0,
-         1, 0, 1, 0, 1,
-         0, 1, 0, 1, 0,
-         1, 0, 1, 0, 1,
-         0, 1, 0, 1, 0],
-         goalFlips: 8)
+                                         1, 0, 1, 0, 1,
+                                         0, 1, 0, 1, 0,
+                                         1, 0, 1, 0, 1,
+                                         0, 1, 0, 1, 0],
+                              goalFlips: 8)
          let level_26 = Level(sequence: [1, 1, 1, 1, 1,
-         0, 1, 1, 1, 0,
-         0, 0, 1, 0, 0,
-         0, 1, 1, 1, 0,
-         1, 1, 1, 1, 1],
-         goalFlips: 9)
+                                         0, 1, 1, 1, 0,
+                                         0, 0, 1, 0, 0,
+                                         0, 1, 1, 1, 0,
+                                         1, 1, 1, 1, 1],
+                              goalFlips: 9)
          let level_27 = Level(sequence: [1, 0, 0, 0, 1,
-         0, 1, 0, 1, 0,
-         0, 0, 1, 0, 0,
-         0, 1, 0, 1, 0,
-         1, 0, 0, 0, 1],
-         goalFlips: 9)
+                                         0, 1, 0, 1, 0,
+                                         0, 0, 1, 0, 0,
+                                         0, 1, 0, 1, 0,
+                                         1, 0, 0, 0, 1],
+                              goalFlips: 9)
          let level_28 = Level(sequence: [1, 1, 1, 0, 1,
-         1, 0, 1, 0, 1,
-         1, 0, 1, 0, 1,
-         1, 0, 1, 0, 1,
-         1, 0, 1, 1, 1],
-         goalFlips: 9)
+                                         1, 0, 1, 0, 1,
+                                         1, 0, 1, 0, 1,
+                                         1, 0, 1, 0, 1,
+                                         1, 0, 1, 1, 1],
+                              goalFlips: 9)
          let level_29 = Level(sequence: [0, 1, 1, 1, 0,
-         1, 1, 0, 1, 1,
-         0, 1, 0, 1, 0,
-         1, 1, 0, 1, 1,
-         0, 1, 1, 1, 0],
-         goalFlips: 9)
+                                         1, 1, 0, 1, 1,
+                                         0, 1, 0, 1, 0,
+                                         1, 1, 0, 1, 1,
+                                         0, 1, 1, 1, 0],
+                              goalFlips: 9)
          let level_30 = Level(sequence: [1, 1, 0, 1, 1,
-         1, 0, 0, 0, 1,
-         0, 0, 0, 0, 0,
-         1, 0, 0, 0, 1,
-         1, 1, 0, 1, 1],
-         goalFlips: 11)
+                                         1, 0, 0, 0, 1,
+                                         0, 0, 0, 0, 0,
+                                         1, 0, 0, 0, 1,
+                                         1, 1, 0, 1, 1],
+                              goalFlips: 11)
         
         
         levels = [level_1, level_2, level_3, level_4, level_5, level_6, level_7, level_8, level_9, level_10, level_11, level_12, level_13, level_14, level_15, level_16, level_17, level_18, level_19, level_20]
@@ -274,6 +274,6 @@ extension FlippingHell: UpdateModelWinDelegate { // Implements update of model f
 
 extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Level screen for levels
     func requestLevelList(StageID: Int) {
-        UpdateLevelViewDelegateInstance.receiveLevelList(StageID: 0, LevelList: levels)
+        UpdateLevelViewDelegateInstance.receiveLevelList(StageID: 0, LevelList: levels2)
     }
 }

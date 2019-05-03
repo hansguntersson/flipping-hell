@@ -22,7 +22,7 @@ import UIKit
 
 class WinScreenController: UIViewController {
     
-    weak var game = FlippingHell()
+    weak var game: FlippingHell?
     
     var WinFlips = 0
     var GoalFlips = 0

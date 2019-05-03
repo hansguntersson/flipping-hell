@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     
     // ********************************** VARIABLES ********************************** //
     
-    weak var game = FlippingHell()
+    weak var game: FlippingHell?
     
     var audioPlayer = AVAudioPlayer()
     
