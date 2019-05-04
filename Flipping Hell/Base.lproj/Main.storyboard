@@ -158,15 +158,15 @@
                                                 <segue destination="YkQ-pC-3dB" kind="unwind" identifier="unwindFromLevelsWithSegue" unwindAction="unwindFromLevelsWithSegue:" id="buW-Qy-b0Z"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: X" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
-                                            <rect key="frame" x="80.666666666666686" y="22" width="99" height="26"/>
-                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="26"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS X/X" textAlignment="natural" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
+                                            <rect key="frame" x="80.666666666666671" y="23" width="138.33333333333331" height="24"/>
+                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="24"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆ ☆ ☆" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJU-xP-I9D">
-                                            <rect key="frame" x="239" y="13.333333333333336" width="111" height="43"/>
-                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="36"/>
+                                            <rect key="frame" x="242" y="14" width="108" height="42"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>

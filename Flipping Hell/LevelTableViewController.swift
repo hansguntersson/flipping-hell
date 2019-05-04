@@ -23,6 +23,9 @@ class LevelTableViewController: UITableViewController {
     weak var game: FlippingHell?
 
     // TODO: create new struct where it's only the level data required for view
+    // TODO: add in stage number to heading object
+    // TODO: font sizing if the integers are too big?
+    
     var levels: [Level] = [] // structure for level
     var CurrentStage = 0 // current stage for identification in
     var DisplayedStage = 0 // Stage displayed on the level screen
@@ -66,7 +69,7 @@ class LevelTableViewController: UITableViewController {
         }
         
         cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.levelGoal.text = "GOAL: " + "\(thisLevel.GoalFlips)"
+        cell.levelGoal.text = "FLIPS " + "\(thisLevel.minFlips)" + " | " + "\(thisLevel.GoalFlips)"
         
         if(thisLevel.minFlips == 0) {
             cell.levelStars.text = "☆ ☆ ☆"
