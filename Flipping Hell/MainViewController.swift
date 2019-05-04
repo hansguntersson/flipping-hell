@@ -13,8 +13,8 @@ import AVFoundation
 
 protocol UpdateModelDelegate {
     func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int])
-    func gameReset(LevelID: Int)
-    func requestLevel(StageID: Int, LevelID: Int)
+    func gameReset()
+    func requestLevel()
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -86,8 +86,11 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func resetLevel(_ sender: UIButton) { //Resets the level from the main screen
-        UpdateModelDelegateInstance.gameReset(LevelID: LevelNum)
-        resetButtons()
+        if(FlipCount > 0) { // Only add to attempts if there have been flips made
+            // TODO: Ensure that the attempts are increased when a level is won
+            UpdateModelDelegateInstance.gameReset()
+            resetButtons()
+        }
     }
     
     override func viewDidLoad() { // Sets up game on load
@@ -101,11 +104,9 @@ class MainViewController: UIViewController {
         buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
         buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
         
-        StageNum = game?.currentStage ?? 0
-        LevelNum = game?.currentLevel ?? 0
         UpdateModelDelegateInstance = game
         
-        UpdateModelDelegateInstance.requestLevel(StageID: StageNum, LevelID: LevelNum)
+        UpdateModelDelegateInstance.requestLevel()
         
         // Can use the following functionality for sizing:
         // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
@@ -117,8 +118,6 @@ class MainViewController: UIViewController {
         updateFlipperDisplay()
         FlipCount = 0
         FlipsLabel.text = "FLIPS: \(FlipCount)"
-        
-        // TODO: add 1 to attemps on the level if flips are greater than 0
         
         // Reset buttons and array
         for buttonIndex in 0 ..< buttonStatus.count {
@@ -252,7 +251,6 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameWonSegue" {
-            print("WinSegue")
             if let vc = segue.destination as? WinScreenController {
                 vc.game = self.game
                 vc.ResetButtonsDelegateInstance = self
@@ -261,12 +259,10 @@ class MainViewController: UIViewController {
                 vc.LevelNumber = LevelNum
             }
         } else if segue.identifier == "LoadLevelsSegue" {
-            print("LevelSegue")
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.game = self.game
                 game!.UpdateLevelViewDelegateInstance = lvc
-                // lvc.UpdateModelLevelsDelegateInstance = UpdateModelDelegateInstance as! UpdateModelLevelsDelegate
             }
         }
     }
@@ -277,7 +273,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: ResetButtonsDelegate { // Resets level to current or next level
     func resetToLevel(Stage: Int, Level: Int) {
-        UpdateModelDelegateInstance.requestLevel(StageID: Stage, LevelID: Level)
+        UpdateModelDelegateInstance.requestLevel()
     }
 }
 

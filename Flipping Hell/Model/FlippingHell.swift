@@ -323,14 +323,11 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         }
     }
     
-    func gameReset(LevelID: Int) {
+    func gameReset() {
         levels[currentLevel].attempts += 1
     }
     
-    func requestLevel(StageID: Int, LevelID: Int) {
-        currentLevel = LevelID
-        currentStage = StageID
-        
+    func requestLevel() { 
         UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: levels[currentLevel].GoalFlips, Sequence: levels[currentLevel].sequence)
     }
 }

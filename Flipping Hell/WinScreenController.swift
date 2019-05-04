@@ -104,9 +104,6 @@ class WinScreenController: UIViewController {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.game = self.game
-                // lvc.UpdateModelLevelsDelegateInstance = UpdateModelWinDelegateInstance as? UpdateModelLevelsDelegate
-                lvc.levels = levels
-                lvc.CurrentLevel = LevelNumber
             }
         }
     }
