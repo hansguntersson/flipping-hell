@@ -673,6 +673,7 @@ class FlippingHell {
         stages = [levels_1, levels_2, levels_3, levels_4, levels_5]
         
         // TODO: Interface with core data for this data, and a JSON file etc
+        // TODO: Put these levels into a data structure outside of the FH object
     }
 }
 
@@ -681,16 +682,18 @@ class FlippingHell {
 extension FlippingHell: UpdateModelDelegate { // Implements update of model from main view
     func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int]) {
         
+        // TODO: process game won via level method, not via accessing elements directly
         let LevelSelected = stages[currentStage][currentLevel]
         
         LevelSelected.attempts += 1
         LevelSelected.isComplete = true
         
-        if (Flips < LevelSelected.minFlips) {
+        if (Flips < LevelSelected.minFlips || LevelSelected.minFlips == 0) {
             LevelSelected.minFlips = Flips
             LevelSelected.minMoves = ButtonsClicked
         }
         
+        // TODO: check completion of all levels in a stage to unlock and generate a new one
         if (currentLevel == 19) {
             print("Stage completed")
         } else {
@@ -704,7 +707,6 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
     
     func requestLevel() {
         let LevelSelected = stages[currentStage][currentLevel]
-        
         UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: LevelSelected.GoalFlips, Sequence: LevelSelected.sequence)
     }
 }
@@ -714,8 +716,7 @@ extension FlippingHell: UpdateModelWinDelegate { // Implements update of model f
         if (currentLevel < 19) {
             currentLevel += 1
         } else {
-            if (currentStage == 1) {
-                // TODO: Need to add in logic for genberating stages etc here
+            if (currentStage < 4 ) { // TODO: remove this logic restriction, game won should generate new stage
                 currentStage += 1
                 currentLevel = 0
             }

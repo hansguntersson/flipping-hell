@@ -31,7 +31,6 @@ class MainViewController: UIViewController {
     var LevelNum = 0
     
     var GoalFlips = 0
-    var MinFlips = 0
     
     var FlipCount = 0
     var FlipperOrientation = 0
