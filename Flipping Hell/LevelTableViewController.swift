@@ -12,6 +12,7 @@ import UIKit
 
 protocol UpdateModelLevelsDelegate {
     func requestLevelList(StageID: Int)
+    func changeLevel(StageID: Int, LevelID: Int)
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -86,7 +87,7 @@ class LevelTableViewController: UITableViewController {
             // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
         } else if (thisLevel.minFlips - thisLevel.GoalFlips < 0) {
             cell.levelStars.text = "✮ ✮ ✮"
-           cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+            cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
         
         if (indexPath.row == CurrentLevel && CurrentStage == DisplayedStage) {
@@ -103,18 +104,18 @@ class LevelTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    
-        
-        // IS THIS NECESSARY ANYMORE?
-        if let vc = segue.destination as? MainViewController {
-            let cellInput = (sender as AnyObject).currentTitle ?? "0"
-            if (cellInput == "★") {
-                vc.UpdateModelDelegateInstance.requestLevel(StageID: DisplayedStage, LevelID: 19)
+        // TODO: Is there anything we need to pass across, presumably the stages can just be loaded regardless
+        if segue.identifier == "unwindFromLevelsWithSegue" {
+            let buttonInstance = sender as! UIButton
+            if (buttonInstance.currentTitle == "★") {
+                UpdateModelLevelsDelegateInstance.changeLevel(StageID: DisplayedStage, LevelID: 19)
+                print("unwound from level 19")
             } else {
-                let LevelNumber = (Int(cellInput ?? "0") ?? 0) - 1
-                vc.UpdateModelDelegateInstance.requestLevel(StageID: DisplayedStage, LevelID: LevelNumber)
+                UpdateModelLevelsDelegateInstance.changeLevel(StageID: DisplayedStage, LevelID: Int(buttonInstance.currentTitle ?? "0")! - 1)
+                print("unwound from level other than 19")
             }
+            
+            
         }
     }
     
@@ -123,9 +124,9 @@ class LevelTableViewController: UITableViewController {
 // ********************************** EXTENSIONS ********************************** //
 
 extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and processes level list
-    func receiveLevelList(StageID: Int, LevelList: [Level]) {
+    func receiveLevelList(StageID: Int, LevelList: [Level], CurrentStage: Int, CurrentLevel: Int) {
         levels = LevelList
-        CurrentStage = 0
-        CurrentLevel = 0
+        self.CurrentStage = CurrentStage
+        self.CurrentLevel = CurrentLevel
     }
 }

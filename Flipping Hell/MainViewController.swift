@@ -83,6 +83,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func unwindFromLevels(segue:UIStoryboardSegue) { // Level selected and unwind
+        UpdateModelDelegateInstance.requestLevel()
+        resetButtons()
     }
     
     @IBAction func resetLevel(_ sender: UIButton) { //Resets the level from the main screen
@@ -262,17 +264,18 @@ class MainViewController: UIViewController {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.game = self.game
+                lvc.DisplayedStage = self.game?.currentStage ?? 0
                 game!.UpdateLevelViewDelegateInstance = lvc
             }
         }
     }
-    
 }
 
  // ********************************** EXTENSIONS ********************************** //
 
-extension MainViewController: ResetButtonsDelegate { // Resets level to current or next level
-    func resetToLevel(Stage: Int, Level: Int) {
+extension MainViewController: ResetLevelDelegate {
+    // Resets level to whatever the current level is
+    func resetLevel() {
         UpdateModelDelegateInstance.requestLevel()
     }
 }

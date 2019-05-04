@@ -15,7 +15,7 @@ protocol UpdateMainViewDelegate {
 }
 
 protocol UpdateLevelViewDelegate {
-    func receiveLevelList(StageID: Int, LevelList: [Level])
+    func receiveLevelList(StageID: Int, LevelList: [Level], CurrentStage: Int, CurrentLevel: Int)
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -333,14 +333,28 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
 }
 
 extension FlippingHell: UpdateModelWinDelegate { // Implements update of model from Win view
-    func temporary() {
-        // anything needed here?
+    func nextLevel() {
+        if (currentLevel < 19) {
+            currentLevel += 1
+        } else {
+            if (currentStage == 1) {
+                // TODO: Need to add in logic for genberating stages etc here
+                currentStage += 1
+                currentLevel = 0
+            }
+        }
     }
 }
 
 extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Level screen for levels
     func requestLevelList(StageID: Int) {
-        UpdateLevelViewDelegateInstance.receiveLevelList(StageID: StageID, LevelList: stages[currentStage])
+        UpdateLevelViewDelegateInstance.receiveLevelList(StageID: StageID, LevelList: stages[currentStage], CurrentStage: currentStage, CurrentLevel: currentLevel)
+    }
+    
+    func changeLevel(StageID: Int, LevelID: Int) {
+        currentStage = StageID
+        currentLevel = LevelID
+        levels[currentLevel].attempts += 1
     }
 }
 

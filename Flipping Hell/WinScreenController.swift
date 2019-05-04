@@ -8,12 +8,12 @@
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol ResetButtonsDelegate {
-    func resetToLevel(Stage: Int, Level: Int)
+protocol ResetLevelDelegate {
+    func resetLevel()
 }
 
 protocol UpdateModelWinDelegate {
-    func temporary()
+    func nextLevel()
 }
 
 import UIKit
@@ -43,8 +43,8 @@ class WinScreenController: UIViewController {
     
     // ********************************** DELEGATES ********************************** //
     
-    var ResetButtonsDelegateInstance: ResetButtonsDelegate!
-    var UpdateModelWinDelegateInstance: UpdateModelDelegate!
+    var ResetButtonsDelegateInstance: ResetLevelDelegate!
+    var UpdateModelWinDelegateInstance: UpdateModelWinDelegate!
     
     // ********************************** FUNCTIONS ********************************** //
     
@@ -81,17 +81,13 @@ class WinScreenController: UIViewController {
     }
     
     @IBAction func replayLevel(_ sender: UIButton) {
-        // resets level buttons etc and segues to it
-        ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber, Level: LevelNumber)
+        ResetButtonsDelegateInstance.resetLevel()
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func nextLevel(_ sender: UIButton) {
-        if(LevelNumber == 19) {
-            ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber + 1, Level: 0)
-        } else {
-            ResetButtonsDelegateInstance.resetToLevel(Stage: StageNumber, Level: LevelNumber + 1)
-        }
+        UpdateModelWinDelegateInstance.nextLevel()
+        ResetButtonsDelegateInstance.resetLevel()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -104,6 +100,8 @@ class WinScreenController: UIViewController {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.game = self.game
+                lvc.DisplayedStage = self.game?.currentStage ?? 0
+                game!.UpdateLevelViewDelegateInstance = lvc
             }
         }
     }
