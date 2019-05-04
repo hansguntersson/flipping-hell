@@ -18,11 +18,9 @@ protocol UpdateModelLevelsDelegate {
 
 class LevelTableViewController: UITableViewController {
     
-    weak var game: FlippingHell?
-    
     //MARK: Properties
-    // var game = FlippingHell()
-    
+    weak var game: FlippingHell?
+
     var levels: [Level] = [] // structure for level
     var CurrentStage = 0 // current stage for identification in
     var DisplayedStage = 0 // Stage displayed on the level screen
@@ -43,8 +41,7 @@ class LevelTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         UpdateModelLevelsDelegateInstance = game
-        
-        UpdateModelLevelsDelegateInstance.requestLevelList(StageID: 0)
+        UpdateModelLevelsDelegateInstance.requestLevelList(StageID: CurrentStage)
         
     }
     
@@ -104,16 +101,16 @@ class LevelTableViewController: UITableViewController {
         return cell
     }
     
-    
-    
     @IBAction func backToScreen(_ sender: Any) { // Back to Win or Main screen from Level screen
         self.dismiss(animated: true, completion: nil)
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+    
+        
+        // IS THIS NECESSARY ANYMORE?
         if let vc = segue.destination as? MainViewController {
             let cellInput = (sender as AnyObject).currentTitle ?? "0"
             if (cellInput == "★") {

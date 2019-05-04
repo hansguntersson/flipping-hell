@@ -26,6 +26,8 @@ class FlippingHell {
     
     var levels = [Level]()
     var levels2 = [Level]()
+    var stages = [levels, levels2]
+    
     var currentLevel = 0
     var currentStage = 0
     

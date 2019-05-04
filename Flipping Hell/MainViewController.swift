@@ -252,7 +252,6 @@ class MainViewController: UIViewController {
             if let vc = segue.destination as? WinScreenController {
                 vc.game = self.game
                 vc.ResetButtonsDelegateInstance = self
-                // vc.UpdateModelWinDelegateInstance = UpdateModelDelegateInstance
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum

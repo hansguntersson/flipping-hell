@@ -180,8 +180,8 @@
 				E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */,
 				E5A1C1F221E6292C001E8D90 /* StageCollectionViewCell.swift */,
 				E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */,
-				E5AB86EC21DE6C4F00337825 /* Options & About & Help */,
 				E5AB86EB21DE6C3800337825 /* Model */,
+				E5AB86EC21DE6C4F00337825 /* Options & About & Help */,
 				E543F3EF2162B77200329519 /* resources */,
 				E5C106BB215408B000947220 /* Assets.xcassets */,
 			);

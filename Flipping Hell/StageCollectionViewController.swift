@@ -12,7 +12,10 @@ private let reuseIdentifier = "Cell"
 
 class StageCollectionViewController: UICollectionViewController {
 
-    var Stages: [Int] = [5, 4, 2]
+    weak var game: FlippingHell?
+    
+    var Stages: [Int] = [1, 2, 3]
+    
     let cellIdentifier = "StageCollectionViewCell"
     
     override func viewDidLoad() {
