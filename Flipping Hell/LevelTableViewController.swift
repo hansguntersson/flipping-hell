@@ -42,6 +42,9 @@ class LevelTableViewController: UITableViewController {
         
         UpdateModelLevelsDelegateInstance = game
         UpdateModelLevelsDelegateInstance.requestLevelList(StageID: DisplayedStage)
+        
+        self.title = "STAGE " + "\(CurrentStage + 1)"
+        // TODO: Check if this needs to be amnended on unwind from stage selection too
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
