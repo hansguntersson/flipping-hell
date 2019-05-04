@@ -89,7 +89,7 @@ class MainViewController: UIViewController {
     
     @IBAction func resetLevel(_ sender: UIButton) { //Resets the level from the main screen
         if(FlipCount > 0) { // Only add to attempts if there have been flips made
-            // TODO: Ensure that the attempts are increased when a level is won
+            // TODO: Ensure that the attempts are increased when a level is won, seems like this is dealt with in the model, make sure it's not done twice
             UpdateModelDelegateInstance.gameReset()
             resetButtons()
         }
@@ -110,7 +110,7 @@ class MainViewController: UIViewController {
         
         UpdateModelDelegateInstance.requestLevel()
         
-        // Can use the following functionality for sizing:
+        // TODO: Can use the following functionality for sizing:
         // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
     }
     
@@ -253,6 +253,11 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameWonSegue" {
+            
+            // TODO: Identify if new record
+            // TODO: Identify if new stage unlocked
+            // TODO: help view
+            
             if let vc = segue.destination as? WinScreenController {
                 vc.game = self.game
                 vc.ResetButtonsDelegateInstance = self

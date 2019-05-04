@@ -12,9 +12,12 @@ private let reuseIdentifier = "Cell"
 
 class StageCollectionViewController: UICollectionViewController {
 
+    // TODO: sum of stars and similar - summary elements?
+    // TODO: create new struct where it's only the stage data required for view
+    
     weak var game: FlippingHell?
     
-    var Stages: [Int] = [1, 2]
+    var Stages: [Int] = [1, 2, 3, 4, 5]
     
     let cellIdentifier = "StageCollectionViewCell"
     
@@ -62,27 +65,29 @@ class StageCollectionViewController: UICollectionViewController {
         
         // StageCollectionViewCell
         
+        // TODO: Stage formatting
+        
         /* cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         cell.levelGoal.text = "GOAL: " + "\(level.GoalFlips)"
         
         if(level.minFlips == 0) {
-            cell.levelStars.text = "☆ ☆ ☆"
+            cell.levelStars.text = "☆"
             // cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         } else if (level.minFlips - level.GoalFlips > 2) {
-            cell.levelStars.text = "★ ☆ ☆"
+            cell.levelStars.text = "★"
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
         } else if (level.minFlips - level.GoalFlips > 0) {
-            cell.levelStars.text = "★ ★ ☆"
+            cell.levelStars.text = "★"
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             // cell.levelStars.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         } else if (level.minFlips - level.GoalFlips == 0) {
-            cell.levelStars.text = "★ ★ ★"
+            cell.levelStars.text = "★"
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
         } else if (level.minFlips - level.GoalFlips < 0) {
-            cell.levelStars.text = "✮ ✮ ✮"
+            cell.levelStars.text = "✮"
             cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
         

@@ -30,6 +30,7 @@ class Level {
     }
     
     static func getLevelNumber() -> Int { // Get level for display on table etc
+        // TODO: - Remove as the array will dictate index
         levelsIndices += 1
         return levelsIndices
     }
@@ -37,8 +38,8 @@ class Level {
     func completeLevel(levelCompleted: Level, completeSequence: Array<Int>) { // What happens when level is completed
         isComplete = true
         attempts += 1
-        // Unlock next level when not yet unlocked
-        // Include moves, sequence of moves
+        // TODO: - Unlock next level when not yet unlocked
+        // TODO: -  Include moves, sequence of moves
     }
     
     func arrayToNumber(ArrayInput: [Int]) -> Int { // Take in an array and converts it to a number

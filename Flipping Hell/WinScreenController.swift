@@ -74,7 +74,6 @@ class WinScreenController: UIViewController {
         // New stage trigger
         if(LevelNumber == 19) {
             NextLevelButton.setTitle("NEXT STAGE", for: .normal)
-            // StageNumber += 1
         } else {
             NextLevelButton.setTitle("NEXT LEVEL", for: .normal)
         }

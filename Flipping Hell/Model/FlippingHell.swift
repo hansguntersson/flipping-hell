@@ -24,8 +24,11 @@ class FlippingHell {
 
     // ********************************** VARIABLES ********************************** //
     
-    var levels = [Level]()
-    var levels2 = [Level]()
+    var levels_1 = [Level]()
+    var levels_2 = [Level]()
+    var levels_3 = [Level]()
+    var levels_4 = [Level]()
+    var levels_5 = [Level]()
     var stages = [[Level]]()
 
     var currentLevel = 0
@@ -33,9 +36,6 @@ class FlippingHell {
     
     init() {
         loadLevels()
-        // synchronise
-        // load current level from memory
-        // unlocks and settings
     }
     
     // ********************************** DELEGATES ********************************** //
@@ -46,6 +46,8 @@ class FlippingHell {
     // ********************************** FUNCTIONS ********************************** //
     
     func loadLevels() { // Load levels into game
+        
+        // STAGE 1
         let level_1 = Level(sequence: [0, 0, 0, 0, 0,
                                        0, 0, 0, 0, 0,
                                        0, 1, 1, 1, 0,
@@ -167,7 +169,7 @@ class FlippingHell {
                                         0, 1, 1, 1, 0],
                              goalFlips: 7)
         
-        // SET 2
+        // STAGE 2
         
          let level_21 = Level(sequence: [0, 0, 1, 0, 0,
                                          0, 1, 1, 1, 0,
@@ -229,9 +231,6 @@ class FlippingHell {
                                          1, 0, 0, 0, 1,
                                          1, 1, 0, 1, 1],
                               goalFlips: 11)
-        
-        // second stage
-        
         let level_31 = Level(sequence: [0, 0, 1, 1, 1,
                                         1, 1, 1, 0, 0,
                                         1, 0, 0, 0, 0,
@@ -293,27 +292,403 @@ class FlippingHell {
                                         0, 0, 0, 0, 1],
                              goalFlips: 18)
         
-        levels = [level_1, level_2, level_3, level_4, level_5, level_6, level_7, level_8, level_9, level_10, level_11, level_12, level_13, level_14, level_15, level_16, level_17, level_18, level_19, level_20]
+        // STAGE 3
         
-        levels2 = [level_21, level_22, level_23, level_24, level_25, level_26, level_27, level_28, level_29, level_30, level_31, level_32, level_33, level_34, level_35, level_36, level_37, level_38, level_39, level_40]
+        let level_41 = Level(sequence: [1, 0, 0, 0, 0,
+                                        1, 0, 0, 1, 1,
+                                        1, 0, 1, 1, 0,
+                                        1, 1, 0, 0, 1,
+                                        0, 0, 0, 1, 0],
+                             goalFlips: 13)
+        let level_42 = Level(sequence: [0, 0, 1, 1, 0,
+                                        1, 0, 1, 0, 0,
+                                        1, 1, 1, 1, 1,
+                                        1, 1, 0, 0, 1,
+                                        1, 0, 1, 1, 1],
+                             goalFlips: 11)
+        let level_43 = Level(sequence: [1, 0, 1, 1, 0,
+                                        0, 0, 1, 0, 0,
+                                        0, 0, 0, 1, 0,
+                                        0, 1, 1, 1, 1,
+                                        0, 1, 0, 1, 1],
+                             goalFlips: 11)
+        let level_44 = Level(sequence: [1, 1, 1, 0, 1,
+                                        1, 0, 1, 0, 0,
+                                        1, 0, 1, 0, 1,
+                                        1, 1, 0, 1, 1,
+                                        1, 0, 0, 0, 1],
+                             goalFlips: 13)
+        let level_45 = Level(sequence: [1, 0, 1, 1, 1,
+                                        0, 0, 0, 1, 1,
+                                        0, 0, 1, 0, 1,
+                                        0, 1, 1, 0, 1,
+                                        0, 1, 0, 0, 0],
+                             goalFlips: 14)
+        let level_46 = Level(sequence: [1, 1, 0, 0, 0,
+                                        0, 1, 1, 1, 1,
+                                        0, 1, 1, 0, 1,
+                                        0, 0, 0, 1, 0,
+                                        1, 0, 0, 0, 1],
+                             goalFlips: 16)
+        let level_47 = Level(sequence: [0, 1, 0, 0, 1,
+                                        0, 1, 0, 0, 1,
+                                        1, 1, 0, 0, 0,
+                                        0, 0, 1, 0, 1,
+                                        0, 1, 0, 1, 1],
+                             goalFlips: 8)
+        let level_48 = Level(sequence: [0, 0, 0, 0, 1,
+                                        1, 1, 1, 1, 1,
+                                        0, 0, 0, 0, 1,
+                                        0, 0, 0, 0, 0,
+                                        1, 1, 1, 1, 0],
+                             goalFlips: 11)
+        let level_49 = Level(sequence: [1, 1, 0, 0, 0,
+                                        1, 0, 0, 0, 0,
+                                        0, 1, 1, 0, 0,
+                                        0, 0, 0, 1, 1,
+                                        1, 1, 1, 1, 0],
+                             goalFlips: 24)
+        let level_50 = Level(sequence: [0, 0, 0, 1, 0,
+                                        0, 0, 1, 0, 1,
+                                        1, 1, 0, 0, 1,
+                                        0, 1, 0, 1, 0,
+                                        1, 0, 1, 0, 1],
+                             goalFlips: 10)
+        let level_51 = Level(sequence: [1, 1, 1, 0, 0,
+                                        0, 1, 0, 1, 1,
+                                        0, 0, 0, 0, 0,
+                                        0, 1, 1, 1, 1,
+                                        0, 0, 0, 1, 1],
+                             goalFlips: 9)
+        let level_52 = Level(sequence: [1, 0, 1, 0, 1,
+                                        0, 1, 0, 0, 0,
+                                        0, 0, 0, 0, 1,
+                                        1, 1, 1, 0, 0,
+                                        0, 1, 1, 1, 1],
+                             goalFlips: 9)
+        let level_53 = Level(sequence: [1, 0, 0, 0, 1,
+                                        0, 0, 0, 0, 1,
+                                        1, 1, 1, 0, 1,
+                                        0, 0, 1, 0, 0,
+                                        1, 1, 0, 0, 1],
+                             goalFlips: 17)
+        let level_54 = Level(sequence: [0, 0, 1, 0, 0,
+                                        0, 1, 1, 0, 0,
+                                        1, 1, 1, 0, 0,
+                                        0, 1, 0, 1, 1,
+                                        1, 0, 1, 0, 1],
+                             goalFlips: 15)
+        let level_55 = Level(sequence: [0, 1, 1, 0, 0,
+                                        1, 1, 0, 0, 1,
+                                        0, 1, 0, 1, 0,
+                                        0, 0, 0, 0, 0,
+                                        0, 1, 1, 1, 0],
+                             goalFlips: 12)
+        let level_56 = Level(sequence: [1, 1, 0, 1, 1,
+                                        0, 0, 0, 1, 0,
+                                        0, 0, 0, 1, 1,
+                                        0, 0, 1, 1, 1,
+                                        1, 0, 0, 1, 1],
+                             goalFlips: 7)
+        let level_57 = Level(sequence: [0, 1, 0, 1, 1,
+                                        1, 0, 0, 1, 0,
+                                        1, 1, 1, 0, 1,
+                                        0, 0, 1, 1, 0,
+                                        1, 1, 0, 0, 0],
+                             goalFlips: 31)
+        let level_58 = Level(sequence: [0, 1, 0, 0, 1,
+                                        0, 1, 1, 0, 1,
+                                        1, 0, 1, 1, 1,
+                                        0, 0, 1, 0, 1,
+                                        0, 1, 0, 0, 0],
+                             goalFlips: 20)
+        let level_59 = Level(sequence: [0, 0, 1, 0, 0,
+                                        1, 1, 0, 1, 1,
+                                        1, 1, 0, 1, 1,
+                                        0, 0, 1, 0, 0,
+                                        1, 0, 0, 1, 0],
+                             goalFlips: 16)
+        let level_60 = Level(sequence: [1, 1, 0, 0, 0,
+                                        0, 1, 1, 1, 1,
+                                        0, 1, 0, 0, 1,
+                                        0, 1, 0, 0, 0,
+                                        1, 1, 1, 0, 0],
+                             goalFlips: 9)
         
-        stages = [levels, levels2]
+        // STAGE 4
+        let level_61 = Level(sequence: [1, 1, 0, 1, 0,
+                                        1, 1, 0, 0, 0,
+                                        0, 0, 1, 1, 0,
+                                        0, 0, 1, 1, 0,
+                                        1, 1, 1, 0, 0],
+                            goalFlips: 20)
+        let level_62 = Level(sequence: [0, 0, 0, 0, 0,
+                                        0, 0, 0, 1, 1,
+                                        1, 0, 1, 1, 0,
+                                        0, 1, 1, 1, 1,
+                                        0, 1, 1, 1, 1],
+                            goalFlips: 10)
+        let level_63 = Level(sequence: [1, 0, 0, 1, 1,
+                                        1, 0, 0, 1, 1,
+                                        1, 1, 1, 1, 0,
+                                        0, 1, 0, 0, 1,
+                                        1, 0, 0, 1, 0],
+                            goalFlips: 10)
+        let level_64 = Level(sequence: [0, 0, 0, 0, 1,
+                                        0, 0, 1, 0, 1,
+                                        0, 1, 1, 1, 0,
+                                        1, 0, 0, 1, 1,
+                                        0, 0, 1, 1, 0],
+                            goalFlips: 16)
+        let level_65 = Level(sequence: [0, 0, 1, 1, 1,
+                                        1, 1, 1, 0, 0,
+                                        1, 0, 0, 0, 0,
+                                        1, 1, 1, 1, 1,
+                                        1, 0, 1, 0, 1],
+                            goalFlips: 10)
+        let level_66 = Level(sequence: [1, 1, 0, 0, 1,
+                                        1, 0, 0, 1, 0,
+                                        0, 1, 0, 1, 0,
+                                        1, 1, 0, 1, 0,
+                                        0, 0, 0, 0, 0],
+                            goalFlips: 12)
+        let level_67 = Level(sequence: [0, 1, 0, 1, 1,
+                                        1, 0, 1, 0, 0,
+                                        1, 1, 0, 0, 1,
+                                        0, 0, 0, 1, 0,
+                                        1, 1, 1, 0, 1],
+                            goalFlips: 21)
+        let level_68 = Level(sequence: [1, 1, 1, 0, 0,
+                                        1, 0, 0, 1, 1,
+                                        1, 0, 0, 1, 0,
+                                        1, 0, 1, 1, 0,
+                                        1, 0, 0, 0, 0],
+                            goalFlips: 11)
+        let level_69 = Level(sequence: [0, 1, 1, 1, 0,
+                                        0, 1, 0, 0, 0,
+                                        0, 0, 0, 0, 1,
+                                        1, 0, 0, 1, 1,
+                                        1, 0, 1, 0, 1],
+                            goalFlips: 9)
+        let level_70 = Level(sequence: [0, 0, 1, 1, 0,
+                                        0, 1, 0, 0, 0,
+                                        1, 1, 1, 0, 0,
+                                        1, 0, 0, 1, 0,
+                                        0, 0, 1, 0, 0],
+                             goalFlips: 11)
+        let level_71 = Level(sequence: [0, 1, 0, 1, 0,
+                                        0, 0, 0, 0, 0,
+                                        0, 0, 1, 1, 0,
+                                        1, 1, 0, 0, 1,
+                                        0, 0, 1, 1, 0],
+                             goalFlips: 7)
+        let level_72 = Level(sequence: [0, 1, 1, 0, 1,
+                                        1, 0, 0, 0, 1,
+                                        1, 0, 0, 1, 0,
+                                        0, 0, 1, 0, 1,
+                                        1, 0, 1, 1, 1],
+                             goalFlips: 11)
+        let level_73 = Level(sequence: [1, 0, 1, 1, 0,
+                                        1, 0, 1, 1, 0,
+                                        1, 0, 0, 0, 1,
+                                        0, 1, 1, 0, 0,
+                                        1, 0, 1, 0, 0],
+                             goalFlips: 10)
+        let level_74 = Level(sequence: [0, 1, 0, 1, 1,
+                                        1, 1, 0, 0, 1,
+                                        0, 1, 1, 0, 0,
+                                        1, 0, 1, 0, 0,
+                                        1, 0, 0, 1, 1],
+                             goalFlips: 11)
+        let level_75 = Level(sequence: [1, 1, 1, 1, 1,
+                                        0, 1, 1, 1, 0,
+                                        0, 1, 0, 0, 0,
+                                        0, 0, 1, 0, 1,
+                                        0, 0, 1, 0, 1],
+                             goalFlips: 10)
+        let level_76 = Level(sequence: [1, 1, 0, 1, 1,
+                                        0, 1, 1, 1, 1,
+                                        0, 0, 0, 0, 1,
+                                        1, 1, 0, 1, 0,
+                                        0, 0, 1, 0, 0],
+                             goalFlips: 37)
+        let level_77 = Level(sequence: [1, 1, 0, 1, 1,
+                                        0, 1, 0, 0, 1,
+                                        1, 1, 0, 0, 1,
+                                        0, 0, 0, 0, 0,
+                                        1, 0, 1, 1, 0],
+                             goalFlips: 11)
+        let level_78 = Level(sequence: [0, 0, 1, 1, 1,
+                                        1, 0, 0, 0, 0,
+                                        1, 1, 0, 1, 1,
+                                        0, 0, 0, 1, 0,
+                                        1, 1, 0, 0, 0],
+                             goalFlips: 17)
+        let level_79 = Level(sequence: [1, 1, 1, 0, 0,
+                                        1, 0, 0, 1, 0,
+                                        1, 0, 1, 1, 1,
+                                        1, 1, 0, 0, 1,
+                                        1, 1, 1, 1, 0],
+                             goalFlips: 12)
+        let level_80 = Level(sequence: [1, 1, 1, 0, 0,
+                                        0, 1, 1, 1, 0,
+                                        0, 0, 1, 0, 0,
+                                        1, 1, 1, 1, 0,
+                                        1, 1, 0, 1, 0],
+                             goalFlips: 14)
+        
+        // STAGE 5
+        let level_81 = Level(sequence: [0, 0, 1, 0, 1,
+                                        1, 0, 0, 0, 0,
+                                        1, 0, 1, 0, 0,
+                                        1, 1, 0, 0, 0,
+                                        1, 0, 1, 1, 0],
+                            goalFlips: 8)
+        let level_82 = Level(sequence: [0, 1, 1, 1, 0,
+                                        1, 1, 0, 0, 0,
+                                        1, 1, 1, 0, 0,
+                                        1, 0, 0, 1, 0,
+                                        0, 1, 1, 1, 0],
+                            goalFlips: 10)
+        let level_83 = Level(sequence: [0, 0, 1, 1, 0,
+                                        1, 1, 1, 0, 0,
+                                        1, 0, 0, 0, 0,
+                                        1, 0, 0, 0, 1,
+                                        1, 0, 1, 1, 1],
+                            goalFlips: 6)
+        let level_84 = Level(sequence: [0, 0, 1, 0, 0,
+                                        0, 1, 0, 1, 1,
+                                        0, 1, 0, 0, 0,
+                                        1, 1, 0, 0, 1,
+                                        0, 1, 1, 0, 1],
+                            goalFlips: 16)
+        let level_85 = Level(sequence: [1, 0, 0, 1, 1,
+                                        0, 0, 0, 1, 1,
+                                        0, 1, 0, 1, 1,
+                                        0, 1, 0, 0, 1,
+                                        1, 0, 1, 1, 1],
+                            goalFlips: 11)
+        let level_86 = Level(sequence: [1, 0, 0, 0, 0,
+                                        1, 1, 0, 1, 1,
+                                        1, 0, 1, 0, 0,
+                                        1, 0, 0, 0, 0,
+                                        1, 1, 1, 0, 0],
+                            goalFlips: 10)
+        let level_87 = Level(sequence: [1, 1, 0, 1, 0,
+                                        0, 0, 1, 0, 1,
+                                        1, 0, 0, 1, 0,
+                                        1, 1, 0, 0, 0,
+                                        0, 1, 1, 0, 1],
+                            goalFlips: 17)
+        let level_88 = Level(sequence: [1, 1, 0, 0, 0,
+                                        1, 1, 1, 1, 0,
+                                        0, 1, 1, 0, 1,
+                                        0, 1, 1, 1, 1,
+                                        1, 0, 0, 0, 1],
+                            goalFlips: 21)
+        let level_89 = Level(sequence: [1, 1, 1, 1, 0,
+                                        0, 1, 1, 0, 0,
+                                        0, 0, 0, 1, 1,
+                                        0, 0, 1, 1, 0,
+                                        1, 1, 0, 1, 0],
+                            goalFlips: 7)
+        let level_90 = Level(sequence: [1, 0, 0, 0, 0,
+                                        1, 1, 1, 0, 1,
+                                        0, 0, 1, 1, 0,
+                                        1, 1, 1, 0, 0,
+                                        1, 0, 1, 1, 0],
+                             goalFlips: 21)
+        let level_91 = Level(sequence: [1, 1, 1, 0, 0,
+                                        0, 0, 0, 1, 1,
+                                        1, 0, 0, 1, 0,
+                                        0, 0, 1, 1, 0,
+                                        0, 1, 1, 0, 0],
+                             goalFlips: 18)
+        let level_92 = Level(sequence: [1, 1, 0, 0, 1,
+                                        0, 1, 0, 1, 0,
+                                        0, 1, 1, 0, 0,
+                                        0, 1, 1, 0, 0,
+                                        1, 1, 1, 0, 0],
+                             goalFlips: 11)
+        let level_93 = Level(sequence: [1, 0, 0, 1, 0,
+                                        0, 0, 0, 1, 1,
+                                        0, 0, 0, 1, 1,
+                                        1, 1, 1, 1, 0,
+                                        1, 0, 0, 1, 1],
+                             goalFlips: 10)
+        let level_94 = Level(sequence: [0, 0, 1, 1, 1,
+                                        0, 0, 0, 0, 0,
+                                        0, 0, 0, 0, 1,
+                                        1, 1, 1, 0, 0,
+                                        1, 0, 0, 1, 0],
+                             goalFlips: 15)
+        let level_95 = Level(sequence: [0, 0, 0, 0, 0,
+                                        0, 1, 0, 0, 0,
+                                        0, 1, 0, 0, 1,
+                                        0, 0, 1, 1, 1,
+                                        1, 1, 1, 1, 0],
+                             goalFlips: 5)
+        let level_96 = Level(sequence: [0, 0, 1, 1, 1,
+                                        1, 1, 1, 1, 1,
+                                        1, 1, 0, 1, 1,
+                                        1, 1, 1, 1, 0,
+                                        1, 0, 0, 0, 0],
+                             goalFlips: 11)
+        let level_97 = Level(sequence: [0, 1, 0, 0, 1,
+                                        0, 0, 0, 0, 0,
+                                        1, 0, 0, 1, 1,
+                                        1, 1, 1, 0, 1,
+                                        0, 0, 0, 0, 1],
+                             goalFlips: 8)
+        let level_98 = Level(sequence: [0, 1, 0, 0, 0,
+                                        1, 1, 1, 1, 0,
+                                        0, 1, 0, 1, 1,
+                                        0, 1, 0, 1, 0,
+                                        0, 1, 0, 0, 1],
+                             goalFlips: 8)
+        let level_99 = Level(sequence: [0, 0, 0, 1, 1,
+                                        1, 0, 0, 1, 1,
+                                        1, 1, 0, 1, 0,
+                                        1, 0, 0, 0, 1,
+                                        1, 0, 0, 1, 1],
+                             goalFlips: 29)
+        let level_100 = Level(sequence: [0, 1, 0, 1, 0,
+                                         1, 0, 1, 1, 1,
+                                         0, 0, 0, 0, 0,
+                                         1, 1, 0, 0, 1,
+                                         0, 0, 0, 0, 0],
+                             goalFlips: 17)
+        
+        
+        levels_1 = [level_1, level_2, level_3, level_4, level_5, level_6, level_7, level_8, level_9, level_10, level_11, level_12, level_13, level_14, level_15, level_16, level_17, level_18, level_19, level_20]
+        
+        levels_2 = [level_21, level_22, level_23, level_24, level_25, level_26, level_27, level_28, level_29, level_30, level_31, level_32, level_33, level_34, level_35, level_36, level_37, level_38, level_39, level_40]
+        
+        levels_3 = [level_41, level_42, level_43, level_44, level_45, level_46, level_47, level_48, level_49, level_50, level_51, level_52, level_53, level_54, level_55, level_56, level_57, level_58, level_59, level_60]
+        
+        levels_4 = [level_61, level_62, level_63, level_64, level_65, level_66, level_67, level_68, level_69, level_70, level_71, level_72, level_73, level_74, level_75, level_76, level_77, level_78, level_79, level_80]
+        
+        levels_5 = [level_81, level_82, level_83, level_84, level_85, level_86, level_87, level_88, level_89, level_90, level_91, level_92, level_93, level_94, level_95, level_96, level_97, level_98, level_99, level_100]
+        
+        stages = [levels_1, levels_2, levels_3, levels_4, levels_5]
+        
+        // TODO: Interface with core data for this data, and a JSON file etc
     }
-    
 }
-
 
 // ********************************** EXTENSIONS ********************************** //
 
 extension FlippingHell: UpdateModelDelegate { // Implements update of model from main view
     func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int]) {
-    
-        levels[currentLevel].attempts += 1
-        levels[currentLevel].isComplete = true
         
-        if (Flips < levels[currentLevel].minFlips) {
-            levels[currentLevel].minFlips = Flips
-            levels[currentLevel].minMoves = ButtonsClicked
+        let LevelSelected = stages[currentStage][currentLevel]
+        
+        LevelSelected.attempts += 1
+        LevelSelected.isComplete = true
+        
+        if (Flips < LevelSelected.minFlips) {
+            LevelSelected.minFlips = Flips
+            LevelSelected.minMoves = ButtonsClicked
         }
         
         if (currentLevel == 19) {
@@ -324,11 +699,13 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
     }
     
     func gameReset() {
-        levels[currentLevel].attempts += 1
+        stages[currentStage][currentLevel].attempts += 1
     }
     
-    func requestLevel() { 
-        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: levels[currentLevel].GoalFlips, Sequence: levels[currentLevel].sequence)
+    func requestLevel() {
+        let LevelSelected = stages[currentStage][currentLevel]
+        
+        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: LevelSelected.GoalFlips, Sequence: LevelSelected.sequence)
     }
 }
 
@@ -354,7 +731,7 @@ extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Lev
     func changeLevel(StageID: Int, LevelID: Int) {
         currentStage = StageID
         currentLevel = LevelID
-        levels[currentLevel].attempts += 1
+        stages[currentStage][currentLevel].attempts += 1
     }
 }
 
@@ -370,369 +747,7 @@ extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Lev
                      0, 0, 1, 0, 0,
                      0, 0, 1, 0, 0]; // 2
  
- 
  // -------------------------------------- 1 - FLIPPING DATA -------------------------------------- //
- 
- 
- var WinRandom_1_11 = [1, 0, 0, 0, 0,
- 1, 0, 0, 1, 1,
- 1, 0, 1, 1, 0,
- 1, 1, 0, 0, 1,
- 0, 0, 0, 1, 0]; // 13
- 
- var WinRandom_1_12 = [0, 0, 1, 1, 0,
- 1, 0, 1, 0, 0,
- 1, 1, 1, 1, 1,
- 1, 1, 0, 0, 1,
- 1, 0, 1, 1, 1]; // 11
- 
- var WinRandom_1_13 = [1, 0, 1, 1, 0,
- 0, 0, 1, 0, 0,
- 0, 0, 0, 1, 0,
- 0, 1, 1, 1, 1,
- 0, 1, 0, 1, 1]; // 11
- 
- var WinRandom_1_14 = [1, 1, 1, 0, 1,
- 1, 0, 1, 0, 0,
- 1, 0, 1, 0, 1,
- 1, 1, 0, 1, 1,
- 1, 0, 0, 0, 1]; // 13
- 
- var WinRandom_1_15 = [1, 0, 1, 1, 1,
- 0, 0, 0, 1, 1,
- 0, 0, 1, 0, 1,
- 0, 1, 1, 0, 1,
- 0, 1, 0, 0, 0]; // 14
- 
- var WinRandom_1_16 = [1, 1, 0, 0, 0,
- 0, 1, 1, 1, 1,
- 0, 1, 1, 0, 1,
- 0, 0, 0, 1, 0,
- 1, 0, 0, 0, 1]; // 16
- 
- var WinRandom_1_17 = [0, 1, 0, 0, 1,
- 0, 1, 0, 0, 1,
- 1, 1, 0, 0, 0,
- 0, 0, 1, 0, 1,
- 0, 1, 0, 1, 1]; // 8
- 
- var WinRandom_1_18 = [0, 0, 0, 0, 1,
- 1, 1, 1, 1, 1,
- 0, 0, 0, 0, 1,
- 0, 0, 0, 0, 0,
- 1, 1, 1, 1, 0]; // 11
- 
- var WinRandom_1_19 = [1, 1, 0, 0, 0,
- 1, 0, 0, 0, 0,
- 0, 1, 1, 0, 0,
- 0, 0, 0, 1, 1,
- 1, 1, 1, 1, 0]; // 24
- 
- var WinRandom_1_20 = [0, 0, 0, 1, 0,
- 0, 0, 1, 0, 1,
- 1, 1, 0, 0, 1,
- 0, 1, 0, 1, 0,
- 1, 0, 1, 0, 1]; // 10
- 
- var WinRandom_1_21 = [1, 1, 1, 0, 0,
- 0, 1, 0, 1, 1,
- 0, 0, 0, 0, 0,
- 0, 1, 1, 1, 1,
- 0, 0, 0, 1, 1]; // 9
- 
- var WinRandom_1_22 = [1, 0, 1, 0, 1,
- 0, 1, 0, 0, 0,
- 0, 0, 0, 0, 1,
- 1, 1, 1, 0, 0,
- 0, 1, 1, 1, 1]; // 9
- 
- var WinRandom_1_23 = [1, 0, 0, 0, 1,
- 0, 0, 0, 0, 1,
- 1, 1, 1, 0, 1,
- 0, 0, 1, 0, 0,
- 1, 1, 0, 0, 1]; // 17
- 
- var WinRandom_1_24 = [0, 0, 1, 0, 0,
- 0, 1, 1, 0, 0,
- 1, 1, 1, 0, 0,
- 0, 1, 0, 1, 1,
- 1, 0, 1, 0, 1]; // 15
- 
- var WinRandom_1_25 = [0, 1, 1, 0, 0,
- 1, 1, 0, 0, 1,
- 0, 1, 0, 1, 0,
- 0, 0, 0, 0, 0,
- 0, 1, 1, 1, 0]; // 12
- 
- var WinRandom_1_26 = [1, 1, 0, 1, 1,
- 0, 0, 0, 1, 0,
- 0, 0, 0, 1, 1,
- 0, 0, 1, 1, 1,
- 1, 0, 0, 1, 1]; // 7
- 
- var WinRandom_1_27 = [0, 1, 0, 1, 1,
- 1, 0, 0, 1, 0,
- 1, 1, 1, 0, 1,
- 0, 0, 1, 1, 0,
- 1, 1, 0, 0, 0]; // 31
- 
- var WinRandom_1_28 = [0, 1, 0, 0, 1,
- 0, 1, 1, 0, 1,
- 1, 0, 1, 1, 1,
- 0, 0, 1, 0, 1,
- 0, 1, 0, 0, 0]; // 20
- 
- var WinRandom_1_29 = [0, 0, 1, 0, 0,
- 1, 1, 0, 1, 1,
- 1, 1, 0, 1, 1,
- 0, 0, 1, 0, 0,
- 1, 0, 0, 1, 0]; // 16
- 
- var WinRandom_1_30 = [1, 1, 0, 0, 0,
- 0, 1, 1, 1, 1,
- 0, 1, 0, 0, 1,
- 0, 1, 0, 0, 0,
- 1, 1, 1, 0, 0]; // 9
- 
- var WinRandom_1_31 = [1, 1, 0, 1, 0,
- 1, 1, 0, 0, 0,
- 0, 0, 1, 1, 0,
- 0, 0, 1, 1, 0,
- 1, 1, 1, 0, 0]; // 20
- 
- var WinRandom_1_32 = [0, 0, 0, 0, 0,
- 0, 0, 0, 1, 1,
- 1, 0, 1, 1, 0,
- 0, 1, 1, 1, 1,
- 0, 1, 1, 1, 1]; // 10
- 
- var WinRandom_1_33 = [1, 0, 0, 1, 1,
- 1, 0, 0, 1, 1,
- 1, 1, 1, 1, 0,
- 0, 1, 0, 0, 1,
- 1, 0, 0, 1, 0]; // 10
- 
- var WinRandom_1_34 = [0, 0, 0, 0, 1,
- 0, 0, 1, 0, 1,
- 0, 1, 1, 1, 0,
- 1, 0, 0, 1, 1,
- 0, 0, 1, 1, 0]; // 16
- 
- var WinRandom_1_35 = [0, 0, 1, 1, 1,
- 1, 1, 1, 0, 0,
- 1, 0, 0, 0, 0,
- 1, 1, 1, 1, 1,
- 1, 0, 1, 0, 1]; // 10
- 
- var WinRandom_1_36 = [1, 1, 0, 0, 1,
- 1, 0, 0, 1, 0,
- 0, 1, 0, 1, 0,
- 1, 1, 0, 1, 0,
- 0, 0, 0, 0, 0]; // 12
- 
- var WinRandom_1_37 = [0, 1, 0, 1, 1,
- 1, 0, 1, 0, 0,
- 1, 1, 0, 0, 1,
- 0, 0, 0, 1, 0,
- 1, 1, 1, 0, 1]; // 21
- 
- var WinRandom_1_38 = [1, 1, 1, 0, 0,
- 1, 0, 0, 1, 1,
- 1, 0, 0, 1, 0,
- 1, 0, 1, 1, 0,
- 1, 0, 0, 0, 0]; // 11
- 
- var WinRandom_1_39 = [0, 1, 1, 1, 0,
- 0, 1, 0, 0, 0,
- 0, 0, 0, 0, 1,
- 1, 0, 0, 1, 1,
- 1, 0, 1, 0, 1]; // 9
- 
- var WinRandom_1_40 = [0, 0, 1, 1, 0,
- 0, 1, 0, 0, 0,
- 1, 1, 1, 0, 0,
- 1, 0, 0, 1, 0,
- 0, 0, 1, 0, 0]; // 11
- 
- var WinRandom_1_41 = [0, 1, 0, 1, 0,
- 0, 0, 0, 0, 0,
- 0, 0, 1, 1, 0,
- 1, 1, 0, 0, 1,
- 0, 0, 1, 1, 0]; // 7
- 
- var WinRandom_1_42 = [0, 1, 1, 0, 1,
- 1, 0, 0, 0, 1,
- 1, 0, 0, 1, 0,
- 0, 0, 1, 0, 1,
- 1, 0, 1, 1, 1]; // 11
- 
- var WinRandom_1_43 = [1, 0, 1, 1, 0,
- 1, 0, 1, 1, 0,
- 1, 0, 0, 0, 1,
- 0, 1, 1, 0, 0,
- 1, 0, 1, 0, 0]; // 10
- 
- var WinRandom_1_44 = [0, 1, 0, 1, 1,
- 1, 1, 0, 0, 1,
- 0, 1, 1, 0, 0,
- 1, 0, 1, 0, 0,
- 1, 0, 0, 1, 1]; // 11
- 
- var WinRandom_1_45 = [1, 1, 1, 1, 1,
- 0, 1, 1, 1, 0,
- 0, 1, 0, 0, 0,
- 0, 0, 1, 0, 1,
- 0, 0, 1, 0, 1]; // 10
- 
- var WinRandom_1_46 = [1, 1, 0, 1, 1,
- 0, 1, 1, 1, 1,
- 0, 0, 0, 0, 1,
- 1, 1, 0, 1, 0,
- 0, 0, 1, 0, 0]; // 37
- 
- var WinRandom_1_47 = [1, 1, 0, 1, 1,
- 0, 1, 0, 0, 1,
- 1, 1, 0, 0, 1,
- 0, 0, 0, 0, 0,
- 1, 0, 1, 1, 0]; // 11
- 
- var WinRandom_1_48 = [0, 0, 1, 1, 1,
- 1, 0, 0, 0, 0,
- 1, 1, 0, 1, 1,
- 0, 0, 0, 1, 0,
- 1, 1, 0, 0, 0]; // 17
- 
- var WinRandom_1_49 = [1, 1, 1, 0, 0,
- 1, 0, 0, 1, 0,
- 1, 0, 1, 1, 1,
- 1, 1, 0, 0, 1,
- 1, 1, 1, 1, 0]; // 12
- 
- var WinRandom_1_50 = [1, 1, 1, 0, 0,
- 0, 1, 1, 1, 0,
- 0, 0, 1, 0, 0,
- 1, 1, 1, 1, 0,
- 1, 1, 0, 1, 0]; // 14
- 
- var WinRandom_1_51 = [0, 0, 1, 0, 1,
- 1, 0, 0, 0, 0,
- 1, 0, 1, 0, 0,
- 1, 1, 0, 0, 0,
- 1, 0, 1, 1, 0]; // 8
- 
- var WinRandom_1_52 = [0, 1, 1, 1, 0,
- 1, 1, 0, 0, 0,
- 1, 1, 1, 0, 0,
- 1, 0, 0, 1, 0,
- 0, 1, 1, 1, 0]; // 10
- 
- var WinRandom_1_53 = [0, 0, 1, 1, 0,
- 1, 1, 1, 0, 0,
- 1, 0, 0, 0, 0,
- 1, 0, 0, 0, 1,
- 1, 0, 1, 1, 1]; // 6
- 
- var WinRandom_1_54 = [0, 0, 1, 0, 0,
- 0, 1, 0, 1, 1,
- 0, 1, 0, 0, 0,
- 1, 1, 0, 0, 1,
- 0, 1, 1, 0, 1]; // 16
- 
- var WinRandom_1_55 = [1, 0, 0, 1, 1,
- 0, 0, 0, 1, 1,
- 0, 1, 0, 1, 1,
- 0, 1, 0, 0, 1,
- 1, 0, 1, 1, 1]; // 11
- 
- var WinRandom_1_56 = [1, 0, 0, 0, 0,
- 1, 1, 0, 1, 1,
- 1, 0, 1, 0, 0,
- 1, 0, 0, 0, 0,
- 1, 1, 1, 0, 0]; // 10
- 
- var WinRandom_1_57 = [1, 1, 0, 1, 0,
- 0, 0, 1, 0, 1,
- 1, 0, 0, 1, 0,
- 1, 1, 0, 0, 0,
- 0, 1, 1, 0, 1]; // 17
- 
- var WinRandom_1_58 = [1, 1, 0, 0, 0,
- 1, 1, 1, 1, 0,
- 0, 1, 1, 0, 1,
- 0, 1, 1, 1, 1,
- 1, 0, 0, 0, 1]; // 21
- 
- var WinRandom_1_59 = [1, 1, 1, 1, 0,
- 0, 1, 1, 0, 0,
- 0, 0, 0, 1, 1,
- 0, 0, 1, 1, 0,
- 1, 1, 0, 1, 0]; // 7
- 
- var WinRandom_1_60 = [1, 0, 0, 0, 0,
- 1, 1, 1, 0, 1,
- 0, 0, 1, 1, 0,
- 1, 1, 1, 0, 0,
- 1, 0, 1, 1, 0]; // 21
- 
- var WinRandom_1_61 = [1, 1, 1, 0, 0,
- 0, 0, 0, 1, 1,
- 1, 0, 0, 1, 0,
- 0, 0, 1, 1, 0,
- 0, 1, 1, 0, 0]; // 18
- 
- var WinRandom_1_62 = [1, 1, 0, 0, 1,
- 0, 1, 0, 1, 0,
- 0, 1, 1, 0, 0,
- 0, 1, 1, 0, 0,
- 1, 1, 1, 0, 0]; // 11
- 
- var WinRandom_1_63 = [1, 0, 0, 1, 0,
- 0, 0, 0, 1, 1,
- 0, 0, 0, 1, 1,
- 1, 1, 1, 1, 0,
- 1, 0, 0, 1, 1]; // 10
- 
- var WinRandom_1_64 = [0, 0, 1, 1, 1,
- 0, 0, 0, 0, 0,
- 0, 0, 0, 0, 1,
- 1, 1, 1, 0, 0,
- 1, 0, 0, 1, 0]; // 15
- 
- var WinRandom_1_65 = [0, 0, 0, 0, 0,
- 0, 1, 0, 0, 0,
- 0, 1, 0, 0, 1,
- 0, 0, 1, 1, 1,
- 1, 1, 1, 1, 0]; // 5
- 
- var WinRandom_1_66 = [0, 0, 1, 1, 1,
- 1, 1, 1, 1, 1,
- 1, 1, 0, 1, 1,
- 1, 1, 1, 1, 0,
- 1, 0, 0, 0, 0]; // 11
- 
- var WinRandom_1_67 = [0, 1, 0, 0, 1,
- 0, 0, 0, 0, 0,
- 1, 0, 0, 1, 1,
- 1, 1, 1, 0, 1,
- 0, 0, 0, 0, 1]; // 8
- 
- var WinRandom_1_68 = [0, 1, 0, 0, 0,
- 1, 1, 1, 1, 0,
- 0, 1, 0, 1, 1,
- 0, 1, 0, 1, 0,
- 0, 1, 0, 0, 1]; // 8
- 
- var WinRandom_1_69 = [0, 0, 0, 1, 1,
- 1, 0, 0, 1, 1,
- 1, 1, 0, 1, 0,
- 1, 0, 0, 0, 1,
- 1, 0, 0, 1, 1]; // 29
- 
- var WinRandom_1_70 = [0, 1, 0, 1, 0,
- 1, 0, 1, 1, 1,
- 0, 0, 0, 0, 0,
- 1, 1, 0, 0, 1,
- 0, 0, 0, 0, 0]; // 17
  
  var WinRandom_1_71 = [1, 0, 0, 0, 0,
  1, 0, 0, 0, 1,

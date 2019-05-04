@@ -22,6 +22,7 @@ class LevelTableViewController: UITableViewController {
     //MARK: Properties
     weak var game: FlippingHell?
 
+    // TODO: create new struct where it's only the level data required for view
     var levels: [Level] = [] // structure for level
     var CurrentStage = 0 // current stage for identification in
     var DisplayedStage = 0 // Stage displayed on the level screen
@@ -30,8 +31,6 @@ class LevelTableViewController: UITableViewController {
     // ********************************** DELEGATES ********************************** //
     
     var UpdateModelLevelsDelegateInstance: UpdateModelLevelsDelegate!
-
-    // MARK: - Table view data source
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,15 +103,12 @@ class LevelTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO: Is there anything we need to pass across, presumably the stages can just be loaded regardless
         if segue.identifier == "unwindFromLevelsWithSegue" {
             let buttonInstance = sender as! UIButton
             if (buttonInstance.currentTitle == "★") {
                 UpdateModelLevelsDelegateInstance.changeLevel(StageID: DisplayedStage, LevelID: 19)
-                print("unwound from level 19")
             } else {
                 UpdateModelLevelsDelegateInstance.changeLevel(StageID: DisplayedStage, LevelID: Int(buttonInstance.currentTitle ?? "0")! - 1)
-                print("unwound from level other than 19")
             }
             
             
