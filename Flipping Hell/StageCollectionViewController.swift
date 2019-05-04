@@ -14,7 +14,7 @@ class StageCollectionViewController: UICollectionViewController {
 
     weak var game: FlippingHell?
     
-    var Stages: [Int] = [1, 2, 3]
+    var Stages: [Int] = [1, 2]
     
     let cellIdentifier = "StageCollectionViewCell"
     

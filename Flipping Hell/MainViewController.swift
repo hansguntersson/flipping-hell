@@ -101,6 +101,10 @@ class MainViewController: UIViewController {
         buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
         buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
         
+        StageNum = game?.currentStage ?? 0
+        LevelNum = game?.currentLevel ?? 0
+        UpdateModelDelegateInstance = game
+        
         UpdateModelDelegateInstance.requestLevel(StageID: StageNum, LevelID: LevelNum)
         
         // Can use the following functionality for sizing:
