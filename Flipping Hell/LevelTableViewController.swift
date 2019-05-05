@@ -108,6 +108,10 @@ class LevelTableViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func unwindFromStages(segue:UIStoryboardSegue) { // Stage selected and unwind
+        UpdateModelLevelsDelegateInstance.requestLevelList(StageID: DisplayedStage)
+    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwindFromLevelsWithSegue" {
@@ -134,5 +138,8 @@ extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and pr
         levels = LevelList
         self.CurrentStage = CurrentStage
         self.CurrentLevel = CurrentLevel
+        self.tableView.reloadData()
+        
+        self.title = "STAGE " + "\(DisplayedStage + 1)"
     }
 }

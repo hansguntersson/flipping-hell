@@ -20,11 +20,11 @@ private let reuseIdentifier = "Cell"
 class StageCollectionViewController: UICollectionViewController {
 
     // TODO: sum of stars and similar - summary elements?
-    // TODO: create new struct where it's only the stage data required for view
+    // TODO: Decide on how numbers by stags are going to be defined
     
     weak var game: FlippingHell?
     
-    var stages: [Int] = [0, 0, 0, 0, 0]
+    var stages: [Int] = []
     let cellIdentifier = "StageCollectionViewCell"
     
     // ********************************** DELEGATES ********************************** //
@@ -73,8 +73,8 @@ class StageCollectionViewController: UICollectionViewController {
         let cell: StageCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! StageCollectionViewCell
     
         // Configure the cell
-        
         let thisStage = stages[indexPath.row]
+        cell.CellIndex = indexPath.row
         
         if (thisStage == 0) {
             cell.cellButton.setTitle("☆", for: .normal)
@@ -104,41 +104,24 @@ class StageCollectionViewController: UICollectionViewController {
         }
         cell.cellLabel.text = String(indexPath.row + 1)
         
-        
-        /* cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.levelGoal.text = "GOAL: " + "\(level.GoalFlips)"
-        
-        if(level.minFlips == 0) {
-            cell.levelStars.text = "☆"
-            // cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-            cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        } else if (level.minFlips - level.GoalFlips > 2) {
-            cell.levelStars.text = "★"
-            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
-        } else if (level.minFlips - level.GoalFlips > 0) {
-            cell.levelStars.text = "★"
-            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            // cell.levelStars.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        } else if (level.minFlips - level.GoalFlips == 0) {
-            cell.levelStars.text = "★"
-            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-        } else if (level.minFlips - level.GoalFlips < 0) {
-            cell.levelStars.text = "✮"
-            cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-        }
-        
-        if (indexPath.row == CurrentLevel) {
-            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            cell.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-        } */
-        
         return cell
     }
     
     @IBAction func unwindToLevelMenuFromStages(segue: UIStoryboardSegue) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "unwindFromStagesWithSegue" {
+            let buttonInstance = sender as! UIButton
+            let superView = buttonInstance.superview?.superview?.superview as! StageCollectionViewCell
+            
+            if let vc = segue.destination as? LevelTableViewController {
+                vc.DisplayedStage = superView.CellIndex
+                vc.reloadInputViews()
+            }
+        }
     }
 
     // MARK: UICollectionViewDelegate

@@ -428,7 +428,7 @@ class FlippingHell {
                                         0, 1, 0, 0, 1,
                                         0, 1, 0, 0, 0,
                                         1, 1, 1, 0, 0],
-                             goalFlips: 9)
+                             goalFlips: 6)
         
         // STAGE 4
         let level_61 = Level(sequence: [1, 1, 0, 1, 0,
@@ -526,7 +526,7 @@ class FlippingHell {
                                         0, 0, 0, 0, 1,
                                         1, 1, 0, 1, 0,
                                         0, 0, 1, 0, 0],
-                             goalFlips: 37)
+                             goalFlips: 16)
         let level_77 = Level(sequence: [1, 1, 0, 1, 1,
                                         0, 1, 0, 0, 1,
                                         1, 1, 0, 0, 1,
@@ -735,7 +735,7 @@ extension FlippingHell: UpdateModelWinDelegate { // Implements update of model f
 
 extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Level screen for levels
     func requestLevelList(StageID: Int) {
-        UpdateLevelViewDelegateInstance.receiveLevelList(StageID: StageID, LevelList: stages[currentStage], CurrentStage: currentStage, CurrentLevel: currentLevel)
+        UpdateLevelViewDelegateInstance.receiveLevelList(StageID: StageID, LevelList: stages[StageID], CurrentStage: currentStage, CurrentLevel: currentLevel)
     }
     
     func changeLevel(StageID: Int, LevelID: Int) {
@@ -748,7 +748,6 @@ extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Lev
 extension FlippingHell: UpdateModelStagesDelegate {
     func requestStages() -> [Int] {
         var stageOutput: [Int] = []
-        print("stages requested")
         for stageIndex in stages {
             var starMin = 4
             for levelIndex in stageIndex {

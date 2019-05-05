@@ -9,6 +9,7 @@
 import UIKit
 
 class StageCollectionViewCell: UICollectionViewCell {
+    var CellIndex = 50
     @IBOutlet var cellButton: UIButton!
     @IBOutlet var cellLabel: UILabel!
 }
