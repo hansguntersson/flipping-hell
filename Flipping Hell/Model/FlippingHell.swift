@@ -18,6 +18,10 @@ protocol UpdateLevelViewDelegate {
     func receiveLevelList(StageID: Int, LevelList: [Level], CurrentStage: Int, CurrentLevel: Int)
 }
 
+protocol UpdateStageViewDelegate {
+    func receiveStageList(StageID: Int, LevelList: [Level])
+}
+
 // ********************************** CLASS DEFINITION ********************************** //
 
 class FlippingHell {
@@ -32,6 +36,11 @@ class FlippingHell {
     var stages = [[Level]]()
 
     var currentLevel = 0
+    
+    var stageStars: [Int] = [0, 0, 0, 0, 0] // number of stars obtained for each level
+    /* 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none */
+    
+    
     var currentStage = 0
     
     init() {
@@ -44,6 +53,12 @@ class FlippingHell {
     var UpdateLevelViewDelegateInstance: UpdateLevelViewDelegate!
     
     // ********************************** FUNCTIONS ********************************** //
+    
+    func calculateStars() {
+        // Loop through stages
+        // loop through each level, and look at star score for minimum
+        
+    }
     
     func loadLevels() { // Load levels into game
         
@@ -685,20 +700,14 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         // TODO: process game won via level method, not via accessing elements directly
         let LevelSelected = stages[currentStage][currentLevel]
         
-        LevelSelected.attempts += 1
-        LevelSelected.isComplete = true
+        LevelSelected.completeLevel(Flips: Flips, completeSequence: ButtonsClicked)
         
-        if (Flips < LevelSelected.minFlips || LevelSelected.minFlips == 0) {
-            LevelSelected.minFlips = Flips
-            LevelSelected.minMoves = ButtonsClicked
-        }
+        
         
         // TODO: check completion of all levels in a stage to unlock and generate a new one
-        if (currentLevel == 19) {
-            print("Stage completed")
-        } else {
-            print("Level completed")
-        }
+        // TODO: check completed list of levels before generating one
+        // TODO: Count level stars in stages to see if the next stage should be unlocked
+        
     }
     
     func gameReset() {
@@ -707,7 +716,7 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
     
     func requestLevel() {
         let LevelSelected = stages[currentStage][currentLevel]
-        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: LevelSelected.GoalFlips, Sequence: LevelSelected.sequence)
+        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: LevelSelected.goalFlips, Sequence: LevelSelected.sequence)
     }
 }
 

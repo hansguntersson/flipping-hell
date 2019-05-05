@@ -253,8 +253,8 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameWonSegue" {
             
-            // TODO: Identify if new record
-            // TODO: Identify if new stage unlocked
+            // TODO: indicate if new record
+            // TODO: indicate if new stage unlocked
             // TODO: help view
             
             if let vc = segue.destination as? WinScreenController {

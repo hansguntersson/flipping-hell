@@ -67,6 +67,7 @@ class LevelTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of LevelTableViewCell.")
         }
         
+        //  TODO: Should this reference be removed as it's accessing values directly?
         let thisLevel = levels[indexPath.row]
         
         if (indexPath.row == 19) {
@@ -76,25 +77,21 @@ class LevelTableViewController: UITableViewController {
         }
         
         cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.levelGoal.text = "FLIPS " + "\(thisLevel.minFlips)" + " | " + "\(thisLevel.GoalFlips)"
+        cell.levelGoal.text = "FLIPS " + "\(thisLevel.minFlips)" + " | " + "\(thisLevel.goalFlips)"
         
-        if(thisLevel.minFlips == 0) {
+        if(thisLevel.starScore == 0) {
             cell.levelStars.text = "☆ ☆ ☆"
-            // cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        } else if (thisLevel.minFlips - thisLevel.GoalFlips > 2) {
+        } else if (thisLevel.starScore == 1) {
             cell.levelStars.text = "★ ☆ ☆"
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
-        } else if (thisLevel.minFlips - thisLevel.GoalFlips > 0) {
+        } else if (thisLevel.starScore == 2) {
             cell.levelStars.text = "★ ★ ☆"
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            // cell.levelStars.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        } else if (thisLevel.minFlips - thisLevel.GoalFlips == 0) {
+        } else if (thisLevel.starScore == 3) {
             cell.levelStars.text = "★ ★ ★"
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-            // cell.levelStars.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-        } else if (thisLevel.minFlips - thisLevel.GoalFlips < 0) {
+        } else if (thisLevel.starScore == 4) {
             cell.levelStars.text = "✮ ✮ ✮"
             cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
