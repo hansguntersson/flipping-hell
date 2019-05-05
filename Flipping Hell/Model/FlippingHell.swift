@@ -37,6 +37,7 @@ class FlippingHell {
 
     var currentLevel = 0
     
+    var stageUnlocks: [Bool] = [true, false, false, false, false]
     var stageStars: [Int] = [0, 0, 0, 0, 0] // number of stars obtained for each level
     /* 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none */
     
@@ -436,7 +437,7 @@ class FlippingHell {
                                         0, 0, 1, 1, 0,
                                         0, 0, 1, 1, 0,
                                         1, 1, 1, 0, 0],
-                            goalFlips: 20)
+                            goalFlips: 6)
         let level_62 = Level(sequence: [0, 0, 0, 0, 0,
                                         0, 0, 0, 1, 1,
                                         1, 0, 1, 1, 0,
@@ -454,7 +455,7 @@ class FlippingHell {
                                         0, 1, 1, 1, 0,
                                         1, 0, 0, 1, 1,
                                         0, 0, 1, 1, 0],
-                            goalFlips: 16)
+                            goalFlips: 12)
         let level_65 = Level(sequence: [0, 0, 1, 1, 1,
                                         1, 1, 1, 0, 0,
                                         1, 0, 0, 0, 0,
@@ -472,7 +473,7 @@ class FlippingHell {
                                         1, 1, 0, 0, 1,
                                         0, 0, 0, 1, 0,
                                         1, 1, 1, 0, 1],
-                            goalFlips: 21)
+                            goalFlips: 9)
         let level_68 = Level(sequence: [1, 1, 1, 0, 0,
                                         1, 0, 0, 1, 1,
                                         1, 0, 0, 1, 0,
@@ -526,7 +527,7 @@ class FlippingHell {
                                         0, 0, 0, 0, 1,
                                         1, 1, 0, 1, 0,
                                         0, 0, 1, 0, 0],
-                             goalFlips: 16)
+                             goalFlips: 12)
         let level_77 = Level(sequence: [1, 1, 0, 1, 1,
                                         0, 1, 0, 0, 1,
                                         1, 1, 0, 0, 1,
@@ -538,7 +539,7 @@ class FlippingHell {
                                         1, 1, 0, 1, 1,
                                         0, 0, 0, 1, 0,
                                         1, 1, 0, 0, 0],
-                             goalFlips: 17)
+                             goalFlips: 13)
         let level_79 = Level(sequence: [1, 1, 1, 0, 0,
                                         1, 0, 0, 1, 0,
                                         1, 0, 1, 1, 1,
@@ -706,8 +707,20 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         
         // TODO: check completion of all levels in a stage to unlock and generate a new one
         // TODO: check completed list of levels before generating one
-        // TODO: Count level stars in stages to see if the next stage should be unlocked
         
+        
+        // TODO: Count level stars in stages to see if the next stage should be unlocked
+        var StageWinTest = true
+        for levelIndex in stages[currentStage] {
+            if (levelIndex.isComplete == false) {
+                StageWinTest = false
+                break
+            }
+        }
+        
+        if(StageWinTest == true) {
+            stageUnlocks[currentStage + 1] = true
+        }
     }
     
     func gameReset() {
@@ -748,6 +761,7 @@ extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Lev
 extension FlippingHell: UpdateModelStagesDelegate {
     func requestStages() -> [Int] {
         var stageOutput: [Int] = []
+        var stageCount = 0
         for stageIndex in stages {
             var starMin = 4
             for levelIndex in stageIndex {
@@ -755,7 +769,10 @@ extension FlippingHell: UpdateModelStagesDelegate {
                     starMin = levelIndex.starScore
                 }
             }
-            stageOutput.append(starMin)
+            if (stageUnlocks[stageCount] == true) {
+                stageOutput.append(starMin)
+            }
+            stageCount += 1
         }
         return stageOutput
     }
