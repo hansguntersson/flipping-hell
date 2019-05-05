@@ -11,7 +11,7 @@ import UIKit
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateModelStagesDelegate {
-    func requestStages()
+    func requestStages() -> [Int]
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -24,7 +24,7 @@ class StageCollectionViewController: UICollectionViewController {
     
     weak var game: FlippingHell?
     
-    var stages: [Int] = [0, 1, 2, 3, 4]
+    var stages: [Int] = [0, 0, 0, 0, 0]
     let cellIdentifier = "StageCollectionViewCell"
     
     // ********************************** DELEGATES ********************************** //
@@ -37,7 +37,7 @@ class StageCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         UpdateModelStagesDelegateInstance = game
-        UpdateModelStagesDelegateInstance.requestStages()
+        stages = UpdateModelStagesDelegateInstance.requestStages()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -102,7 +102,7 @@ class StageCollectionViewController: UICollectionViewController {
             cell.backgroundColor = #colorLiteral(red: 0.8391310573, green: 0.9654389024, blue: 0.9490205646, alpha: 1)
             cell.cellLabel.textColor = #colorLiteral(red: 0.2127193809, green: 0.5863756537, blue: 0.7115346193, alpha: 1)
         }
-        cell.cellLabel.text = String(thisStage + 1)
+        cell.cellLabel.text = String(indexPath.row + 1)
         
         
         /* cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)

@@ -746,8 +746,19 @@ extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Lev
 }
 
 extension FlippingHell: UpdateModelStagesDelegate {
-    func requestStages() {
+    func requestStages() -> [Int] {
+        var stageOutput: [Int] = []
         print("stages requested")
+        for stageIndex in stages {
+            var starMin = 4
+            for levelIndex in stageIndex {
+                if (levelIndex.starScore < starMin) {
+                    starMin = levelIndex.starScore
+                }
+            }
+            stageOutput.append(starMin)
+        }
+        return stageOutput
     }
 }
 
