@@ -736,6 +736,11 @@ extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Lev
     }
 }
 
+extension FlippingHell: UpdateModelStagesDelegate {
+    func requestStages() {
+        print("stages requested")
+    }
+}
 
 /*
  

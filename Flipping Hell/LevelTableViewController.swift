@@ -25,6 +25,8 @@ class LevelTableViewController: UITableViewController {
     // TODO: create new struct where it's only the level data required for view
     // TODO: add in stage number to heading object
     // TODO: font sizing if the integers are too big?
+    // TODO: create custom navbaritem class and change formatting
+    // TODO: Change output for orientation to show more text - goal and flips
     
     var levels: [Level] = [] // structure for level
     var CurrentStage = 0 // current stage for identification in
@@ -34,6 +36,8 @@ class LevelTableViewController: UITableViewController {
     // ********************************** DELEGATES ********************************** //
     
     var UpdateModelLevelsDelegateInstance: UpdateModelLevelsDelegate!
+    
+    // ********************************** FUNCTIONs ********************************** //
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,8 +120,11 @@ class LevelTableViewController: UITableViewController {
             } else {
                 UpdateModelLevelsDelegateInstance.changeLevel(StageID: DisplayedStage, LevelID: Int(buttonInstance.currentTitle ?? "0")! - 1)
             }
-            
-            
+        } else if segue.identifier == "LoadStagesSegue" {
+            if let vc = segue.destination as? UINavigationController {
+                let lvc = vc.children[0] as! StageCollectionViewController
+                lvc.game = game
+            }
         }
     }
     

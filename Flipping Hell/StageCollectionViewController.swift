@@ -8,6 +8,13 @@
 
 import UIKit
 
+// ********************************** PROTOCOLS ********************************** //
+
+protocol UpdateModelStagesDelegate {
+    func requestStages()
+}
+
+// ********************************** CLASS DEFINITION ********************************** //
 private let reuseIdentifier = "Cell"
 
 class StageCollectionViewController: UICollectionViewController {
@@ -17,12 +24,20 @@ class StageCollectionViewController: UICollectionViewController {
     
     weak var game: FlippingHell?
     
-    var Stages: [Int] = [1, 2, 3, 4, 5]
-    
+    var Stages: [[Level]]?
     let cellIdentifier = "StageCollectionViewCell"
+    
+    // ********************************** DELEGATES ********************************** //
+    
+    var UpdateModelStagesDelegateInstance: UpdateModelStagesDelegate!
+    
+    // ********************************** FUNCTIONS ********************************** //
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UpdateModelStagesDelegateInstance = game
+        UpdateModelStagesDelegateInstance.requestStages()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,7 +65,7 @@ class StageCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.Stages.count
+        return self.Stages?.count ?? 5
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> StageCollectionViewCell {
