@@ -10,20 +10,20 @@ import Foundation
 
 class Level {
 
-    var sequenceID: Int = 0 // The unique sequence ID
+    var sequenceID: Int32 = 0 // The unique sequence ID
     var sequence: Array<Int> // The array sequence for the level
-    var goalFlips: Int // The goal flips for the level
+    var goalFlips: Int16 // The goal flips for the level
     var currentFlips: Int = 0 // The current flip count
     let levelIndex: Int // Which index the level is at
     var attempts = 0 // Hpw many attempts were made
-    var minFlips: Int = 0 // The minimum number of flips the level has been completed in
+    var minFlips: Int16 = 0 // The minimum number of flips the level has been completed in
     var minMoves: Array<Int> = [0] // The minimum moves the level has been completed in
     var starScore: Int = 0 // Score of stars for the particular level
     var isComplete = false // Whether the level has been completed
 
     static var levelsIndices = 0 // The class index for the levels    
     
-    init(sequence: Array<Int>, goalFlips: Int) { // Initialiser
+    init(sequence: Array<Int>, goalFlips: Int16) { // Initialiser
         self.sequence = sequence
         self.goalFlips = goalFlips
         levelIndex = Level.getLevelNumber()
@@ -36,7 +36,7 @@ class Level {
         return levelsIndices
     }
     
-    func completeLevel(Flips: Int, completeSequence: Array<Int>) { // Actions when level is completed
+    func completeLevel(Flips: Int16, completeSequence: Array<Int>) { // Actions when level is completed
         isComplete = true
         attempts += 1
         
@@ -60,16 +60,16 @@ class Level {
         }
     }
     
-    func arrayToNumber(ArrayInput: [Int]) -> Int { // Take in an array and converts it to a number
+    func arrayToNumber(ArrayInput: [Int]) -> Int32 { // Take in an array and converts it to a number
         var TextString: String = ""
         for Digit in ArrayInput {
         TextString += String(Digit)
         }
-        return Int(TextString, radix: 2) ?? 0
+        return Int32(TextString, radix: 2) ?? 0
     }
     
     
-    func numberToArray(NumberInput: Int) -> [Int] { // Take a number and converts it to an array
+    func numberToArray(NumberInput: Int32) -> [Int] { // Take a number and converts it to an array
         var IntOutput: [Int] = []
         let BinaryOutput = String(NumberInput, radix: 2)
         let BinaryArray = Array(BinaryOutput)

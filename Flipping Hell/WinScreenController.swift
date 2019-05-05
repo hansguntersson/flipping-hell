@@ -24,8 +24,8 @@ class WinScreenController: UIViewController {
     
     weak var game: FlippingHell?
     
-    var WinFlips = 0
-    var GoalFlips = 0
+    var WinFlips: Int16 = 0
+    var GoalFlips: Int16 = 0
     var LevelNumber = 0
     var StageNumber = 0
     

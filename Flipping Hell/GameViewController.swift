@@ -16,7 +16,16 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // let CD_testid: Int32 = 5
+        // slet CD_flips: Int16 = 10
+        
+        // save(testid: CD_testid, flips: CD_flips)
+        
         // Do any additional setup after loading the view.
+        
+        // save(testid: Int32, flips: Int16)
+        
     }
     
     // ********************************** FUNCTIONS ********************************** //

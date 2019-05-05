@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateMainViewDelegate {
-    func receiveLevel(LevelID: Int, GoalFlips: Int, Sequence: [Int])
+    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int])
 }
 
 protocol UpdateLevelViewDelegate {
@@ -25,7 +27,6 @@ protocol UpdateStageViewDelegate {
 // ********************************** CLASS DEFINITION ********************************** //
 
 class FlippingHell {
-
     // ********************************** VARIABLES ********************************** //
     
     var levels_1 = [Level]()
@@ -34,7 +35,7 @@ class FlippingHell {
     var levels_4 = [Level]()
     var levels_5 = [Level]()
     var stages = [[Level]]()
-
+    
     var currentLevel = 0
     
     var stageUnlocks: [Bool] = [true, false, false, false, false]
@@ -46,12 +47,98 @@ class FlippingHell {
     
     init() {
         loadLevels()
+        deleteData()
     }
     
     // ********************************** DELEGATES ********************************** //
     
     var UpdateMainViewDelegateInstance: UpdateMainViewDelegate!
     var UpdateLevelViewDelegateInstance: UpdateLevelViewDelegate!
+    
+    // ********************************** CORE DATA ********************************** //
+    
+    func saveData(levelid: Int32, flips: Int16) {
+        
+        var levelsTest: [NSManagedObject] = []
+        
+        // Get app delegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        // Get managed object context
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        // Create entity named Test
+        let entity = NSEntityDescription.entity(forEntityName: "Levels", in: managedContext)!
+        
+        // Create entry in Test table
+        let entry = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        // Set values for the fields in the table
+        entry.setValue(levelid, forKeyPath: "levelid")
+        entry.setValue(flips, forKeyPath: "flips")
+        
+        // save the context
+        do {
+            try managedContext.save()
+            levelsTest.append(entry)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    
+    func loadData() -> [Levels] {
+        
+        // Get app delegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return []
+        }
+        
+        // Get managed object context
+        let context = appDelegate.persistentContainer.viewContext
+        
+        // 1
+        let request: NSFetchRequest<Levels> = Levels.fetchRequest()
+        
+        // 2
+        //        request.predicate = NSPredicate(format: "title = %@", "MEDIUM")
+        do {
+            // 3
+            let TestItems = try context.fetch(request)
+            
+            // 4
+            TestItems.forEach { item in
+                let levelid = item.levelid
+                let flips = item.flips
+            }
+            
+            return TestItems
+        }  catch {
+            fatalError("This was not supposed to happen")
+        }
+    }
+    
+    func deleteData() {
+        
+        // Get app delegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        // Get managed object context
+        let context = appDelegate.persistentContainer.viewContext
+        
+        // Load data into memory
+        let items = loadData()
+        
+        // Delete the items
+        items.forEach { item in
+            context.delete(item)
+        }
+    }
+    
     
     // ********************************** FUNCTIONS ********************************** //
     
@@ -619,7 +706,7 @@ class FlippingHell {
                                         1, 0, 0, 1, 0,
                                         0, 0, 1, 1, 0,
                                         0, 1, 1, 0, 0],
-                             goalFlips: 18)
+                             goalFlips: 14)
         let level_92 = Level(sequence: [1, 1, 0, 0, 1,
                                         0, 1, 0, 1, 0,
                                         0, 1, 1, 0, 0,
@@ -637,7 +724,7 @@ class FlippingHell {
                                         0, 0, 0, 0, 1,
                                         1, 1, 1, 0, 0,
                                         1, 0, 0, 1, 0],
-                             goalFlips: 15)
+                             goalFlips: 7)
         let level_95 = Level(sequence: [0, 0, 0, 0, 0,
                                         0, 1, 0, 0, 0,
                                         0, 1, 0, 0, 1,
@@ -667,7 +754,7 @@ class FlippingHell {
                                         1, 1, 0, 1, 0,
                                         1, 0, 0, 0, 1,
                                         1, 0, 0, 1, 1],
-                             goalFlips: 29)
+                             goalFlips: 17)
         let level_100 = Level(sequence: [0, 1, 0, 1, 0,
                                          1, 0, 1, 1, 1,
                                          0, 0, 0, 0, 0,
@@ -696,14 +783,12 @@ class FlippingHell {
 // ********************************** EXTENSIONS ********************************** //
 
 extension FlippingHell: UpdateModelDelegate { // Implements update of model from main view
-    func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int]) {
+    func gameWon(LevelID: Int, Flips: Int16, ButtonsClicked: [Int]) {
         
         // TODO: process game won via level method, not via accessing elements directly
         let LevelSelected = stages[currentStage][currentLevel]
         
         LevelSelected.completeLevel(Flips: Flips, completeSequence: ButtonsClicked)
-        
-        
         
         // TODO: check completion of all levels in a stage to unlock and generate a new one
         // TODO: check completed list of levels before generating one
@@ -721,6 +806,11 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         if(StageWinTest == true) {
             stageUnlocks[currentStage + 1] = true
         }
+        
+        saveData(levelid: LevelSelected.sequenceID, flips: Flips)
+        
+        let ItemList = loadData()
+        print(ItemList)
     }
     
     func gameReset() {

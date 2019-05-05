@@ -12,7 +12,7 @@ import AVFoundation
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateModelDelegate {
-    func gameWon(LevelID: Int, Flips: Int, ButtonsClicked: [Int])
+    func gameWon(LevelID: Int, Flips: Int16, ButtonsClicked: [Int])
     func gameReset()
     func requestLevel()
 }
@@ -30,9 +30,9 @@ class MainViewController: UIViewController {
     var StageNum = 0
     var LevelNum = 0
     
-    var GoalFlips = 0
+    var GoalFlips: Int16 = 0
     
-    var FlipCount = 0
+    var FlipCount: Int16 = 0
     var FlipperOrientation = 0
     
     var buttonStatus = [0, 0, 0, 0, 0,
@@ -285,7 +285,7 @@ extension MainViewController: ResetLevelDelegate {
 }
 
 extension MainViewController: UpdateMainViewDelegate { // Updates main view via model
-    func receiveLevel(LevelID: Int, GoalFlips: Int, Sequence: [Int]) {
+    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int]) {
         CurrentSequence = Sequence
         self.GoalFlips = GoalFlips
         LevelNum = LevelID
