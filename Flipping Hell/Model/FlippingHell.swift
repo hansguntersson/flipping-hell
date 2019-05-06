@@ -27,6 +27,27 @@ protocol UpdateStageViewDelegate {
 // ********************************** CLASS DEFINITION ********************************** //
 
 class FlippingHell {
+    
+    struct JSONfeed {
+        let levelID: Int32
+        let goalFlips: Int16
+    }
+    
+    static func readJSONFromFile(fileName: String) -> Any? {
+        var json: Any?
+        if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
+            do {
+                let fileUrl = URL(fileURLWithPath: path)
+                // Getting data from JSON file using the file URL
+                let data = try Data(contentsOf: fileUrl, options: .mappedIfSafe)
+                json = try? JSONSerialization.jsonObject(with: data)
+            } catch {
+                // Handle error here
+            }
+        }
+        return json
+    }
+    
     // ********************************** VARIABLES ********************************** //
     
     var levels_1 = [Level]()
@@ -48,6 +69,36 @@ class FlippingHell {
     init() {
         loadLevels()
         deleteData()
+        
+        
+        // ********************************** JSON DATA ********************************** //
+        
+        let JSON_Output = FlippingHell.readJSONFromFile(fileName: "FH_data")
+        print(JSON_Output)
+        
+        /*
+        // var JSONversion = 1
+        let JSONlink = "https://www.hansguntersson.com/flipping-hell/FH_data.json"
+        print(JSONlink)
+        
+        guard let url = URL(string: JSONlink) else {
+            print("HTTP error")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+            // What to do with url data
+            print("URL session")
+            
+            guard let data = data else { return }
+            
+            let dataAsString = String(data: data, encoding: .utf8)
+            
+            print(dataAsString)
+            
+        }.resume()
+    */
+   
     }
     
     // ********************************** DELEGATES ********************************** //
@@ -111,9 +162,11 @@ class FlippingHell {
             // 4
             TestItems.forEach { item in
                 let levelid = item.levelid
+                print(levelid)
                 let flips = item.flips
+                print(flips)
             }
-            
+ 
             return TestItems
         }  catch {
             fatalError("This was not supposed to happen")
@@ -712,7 +765,7 @@ class FlippingHell {
                                         0, 1, 1, 0, 0,
                                         0, 1, 1, 0, 0,
                                         1, 1, 1, 0, 0],
-                             goalFlips: 11)
+                             goalFlips: 6)
         let level_93 = Level(sequence: [1, 0, 0, 1, 0,
                                         0, 0, 0, 1, 1,
                                         0, 0, 0, 1, 1,
@@ -724,7 +777,7 @@ class FlippingHell {
                                         0, 0, 0, 0, 1,
                                         1, 1, 1, 0, 0,
                                         1, 0, 0, 1, 0],
-                             goalFlips: 7)
+                             goalFlips: 5)
         let level_95 = Level(sequence: [0, 0, 0, 0, 0,
                                         0, 1, 0, 0, 0,
                                         0, 1, 0, 0, 1,

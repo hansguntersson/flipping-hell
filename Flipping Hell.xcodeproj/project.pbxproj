@@ -31,6 +31,7 @@
 		E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C106BD215408B000947220 /* LaunchScreen.storyboard */; };
 		E5C106CA215408B100947220 /* Flipping_HellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106C9215408B100947220 /* Flipping_HellTests.swift */; };
 		E5C106D5215408B100947220 /* Flipping_HellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106D4215408B100947220 /* Flipping_HellUITests.swift */; };
+		E5DABA502280530E005F6287 /* FH_data.json in Resources */ = {isa = PBXBuildFile; fileRef = E5DABA4F2280530E005F6287 /* FH_data.json */; };
 		E5EB0F0A223E47330012EEFD /* FlippingHell.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */; };
 		E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F12CC021B94949004D0176 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		E5C106D0215408B100947220 /* Flipping HellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flipping HellUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C106D4215408B100947220 /* Flipping_HellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flipping_HellUITests.swift; sourceTree = "<group>"; };
 		E5C106D6215408B100947220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5DABA4F2280530E005F6287 /* FH_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FH_data.json; sourceTree = "<group>"; };
 		E5EB0F09223E47330012EEFD /* FlippingHell.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlippingHell.xcdatamodel; sourceTree = "<group>"; };
 		E5F12CC021B94949004D0176 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +182,7 @@
 				E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */,
 				E5A1C1F221E6292C001E8D90 /* StageCollectionViewCell.swift */,
 				E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */,
+				E5DABA4F2280530E005F6287 /* FH_data.json */,
 				E5AB86EB21DE6C3800337825 /* Model */,
 				E5AB86EC21DE6C4F00337825 /* Options & About & Help */,
 				E543F3EF2162B77200329519 /* resources */,
@@ -313,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DABA502280530E005F6287 /* FH_data.json in Resources */,
 				E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */,
 				E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */,
 				E5C106BC215408B000947220 /* Assets.xcassets in Resources */,
