@@ -43,6 +43,7 @@ class FlippingHell {
                 json = try? JSONSerialization.jsonObject(with: data)
             } catch {
                 // Handle error here
+                print("error finding JSON file")
             }
         }
         return json
@@ -70,11 +71,10 @@ class FlippingHell {
         loadLevels()
         deleteData()
         
-        
         // ********************************** JSON DATA ********************************** //
         
         let JSON_Output = FlippingHell.readJSONFromFile(fileName: "FH_data")
-        print(JSON_Output)
+        print(JSON_Output!)
         
         /*
         // var JSONversion = 1
