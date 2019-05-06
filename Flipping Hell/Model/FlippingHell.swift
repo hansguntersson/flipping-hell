@@ -75,7 +75,7 @@ class FlippingHell {
         // Print out sequence
         for stageindex in stages {
             for levelIndex in stageindex {
-                // print("Number:\(levelIndex.levelIndex)" + ", ID:\(levelIndex.sequenceID)" + ", flips: \(levelIndex.goalFlips)")
+                print("Number:\(levelIndex.levelIndex)" + ", ID:\(levelIndex.sequenceID)" + ", flips: \(levelIndex.goalFlips)")
             }
         }
        

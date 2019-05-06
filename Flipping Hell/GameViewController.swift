@@ -17,14 +17,23 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // let CD_testid: Int32 = 5
-        // slet CD_flips: Int16 = 10
+        // TODO: Add in score / ranking buttons and menus to the interface
         
-        // save(testid: CD_testid, flips: CD_flips)
-        
-        // Do any additional setup after loading the view.
-        
-        // save(testid: Int32, flips: Int16)
+        /*
+         Summary of stars won for each type
+         Stages completed, Levels completed
+         Top ranking users, based on various metrics:
+         - most levels won
+         - most stars
+         - level completed most times
+         - score (based on stars)
+         - most attempts
+         - attempts / won ratio
+         
+         Should green stars indicate that you're the first person to complete a level?
+         Wnat's the highest number for any number of flips?
+ 
+        */
         
     }
     

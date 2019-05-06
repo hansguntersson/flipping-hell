@@ -718,7 +718,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP" userLabel="FlipsLabel">
-                                <rect key="frame" x="129.33333333333334" y="733" width="116.66666666666666" height="25"/>
+                                <rect key="frame" x="129.33333333333337" y="733" width="116.66666666666666" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="jqt-Hr-bNX"/>
                                 </constraints>

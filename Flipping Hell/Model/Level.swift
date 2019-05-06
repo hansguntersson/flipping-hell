@@ -9,11 +9,34 @@
 import Foundation
 
 class Level {
+    /*
+     
+     Data taken in:
+     - sequence ID
+     - goal flips
+     - who won the level first
+ 
+     Data stored per user:
+     - sequence ID
+     - completed (inferred)
+     - attempts
+     - minFlips
+     - minMoves
+     
+     Data held centrally:
+     - sequence ID
+     - minFlips
+     - minMoves
+     - username
+     - date
+     - attempts
+ 
+    */
 
     var sequenceID: Int32 = 0 // The unique sequence ID
     var sequence: Array<Int> = [] // The array sequence for the level
     var goalFlips: Int16 // The goal flips for the level
-    var currentFlips: Int = 0 // The current flip count
+    // var currentFlips: Int = 0 // The current flip count
     let levelIndex: Int // Which index the level is at
     var attempts = 0 // Hpw many attempts were made
     var minFlips: Int16 = 0 // The minimum number of flips the level has been completed in
