@@ -11,7 +11,7 @@ import Foundation
 class Level {
 
     var sequenceID: Int32 = 0 // The unique sequence ID
-    var sequence: Array<Int> // The array sequence for the level
+    var sequence: Array<Int> = [] // The array sequence for the level
     var goalFlips: Int16 // The goal flips for the level
     var currentFlips: Int = 0 // The current flip count
     let levelIndex: Int // Which index the level is at
@@ -21,13 +21,20 @@ class Level {
     var starScore: Int = 0 // Score of stars for the particular level
     var isComplete = false // Whether the level has been completed
 
-    static var levelsIndices = 0 // The class index for the levels    
+    static var levelsIndices = 0 // The class index for the levels
     
-    init(sequence: Array<Int>, goalFlips: Int16) { // Initialiser
+    init(sequence: Array<Int>, goalFlips: Int16) { // Initialiser when array is available
         self.sequence = sequence
         self.goalFlips = goalFlips
         levelIndex = Level.getLevelNumber()
         self.sequenceID = arrayToNumber(ArrayInput: sequence)
+    }
+    
+    init(sequenceID: Int32, goalFlips: Int16) { // Initialiser when number is available
+        self.sequenceID = sequenceID
+        self.goalFlips = goalFlips
+        levelIndex = Level.getLevelNumber()
+        self.sequence = numberToArray(NumberInput: sequenceID)
     }
     
     static func getLevelNumber() -> Int { // Get level for display on table etc

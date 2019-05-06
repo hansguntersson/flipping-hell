@@ -71,10 +71,20 @@ class FlippingHell {
         loadLevels()
         deleteData()
         
+        
+        // Print out sequence
+        for stageindex in stages {
+            for levelIndex in stageindex {
+                // print("Number:\(levelIndex.levelIndex)" + ", ID:\(levelIndex.sequenceID)" + ", flips: \(levelIndex.goalFlips)")
+            }
+        }
+       
+        
+        
         // ********************************** JSON DATA ********************************** //
         
-        let JSON_Output = FlippingHell.readJSONFromFile(fileName: "FH_data")
-        print(JSON_Output!)
+        // let JSON_Output = FlippingHell.readJSONFromFile(fileName: "FH_data")
+        // print(JSON_Output!)
         
         /*
         // var JSONversion = 1
@@ -161,10 +171,10 @@ class FlippingHell {
             
             // 4
             TestItems.forEach { item in
-                let levelid = item.levelid
-                print(levelid)
-                let flips = item.flips
-                print(flips)
+                // let levelid = item.levelid
+                // print(levelid)
+                // let flips = item.flips
+                // print(flips)
             }
  
             return TestItems
@@ -846,12 +856,12 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         // TODO: check completion of all levels in a stage to unlock and generate a new one
         // TODO: check completed list of levels before generating one
         
-        
         // TODO: Count level stars in stages to see if the next stage should be unlocked
         var StageWinTest = true
         for levelIndex in stages[currentStage] {
             if (levelIndex.isComplete == false) {
                 StageWinTest = false
+                
                 break
             }
         }
