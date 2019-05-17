@@ -39,37 +39,21 @@ class FlippingHell {
     var stageStars: [Int] = [0] // number of stars obtained for each level
     /* 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none */
     
+    struct LevelJSON: Codable {
+        let levelid: Int
+        let flips: Int
+    }
+    
+    struct LevelArrayJSON: Codable {
+        let levelfeed: [LevelJSON]
+    }
     
     var currentStage = 0
     
     init() {
         loadLevels()
-        deleteData()
-        
-        // ********************************** JSON DATA ********************************** //
-        
-        /*
-        // var JSONversion = 1
-        let JSONlink = "https://www.hansguntersson.com/flipping-hell/FH_data.json"
-        print(JSONlink)
-        
-        guard let url = URL(string: JSONlink) else {
-            print("HTTP error")
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            // What to do with url data
-            print("URL session")
-            
-            guard let data = data else { return }
-            
-            let dataAsString = String(data: data, encoding: .utf8)
-            
-            print(dataAsString)
-            
-        }.resume()
-        */
+        // deleteData()
+        getFromURL()
    
     }
     
@@ -167,6 +151,38 @@ class FlippingHell {
         }
     }
     
+    func getFromURL() {
+        //Implementing URLSession
+        let urlString = "https://www.hansguntersson.com/flipping-hell/FH_data.json"
+        guard let url = URL(string: urlString) else {
+            print("url failure")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            guard let data = data else {
+                print("data failure")
+                return
+            }
+            
+            do {
+                //Decode retrived data with JSONDecoder and assing type of Article object
+                let jsonData = try JSONDecoder().decode([LevelArrayJSON].self, from: data)
+                
+                print(jsonData)
+                
+            } catch let jsonError {
+                print(jsonError)
+            }
+            
+            }.resume()
+        //End implementing URLSession
+    }
+    
     
     // ********************************** FUNCTIONS ********************************** //
     
@@ -177,15 +193,6 @@ class FlippingHell {
     }
     
     func loadLevels() { // Load levels into game
-        
-        struct LevelJSON: Codable {
-            let levelid: Int
-            let flips: Int
-        }
-        
-        struct LevelArrayJSON: Codable {
-            let levelfeed: [LevelJSON]
-        }
         
         // Get url of file
         guard let url = Bundle.main.url(forResource: "FH_data", withExtension: "json") else{
@@ -261,7 +268,7 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         
         saveData(levelid: LevelSelected.sequenceID, flips: Flips)
         
-        let ItemList = loadData()
+        //let ItemList = loadData()
         // print(ItemList)
     }
     
