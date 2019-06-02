@@ -53,7 +53,8 @@ class FlippingHell {
     init() {
         loadLevels()
         // deleteData()
-        getFromURL()
+        // getFromURL()
+        // sendResults()
    
     }
     
@@ -151,17 +152,91 @@ class FlippingHell {
         }
     }
     
-    func getFromURL() {
-        //Implementing URLSession
-        let urlString = "https://www.hansguntersson.com/flipping-hell/FH_data.json"
+    
+    func sendResults() { // Send results from weblink
+        let userid = 15
+        let stageid = 1
+        let sequenceid = 1111
+        let bestid  = 10
+        
+        let useridstring = "?a=\(userid)"
+        let stageidstring = "?b=\(stageid)"
+        let sequenceidstring = "?c=\(sequenceid)"
+        let bestidstring  = "?d=\(bestid)"
+        
+        
+        let urlString = "https://www.hansguntersson.com/flipping-hell/FH-update.php"
+        
+        print(urlString)
+        
+        //created URL
+        guard let requestURL = URL(string: urlString) else {
+            print("URL didn't work")
+            return
+        }
+        
+        //creating URLRequest
+        var request = URLRequest(url: requestURL)
+        
+        //setting the method to post
+        request.httpMethod = "POST"
+        
+        //getting values from text fields
+        let phpParameters: String = useridstring + stageidstring + sequenceidstring + bestidstring
+        
+        //adding the parameters to request body
+        request.httpBody = phpParameters.data(using: .utf8)
+        
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data,
+                let response = response as? HTTPURLResponse,
+                error == nil else {        // check for fundamental networking error
+                    print("network error")
+                    // print("error", error ?? "Unknown error")
+                    return
+            }
+            
+            guard (200 ... 299) ~= response.statusCode else {
+                print("response error")
+                
+                // check for http errors
+                //print("statusCode should be 2xx, but is \(response.statusCode)")
+                //print("response = \(response)")
+                return
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            
+            
+            // print("responseString = \(responseString)")
+        }
+        
+        task.resume()
+        
+    }
+    
+    
+    
+    func getFromURL() { // TRY TO GET DATA FROM WEB LINK
+        
+        //let urlString = "https://hansguntersson.com/flipping-hell/FH_data.json"
+        let urlString = "https://learnappmaking.com/ex/users.json"
+        
+        print(urlString)
+        
         guard let url = URL(string: urlString) else {
             print("url failure")
             return
         }
         
+        print(url)
+        
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
-                print(error!.localizedDescription)
+                // print(error!.localizedDescription)
+                print("session failure")
             }
             
             guard let data = data else {
@@ -171,9 +246,9 @@ class FlippingHell {
             
             do {
                 //Decode retrived data with JSONDecoder and assing type of Article object
-                let jsonData = try JSONDecoder().decode([LevelArrayJSON].self, from: data)
+                //let jsonData = try JSONDecoder().decode([LevelArrayJSON].self, from: data)
                 
-                print(jsonData)
+                //print(jsonData)
                 
             } catch let jsonError {
                 print(jsonError)

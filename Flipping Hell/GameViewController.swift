@@ -49,8 +49,6 @@ class GameViewController: UIViewController {
             }
         } else if segue.identifier == "loadOptionsSegue" {
             print("Options Segue")
-        } else if segue.identifier == "loadAboutSegue" {
-            print("About Segue")
         }
     }
 }
