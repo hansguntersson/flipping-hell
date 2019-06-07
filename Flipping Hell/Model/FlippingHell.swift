@@ -285,10 +285,9 @@ class FlippingHell {
         
         let jsonarray = jsonoutput.levelfeed
         
-        
         // Cycle through and create objects
         
-        var jsonarrayindex = 20 // index of levels to ensure each stage is only 20 items  long
+        var jsonarrayindex = 20 // index of levels to ensure each stage is only 20 items long
         var jsonstageindex = -1 // index of stages to cycle through stages
         for jsonlevel in jsonarray {
             
@@ -401,106 +400,3 @@ extension FlippingHell: UpdateModelStagesDelegate {
         return stageOutput
     }
 }
-
-/*
- 
- 
- // -------------------------------------- OTHER LEVELS -------------------------------------- //
- 
- var WinState_0_7 = [0, 1, 1, 1, 0,
-                     0, 0, 0, 0, 0,
-                     0, 0, 0, 0, 0,
-                     0, 0, 1, 0, 0,
-                     0, 0, 1, 0, 0]; // 2
- 
- var WinRandom_1_71 = [1, 0, 0, 0, 0,
- 1, 0, 0, 0, 1,
- 0, 0, 1, 0, 0,
- 0, 0, 0, 0, 0,
- 1, 1, 1, 1, 0]; // 14
- 
- var WinRandom_1_72 = [0, 0, 0, 1, 1,
- 0, 1, 1, 0, 1,
- 0, 1, 0, 1, 0,
- 0, 0, 0, 1, 1,
- 1, 1, 0, 0, 0]; // 12
- 
- var WinRandom_1_73 = [0, 0, 0, 1, 0,
- 1, 1, 1, 1, 0,
- 0, 0, 0, 1, 1,
- 0, 0, 0, 1, 0,
- 1, 1, 1, 0, 1]; // 5
- 
- var WinRandom_1_74 = [1, 1, 0, 1, 1,
- 1, 0, 1, 0, 1,
- 1, 0, 0, 1, 1,
- 0, 0, 1, 0, 0,
- 0, 0, 1, 0, 0]; // 13
- 
- var WinRandom_1_75 = [1, 1, 0, 1, 0,
- 0, 1, 1, 1, 0,
- 0, 0, 0, 1, 0,
- 0, 0, 0, 1, 0,
- 0, 1, 0, 0, 1]; // 14
- 
- var WinRandom_1_76 = [1, 1, 0, 1, 0,
- 0, 0, 0, 0, 1,
- 1, 1, 1, 0, 0,
- 1, 0, 0, 1, 0,
- 0, 0, 0, 0, 0]; // 14
- 
- var WinRandom_1_77 = [1, 1, 1, 1, 0,
- 1, 1, 0, 1, 0,
- 0, 1, 1, 1, 0,
- 0, 0, 1, 0, 1,
- 1, 0, 0, 0, 0]; // 14
- 
- var WinRandom_1_78 = [1, 0, 1, 1, 1,
- 0, 0, 0, 1, 0,
- 0, 0, 1, 0, 1,
- 0, 0, 0, 0, 0,
- 1, 0, 1, 1, 0]; // 11
- 
- var WinRandom_1_79 = [1, 1, 0, 1, 0,
- 0, 0, 0, 0, 0,
- 1, 1, 0, 1, 0,
- 1, 0, 1, 1, 1,
- 0, 0, 0, 1, 1]; // 13
- 
- var WinRandom_1_80 = [1, 1, 0, 0, 0,
- 0, 0, 0, 1, 1,
- 0, 0, 0, 0, 0,
- 1, 0, 1, 0, 1,
- 1, 1, 1, 0, 1]; // 13
- 
- var WinRandom_1_81 = [1, 1, 0, 0, 1,
- 0, 0, 1, 0, 1,
- 1, 1, 1, 1, 1,
- 1, 0, 0, 1, 0,
- 0, 0, 0, 1, 1]; // 14
- 
- var WinRandom_1_82 = [0, 0, 0, 1, 0,
- 1, 1, 1, 1, 1,
- 0, 0, 0, 0, 0,
- 0, 0, 0, 1, 0,
- 1, 1, 1, 0, 0]; //  8
- 
- var WinRandom_1_83 = [0, 0, 1, 0, 1,
- 0, 0, 0, 0, 1,
- 0, 0, 0, 0, 0,
- 0, 0, 0, 0, 0,
- 0, 1, 1, 0, 1]; //  7
- 
- var WinRandom_1_84 = [1, 1, 1, 0, 1,
- 1, 0, 0, 0, 1,
- 0, 1, 0, 1, 1,
- 1, 0, 0, 0, 1,
- 1, 0, 1, 0, 0]; //  12
- 
- var WinRandom_1_85 = [0, 0, 1, 1, 0,
- 0, 0, 0, 1, 0,
- 0, 0, 0, 1, 0,
- 0, 1, 1, 1, 0,
- 1, 1, 0, 1, 1]; //  10
- 
-*/

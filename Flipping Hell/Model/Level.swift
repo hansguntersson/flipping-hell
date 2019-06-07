@@ -93,7 +93,7 @@ class Level {
     func arrayToNumber(ArrayInput: [Int]) -> Int32 { // Take in an array and converts it to a number
         var TextString: String = ""
         for Digit in ArrayInput {
-        TextString += String(Digit)
+            TextString += String(Digit)
         }
         return Int32(TextString, radix: 2) ?? 0
     }
@@ -105,13 +105,14 @@ class Level {
         let BinaryArray = Array(BinaryOutput)
         
         let AdditionalElements = 25 - BinaryArray.count
+        print(AdditionalElements)
         
         for _ in 0..<AdditionalElements {
-        IntOutput.append(0)
+            IntOutput.append(0)
         }
         
         for index in 0..<BinaryArray.count {
-        IntOutput.append(Int(String(BinaryArray[index]))!)
+            IntOutput.append(Int(String(BinaryArray[index]))!)
         }
         
         return IntOutput
