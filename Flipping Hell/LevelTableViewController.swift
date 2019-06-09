@@ -70,7 +70,7 @@ class LevelTableViewController: UITableViewController {
         //  TODO: Should this reference be removed as it's accessing values directly?
         let thisLevel = levels[indexPath.row]
         
-        if (indexPath.row == 19) {
+        if (indexPath.row == 9) {
             cell.levelIndex.setTitle("★", for: .normal)
         } else {
             cell.levelIndex.setTitle(String(indexPath.row + 1), for: .normal)
@@ -117,7 +117,7 @@ class LevelTableViewController: UITableViewController {
         if segue.identifier == "unwindFromLevelsWithSegue" {
             let buttonInstance = sender as! UIButton
             if (buttonInstance.currentTitle == "★") {
-                UpdateModelLevelsDelegateInstance.changeLevel(StageID: DisplayedStage, LevelID: 19)
+                UpdateModelLevelsDelegateInstance.changeLevel(StageID: DisplayedStage, LevelID: 9)
             } else {
                 UpdateModelLevelsDelegateInstance.changeLevel(StageID: DisplayedStage, LevelID: Int(buttonInstance.currentTitle ?? "0")! - 1)
             }
