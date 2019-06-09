@@ -52,6 +52,16 @@ class FlippingHell {
     
     init() {
         loadLevels()
+        
+        
+        /*
+        let TestArray = [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0]
+        
+        let templevel = Level(sequence: TestArray, goalFlips: 2)
+        print(templevel.sequenceID)
+ 
+         */
+        
         // deleteData()
         // getFromURL()
         // sendResults()
@@ -164,7 +174,6 @@ class FlippingHell {
         let sequenceidstring = "?c=\(sequenceid)"
         let bestidstring  = "?d=\(bestid)"
         
-        
         let urlString = "https://www.hansguntersson.com/flipping-hell/FH-update.php"
         
         print(urlString)
@@ -210,7 +219,7 @@ class FlippingHell {
             let responseString = String(data: data, encoding: .utf8)
             
             
-            // print("responseString = \(responseString)")
+            print("responseString = \(responseString ?? "No response string")")
         }
         
         task.resume()
@@ -232,30 +241,6 @@ class FlippingHell {
         }
         
         print(url)
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                // print(error!.localizedDescription)
-                print("session failure")
-            }
-            
-            guard let data = data else {
-                print("data failure")
-                return
-            }
-            
-            do {
-                //Decode retrived data with JSONDecoder and assing type of Article object
-                //let jsonData = try JSONDecoder().decode([LevelArrayJSON].self, from: data)
-                
-                //print(jsonData)
-                
-            } catch let jsonError {
-                print(jsonError)
-            }
-            
-            }.resume()
-        //End implementing URLSession
     }
     
     
