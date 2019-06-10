@@ -218,7 +218,7 @@
         { "levelid": 370832, "flips": 8 },
         { "levelid": 18586339, "flips": 12 },
         
-        { "levelid": 33071503, "flips": 11 },
+        { "levelid": 33071503, "flips": 7 },
         { "levelid": 29552548, "flips": 9 },
         { "levelid": 23648265, "flips": 8 },
         { "levelid": 2037646, "flips": 10 },
@@ -232,16 +232,17 @@
         
         
         
-        { "levelid": 17288147, "flips": 20 },
-        { "levelid": 10109478, "flips": 20 },
-        { "levelid": 11108491, "flips": 20 },
-        { "levelid": 20366795, "flips": 20 },
-        { "levelid": 1904629, "flips": 20 },
-        { "levelid": 1003810, "flips": 20 },
-        { "levelid": 25696709, "flips": 20 },
-        { "levelid": 4002646, "flips": 20 },
-        { "levelid": 10178195, "flips": 20 },
-        { "levelid": 24667370, "flips": 20 },
+        { "levelid": 17288147, "flips": 8 },
+        { "levelid": 10109478, "flips": 15 },
+        { "levelid": 11108491, "flips": 12 },
+        { "levelid": 20366795, "flips": 7 },
+        { "levelid": 1904629, "flips": 10 },
+        { "levelid": 1003810, "flips": 8 },
+        { "levelid": 25696709, "flips": 12 },
+        { "levelid": 4002646, "flips": 12 },
+        { "levelid": 10178195, "flips": 12 },
+        { "levelid": 24667370, "flips": 6 },
+        
         { "levelid": 10288997, "flips": 20 },
         { "levelid": 19105427, "flips": 20 },
         { "levelid": 1826184, "flips": 20 },
@@ -252,6 +253,7 @@
         { "levelid": 27616826, "flips": 20 },
         { "levelid": 19080722, "flips": 20 },
         { "levelid": 23483718, "flips": 20 },
+        
         { "levelid": 29380345, "flips": 20 },
         { "levelid": 1407726, "flips": 20 },
         { "levelid": 24518659, "flips": 20 },
@@ -262,6 +264,7 @@
         { "levelid": 32702079, "flips": 20 },
         { "levelid": 26914404, "flips": 20 },
         { "levelid": 23585214, "flips": 20 },
+        
         { "levelid": 3012371, "flips": 20 },
         { "levelid": 18977334, "flips": 20 },
         { "levelid": 24638695, "flips": 20 },
@@ -272,6 +275,7 @@
         { "levelid": 8621115, "flips": 20 },
         { "levelid": 12355736, "flips": 20 },
         { "levelid": 12141337, "flips": 20 },
+        
         { "levelid": 11231508, "flips": 20 },
         { "levelid": 5259299, "flips": 20 },
         { "levelid": 24416407, "flips": 20 },
@@ -282,6 +286,10 @@
         { "levelid": 13591046, "flips": 20 },
         { "levelid": 5206392, "flips": 20 },
         { "levelid": 12733204, "flips": 20 },
+        
+        
+        
+        
         { "levelid": 7773065, "flips": 20 },
         { "levelid": 24841613, "flips": 20 },
         { "levelid": 29452158, "flips": 20 },
