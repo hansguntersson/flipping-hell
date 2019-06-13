@@ -173,7 +173,7 @@ class FlippingHell {
         let sequenceidstring = "?c=\(sequenceid)"
         let bestidstring  = "?d=\(bestid)"
         
-        let urlString = "https://www.hansguntersson.com/flipping-hell/FH-update.php"
+        let urlString = "https://www.hansguntersson.com/flipping-hell/service.php"
         
         print(urlString)
         
@@ -345,7 +345,7 @@ extension FlippingHell: UpdateModelWinDelegate { // Implements update of model f
         if (currentLevel < 9) {
             currentLevel += 1
         } else {
-            if (currentStage < 4 ) { // TODO: remove this logic restriction, game won should generate new stage
+            if (currentStage < 62 ) { // TODO: remove this logic restriction, game won should generate new stage
                 currentStage += 1
                 currentLevel = 0
             }
