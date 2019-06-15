@@ -85,21 +85,25 @@ class StageCollectionViewController: UICollectionViewController {
             cell.cellButton.setTitle("★", for: .normal)
             cell.cellButton.setTitleColor(#colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1), for: .normal)
             cell.backgroundColor = #colorLiteral(red: 0.9639343619, green: 0.8337499499, blue: 0.685505569, alpha: 1)
+            cell.borderWidth = 1
             cell.cellLabel.textColor = #colorLiteral(red: 0.6425394416, green: 0.3705662191, blue: 0.03817562759, alpha: 1)
         } else if (thisStage == 2) {
             cell.cellButton.setTitle("★", for: .normal)
             cell.cellButton.setTitleColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), for: .normal)
             cell.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+            cell.borderWidth = 1
             cell.cellLabel.textColor = #colorLiteral(red: 0.4861137271, green: 0.4832279086, blue: 0.4883345366, alpha: 1)
         } else if (thisStage == 3) {
             cell.cellButton.setTitle("★", for: .normal)
             cell.cellButton.setTitleColor(#colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1), for: .normal)
             cell.backgroundColor = #colorLiteral(red: 0.9720624089, green: 0.9512637258, blue: 0.7572063208, alpha: 1)
+            cell.borderWidth = 1
             cell.cellLabel.textColor = #colorLiteral(red: 0.7436745763, green: 0.5970394611, blue: 0.06599663943, alpha: 1)
         } else if (thisStage == 4) {
             cell.cellButton.setTitle("✮", for: .normal)
             cell.cellButton.setTitleColor(#colorLiteral(red: 0.2984283566, green: 0.8121408224, blue: 0.9792012572, alpha: 1), for: .normal)
             cell.backgroundColor = #colorLiteral(red: 0.8391310573, green: 0.9654389024, blue: 0.9490205646, alpha: 1)
+            cell.borderWidth = 1
             cell.cellLabel.textColor = #colorLiteral(red: 0.2127193809, green: 0.5863756537, blue: 0.7115346193, alpha: 1)
         }
         cell.cellLabel.text = String(indexPath.row + 1)
