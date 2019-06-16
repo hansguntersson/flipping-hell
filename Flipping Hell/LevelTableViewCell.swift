@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SelectLevel {
+protocol SelectLevel: class {
     func selectLevelFromButton(LevelSelected: Int)
 }
 

@@ -34,9 +34,7 @@ class Level {
     */
 
     var sequenceID: Int32 = 0 // The unique sequence ID
-    var sequence: Array<Int> = [] // The array sequence for the level
     var goalFlips: Int16 // The goal flips for the level
-    // var currentFlips: Int = 0 // The current flip count
     let levelIndex: Int // Which index the level is at
     var attempts = 0 // Hpw many attempts were made
     var minFlips: Int16 = 0 // The minimum number of flips the level has been completed in
@@ -47,7 +45,6 @@ class Level {
     static var levelsIndices = 0 // The class index for the levels
     
     init(sequence: Array<Int>, goalFlips: Int16) { // Initialiser when array is available
-        self.sequence = sequence
         self.goalFlips = goalFlips
         levelIndex = Level.getLevelNumber()
         self.sequenceID = arrayToNumber(ArrayInput: sequence)
@@ -57,7 +54,7 @@ class Level {
         self.sequenceID = sequenceID
         self.goalFlips = goalFlips
         levelIndex = Level.getLevelNumber()
-        self.sequence = numberToArray(NumberInput: sequenceID)
+        // self.sequence = numberToArray(NumberInput: sequenceID)
     }
     
     static func getLevelNumber() -> Int { // Get level for display on table etc
@@ -115,9 +112,10 @@ class Level {
             IntOutput.append(Int(String(BinaryArray[index]))!)
         }
         
+        /*
         let tempSum = IntOutput[0] + IntOutput[1] + IntOutput[3] + IntOutput[4] + IntOutput[5] + IntOutput[6] + IntOutput[8] + IntOutput[9] + IntOutput[15] + IntOutput[16] + IntOutput[18] + IntOutput[19] + IntOutput[20] + IntOutput[21] + IntOutput[23] + IntOutput[24]
         
-        /*
+        
         if tempSum % 2 == 0 {
             print("even")
         } else {

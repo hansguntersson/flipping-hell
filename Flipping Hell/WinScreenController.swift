@@ -8,11 +8,11 @@
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol ResetLevelDelegate {
+protocol ResetLevelDelegate: class {
     func resetLevel()
 }
 
-protocol UpdateModelWinDelegate {
+protocol UpdateModelWinDelegate: class {
     func nextLevel()
 }
 
@@ -43,8 +43,8 @@ class WinScreenController: UIViewController {
     
     // ********************************** DELEGATES ********************************** //
     
-    var ResetButtonsDelegateInstance: ResetLevelDelegate!
-    var UpdateModelWinDelegateInstance: UpdateModelWinDelegate!
+    weak var ResetButtonsDelegateInstance: ResetLevelDelegate!
+    weak var UpdateModelWinDelegateInstance: UpdateModelWinDelegate!
     
     // ********************************** FUNCTIONS ********************************** //
     

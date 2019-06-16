@@ -12,15 +12,15 @@ import CoreData
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol UpdateMainViewDelegate {
-    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int])
+protocol UpdateMainViewDelegate: class {
+    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool)
 }
 
-protocol UpdateLevelViewDelegate {
+protocol UpdateLevelViewDelegate: class {
     func receiveLevelList(StageID: Int, LevelList: [Level], CurrentStage: Int, CurrentLevel: Int)
 }
 
-protocol UpdateStageViewDelegate {
+protocol UpdateStageViewDelegate: class {
     func receiveStageList(StageID: Int, LevelList: [Level])
 }
 
@@ -69,8 +69,8 @@ class FlippingHell {
     
     // ********************************** DELEGATES ********************************** //
     
-    var UpdateMainViewDelegateInstance: UpdateMainViewDelegate!
-    var UpdateLevelViewDelegateInstance: UpdateLevelViewDelegate!
+    weak var UpdateMainViewDelegateInstance: UpdateMainViewDelegate!
+    weak var UpdateLevelViewDelegateInstance: UpdateLevelViewDelegate!
     
     
     // ********************************** CORE DATA ********************************** //
@@ -336,7 +336,8 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
     
     func requestLevel() {
         let LevelSelected = stages[currentStage][currentLevel]
-        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: LevelSelected.goalFlips, Sequence: LevelSelected.sequence)
+        let LevelArray = LevelSelected.numberToArray(NumberInput: LevelSelected.sequenceID)
+        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: LevelSelected.goalFlips, Sequence: LevelArray, IsCompleted: LevelSelected.isComplete)
     }
 }
 

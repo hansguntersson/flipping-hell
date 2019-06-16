@@ -10,7 +10,7 @@ import UIKit
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol UpdateModelStagesDelegate {
+protocol UpdateModelStagesDelegate: class {
     func requestStages() -> [Int]
 }
 
@@ -23,6 +23,7 @@ class StageCollectionViewController: UICollectionViewController {
     // TODO: Decide on how numbers by stags are going to be defined
     
     weak var game: FlippingHell?
+    var SelectedStage: Int = 40
     
     var stages: [Int] = []
     let cellIdentifier = "StageCollectionViewCell"

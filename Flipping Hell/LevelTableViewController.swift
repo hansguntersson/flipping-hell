@@ -10,7 +10,7 @@ import UIKit
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol UpdateModelLevelsDelegate {
+protocol UpdateModelLevelsDelegate: class {
     func requestLevelList(StageID: Int)
     func changeLevel(StageID: Int, LevelID: Int)
 }
@@ -35,7 +35,7 @@ class LevelTableViewController: UITableViewController {
     
     // ********************************** DELEGATES ********************************** //
     
-    var UpdateModelLevelsDelegateInstance: UpdateModelLevelsDelegate!
+    weak var UpdateModelLevelsDelegateInstance: UpdateModelLevelsDelegate!
     
     // ********************************** FUNCTIONs ********************************** //
     
@@ -49,6 +49,8 @@ class LevelTableViewController: UITableViewController {
         
         self.title = "STAGE " + "\(CurrentStage + 1)"
         // TODO: Check if this needs to be amnended on unwind from stage selection too
+        
+        scrollToFirstRow()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -125,8 +127,14 @@ class LevelTableViewController: UITableViewController {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! StageCollectionViewController
                 lvc.game = game
+                lvc.SelectedStage = DisplayedStage
             }
         }
+    }
+    
+    func scrollToFirstRow() {
+        let indexPath = NSIndexPath(row: 9, section: 0)
+        self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
     }
     
 }

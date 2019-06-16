@@ -11,7 +11,7 @@ import AVFoundation
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol UpdateModelDelegate {
+protocol UpdateModelDelegate: class {
     func gameWon(LevelID: Int, Flips: Int16, ButtonsClicked: [Int])
     func gameReset()
     func requestLevel()
@@ -31,6 +31,7 @@ class MainViewController: UIViewController {
     var LevelNum = 0
     
     var GoalFlips: Int16 = 0
+    var levelCompleted: Bool = false
     
     var FlipCount: Int16 = 0
     var FlipperOrientation = 0
@@ -73,7 +74,7 @@ class MainViewController: UIViewController {
     
     // ********************************** DELEGATES ********************************** //
     
-    var UpdateModelDelegateInstance: UpdateModelDelegate!
+    weak var UpdateModelDelegateInstance: UpdateModelDelegate!
     
     // ********************************** FUNCTIONS ********************************** //
     
@@ -118,7 +119,13 @@ class MainViewController: UIViewController {
         FlipperOrientation = 1 // set to 1 so that the update flipper display moves it back to 0
         updateFlipperDisplay()
         FlipCount = 0
-        FlipsLabel.text = "FLIPS: \(FlipCount)"
+        
+        if levelCompleted == false {
+            FlipsLabel.text = "FLIPS: \(FlipCount)"
+        } else {
+            FlipsLabel.text = "FLIPS: \(FlipCount)" +  " / " + "\(GoalFlips)"
+        }
+        
         
         // Reset buttons and array
         for buttonIndex in 0 ..< buttonStatus.count {
@@ -163,7 +170,13 @@ class MainViewController: UIViewController {
         }
         updateFlipperDisplay()
         FlipCount += 1
-        FlipsLabel.text = "FLIPS: \(FlipCount)"
+        
+        
+        if levelCompleted == false {
+            FlipsLabel.text = "FLIPS: \(FlipCount)"
+        } else {
+            FlipsLabel.text = "FLIPS: \(FlipCount)" +  " / " + "\(GoalFlips)"
+        }
         
         WinVal = checkWin()
         
@@ -285,10 +298,11 @@ extension MainViewController: ResetLevelDelegate {
 }
 
 extension MainViewController: UpdateMainViewDelegate { // Updates main view via model
-    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int]) {
+    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool) {
         CurrentSequence = Sequence
         self.GoalFlips = GoalFlips
         LevelNum = LevelID
+        levelCompleted = IsCompleted
         
         for winVal in 0 ..< CurrentSequence.count {
             if(CurrentSequence[winVal] == 0) {
