@@ -27,6 +27,8 @@ class MainViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
     
+    var FirstOpen: Bool = true // TODO: switch this off when releasing
+    
     var StageNum = 0
     var LevelNum = 0
     
@@ -118,6 +120,13 @@ class MainViewController: UIViewController {
         UpdateModelDelegateInstance = game
         
         UpdateModelDelegateInstance.requestLevel()
+        
+        if (FirstOpen == true) {
+            // TODO: save whether file has opened and show help
+            self.performSegue(withIdentifier: "GameHelpSegue", sender: self)
+            FirstOpen = false
+        }
+        
         
         // TODO: Can use the following functionality for sizing:
         // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2

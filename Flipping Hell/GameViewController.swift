@@ -51,6 +51,20 @@ class GameViewController: UIViewController {
             print("Options Segue")
         }
     }
+    
+    @IBAction func openTwitter(_ sender: UIButton) {
+        let screenName = "hansguntersson"
+        let appURL = NSURL(string: "twitter://user?screen_name=\(screenName)")! as URL
+        let webURL = NSURL(string: "https://twitter.com/\(screenName)")! as URL
+        
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL, options: [:])
+        } else {
+            application.open(webURL, options: [:])
+        }
+    }
 }
 
 @IBDesignable extension UIButton {
