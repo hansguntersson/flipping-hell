@@ -1575,21 +1575,25 @@
                                 <rect key="frame" x="20" y="40" width="374" height="656"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-s0-jGw">
-                                        <rect key="frame" x="20" y="82" width="320.66666666666669" height="119.66666666666669"/>
+                                        <rect key="frame" x="20" y="102" width="320.66666666666669" height="119.66666666666669"/>
                                         <string key="text">The goal is to flip the buttons in the main screen to create the shape on the left hand side, the shape of the flipper changes each flip, and can be seen on the right hand side</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO PLAY" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-hX-03X">
-                                        <rect key="frame" x="56" y="30" width="262" height="32"/>
+                                        <rect key="frame" x="56" y="50" width="262" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-Gc-qAn">
-                                        <rect key="frame" x="339" y="10" width="30" height="33"/>
+                                        <rect key="frame" x="334" y="10" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="tsQ-lw-LvB"/>
+                                            <constraint firstAttribute="width" secondItem="4qe-Gc-qAn" secondAttribute="height" multiplier="1:1" id="uPq-dj-qWD"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="✕">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1606,10 +1610,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="4qe-Gc-qAn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sBf-hX-03X" secondAttribute="trailing" constant="10" id="Lxf-KE-AAq"/>
-                                    <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="30" id="ObE-mt-2z3"/>
+                                    <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="4qe-Gc-qAn" secondAttribute="bottom" constant="10" id="MUO-Wg-TwP"/>
+                                    <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="BlO-zn-FaH" secondAttribute="top" constant="50" id="ObE-mt-2z3"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fd7-s0-jGw" secondAttribute="trailing" constant="20" id="QmZ-l8-tgh"/>
-                                    <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" secondItem="4qe-Gc-qAn" secondAttribute="trailing" constant="5" id="YMM-0g-z34"/>
+                                    <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" secondItem="4qe-Gc-qAn" secondAttribute="trailing" constant="10" id="YMM-0g-z34"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sBf-hX-03X" secondAttribute="trailing" constant="5" id="fXj-2W-J6m"/>
                                     <constraint firstItem="sBf-hX-03X" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BlO-zn-FaH" secondAttribute="leading" constant="5" id="kqP-dW-ZPC"/>
                                     <constraint firstItem="BlO-zn-FaH" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fd7-s0-jGw" secondAttribute="bottom" constant="20" id="o6V-uw-yBk"/>
@@ -2139,6 +2143,6 @@
         <image name="list_icon" width="891" height="891"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JdO-Ve-BpG"/>
+        <segue reference="IYV-QO-7Yk"/>
     </inferredMetricsTieBreakers>
 </document>

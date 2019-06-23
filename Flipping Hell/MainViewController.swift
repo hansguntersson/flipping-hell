@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
     
-    var FirstOpen: Bool = true // TODO: switch this off when releasing
+    var FirstOpen: Bool = true // TODO: switch this off when releasing, load from game
     
     var StageNum = 0
     var LevelNum = 0
@@ -118,18 +118,14 @@ class MainViewController: UIViewController {
         }
         
         UpdateModelDelegateInstance = game
-        
         UpdateModelDelegateInstance.requestLevel()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if (FirstOpen == true) {
-            // TODO: save whether file has opened and show help
-            self.performSegue(withIdentifier: "GameHelpSegue", sender: self)
+            performSegue(withIdentifier: "GameHelpSegue", sender: nil)
             FirstOpen = false
         }
-        
-        
-        // TODO: Can use the following functionality for sizing:
-        // buttonClassID.layer.cornerRadius = buttonClassID.frame.size.height/2
     }
     
     func resetButtons() { // Resets buttons
@@ -285,7 +281,6 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameWonSegue" {
-            
             // TODO: indicate if new record
             // TODO: indicate if new stage unlocked
             // TODO: help view
