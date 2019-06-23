@@ -100,11 +100,20 @@ class MainViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
         
-        buttonFlipperCollection[1].layer.cornerRadius = buttonFlipperCollection[1].frame.size.width / 2
-        buttonFlipperCollection[3].layer.cornerRadius = buttonFlipperCollection[3].frame.size.width / 2
-        buttonFlipperCollection[4].layer.cornerRadius = buttonFlipperCollection[4].frame.size.width / 2
-        buttonFlipperCollection[5].layer.cornerRadius = buttonFlipperCollection[5].frame.size.width / 2
-        buttonFlipperCollection[7].layer.cornerRadius = buttonFlipperCollection[7].frame.size.width / 2
+        for mainButton in buttonCollection
+        {
+            mainButton.layer.cornerRadius = mainButton.frame.size.width / 2
+        }
+        
+        for winButton in buttonWinCollection
+        {
+            winButton.layer.cornerRadius = winButton.frame.size.width / 2
+        }
+        
+        for flipButton in buttonFlipperCollection
+        {
+            flipButton.layer.cornerRadius = flipButton.frame.size.width / 2
+        }
         
         UpdateModelDelegateInstance = game
         
@@ -190,6 +199,8 @@ class MainViewController: UIViewController {
     
     func flipButton(_ sender: UIButton, buttonIndex: Int) { // Flips the corresponding button
         let button = sender
+        
+        let widthVal = button.frame.size.width
         let animTime = 0.2
         let xVal = button.center.x
         let yVal = button.center.y
@@ -207,27 +218,27 @@ class MainViewController: UIViewController {
         
         if (FlipperOrientation == 0) {
             UIView.animate(withDuration: animTime, animations:  {
-                button.frame.size = CGSize(width: 0, height: 50.0)
-                button.layer.cornerRadius = 2
+                button.frame.size = CGSize(width: 0, height: widthVal)
+                button.layer.cornerRadius = widthVal / 25
                 button.center = CGPoint(x: xVal, y: yVal)
             })
             
             UIView.animate(withDuration: animTime, delay: animTime, animations: {
-                button.frame.size = CGSize(width: 50.0, height: 50.0)
-                button.layer.cornerRadius = button.frame.size.width / 2
+                button.frame.size = CGSize(width: widthVal, height: widthVal)
+                button.layer.cornerRadius = widthVal / 2
                 button.backgroundColor = baseColour
                 button.center = CGPoint(x: xVal, y: yVal)
             })
         } else {
             UIView.animate(withDuration: animTime, animations:  {
-                button.frame.size = CGSize(width: 50.0, height: 0)
-                button.layer.cornerRadius = 2
+                button.frame.size = CGSize(width: widthVal, height: 0)
+                button.layer.cornerRadius = widthVal / 25
                 button.center = CGPoint(x: xVal, y: yVal)
             })
             
             UIView.animate(withDuration: animTime, delay: animTime, animations: {
-                button.frame.size = CGSize(width: 50.0, height: 50.0)
-                button.layer.cornerRadius = button.frame.size.width / 2
+                button.frame.size = CGSize(width: widthVal, height: widthVal)
+                button.layer.cornerRadius = widthVal / 2
                 button.backgroundColor = baseColour
                 button.center = CGPoint(x: xVal, y: yVal)
             })
@@ -307,10 +318,10 @@ extension MainViewController: UpdateMainViewDelegate { // Updates main view via 
         for winVal in 0 ..< CurrentSequence.count {
             if(CurrentSequence[winVal] == 0) {
                 buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
-                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
+                // buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
             } else {
                 buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-                buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
+                // buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
             }
         }
         levelTitle.text = "LEVEL \(LevelNum + 1)"

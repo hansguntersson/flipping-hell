@@ -30,7 +30,7 @@ class StageCollectionViewController: UICollectionViewController {
     
     // ********************************** DELEGATES ********************************** //
     
-    var UpdateModelStagesDelegateInstance: UpdateModelStagesDelegate!
+    weak var UpdateModelStagesDelegateInstance: UpdateModelStagesDelegate!
     
     // ********************************** FUNCTIONS ********************************** //
     

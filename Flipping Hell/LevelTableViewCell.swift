@@ -8,9 +8,13 @@
 
 import UIKit
 
+// ********************************** PROTOCOLS ********************************** //
+
 protocol SelectLevel: class {
     func selectLevelFromButton(LevelSelected: Int)
 }
+
+// ********************************** CLASS DEFINITION ********************************** //
 
 class LevelTableViewCell: UITableViewCell {
     
