@@ -13,9 +13,15 @@ import UIKit
 class GameViewController: UIViewController {
     
     var game = FlippingHell()
+    @IBOutlet var playButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // let widthValue = playButton.frame.size.height / 2.0
+        // playButton.layer.cornerRadius = widthValue
+        
+        playButton.cornerCalculation(r: 1)
         
         // TODO: Add in score / ranking buttons and menus to the interface
         
@@ -67,26 +73,7 @@ class GameViewController: UIViewController {
     }
 }
 
-@IBDesignable extension UIButton {
-    @IBInspectable var cornerRadius: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-        }
-        get {
-            return layer.cornerRadius
-        }
-    }
-}
-
 @IBDesignable extension UIView {
-    @IBInspectable var cornerRadiusVIEW: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-        }
-        get {
-            return layer.cornerRadius
-        }
-    }
     
     @IBInspectable var borderWidth: CGFloat {
         set {
@@ -110,6 +97,23 @@ class GameViewController: UIViewController {
             } else {
                 layer.borderColor = nil
             }
+        }
+    }
+}
+
+extension UIButton {
+    func cornerCalculation(r: CGFloat) {
+        self.layer.cornerRadius = self.frame.height / 2 * r
+    }
+}
+
+@IBDesignable extension UIView {
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
         }
     }
 }
