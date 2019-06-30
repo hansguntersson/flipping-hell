@@ -104,17 +104,18 @@ class MainViewController: UIViewController {
         
         for mainButton in buttonCollection
         {
-            mainButton.layer.cornerRadius = mainButton.frame.size.width / 2.0
+            // mainButton.layer.cornerRadius = mainButton.frame.size.width / 2.0
+            mainButton.cornerCalculation(r: 0.90)
         }
         
         for winButton in buttonWinCollection
         {
-            winButton.layer.cornerRadius = winButton.frame.size.width / 2.0
+            winButton.cornerCalculation(r: 0.90)
         }
         
         for flipButton in buttonFlipperCollection
         {
-            flipButton.layer.cornerRadius = flipButton.frame.size.width / 2.0
+            flipButton.cornerCalculation(r: 0.90)
         }
         
         UpdateModelDelegateInstance = game

@@ -21,7 +21,9 @@ class GameViewController: UIViewController {
         // let widthValue = playButton.frame.size.height / 2.0
         // playButton.layer.cornerRadius = widthValue
         
-        playButton.cornerCalculation(r: 1)
+        print(playButton.frame.height)
+        print(playButton.frame.width)
+        playButton.cornerCalculation(r: 0.90)
         
         // TODO: Add in score / ranking buttons and menus to the interface
         
