@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
         
         print(playButton.frame.height)
         print(playButton.frame.width)
-        playButton.cornerCalculation(r: 0.90)
+        playButton.cornerCalculation(r: 1)
         
         // TODO: Add in score / ranking buttons and menus to the interface
         
