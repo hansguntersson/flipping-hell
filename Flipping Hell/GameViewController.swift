@@ -18,12 +18,12 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // let widthValue = playButton.frame.size.height / 2.0
-        // playButton.layer.cornerRadius = widthValue
+        let widthValue = playButton.frame.size.height / 2.0
+        playButton.layer.cornerRadius = widthValue
         
-        print(playButton.frame.height)
-        print(playButton.frame.width)
-        playButton.cornerCalculation(r: 1)
+        // print(playButton.frame.height)
+        // print(playButton.frame.width)
+        // playButton.cornerCalculation(r: 1)
         
         // TODO: Add in score / ranking buttons and menus to the interface
         
@@ -60,7 +60,8 @@ class GameViewController: UIViewController {
         }
     }
     
-    @IBAction func openTwitter(_ sender: UIButton) {
+    @IBAction func openTwitter(_ sender: UIButton) { // Twitter link on main screen
+        // TODO: Check  twitter works on info.plist
         let screenName = "hansguntersson"
         let appURL = NSURL(string: "twitter://user?screen_name=\(screenName)")! as URL
         let webURL = NSURL(string: "https://twitter.com/\(screenName)")! as URL

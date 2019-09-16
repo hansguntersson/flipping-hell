@@ -59,7 +59,7 @@ class FlippingHell {
         let templevel = Level(sequence: TestArray, goalFlips: 2)
         print(templevel.sequenceID)
  
-         */
+        */
         
         // deleteData()
         // getFromURL()
@@ -217,7 +217,6 @@ class FlippingHell {
             
             let responseString = String(data: data, encoding: .utf8)
             
-            
             print("responseString = \(responseString ?? "No response string")")
         }
         
@@ -229,8 +228,8 @@ class FlippingHell {
     
     func getFromURL() { // TRY TO GET DATA FROM WEB LINK
         
-        //let urlString = "https://hansguntersson.com/flipping-hell/FH_data.json"
-        let urlString = "https://learnappmaking.com/ex/users.json"
+        let urlString = "https://hansguntersson.com/flipping-hell/FH_data.json"
+        // let urlString = "https://learnappmaking.com/ex/users.json"
         
         print(urlString)
         
@@ -271,7 +270,7 @@ class FlippingHell {
         
         // Cycle through and create objects
         
-        var jsonarrayindex = 10 // index of levels to ensure each stage is only 20 items long
+        var jsonarrayindex = 10 // index of levels to ensure each stage is only 10 items long
         var jsonstageindex = -1 // index of stages to cycle through stages
         for jsonlevel in jsonarray {
             
@@ -315,7 +314,6 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         for levelIndex in stages[currentStage] {
             if (levelIndex.isComplete == false) {
                 StageWinTest = false
-                
                 break
             }
         }

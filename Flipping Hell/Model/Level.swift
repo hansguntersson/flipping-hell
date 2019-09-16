@@ -10,7 +10,6 @@ import Foundation
 
 class Level {
     /*
-     
      Data taken in:
      - sequence ID
      - goal flips
@@ -30,7 +29,6 @@ class Level {
      - username
      - date
      - attempts
- 
     */
 
     var sequenceID: Int32 = 0 // The unique sequence ID
