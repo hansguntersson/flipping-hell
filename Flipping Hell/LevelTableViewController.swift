@@ -11,7 +11,7 @@ import UIKit
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateModelLevelsDelegate: class {
-    func requestLevelList(StageID: Int)
+    func requestLevelList()
     func changeLevel(StageID: Int, LevelID: Int)
 }
 
@@ -30,7 +30,6 @@ class LevelTableViewController: UITableViewController {
     
     var levels: [Level] = [] // structure for level
     var CurrentStage = 0 // current stage for identification in
-    var DisplayedStage = 0 // Stage displayed on the level screen
     var CurrentLevel = 0; // current level for basic highlighting
     
     // ********************************** DELEGATES ********************************** //
@@ -45,7 +44,7 @@ class LevelTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
         
         UpdateModelLevelsDelegateInstance = game
-        UpdateModelLevelsDelegateInstance.requestLevelList(StageID: DisplayedStage)
+        UpdateModelLevelsDelegateInstance.requestLevelList()
         
         // TODO: remove this - self.title = "STAGE " + "\(CurrentStage + 1)"
         // TODO: Check if this needs to be amnended on unwind from stage selection too
@@ -98,7 +97,7 @@ class LevelTableViewController: UITableViewController {
             cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
         
-        if (indexPath.row == CurrentLevel && CurrentStage == DisplayedStage) {
+        if (indexPath.row == CurrentLevel && CurrentStage == CurrentStage) {
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             cell.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.9372549057, blue: 0.9568627477, alpha: 1)
         }
@@ -111,7 +110,7 @@ class LevelTableViewController: UITableViewController {
     }
     
     @IBAction func unwindFromStages(segue:UIStoryboardSegue) { // Stage selected and unwind
-        UpdateModelLevelsDelegateInstance.requestLevelList(StageID: DisplayedStage)
+        UpdateModelLevelsDelegateInstance.requestLevelList()
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -119,15 +118,15 @@ class LevelTableViewController: UITableViewController {
         if segue.identifier == "unwindFromLevelsWithSegue" {
             let buttonInstance = sender as! UIButton
             if (buttonInstance.currentTitle == "★") {
-                UpdateModelLevelsDelegateInstance.changeLevel(StageID: DisplayedStage, LevelID: 9)
+                UpdateModelLevelsDelegateInstance.changeLevel(StageID: CurrentStage, LevelID: 9)
             } else {
-                UpdateModelLevelsDelegateInstance.changeLevel(StageID: DisplayedStage, LevelID: Int(buttonInstance.currentTitle ?? "0")! - 1)
+                UpdateModelLevelsDelegateInstance.changeLevel(StageID: CurrentStage, LevelID: Int(buttonInstance.currentTitle ?? "0")! - 1)
             }
         } else if segue.identifier == "LoadStagesSegue" {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! StageCollectionViewController
                 lvc.game = game
-                lvc.SelectedStage = DisplayedStage
+                lvc.SelectedStage = CurrentStage
             }
         }
     }
@@ -148,6 +147,6 @@ extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and pr
         self.CurrentLevel = CurrentLevel
         self.tableView.reloadData()
         
-        self.title = "STAGE " + "\(DisplayedStage + 1)"
+        self.title = "STAGE " + "\(CurrentStage + 1)"
     }
 }

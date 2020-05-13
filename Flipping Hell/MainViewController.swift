@@ -56,16 +56,15 @@ class MainViewController: UIViewController {
                          6, 7, 8, 9,
                          11, 12, 13, 14,
                          16, 17, 18, 19,
-                         21, 22, 23, 24] // List to define when left button is flipped
+                         21, 22, 23, 24] // Defines when bottom on left hand side is flipped
     
     let rightValidNums = [0, 1, 2, 3,
                           5, 6, 7, 8,
                           10, 11, 12, 13,
                           15, 16, 17, 18,
-                          20, 21, 22, 23] // List to define when right button is flipped
+                          20, 21, 22, 23] // Defines when bottom on right hand side is flipped
     
     // ********************************** OUTLETS ********************************** //
-    
     
     @IBOutlet var FlipsLabel: UILabel!
     @IBOutlet var levelTitle: UILabel!

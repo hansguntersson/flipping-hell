@@ -128,7 +128,6 @@ class StageCollectionViewController: UICollectionViewController {
             let superView = buttonInstance.superview?.superview?.superview as! StageCollectionViewCell
             
             if let vc = segue.destination as? LevelTableViewController {
-                vc.DisplayedStage = superView.CellIndex
                 vc.reloadInputViews()
             }
         }

@@ -224,8 +224,6 @@ class FlippingHell {
         
     }
     
-    
-    
     func getFromURL() { // TRY TO GET DATA FROM WEB LINK
         
         let urlString = "https://hansguntersson.com/flipping-hell/FH_data.json"
@@ -267,6 +265,14 @@ class FlippingHell {
         let jsonoutput = try! JSONDecoder().decode(LevelArrayJSON.self, from: data)
         
         let jsonarray = jsonoutput.levelfeed
+        
+        for jsonlevel in jsonarray {
+            
+        }
+        
+        
+        
+        
         
         // Cycle through and create objects
         
@@ -352,9 +358,10 @@ extension FlippingHell: UpdateModelWinDelegate { // Implements update of model f
     }
 }
 
-extension FlippingHell: UpdateModelLevelsDelegate { // Receives request from Level screen for levels
-    func requestLevelList(StageID: Int) {
-        UpdateLevelViewDelegateInstance.receiveLevelList(StageID: StageID, LevelList: stages[StageID], CurrentStage: currentStage, CurrentLevel: currentLevel)
+extension FlippingHell: UpdateModelLevelsDelegate {
+    // Receives request from Level screen for levels
+    func requestLevelList() {
+        UpdateLevelViewDelegateInstance.receiveLevelList(StageID: 0, LevelList: stages[0], CurrentStage: currentStage, CurrentLevel: currentLevel)
     }
     
     func changeLevel(StageID: Int, LevelID: Int) {
