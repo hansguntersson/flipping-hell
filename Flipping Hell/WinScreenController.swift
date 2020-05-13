@@ -99,7 +99,7 @@ class WinScreenController: UIViewController {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.game = self.game
-                lvc.DisplayedStage = self.game?.currentStage ?? 0
+                // lvc.DisplayedStage = self.game?.currentStage ?? 0
                 game!.UpdateLevelViewDelegateInstance = lvc
             }
         }
