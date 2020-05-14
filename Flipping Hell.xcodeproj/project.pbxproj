@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E505D57A246D829200F0FD16 /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E505D579246D829200F0FD16 /* UIRoundedButton.swift */; };
 		E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508CECC216FD98C0029408A /* LevelTableViewCell.swift */; };
 		E543F3F52162B77200329519 /* Orbitron-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F02162B77200329519 /* Orbitron-Black.ttf */; };
 		E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F12162B77200329519 /* Orbitron-Medium.ttf */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E505D579246D829200F0FD16 /* UIRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedButton.swift; sourceTree = "<group>"; };
 		E508CECC216FD98C0029408A /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
 		E543F3F02162B77200329519 /* Orbitron-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Black.ttf"; sourceTree = "<group>"; };
 		E543F3F12162B77200329519 /* Orbitron-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Medium.ttf"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				E5C106BD215408B000947220 /* LaunchScreen.storyboard */,
 				E5C106B8215408AF00947220 /* Main.storyboard */,
 				E5F12CC021B94949004D0176 /* GameViewController.swift */,
+				E505D579246D829200F0FD16 /* UIRoundedButton.swift */,
 				E5C106B6215408AF00947220 /* MainViewController.swift */,
 				E54E2956219A0F120042934E /* WinScreenController.swift */,
 				E56E325B2173612500A16788 /* LevelTableViewController.swift */,
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56E325C2173612500A16788 /* LevelTableViewController.swift in Sources */,
+				E505D57A246D829200F0FD16 /* UIRoundedButton.swift in Sources */,
 				E5EB0F0A223E47330012EEFD /* FlippingHell.xcdatamodeld in Sources */,
 				E5B2FB6E216A8A8400A13D18 /* FlippingHell.swift in Sources */,
 				E5A1C1F321E6292C001E8D90 /* StageCollectionViewCell.swift in Sources */,
