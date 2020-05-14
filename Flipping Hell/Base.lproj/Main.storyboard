@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lMA-s8-8RC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eaX-Lf-uKk">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -138,13 +138,13 @@
         <!--View Controller-->
         <scene sceneID="zHc-4E-kT9">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="eaX-Lf-uKk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainScreen" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="eaX-Lf-uKk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BWZ-ai-Lqb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL 19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuN-GI-4L4">
-                                <rect key="frame" x="137" y="20" width="140" height="25"/>
+                                <rect key="frame" x="137.33333333333337" y="20" width="139.66666666666663" height="25"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -211,20 +211,1003 @@
                                     <action selector="resetLevel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uze-kQ-nL0"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NY4-jW-Iph">
+                                <rect key="frame" x="36" y="75" width="342" height="342"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dDI-kv-qJe">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="62"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IX-oS-Lzg" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8IX-oS-Lzg" secondAttribute="height" multiplier="1:1" id="0yp-rU-NDj"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E1z-XE-BGi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdK-iU-klZ" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mdK-iU-klZ" secondAttribute="height" multiplier="1:1" id="Xby-H4-cQK"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QiI-k9-vKl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysD-Hp-ayn" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="140" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="2"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ysD-Hp-ayn" secondAttribute="height" multiplier="1:1" id="LAt-Nn-JCK"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSW-bQ-On1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pA8-Mf-GYa" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="210" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pA8-Mf-GYa" secondAttribute="height" multiplier="1:1" id="Kl7-Py-j6F"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KP4-pD-0np"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJm-6t-MlR" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="280" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="4"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="aJm-6t-MlR" secondAttribute="height" multiplier="1:1" id="cmK-bK-Hjd"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E3S-oT-VHd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pA8-Mf-GYa" firstAttribute="width" secondItem="8IX-oS-Lzg" secondAttribute="width" id="9PI-3T-IdD"/>
+                                            <constraint firstItem="ysD-Hp-ayn" firstAttribute="width" secondItem="8IX-oS-Lzg" secondAttribute="width" id="QWl-4D-5P3"/>
+                                            <constraint firstItem="aJm-6t-MlR" firstAttribute="width" secondItem="8IX-oS-Lzg" secondAttribute="width" id="ayY-wk-kkt"/>
+                                            <constraint firstItem="mdK-iU-klZ" firstAttribute="width" secondItem="8IX-oS-Lzg" secondAttribute="width" id="wpp-0m-yD2"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=regular" spacing="15"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ier-fu-iRl">
+                                        <rect key="frame" x="0.0" y="70" width="342" height="62"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgJ-7J-Sg8" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="OgJ-7J-Sg8" secondAttribute="height" multiplier="1:1" id="oTv-NR-pfu"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTL-Bl-Eaa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4N-sh-xsn" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="6"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="b4N-sh-xsn" secondAttribute="height" multiplier="1:1" id="YDA-Ch-HbQ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XIe-N8-Hx8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-B8-oGD" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="140" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="7"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pqf-B8-oGD" secondAttribute="height" multiplier="1:1" id="Cvk-d7-ewX"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hE7-kr-fUo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-pi-B0R" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="210" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="8"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nYa-pi-B0R" secondAttribute="height" multiplier="1:1" id="abA-Sa-IQy"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rRg-NX-5Y5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xf-IE-Kg2" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="280" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="9"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9xf-IE-Kg2" secondAttribute="height" multiplier="1:1" id="FL1-UG-SbT"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZJ-ho-zIa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9xf-IE-Kg2" firstAttribute="width" secondItem="OgJ-7J-Sg8" secondAttribute="width" id="2pH-pL-zXU"/>
+                                            <constraint firstItem="pqf-B8-oGD" firstAttribute="width" secondItem="OgJ-7J-Sg8" secondAttribute="width" id="Yd4-io-5CO"/>
+                                            <constraint firstItem="b4N-sh-xsn" firstAttribute="width" secondItem="OgJ-7J-Sg8" secondAttribute="width" id="evO-dm-3pG"/>
+                                            <constraint firstItem="nYa-pi-B0R" firstAttribute="width" secondItem="OgJ-7J-Sg8" secondAttribute="width" id="rEa-k1-3qW"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=regular" spacing="15"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OSV-kg-6UU">
+                                        <rect key="frame" x="0.0" y="140" width="342" height="62"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBs-k9-GSp" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="10"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="JBs-k9-GSp" secondAttribute="height" multiplier="1:1" id="TSP-d8-eUc"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mD-MR-euj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAw-v9-BkQ" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="11"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="VAw-v9-BkQ" secondAttribute="height" multiplier="1:1" id="F01-tZ-b6G"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6h-lL-vbv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeE-fw-Ytl" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="140" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="12"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yeE-fw-Ytl" secondAttribute="height" multiplier="1:1" id="aMm-Et-gwc"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gR4-QH-GtF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAW-1p-FYi" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="210" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="13"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="KAW-1p-FYi" secondAttribute="height" multiplier="1:1" id="c6Q-VZ-2Ji"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xnt-Yy-isE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-f6-gWY" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="280" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="rMs-f6-gWY" secondAttribute="height" multiplier="1:1" id="8vE-YW-rR8"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fX7-ly-IEf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VAw-v9-BkQ" firstAttribute="width" secondItem="JBs-k9-GSp" secondAttribute="width" id="O3r-2y-TBG"/>
+                                            <constraint firstItem="rMs-f6-gWY" firstAttribute="width" secondItem="JBs-k9-GSp" secondAttribute="width" id="bdT-Fr-e9m"/>
+                                            <constraint firstItem="yeE-fw-Ytl" firstAttribute="width" secondItem="JBs-k9-GSp" secondAttribute="width" id="ha0-vJ-H9J"/>
+                                            <constraint firstItem="KAW-1p-FYi" firstAttribute="width" secondItem="JBs-k9-GSp" secondAttribute="width" id="vpm-k4-DMh"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=regular" spacing="15"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="02R-5x-eUP">
+                                        <rect key="frame" x="0.0" y="210" width="342" height="62"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjK-KC-f8l" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gjK-KC-f8l" secondAttribute="height" multiplier="1:1" id="nBJ-7w-sXk"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UB1-xF-S3K"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0J-SN-dVv" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="z0J-SN-dVv" secondAttribute="height" multiplier="1:1" id="9dI-ND-bNS"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h3a-mM-qkr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZg-JD-sDB" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="140" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="dZg-JD-sDB" secondAttribute="height" multiplier="1:1" id="EIa-Dk-v2n"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eGz-Gg-JZS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EME-vO-34A" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="210" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="EME-vO-34A" secondAttribute="height" multiplier="1:1" id="Tg3-gO-5Z2"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="33i-gx-okn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-92-agT" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="280" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fdd-92-agT" secondAttribute="height" multiplier="1:1" id="un4-cf-VP3"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NwN-Tg-cxL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="z0J-SN-dVv" firstAttribute="width" secondItem="gjK-KC-f8l" secondAttribute="width" id="UXp-Yl-4PI"/>
+                                            <constraint firstItem="fdd-92-agT" firstAttribute="width" secondItem="gjK-KC-f8l" secondAttribute="width" id="bDL-nP-xnL"/>
+                                            <constraint firstItem="EME-vO-34A" firstAttribute="width" secondItem="gjK-KC-f8l" secondAttribute="width" id="ndE-Gt-1JZ"/>
+                                            <constraint firstItem="dZg-JD-sDB" firstAttribute="width" secondItem="gjK-KC-f8l" secondAttribute="width" id="uSO-XW-SrE"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=regular" spacing="15"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="D3z-jq-9hV">
+                                        <rect key="frame" x="0.0" y="280" width="342" height="62"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-ik-vhs" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="EP2-ik-vhs" secondAttribute="height" multiplier="1:1" id="iRK-J9-eNh"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VE2-Mb-J0i"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJj-ju-wwF" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="VJj-ju-wwF" secondAttribute="height" multiplier="1:1" id="6Iq-mK-oSO"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rC4-Dh-S1G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vub-aj-E5J" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="140" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Vub-aj-E5J" secondAttribute="height" multiplier="1:1" id="2KF-ra-L3m"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="soh-xU-Dwf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEi-3U-m6a" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="210" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yEi-3U-m6a" secondAttribute="height" multiplier="1:1" id="Bzt-hJ-TJI"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fyN-75-mEg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fB8-gz-wuJ" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="280" y="0.0" width="62" height="62"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fB8-gz-wuJ" secondAttribute="height" multiplier="1:1" id="ljP-IC-2d7"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nmn-kn-VZf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fB8-gz-wuJ" firstAttribute="width" secondItem="EP2-ik-vhs" secondAttribute="width" id="Hg7-rw-029"/>
+                                            <constraint firstItem="Vub-aj-E5J" firstAttribute="width" secondItem="EP2-ik-vhs" secondAttribute="width" id="NnS-s2-0XK"/>
+                                            <constraint firstItem="VJj-ju-wwF" firstAttribute="width" secondItem="EP2-ik-vhs" secondAttribute="width" id="Sic-Ft-MaY"/>
+                                            <constraint firstItem="yEi-3U-m6a" firstAttribute="width" secondItem="EP2-ik-vhs" secondAttribute="width" id="X0w-hm-ZOp"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=regular" spacing="15"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EP2-ik-vhs" firstAttribute="width" secondItem="8IX-oS-Lzg" secondAttribute="width" id="04j-uz-iL4"/>
+                                    <constraint firstItem="gjK-KC-f8l" firstAttribute="width" secondItem="8IX-oS-Lzg" secondAttribute="width" id="J5Z-Sz-GJ6"/>
+                                    <constraint firstItem="Ier-fu-iRl" firstAttribute="height" secondItem="dDI-kv-qJe" secondAttribute="height" id="JDF-jo-1Qm"/>
+                                    <constraint firstItem="D3z-jq-9hV" firstAttribute="height" secondItem="dDI-kv-qJe" secondAttribute="height" id="Sc1-2K-zwv"/>
+                                    <constraint firstItem="02R-5x-eUP" firstAttribute="height" secondItem="dDI-kv-qJe" secondAttribute="height" id="dy4-QA-eSS"/>
+                                    <constraint firstItem="OSV-kg-6UU" firstAttribute="height" secondItem="dDI-kv-qJe" secondAttribute="height" id="pGT-oW-Yg9"/>
+                                    <constraint firstItem="OgJ-7J-Sg8" firstAttribute="width" secondItem="8IX-oS-Lzg" secondAttribute="width" id="uYC-2z-NVZ"/>
+                                    <constraint firstItem="JBs-k9-GSp" firstAttribute="width" secondItem="8IX-oS-Lzg" secondAttribute="width" id="yCJ-Hg-Rg3"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gK2-bn-1TJ">
+                                <rect key="frame" x="36" y="467" width="166" height="166"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6mq-tx-Ias">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOg-LW-oK6" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="BOg-LW-oK6" secondAttribute="height" multiplier="1:1" id="byc-Ik-dZ2"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-c1-M0f" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="34" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="5qb-c1-M0f" secondAttribute="height" multiplier="1:1" id="apI-by-ESR"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enA-aG-YDH" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="enA-aG-YDH" secondAttribute="height" multiplier="1:1" id="hlM-gO-8UR"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKG-B9-449" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yKG-B9-449" secondAttribute="height" multiplier="1:1" id="1SA-Tz-hYp"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZM-T0-EgP" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="136" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oZM-T0-EgP" secondAttribute="height" multiplier="1:1" id="99h-BH-MTz"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="QTa-Mb-gXg">
+                                        <rect key="frame" x="0.0" y="34" width="166" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bag-xi-je8" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Bag-xi-je8" secondAttribute="height" multiplier="1:1" id="SrD-9V-qTI"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blA-Yx-4dE" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="34" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="blA-Yx-4dE" secondAttribute="height" multiplier="1:1" id="lAa-Qr-6O5"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7l-Ih-TGp" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="H7l-Ih-TGp" secondAttribute="height" multiplier="1:1" id="Okd-9X-b18"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNp-c1-02w" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="vNp-c1-02w" secondAttribute="height" multiplier="1:1" id="f3K-FW-pkH"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fby-O3-fkU" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="136" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Fby-O3-fkU" secondAttribute="height" multiplier="1:1" id="egZ-FP-qia"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jZP-fz-Nmy">
+                                        <rect key="frame" x="0.0" y="68" width="166" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-HN-KQN" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="n3v-HN-KQN" secondAttribute="height" multiplier="1:1" id="IjX-54-ZRP"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUd-eG-d4X" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="34" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="wUd-eG-d4X" secondAttribute="height" multiplier="1:1" id="Rn3-VV-uLW"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0r-al-ccC" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="y0r-al-ccC" secondAttribute="height" multiplier="1:1" id="aEa-jD-QRC"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xih-CH-Dq7" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="xih-CH-Dq7" secondAttribute="height" multiplier="1:1" id="Epf-6o-8Gj"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsS-S7-Kef" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="136" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="AsS-S7-Kef" secondAttribute="height" multiplier="1:1" id="J7S-zR-vKy"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PNp-cI-VzT">
+                                        <rect key="frame" x="0.0" y="102" width="166" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q21-6f-yiJ" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Q21-6f-yiJ" secondAttribute="height" multiplier="1:1" id="7bJ-3h-hD2"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpR-La-Dhi" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="34" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gpR-La-Dhi" secondAttribute="height" multiplier="1:1" id="1DZ-iu-oOj"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kb-FL-z1j" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="5kb-FL-z1j" secondAttribute="height" multiplier="1:1" id="Q5j-aN-LnV"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiN-tI-11m" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="JiN-tI-11m" secondAttribute="height" multiplier="1:1" id="zQn-4d-uOP"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Baf-FK-Xp9" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="136" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Baf-FK-Xp9" secondAttribute="height" multiplier="1:1" id="tAX-U2-n8A"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gy6-Tr-7R0">
+                                        <rect key="frame" x="0.0" y="136" width="166" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK8-d6-nqm" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zK8-d6-nqm" secondAttribute="height" multiplier="1:1" id="fPg-us-b3v"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXn-DZ-4Zh" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="34" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="aXn-DZ-4Zh" secondAttribute="height" multiplier="1:1" id="yUc-rF-dIa"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueD-SG-Eiu" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="68" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ueD-SG-Eiu" secondAttribute="height" multiplier="1:1" id="LhQ-GN-oqV"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFI-bF-ONP" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="RFI-bF-ONP" secondAttribute="height" multiplier="1:1" id="xFQ-xo-4jK"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzE-1I-q2h" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="136" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="EzE-1I-q2h" secondAttribute="height" multiplier="1:1" id="FTV-rt-gOF"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0aR-uF-ydv">
+                                <rect key="frame" x="212" y="467" width="166" height="166"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oLz-yO-hkp">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJr-Ip-xgr" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GJr-Ip-xgr" secondAttribute="height" multiplier="1:1" id="XuD-lk-hjw"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5h-JS-Go7" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="t5h-JS-Go7" secondAttribute="height" multiplier="1:1" id="PuJ-no-RtU"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17g-fC-il3" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="116" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="17g-fC-il3" secondAttribute="height" multiplier="1:1" id="ddG-jf-1Hj"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wYC-j6-NSC">
+                                        <rect key="frame" x="0.0" y="58" width="166" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uf9-bu-pAh" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="uf9-bu-pAh" secondAttribute="height" multiplier="1:1" id="OPj-OR-1Z5"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tS-Nx-mNu" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4tS-Nx-mNu" secondAttribute="height" multiplier="1:1" id="2yZ-8S-y3r"/>
+                                                </constraints>
+                                                <state key="normal" title="⚫️">
+                                                    <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTA-bs-adD" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="116" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="tTA-bs-adD" secondAttribute="height" multiplier="1:1" id="FqK-BV-5Ie"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ysB-o6-vav">
+                                        <rect key="frame" x="0.0" y="116" width="166" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7A6-Gb-NCh" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7A6-Gb-NCh" secondAttribute="height" multiplier="1:1" id="nEX-Tr-bo0"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4d-PX-KpI" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="a4d-PX-KpI" secondAttribute="height" multiplier="1:1" id="U5N-39-9w2"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqv-V5-x6h" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
+                                                <rect key="frame" x="116" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nqv-V5-x6h" secondAttribute="height" multiplier="1:1" id="Vei-hx-jRm"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oLz-yO-hkp" firstAttribute="height" secondItem="wYC-j6-NSC" secondAttribute="height" id="1ML-KZ-pt1"/>
+                                    <constraint firstItem="oLz-yO-hkp" firstAttribute="height" secondItem="ysB-o6-vav" secondAttribute="height" id="5Ys-6Y-95h"/>
+                                    <constraint firstAttribute="width" secondItem="0aR-uF-ydv" secondAttribute="height" id="nQy-E3-NQ4"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="XoO-cJ-Gm3" firstAttribute="bottom" secondItem="FRp-mO-Ld6" secondAttribute="bottom" constant="15" id="1rX-dM-Gg9"/>
                             <constraint firstItem="KuN-GI-4L4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EdM-gL-kKL" secondAttribute="trailing" constant="15" id="2X4-YL-2AO"/>
                             <constraint firstItem="KuN-GI-4L4" firstAttribute="top" secondItem="XoO-cJ-Gm3" secondAttribute="top" constant="20" id="4HT-jW-tFu"/>
+                            <constraint firstItem="0aR-uF-ydv" firstAttribute="trailing" secondItem="NY4-jW-Iph" secondAttribute="trailing" id="5RY-Hj-GBs"/>
+                            <constraint firstItem="XoO-cJ-Gm3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NY4-jW-Iph" secondAttribute="trailing" constant="20" id="6WZ-I9-Yjr"/>
+                            <constraint firstItem="NY4-jW-Iph" firstAttribute="width" secondItem="BWZ-ai-Lqb" secondAttribute="width" multiplier="0.8" id="7fN-AT-WhL"/>
+                            <constraint firstItem="0aR-uF-ydv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NY4-jW-Iph" secondAttribute="bottom" constant="25" id="95q-nO-lCW"/>
+                            <constraint firstItem="gK2-bn-1TJ" firstAttribute="leading" secondItem="NY4-jW-Iph" secondAttribute="leading" id="Dug-wn-qmj"/>
+                            <constraint firstItem="gK2-bn-1TJ" firstAttribute="centerX" secondItem="0aR-uF-ydv" secondAttribute="centerX" id="HvA-nw-b6c"/>
+                            <constraint firstItem="gK2-bn-1TJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NY4-jW-Iph" secondAttribute="bottom" constant="25" id="KyQ-W1-IaW"/>
                             <constraint firstItem="KuN-GI-4L4" firstAttribute="centerX" secondItem="XoO-cJ-Gm3" secondAttribute="centerX" id="Pox-dP-NiN"/>
                             <constraint firstItem="XoO-cJ-Gm3" firstAttribute="bottom" secondItem="1eG-qR-93l" secondAttribute="bottom" constant="20" id="TBw-sA-26m"/>
+                            <constraint firstItem="0aR-uF-ydv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gK2-bn-1TJ" secondAttribute="trailing" constant="10" id="VSO-4F-xdY"/>
                             <constraint firstItem="EdM-gL-kKL" firstAttribute="top" secondItem="XoO-cJ-Gm3" secondAttribute="top" constant="15" id="WLu-ZR-EeM"/>
                             <constraint firstItem="XoO-cJ-Gm3" firstAttribute="trailing" secondItem="FRp-mO-Ld6" secondAttribute="trailing" constant="15" id="XLE-Dj-D7T"/>
+                            <constraint firstItem="NY4-jW-Iph" firstAttribute="width" secondItem="NY4-jW-Iph" secondAttribute="height" multiplier="1:1" id="Xtw-j9-9Bu"/>
+                            <constraint firstItem="NY4-jW-Iph" firstAttribute="top" secondItem="KuN-GI-4L4" secondAttribute="bottom" constant="30" id="aP6-7Q-FSF"/>
                             <constraint firstItem="iid-da-cCA" firstAttribute="leading" secondItem="XoO-cJ-Gm3" secondAttribute="leading" constant="15" id="cRA-rK-byF"/>
                             <constraint firstItem="XoO-cJ-Gm3" firstAttribute="bottom" secondItem="iid-da-cCA" secondAttribute="bottom" constant="15" id="dEa-og-IGO"/>
+                            <constraint firstItem="NY4-jW-Iph" firstAttribute="centerX" secondItem="XoO-cJ-Gm3" secondAttribute="centerX" id="ejI-pz-PPv"/>
+                            <constraint firstItem="0aR-uF-ydv" firstAttribute="height" secondItem="gK2-bn-1TJ" secondAttribute="height" id="es9-n4-slq"/>
                             <constraint firstItem="EdM-gL-kKL" firstAttribute="leading" secondItem="XoO-cJ-Gm3" secondAttribute="leading" constant="15" id="oFe-DZ-kWe"/>
                             <constraint firstItem="1eG-qR-93l" firstAttribute="centerX" secondItem="XoO-cJ-Gm3" secondAttribute="centerX" id="pFs-O9-0V6"/>
+                            <constraint firstItem="1eG-qR-93l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0aR-uF-ydv" secondAttribute="bottom" constant="20" id="qHW-1Q-S22"/>
+                            <constraint firstItem="NY4-jW-Iph" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XoO-cJ-Gm3" secondAttribute="leading" constant="20" id="qeo-JR-sM5"/>
                             <constraint firstItem="1eG-qR-93l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iid-da-cCA" secondAttribute="trailing" id="zDn-39-nFh"/>
                             <constraint firstItem="FRp-mO-Ld6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1eG-qR-93l" secondAttribute="trailing" constant="15" id="zXm-LD-sBP"/>
                         </constraints>
@@ -235,7 +1218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Y5-Qd-sCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-77639.130434782608" y="-5468.4782608695659"/>
+            <point key="canvasLocation" x="-79949" y="-4797"/>
         </scene>
         <!--LEVELS-->
         <scene sceneID="HW2-aE-ejK">
@@ -269,9 +1252,6 @@
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                             </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <segue destination="eaX-Lf-uKk" kind="show" id="yZQ-vd-71U"/>
-                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS X/X" textAlignment="natural" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
                                             <rect key="frame" x="79.999999999999986" y="23" width="138.66666666666663" height="24"/>
@@ -329,13 +1309,13 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainScreenOld" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zSS-ky-ncw">
-                                <rect key="frame" x="41.333333333333343" y="80" width="331.33333333333326" height="331.33333333333331"/>
+                                <rect key="frame" x="41.333333333333343" y="85" width="331.33333333333326" height="331.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gwq-aK-eyh">
                                         <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="60"/>
@@ -787,7 +1767,7 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="edz-eu-b6a">
-                                <rect key="frame" x="41.333333333333329" y="461.33333333333326" width="147.33333333333337" height="147"/>
+                                <rect key="frame" x="41.333333333333329" y="466.33333333333326" width="147.33333333333337" height="147"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FBu-sj-7N8">
                                         <rect key="frame" x="0.0" y="0.0" width="147.33333333333334" height="26"/>
@@ -1212,7 +2192,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-2T-XqP" userLabel="FlipsLabel">
-                                <rect key="frame" x="148.66666666666666" y="691" width="116.66666666666666" height="25"/>
+                                <rect key="frame" x="159.66666666666666" y="686.66666666666663" width="95" height="29.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="jqt-Hr-bNX"/>
                                 </constraints>
@@ -1234,7 +2214,7 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WBP-0A-RtF">
-                                <rect key="frame" x="225.33333333333331" y="461.33333333333326" width="147.33333333333331" height="147"/>
+                                <rect key="frame" x="225.33333333333331" y="466.33333333333326" width="147.33333333333331" height="147"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T7D-V6-QQc">
                                         <rect key="frame" x="0.0" y="0.0" width="147.33333333333334" height="43.666666666666664"/>
@@ -1319,7 +2299,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL 19" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-aJ-FAB">
-                                <rect key="frame" x="123.33333333333333" y="20" width="167.66666666666669" height="30"/>
+                                <rect key="frame" x="142" y="20" width="130.33333333333337" height="35"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1552,107 +2532,56 @@
             </objects>
             <point key="canvasLocation" x="-76536" y="-4978"/>
         </scene>
-        <!--Help View Controller-->
-        <scene sceneID="nYe-xn-huK">
+        <!--View Controller-->
+        <scene sceneID="r7w-Se-PbL">
             <objects>
-                <viewController storyboardIdentifier="HelpScreen" id="xvK-cP-GKh" customClass="HelpViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L8M-qs-L85">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                <viewController id="xuQ-Y5-3G3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZzG-7L-NGz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gS-Qc-Toc">
-                                <rect key="frame" x="10" y="10" width="394" height="1480"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuJ-JA-Gnd" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="1480"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO PLAY" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-hX-03X">
-                                                <rect key="frame" x="66" y="39" width="261" height="32"/>
-                                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-Gc-qAn">
-                                                <rect key="frame" x="356" y="8" width="30" height="30"/>
-                                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="tsQ-lw-LvB"/>
-                                                    <constraint firstAttribute="width" secondItem="4qe-Gc-qAn" secondAttribute="height" multiplier="1:1" id="uPq-dj-qWD"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="✕">
-                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="15"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="backToMainGameScreen:" destination="xvK-cP-GKh" eventType="touchUpInside" id="kf4-4B-6KO"/>
-                                                </connections>
-                                            </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bic-2n-5zG">
-                                                <rect key="frame" x="10" y="532" width="374" height="178"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(1) Click in this grid to flip a set of three buttons to another colour " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-s0-jGw">
-                                                        <rect key="frame" x="17.333333333333343" y="0.0" width="339.33333333333326" height="48"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(2) This grid shows the pattern you need to try to create" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuF-vG-nSp">
-                                                        <rect key="frame" x="0.0" y="65" width="374" height="48"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(3) This grid shows the three buttons you'll flip, based on the centre button" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab2-Yk-Bbv">
-                                                        <rect key="frame" x="0.33333333333334281" y="130" width="373.33333333333326" height="48"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="4qe-Gc-qAn" secondAttribute="trailing" constant="8" id="Gbr-UX-P7y"/>
-                                            <constraint firstItem="sBf-hX-03X" firstAttribute="top" secondItem="tuJ-JA-Gnd" secondAttribute="top" constant="39" id="IUH-va-xnS"/>
-                                            <constraint firstItem="Bic-2n-5zG" firstAttribute="leading" secondItem="tuJ-JA-Gnd" secondAttribute="leading" constant="10" id="LoU-mG-NZG"/>
-                                            <constraint firstAttribute="trailing" secondItem="Bic-2n-5zG" secondAttribute="trailing" constant="10" id="hJ5-Sf-88N"/>
-                                            <constraint firstItem="4qe-Gc-qAn" firstAttribute="top" secondItem="tuJ-JA-Gnd" secondAttribute="top" constant="8" id="nGW-xW-B1n"/>
-                                            <constraint firstItem="sBf-hX-03X" firstAttribute="centerX" secondItem="tuJ-JA-Gnd" secondAttribute="centerX" id="o1B-Aw-SWd"/>
-                                            <constraint firstItem="Bic-2n-5zG" firstAttribute="top" secondItem="sBf-hX-03X" secondAttribute="bottom" constant="461" id="pfO-VF-2PM"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="tuJ-JA-Gnd" firstAttribute="leading" secondItem="3gS-Qc-Toc" secondAttribute="leading" id="V4P-h4-vBk"/>
-                                    <constraint firstAttribute="trailing" secondItem="tuJ-JA-Gnd" secondAttribute="trailing" id="ep1-Rg-V3p"/>
-                                    <constraint firstItem="tuJ-JA-Gnd" firstAttribute="width" secondItem="3gS-Qc-Toc" secondAttribute="width" id="g8N-sW-ZaU"/>
-                                    <constraint firstItem="tuJ-JA-Gnd" firstAttribute="height" secondItem="3gS-Qc-Toc" secondAttribute="height" priority="250" id="q4t-fw-TpG"/>
-                                    <constraint firstAttribute="bottom" secondItem="tuJ-JA-Gnd" secondAttribute="bottom" id="tQq-r2-ZJV"/>
-                                    <constraint firstItem="tuJ-JA-Gnd" firstAttribute="top" secondItem="3gS-Qc-Toc" secondAttribute="top" id="uyh-aM-9Na"/>
-                                </constraints>
-                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOW TO PLAY" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-UZ-eW2">
+                                <rect key="frame" x="54" y="42" width="261.33333333333326" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(3) This grid shows the three buttons you'll flip, based on the centre button" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab2-Yk-Bbv">
+                                <rect key="frame" x="28" y="408" width="641.33333333333337" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiI-hl-itI">
+                                <rect key="frame" x="46" y="135" width="324" height="198"/>
+                                <string key="text">(1) Click in this grid to flip a set of three buttons to another colour
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(2) This grid shows the pattern you need to try to create" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjz-P1-H6K">
+                                <rect key="frame" x="54" y="312" width="295" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zbE-dd-AW7" firstAttribute="trailing" secondItem="3gS-Qc-Toc" secondAttribute="trailing" constant="10" id="59C-c9-Kvt"/>
-                            <constraint firstItem="3gS-Qc-Toc" firstAttribute="top" secondItem="zbE-dd-AW7" secondAttribute="top" constant="10" id="B4t-NW-efW"/>
-                            <constraint firstItem="zbE-dd-AW7" firstAttribute="bottom" secondItem="3gS-Qc-Toc" secondAttribute="bottom" constant="10" id="JLB-Dy-q5v"/>
-                            <constraint firstItem="3gS-Qc-Toc" firstAttribute="leading" secondItem="zbE-dd-AW7" secondAttribute="leading" constant="10" id="hYP-UE-hMb"/>
+                            <constraint firstItem="u0o-6P-cT9" firstAttribute="trailing" secondItem="RiI-hl-itI" secondAttribute="trailing" constant="44" id="6Bm-rM-07C"/>
+                            <constraint firstItem="RiI-hl-itI" firstAttribute="leading" secondItem="u0o-6P-cT9" secondAttribute="leading" constant="46" id="bJp-5W-JXa"/>
+                            <constraint firstItem="RiI-hl-itI" firstAttribute="centerX" secondItem="u0o-6P-cT9" secondAttribute="centerX" id="mxc-qj-2Qm"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="zbE-dd-AW7"/>
+                        <viewLayoutGuide key="safeArea" id="u0o-6P-cT9"/>
                     </view>
-                    <size key="freeformSize" width="414" height="1500"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rl9-fO-5Xq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4R-0O-ArC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-77552" y="-4471"/>
+            <point key="canvasLocation" x="-77662.318840579712" y="-4757.608695652174"/>
         </scene>
         <!--Win Screen Controller-->
         <scene sceneID="qiU-yJ-KnD">

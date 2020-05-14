@@ -135,7 +135,6 @@ class LevelTableViewController: UITableViewController {
         let indexPath = NSIndexPath(row: 9, section: 0)
         self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
     }
-    
 }
 
 // ********************************** EXTENSIONS ********************************** //
