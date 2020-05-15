@@ -97,7 +97,7 @@ class GameViewController: UIViewController {
     }
 }
 
-extension UIButton {
+ extension UIButton {
     func cornerCalculation(r: CGFloat) {
         self.layer.cornerRadius = self.frame.height / 2 * r
     }
