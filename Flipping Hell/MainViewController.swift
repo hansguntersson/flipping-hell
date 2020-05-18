@@ -292,13 +292,6 @@ class MainViewController: UIViewController {
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum
             }
-        } else if segue.identifier == "LoadLevelsSegue" {
-            if let vc = segue.destination as? UINavigationController {
-                let lvc = vc.children[0] as! LevelTableViewController
-                lvc.game = self.game
-                // lvc.DisplayedStage = self.game?.currentStage ?? 0
-                game!.UpdateLevelViewDelegateInstance = lvc
-            }
         }
     }
 }

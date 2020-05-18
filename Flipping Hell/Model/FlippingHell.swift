@@ -267,7 +267,6 @@ class FlippingHell {
         let jsonarray = jsonoutput.levelfeed
         
         for jsonlevel in jsonarray {
-            
         }
         
         

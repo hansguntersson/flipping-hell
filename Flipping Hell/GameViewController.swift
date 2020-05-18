@@ -38,7 +38,7 @@ class GameViewController: UIViewController {
         
     }
     
-    // ********************************** FUNCTIONS ********************************** //
+    // ********************************** SEGUES ********************************** //
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
@@ -48,10 +48,17 @@ class GameViewController: UIViewController {
                 vc.game = self.game
                 game.UpdateMainViewDelegateInstance = vc
             }
-        } else if segue.identifier == "loadOptionsSegue" {
-            print("Options Segue")
+        } else if segue.identifier == "LoadLevelsSegue" {
+            if let vc = segue.destination as? UINavigationController {
+                let lvc = vc.children[0] as! LevelTableViewController
+                lvc.game = self.game
+                // lvc.DisplayedStage = self.game.currentStage ?? 0
+                // game!.UpdateLevelViewDelegateInstance = lvc
+            }
         }
     }
+    
+    // ********************************** LINKS ********************************** //
     
     @IBAction func openTwitter(_ sender: UIButton) { // Twitter link on main screen
         // TODO: Check  twitter works on info.plist
@@ -68,6 +75,8 @@ class GameViewController: UIViewController {
         }
     }
 }
+
+// ********************************** EXTENSIONS ********************************** //
 
 @IBDesignable extension UIView {
     
