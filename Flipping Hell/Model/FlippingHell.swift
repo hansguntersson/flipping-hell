@@ -33,6 +33,7 @@ class FlippingHell {
     var stages = [[Level]]()
     
     var currentLevel = 0
+    var currentStage = 0
     
     // TODO: Ensure these arrays are appropriately generated
     var stageUnlocks: [Bool] = []
@@ -47,8 +48,6 @@ class FlippingHell {
     struct LevelArrayJSON: Codable {
         let levelfeed: [LevelJSON]
     }
-    
-    var currentStage = 0
     
     init() {
         loadLevels()
@@ -265,21 +264,14 @@ class FlippingHell {
         let jsonoutput = try! JSONDecoder().decode(LevelArrayJSON.self, from: data)
         
         let jsonarray = jsonoutput.levelfeed
-        
-        for jsonlevel in jsonarray {
-        }
-        
-        
-        
-        
-        
+
         // Cycle through and create objects
         
-        var jsonarrayindex = 10 // index of levels to ensure each stage is only 10 items long
+        var jsonarrayindex = 20 // index of levels to ensure each stage is only 10 items long
         var jsonstageindex = -1 // index of stages to cycle through stages
         for jsonlevel in jsonarray {
             
-            if (jsonarrayindex == 10) {
+            if (jsonarrayindex == 20) {
                 jsonarrayindex = 0
                 jsonstageindex += 1
                 
@@ -297,6 +289,7 @@ class FlippingHell {
             jsonarrayindex += 1
             
             stageUnlocks[0] = true // ensures that the first level is available
+            
         }
     }
 }
@@ -346,7 +339,7 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
 
 extension FlippingHell: UpdateModelWinDelegate { // Implements update of model from Win view
     func nextLevel() {
-        if (currentLevel < 9) {
+        if (currentLevel < 19) {
             currentLevel += 1
         } else {
             if (currentStage < 62 ) { // TODO: remove this logic restriction, game won should generate new stage

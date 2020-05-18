@@ -43,19 +43,24 @@ class GameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "GameStartSegue" {
+        
+        if segue.identifier == "LoadLevelsSegue" {
+            if let vc = segue.destination as? UINavigationController {
+                let lvc = vc.children[0] as! LevelTableViewController
+                lvc.game = self.game
+                game.UpdateLevelViewDelegateInstance = lvc
+                //lvc.DisplayedStage = self.game.currentStage ?? 0
+                
+            }
+        }
+        
+        // TODO: remove this segue
+        /* if segue.identifier == "GameStartSegue" {
             if let vc = segue.destination as? MainViewController {
                 vc.game = self.game
                 game.UpdateMainViewDelegateInstance = vc
             }
-        } else if segue.identifier == "LoadLevelsSegue" {
-            if let vc = segue.destination as? UINavigationController {
-                let lvc = vc.children[0] as! LevelTableViewController
-                lvc.game = self.game
-                // lvc.DisplayedStage = self.game.currentStage ?? 0
-                // game!.UpdateLevelViewDelegateInstance = lvc
-            }
-        }
+        } */
     }
     
     // ********************************** LINKS ********************************** //

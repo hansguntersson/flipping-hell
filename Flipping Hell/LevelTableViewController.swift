@@ -29,7 +29,7 @@ class LevelTableViewController: UITableViewController {
     // TODO: Change output for orientation to show more text - goal and flips
     
     var levels: [Level] = [] // structure for level
-    var CurrentStage = 0 // current stage for identification in
+    var CurrentStage = 0 // current stage for sorting sections
     var CurrentLevel = 0; // current level for basic highlighting
     
     // ********************************** DELEGATES ********************************** //
@@ -71,7 +71,7 @@ class LevelTableViewController: UITableViewController {
         //  TODO: Should this reference be removed as it's accessing values directly?
         let thisLevel = levels[indexPath.row]
         
-        if (indexPath.row == 9) {
+        if (indexPath.row == 19) {
             cell.levelIndex.setTitle("★", for: .normal)
         } else {
             cell.levelIndex.setTitle(String(indexPath.row + 1), for: .normal)
@@ -145,6 +145,8 @@ extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and pr
         self.CurrentStage = CurrentStage
         self.CurrentLevel = CurrentLevel
         self.tableView.reloadData()
+        
+        // TODO: Navigate to the right level immediately
         
         self.title = "STAGE " + "\(CurrentStage + 1)"
     }
