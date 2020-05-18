@@ -69,10 +69,11 @@ class StageCollectionViewController: UICollectionViewController {
         return self.stages.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> StageCollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell: StageCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! StageCollectionViewCell
+        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! UICollectionViewCell
     
+        /*
         // Configure the cell
         let thisStage = stages[indexPath.row]
         cell.CellIndex = indexPath.row
@@ -113,7 +114,8 @@ class StageCollectionViewController: UICollectionViewController {
             cell.cellLabel.textColor = #colorLiteral(red: 0.2127193809, green: 0.5863756537, blue: 0.7115346193, alpha: 1)
         }
         cell.cellLabel.text = String(indexPath.row + 1)
-        
+
+         */
         return cell
     }
     
@@ -125,7 +127,7 @@ class StageCollectionViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwindFromStagesWithSegue" {
             let buttonInstance = sender as! UIButton
-            let superView = buttonInstance.superview?.superview?.superview as! StageCollectionViewCell
+            let superView = buttonInstance.superview?.superview?.superview as! UICollectionViewCell
             
             if let vc = segue.destination as? LevelTableViewController {
                 vc.reloadInputViews()

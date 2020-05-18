@@ -20,7 +20,6 @@
 		E56E325A21735E8200A16788 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E325921735E8200A16788 /* Level.swift */; };
 		E56E325C2173612500A16788 /* LevelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E325B2173612500A16788 /* LevelTableViewController.swift */; };
 		E5A1C1F121E36925001E8D90 /* StageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */; };
-		E5A1C1F321E6292C001E8D90 /* StageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1C1F221E6292C001E8D90 /* StageCollectionViewCell.swift */; };
 		E5B2FB6E216A8A8400A13D18 /* FlippingHell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2FB6D216A8A8400A13D18 /* FlippingHell.swift */; };
 		E5C106B5215408AF00947220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106B4215408AF00947220 /* AppDelegate.swift */; };
 		E5C106B7215408AF00947220 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106B6215408AF00947220 /* MainViewController.swift */; };
@@ -65,7 +64,6 @@
 		E56E325921735E8200A16788 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		E56E325B2173612500A16788 /* LevelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewController.swift; sourceTree = "<group>"; };
 		E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCollectionViewController.swift; sourceTree = "<group>"; };
-		E5A1C1F221E6292C001E8D90 /* StageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5B2FB6D216A8A8400A13D18 /* FlippingHell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippingHell.swift; sourceTree = "<group>"; };
 		E5C106B1215408AF00947220 /* Flipping Hell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flipping Hell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C106B4215408AF00947220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				E5C106B6215408AF00947220 /* MainViewController.swift */,
 				E54E2956219A0F120042934E /* WinScreenController.swift */,
 				E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */,
-				E5A1C1F221E6292C001E8D90 /* StageCollectionViewCell.swift */,
 				E505D579246D829200F0FD16 /* UIRoundedButton.swift */,
 				E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */,
 				E5AB86EB21DE6C3800337825 /* Model */,
@@ -341,7 +338,6 @@
 				E505D57A246D829200F0FD16 /* UIRoundedButton.swift in Sources */,
 				E5EB0F0A223E47330012EEFD /* FlippingHell.xcdatamodeld in Sources */,
 				E5B2FB6E216A8A8400A13D18 /* FlippingHell.swift in Sources */,
-				E5A1C1F321E6292C001E8D90 /* StageCollectionViewCell.swift in Sources */,
 				E5C106B7215408AF00947220 /* MainViewController.swift in Sources */,
 				E54E2957219A0F120042934E /* WinScreenController.swift in Sources */,
 				E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */,

@@ -53,11 +53,11 @@ class LevelTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return levels.count
+        return levels.count / 2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -131,8 +131,20 @@ class LevelTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "STAGE \(section + 1)"
+    }
+    
+    
+    /*override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let vw = UIView()
+        vw.backgroundColor = UIColor.white
+        return vw
+    }*/
+    
+    
     func scrollToFirstRow() {
-        let indexPath = NSIndexPath(row: 9, section: 0)
+        let indexPath = NSIndexPath(row: 0, section: 0)
         self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
     }
 }
@@ -147,7 +159,8 @@ extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and pr
         self.tableView.reloadData()
         
         // TODO: Navigate to the right level immediately
+        scrollToFirstRow()
         
-        self.title = "STAGE " + "\(CurrentStage + 1)"
+        self.title = "LEVEL SELECT"
     }
 }

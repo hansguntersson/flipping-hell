@@ -170,7 +170,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="xuQ-Y5-3G3" kind="presentation" id="scz-tB-k3D"/>
+                                    <segue destination="xuQ-Y5-3G3" kind="presentation" modalPresentationStyle="automatic" modalTransitionStyle="coverVertical" id="scz-tB-k3D"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eG-qR-93l" userLabel="FlipsLabel">
@@ -1162,11 +1162,29 @@
         <!--View Controller-->
         <scene sceneID="EEW-a0-SVo">
             <objects>
-                <viewController id="UIH-JX-zbw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScoreScreen" modalTransitionStyle="flipHorizontal" modalPresentationStyle="formSheet" id="UIH-JX-zbw" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HN1-EP-ucz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="5uh-oN-0Dr">
+                                <rect key="frame" x="15" y="15" width="35" height="35"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="23"/>
+                                <state key="normal" title="⮐ ">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5uh-oN-0Dr" firstAttribute="top" secondItem="SYw-VJ-8ya" secondAttribute="top" constant="15" id="O2p-eK-UTH"/>
+                            <constraint firstItem="5uh-oN-0Dr" firstAttribute="leading" secondItem="SYw-VJ-8ya" secondAttribute="leading" constant="15" id="VIB-Z7-RoI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SYw-VJ-8ya"/>
                     </view>
                     <navigationItem key="navigationItem" id="0sW-Dp-R2D"/>
@@ -1258,7 +1276,7 @@
                         <barButtonItem key="rightBarButtonItem" title="★" id="6tT-wl-5OA">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="UIH-JX-zbw" kind="show" id="aP0-J5-p1D"/>
+                                <segue destination="UIH-JX-zbw" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="aP0-J5-p1D"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

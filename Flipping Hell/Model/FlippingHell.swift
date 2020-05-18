@@ -267,11 +267,11 @@ class FlippingHell {
 
         // Cycle through and create objects
         
-        var jsonarrayindex = 20 // index of levels to ensure each stage is only 10 items long
+        var jsonarrayindex = 40 // index of levels to ensure each stage is only 10 items long
         var jsonstageindex = -1 // index of stages to cycle through stages
         for jsonlevel in jsonarray {
             
-            if (jsonarrayindex == 20) {
+            if (jsonarrayindex == 40) {
                 jsonarrayindex = 0
                 jsonstageindex += 1
                 
