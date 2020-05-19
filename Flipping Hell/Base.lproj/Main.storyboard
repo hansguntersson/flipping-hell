@@ -170,7 +170,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="xuQ-Y5-3G3" kind="presentation" modalPresentationStyle="automatic" modalTransitionStyle="coverVertical" id="scz-tB-k3D"/>
+                                    <segue destination="xuQ-Y5-3G3" kind="presentation" identifier="GameHelpSegue" modalPresentationStyle="automatic" modalTransitionStyle="coverVertical" id="scz-tB-k3D"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS: 0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eG-qR-93l" userLabel="FlipsLabel">
@@ -1210,6 +1210,15 @@
                         <outletCollection property="buttonWinCollection" destination="ueD-SG-Eiu" collectionClass="NSMutableArray" id="Jnz-0H-x1k"/>
                         <outletCollection property="buttonWinCollection" destination="RFI-bF-ONP" collectionClass="NSMutableArray" id="MNw-RS-inh"/>
                         <outletCollection property="buttonWinCollection" destination="EzE-1I-q2h" collectionClass="NSMutableArray" id="9N6-Ea-jBj"/>
+                        <outletCollection property="buttonFlipperCollection" destination="GJr-Ip-xgr" collectionClass="NSMutableArray" id="Cpx-ac-k9f"/>
+                        <outletCollection property="buttonFlipperCollection" destination="t5h-JS-Go7" collectionClass="NSMutableArray" id="fx6-uy-IQE"/>
+                        <outletCollection property="buttonFlipperCollection" destination="17g-fC-il3" collectionClass="NSMutableArray" id="xgD-YQ-k90"/>
+                        <outletCollection property="buttonFlipperCollection" destination="uf9-bu-pAh" collectionClass="NSMutableArray" id="bnc-A8-ePx"/>
+                        <outletCollection property="buttonFlipperCollection" destination="4tS-Nx-mNu" collectionClass="NSMutableArray" id="jnh-5B-bRs"/>
+                        <outletCollection property="buttonFlipperCollection" destination="tTA-bs-adD" collectionClass="NSMutableArray" id="HWV-vJ-6LW"/>
+                        <outletCollection property="buttonFlipperCollection" destination="7A6-Gb-NCh" collectionClass="NSMutableArray" id="dzu-OO-OY9"/>
+                        <outletCollection property="buttonFlipperCollection" destination="a4d-PX-KpI" collectionClass="NSMutableArray" id="ufd-Ad-BaG"/>
+                        <outletCollection property="buttonFlipperCollection" destination="nqv-V5-x6h" collectionClass="NSMutableArray" id="vQy-CD-vwz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Y5-Qd-sCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1286,7 +1295,7 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <segue destination="eaX-Lf-uKk" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="gu7-zI-vUa"/>
+                                                <segue destination="eaX-Lf-uKk" kind="presentation" identifier="GameStartSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="gu7-zI-vUa"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS X/X" textAlignment="natural" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">

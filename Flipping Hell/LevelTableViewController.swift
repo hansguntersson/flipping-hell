@@ -109,13 +109,20 @@ class LevelTableViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    /*
     @IBAction func unwindFromStages(segue:UIStoryboardSegue) { // Stage selected and unwind
         UpdateModelLevelsDelegateInstance.requestLevelList()
     }
+    */
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "unwindFromLevelsWithSegue" {
+        if segue.identifier == "GameStartSegue" {
+            if let vc = segue.destination as? MainViewController {
+                vc.game = self.game
+                game!.UpdateMainViewDelegateInstance = vc
+            }
+        } else if segue.identifier == "unwindFromLevelsWithSegue" {
             let buttonInstance = sender as! UIButton
             if (buttonInstance.currentTitle == "★") {
                 UpdateModelLevelsDelegateInstance.changeLevel(StageID: CurrentStage, LevelID: 9)

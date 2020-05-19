@@ -53,14 +53,6 @@ class GameViewController: UIViewController {
                 
             }
         }
-        
-        // TODO: remove this segue
-        /* if segue.identifier == "GameStartSegue" {
-            if let vc = segue.destination as? MainViewController {
-                vc.game = self.game
-                game.UpdateMainViewDelegateInstance = vc
-            }
-        } */
     }
     
     // ********************************** LINKS ********************************** //
