@@ -11,13 +11,13 @@ import UIKit
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateModelStagesDelegate: class {
-    func requestStages() -> [Int]
+    func requestScores() -> [Int]
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
 private let reuseIdentifier = "Cell"
 
-class StageCollectionViewController: UICollectionViewController {
+class ScoreViewControllerOld: UIViewController {
 
     // TODO: sum of stars and similar - summary elements?
     // TODO: Decide on how numbers by stags are going to be defined
@@ -38,7 +38,7 @@ class StageCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         UpdateModelStagesDelegateInstance = game
-        stages = UpdateModelStagesDelegateInstance.requestStages()
+        stages = UpdateModelStagesDelegateInstance.requestScores()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -60,7 +60,7 @@ class StageCollectionViewController: UICollectionViewController {
     */
 
     // MARK: UICollectionViewDataSource
-
+    /*
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -72,8 +72,8 @@ class StageCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! UICollectionViewCell
-    
-        /*
+    */
+    /*
         // Configure the cell
         let thisStage = stages[indexPath.row]
         cell.CellIndex = indexPath.row
@@ -115,7 +115,7 @@ class StageCollectionViewController: UICollectionViewController {
         }
         cell.cellLabel.text = String(indexPath.row + 1)
 
-         */
+        
         return cell
     }
     
@@ -133,10 +133,11 @@ class StageCollectionViewController: UICollectionViewController {
                 vc.reloadInputViews()
             }
         }
+        
     }
 
     // MARK: UICollectionViewDelegate
-
+     */
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionVieiw(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

@@ -79,7 +79,7 @@ class MainViewController: UIViewController {
     
     // ********************************** FUNCTIONS ********************************** //
     
-    @IBAction func backToMain(_ sender: UIButton) { // Dismisses view controller back to the title screen
+    @IBAction func backToMain(_ sender: UIButton) { // Dismisses view controller back to the level screen
         self.dismiss(animated: true, completion: nil)
     }
     

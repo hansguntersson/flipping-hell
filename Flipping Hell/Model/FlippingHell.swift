@@ -364,7 +364,7 @@ extension FlippingHell: UpdateModelLevelsDelegate {
 }
 
 extension FlippingHell: UpdateModelStagesDelegate {
-    func requestStages() -> [Int] {
+    func requestScores() -> [Int] {
         var stageOutput: [Int] = []
         var stageCount = 0
         for stageIndex in stages {

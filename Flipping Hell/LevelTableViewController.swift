@@ -122,13 +122,17 @@ class LevelTableViewController: UITableViewController {
             } else {
                 UpdateModelLevelsDelegateInstance.changeLevel(StageID: CurrentStage, LevelID: Int(buttonInstance.currentTitle ?? "0")! - 1)
             }
-        } else if segue.identifier == "LoadStagesSegue" {
+        }
+        
+        /*else if segue.identifier == "LoadStagesSegue" {
             if let vc = segue.destination as? UINavigationController {
-                let lvc = vc.children[0] as! StageCollectionViewController
+                let lvc = vc.children[0] as! ScoreViewController
                 lvc.game = game
                 lvc.SelectedStage = CurrentStage
             }
-        }
+        } */
+ 
+         
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

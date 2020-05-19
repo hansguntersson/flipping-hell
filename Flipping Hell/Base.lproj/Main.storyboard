@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="-80276" y="-5488"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="zHc-4E-kT9">
             <objects>
-                <viewController storyboardIdentifier="MainScreen" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="eaX-Lf-uKk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainScreen" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="eaX-Lf-uKk" customClass="MainViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BWZ-ai-Lqb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,6 +207,9 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backToMain:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="BIc-gy-qgj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FRp-mO-Ld6">
                                 <rect key="frame" x="330" y="622" width="30" height="30"/>
@@ -1154,20 +1157,74 @@
                     </view>
                     <navigationItem key="navigationItem" id="5vC-Ip-bGm"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="FlipsLabel" destination="1eG-qR-93l" id="66Y-8M-ZkX"/>
+                        <outlet property="levelTitle" destination="KuN-GI-4L4" id="3G7-vr-ioZ"/>
+                        <outletCollection property="buttonCollection" destination="8IX-oS-Lzg" collectionClass="NSMutableArray" id="ccx-Z8-W1Y"/>
+                        <outletCollection property="buttonCollection" destination="mdK-iU-klZ" collectionClass="NSMutableArray" id="eZe-qh-Oy4"/>
+                        <outletCollection property="buttonCollection" destination="ysD-Hp-ayn" collectionClass="NSMutableArray" id="Nrs-Nq-uOK"/>
+                        <outletCollection property="buttonCollection" destination="pA8-Mf-GYa" collectionClass="NSMutableArray" id="kC9-kT-fbn"/>
+                        <outletCollection property="buttonCollection" destination="aJm-6t-MlR" collectionClass="NSMutableArray" id="v2z-yN-PcO"/>
+                        <outletCollection property="buttonCollection" destination="OgJ-7J-Sg8" collectionClass="NSMutableArray" id="xqY-8P-txd"/>
+                        <outletCollection property="buttonCollection" destination="b4N-sh-xsn" collectionClass="NSMutableArray" id="rbQ-Nh-Lr1"/>
+                        <outletCollection property="buttonCollection" destination="pqf-B8-oGD" collectionClass="NSMutableArray" id="dUk-H7-RhL"/>
+                        <outletCollection property="buttonCollection" destination="nYa-pi-B0R" collectionClass="NSMutableArray" id="adD-eH-Ioi"/>
+                        <outletCollection property="buttonCollection" destination="9xf-IE-Kg2" collectionClass="NSMutableArray" id="Syi-N7-Y8b"/>
+                        <outletCollection property="buttonCollection" destination="JBs-k9-GSp" collectionClass="NSMutableArray" id="SYl-wi-rhD"/>
+                        <outletCollection property="buttonCollection" destination="VAw-v9-BkQ" collectionClass="NSMutableArray" id="mRT-f2-7nD"/>
+                        <outletCollection property="buttonCollection" destination="yeE-fw-Ytl" collectionClass="NSMutableArray" id="v85-LF-GUn"/>
+                        <outletCollection property="buttonCollection" destination="KAW-1p-FYi" collectionClass="NSMutableArray" id="H9f-Cm-Auv"/>
+                        <outletCollection property="buttonCollection" destination="rMs-f6-gWY" collectionClass="NSMutableArray" id="b1B-VJ-g1G"/>
+                        <outletCollection property="buttonCollection" destination="gjK-KC-f8l" collectionClass="NSMutableArray" id="f5e-8g-eXx"/>
+                        <outletCollection property="buttonCollection" destination="z0J-SN-dVv" collectionClass="NSMutableArray" id="FSI-pP-7Vj"/>
+                        <outletCollection property="buttonCollection" destination="dZg-JD-sDB" collectionClass="NSMutableArray" id="W5H-ng-h9l"/>
+                        <outletCollection property="buttonCollection" destination="EME-vO-34A" collectionClass="NSMutableArray" id="GwG-f9-qG1"/>
+                        <outletCollection property="buttonCollection" destination="fdd-92-agT" collectionClass="NSMutableArray" id="ioP-2t-eAg"/>
+                        <outletCollection property="buttonCollection" destination="EP2-ik-vhs" collectionClass="NSMutableArray" id="W78-WK-93q"/>
+                        <outletCollection property="buttonCollection" destination="VJj-ju-wwF" collectionClass="NSMutableArray" id="gBS-fY-1Xl"/>
+                        <outletCollection property="buttonCollection" destination="Vub-aj-E5J" collectionClass="NSMutableArray" id="6Eb-Cj-PdL"/>
+                        <outletCollection property="buttonCollection" destination="yEi-3U-m6a" collectionClass="NSMutableArray" id="wPT-af-f8B"/>
+                        <outletCollection property="buttonCollection" destination="fB8-gz-wuJ" collectionClass="NSMutableArray" id="sCC-hA-jVb"/>
+                        <outletCollection property="buttonWinCollection" destination="BOg-LW-oK6" collectionClass="NSMutableArray" id="Fy4-cB-wfR"/>
+                        <outletCollection property="buttonWinCollection" destination="5qb-c1-M0f" collectionClass="NSMutableArray" id="UGg-lR-lzl"/>
+                        <outletCollection property="buttonWinCollection" destination="enA-aG-YDH" collectionClass="NSMutableArray" id="i1e-18-uY8"/>
+                        <outletCollection property="buttonWinCollection" destination="yKG-B9-449" collectionClass="NSMutableArray" id="EbU-rL-Mkq"/>
+                        <outletCollection property="buttonWinCollection" destination="oZM-T0-EgP" collectionClass="NSMutableArray" id="mI8-XH-G6M"/>
+                        <outletCollection property="buttonWinCollection" destination="Bag-xi-je8" collectionClass="NSMutableArray" id="JQh-KU-Rx3"/>
+                        <outletCollection property="buttonWinCollection" destination="blA-Yx-4dE" collectionClass="NSMutableArray" id="ED1-Qk-fRs"/>
+                        <outletCollection property="buttonWinCollection" destination="H7l-Ih-TGp" collectionClass="NSMutableArray" id="xVJ-eI-9xU"/>
+                        <outletCollection property="buttonWinCollection" destination="vNp-c1-02w" collectionClass="NSMutableArray" id="V4V-Q1-15Z"/>
+                        <outletCollection property="buttonWinCollection" destination="Fby-O3-fkU" collectionClass="NSMutableArray" id="KXI-np-6GO"/>
+                        <outletCollection property="buttonWinCollection" destination="n3v-HN-KQN" collectionClass="NSMutableArray" id="4G4-H8-RvJ"/>
+                        <outletCollection property="buttonWinCollection" destination="wUd-eG-d4X" collectionClass="NSMutableArray" id="6bJ-jO-aee"/>
+                        <outletCollection property="buttonWinCollection" destination="y0r-al-ccC" collectionClass="NSMutableArray" id="NLa-MS-zjn"/>
+                        <outletCollection property="buttonWinCollection" destination="xih-CH-Dq7" collectionClass="NSMutableArray" id="jwD-7c-kLx"/>
+                        <outletCollection property="buttonWinCollection" destination="AsS-S7-Kef" collectionClass="NSMutableArray" id="MlE-N2-exk"/>
+                        <outletCollection property="buttonWinCollection" destination="Q21-6f-yiJ" collectionClass="NSMutableArray" id="yEj-Cz-wKq"/>
+                        <outletCollection property="buttonWinCollection" destination="gpR-La-Dhi" collectionClass="NSMutableArray" id="WVS-yU-0Vj"/>
+                        <outletCollection property="buttonWinCollection" destination="5kb-FL-z1j" collectionClass="NSMutableArray" id="QHa-Ic-m3s"/>
+                        <outletCollection property="buttonWinCollection" destination="JiN-tI-11m" collectionClass="NSMutableArray" id="vTu-7h-zeQ"/>
+                        <outletCollection property="buttonWinCollection" destination="Baf-FK-Xp9" collectionClass="NSMutableArray" id="vGY-E8-5WK"/>
+                        <outletCollection property="buttonWinCollection" destination="zK8-d6-nqm" collectionClass="NSMutableArray" id="9ax-7f-EtT"/>
+                        <outletCollection property="buttonWinCollection" destination="aXn-DZ-4Zh" collectionClass="NSMutableArray" id="vQn-y4-zE1"/>
+                        <outletCollection property="buttonWinCollection" destination="ueD-SG-Eiu" collectionClass="NSMutableArray" id="Jnz-0H-x1k"/>
+                        <outletCollection property="buttonWinCollection" destination="RFI-bF-ONP" collectionClass="NSMutableArray" id="MNw-RS-inh"/>
+                        <outletCollection property="buttonWinCollection" destination="EzE-1I-q2h" collectionClass="NSMutableArray" id="9N6-Ea-jBj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Y5-Qd-sCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-77892" y="-5426"/>
         </scene>
-        <!--View Controller-->
+        <!--Score View Controller-->
         <scene sceneID="EEW-a0-SVo">
             <objects>
-                <viewController storyboardIdentifier="ScoreScreen" modalTransitionStyle="flipHorizontal" modalPresentationStyle="formSheet" id="UIH-JX-zbw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScoreScreen" modalTransitionStyle="flipHorizontal" modalPresentationStyle="formSheet" id="UIH-JX-zbw" customClass="ScoreViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HN1-EP-ucz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="5uh-oN-0Dr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="5uh-oN-0Dr" customClass="score">
                                 <rect key="frame" x="15" y="15" width="35" height="35"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="23"/>
                                 <state key="normal" title="⮐ ">
@@ -1178,6 +1235,9 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="unwindToLevelMenuFromStagesWithSegue:" destination="UIH-JX-zbw" eventType="touchUpInside" id="PHW-xk-4rN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
