@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
     
-    var FirstOpen: Bool = true // TODO: switch this off when releasing, load from game
+    var FirstOpen: Bool = false // TODO: switch this off when releasing, load from game
     
     var StageNum = 0
     var LevelNum = 0
@@ -125,6 +125,7 @@ class MainViewController: UIViewController {
         if (FirstOpen == true) {
             performSegue(withIdentifier: "GameHelpSegue", sender: nil)
             FirstOpen = false
+            // TODO: MAke this part of the game rather than linked to view
         }
     }
     
