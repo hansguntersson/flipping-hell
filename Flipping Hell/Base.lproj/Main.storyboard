@@ -220,6 +220,9 @@
                                 <state key="normal" image="icons8-restart-filled-60">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetLevel:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="g4N-kI-kh6"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NY4-jW-Iph">
                                 <rect key="frame" x="37.5" y="90" width="300" height="300"/>
@@ -240,6 +243,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="KoC-AI-E3A"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdK-iU-klZ" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="61.5" y="0.0" width="53.5" height="53.5"/>
@@ -254,6 +260,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="Agr-Uo-zSV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysD-Hp-ayn" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="123" y="0.0" width="54" height="53.5"/>
@@ -268,6 +277,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="I8O-Kt-00z"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pA8-Mf-GYa" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="185" y="0.0" width="53.5" height="53.5"/>
@@ -282,6 +294,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="eCB-9Y-obp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJm-6t-MlR" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="246.5" y="0.0" width="53.5" height="53.5"/>
@@ -296,6 +311,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="WUN-Kj-fpv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -322,6 +340,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="FW4-lr-NC8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4N-sh-xsn" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="61.5" y="0.0" width="53.5" height="53.5"/>
@@ -336,6 +357,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="NIy-tB-K5L"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-B8-oGD" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="123" y="0.0" width="54" height="53.5"/>
@@ -350,6 +374,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="CTP-bs-DMq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-pi-B0R" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="185" y="0.0" width="53.5" height="53.5"/>
@@ -364,6 +391,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="Llr-y0-h7I"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xf-IE-Kg2" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="246.5" y="0.0" width="53.5" height="53.5"/>
@@ -378,6 +408,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="abz-N6-85C"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -404,6 +437,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="fE4-Re-Ruo"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAw-v9-BkQ" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="61.5" y="0.0" width="53.5" height="54"/>
@@ -418,6 +454,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="Ogw-V8-tYW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeE-fw-Ytl" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="123" y="0.0" width="54" height="54"/>
@@ -432,6 +471,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="GY0-wt-XKA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAW-1p-FYi" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="185" y="0.0" width="53.5" height="54"/>
@@ -446,6 +488,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="YLJ-jW-ocs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-f6-gWY" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="246.5" y="0.0" width="53.5" height="54"/>
@@ -460,6 +505,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="6zw-hD-iKD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -486,6 +534,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="6oQ-rm-VU7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0J-SN-dVv" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="61.5" y="0.0" width="53.5" height="53.5"/>
@@ -500,6 +551,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="1WH-V0-ucO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZg-JD-sDB" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="123" y="0.0" width="54" height="53.5"/>
@@ -514,6 +568,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="j3E-dT-kv3"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EME-vO-34A" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="185" y="0.0" width="53.5" height="53.5"/>
@@ -528,6 +585,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="hcy-Bc-H7v"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-92-agT" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
                                                 <rect key="frame" x="246.5" y="0.0" width="53.5" height="53.5"/>
@@ -542,6 +602,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="LpW-sc-UvA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -556,7 +619,7 @@
                                         <rect key="frame" x="0.0" y="246.5" width="300" height="53.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-ik-vhs" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="53.5"/>
                                                 <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="20"/>
                                                 <constraints>
@@ -568,9 +631,12 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="Wd2-6n-39x"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJj-ju-wwF" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
-                                                <rect key="frame" x="61.5" y="0.0" width="53.5" height="53.5"/>
+                                                <rect key="frame" x="67.5" y="0.0" width="30" height="53.5"/>
                                                 <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="21"/>
                                                 <constraints>
@@ -582,9 +648,12 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="1ks-U5-G7Z"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vub-aj-E5J" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
-                                                <rect key="frame" x="123" y="0.0" width="54" height="53.5"/>
+                                                <rect key="frame" x="135" y="0.0" width="30" height="53.5"/>
                                                 <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="22"/>
                                                 <constraints>
@@ -596,9 +665,12 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="0LV-g9-eGK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEi-3U-m6a" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
-                                                <rect key="frame" x="185" y="0.0" width="53.5" height="53.5"/>
+                                                <rect key="frame" x="202.5" y="0.0" width="30" height="53.5"/>
                                                 <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="23"/>
                                                 <constraints>
@@ -610,9 +682,12 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="ZX2-m4-Etj"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fB8-gz-wuJ" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
-                                                <rect key="frame" x="246.5" y="0.0" width="53.5" height="53.5"/>
+                                                <rect key="frame" x="270" y="0.0" width="30" height="53.5"/>
                                                 <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="24"/>
                                                 <constraints>
@@ -624,6 +699,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="cwU-VZ-e01"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
