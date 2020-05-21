@@ -28,7 +28,7 @@ class LevelTableViewController: UITableViewController {
     // TODO: create custom navbaritem class and change formatting
     // TODO: Change output for orientation to show more text - goal and flips
     
-    var levels: [Level] = [] // structure for level
+    var levels: [[Level]] = [] // structure for level
     var CurrentStage = 0 // current stage for sorting sections
     var CurrentLevel = 0; // current level for basic highlighting
     
@@ -53,11 +53,11 @@ class LevelTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return levels.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return levels.count / 2
+        return 20
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -69,7 +69,7 @@ class LevelTableViewController: UITableViewController {
         }
         
         //  TODO: Should this reference be removed as it's accessing values directly?
-        let thisLevel = levels[indexPath.row]
+        let thisLevel = levels[0][indexPath.row]
         
         if (indexPath.row == 19) {
             cell.levelIndex.setTitle("★", for: .normal)
@@ -118,7 +118,7 @@ class LevelTableViewController: UITableViewController {
                 let buttonInstance = sender as! UIButton
                 
                 if (buttonInstance.currentTitle == "★") {
-                    UpdateModelLevelsDelegateInstance.changeLevel(StageID: CurrentStage, LevelID: 9)
+                    UpdateModelLevelsDelegateInstance.changeLevel(StageID: CurrentStage, LevelID: 19)
                 } else {
                     UpdateModelLevelsDelegateInstance.changeLevel(StageID: CurrentStage, LevelID: Int(buttonInstance.currentTitle ?? "0")! - 1)
                 }
@@ -157,7 +157,7 @@ class LevelTableViewController: UITableViewController {
 // ********************************** EXTENSIONS ********************************** //
 
 extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and processes level list
-    func receiveLevelList(StageID: Int, LevelList: [Level], CurrentStage: Int, CurrentLevel: Int) {
+    func receiveLevelList(LevelList: [[Level]], CurrentStage: Int, CurrentLevel: Int) {
         levels = LevelList
         self.CurrentStage = CurrentStage
         self.CurrentLevel = CurrentLevel

@@ -17,7 +17,7 @@ protocol UpdateMainViewDelegate: class {
 }
 
 protocol UpdateLevelViewDelegate: class {
-    func receiveLevelList(StageID: Int, LevelList: [Level], CurrentStage: Int, CurrentLevel: Int)
+    func receiveLevelList(LevelList: [[Level]], CurrentStage: Int, CurrentLevel: Int)
 }
 
 protocol UpdateStageViewDelegate: class {
@@ -51,7 +51,8 @@ class FlippingHell {
     
     init() {
         loadLevels()
-        
+        print(stages.count)
+        print(stages[0].count)
         /*
         let TestArray = [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0]
         
@@ -267,11 +268,11 @@ class FlippingHell {
 
         // Cycle through and create objects
         
-        var jsonarrayindex = 40 // index of levels to ensure each stage is only 10 items long
+        var jsonarrayindex = 20 // index of levels to ensure each stage is only 20 items long
         var jsonstageindex = -1 // index of stages to cycle through stages
         for jsonlevel in jsonarray {
             
-            if (jsonarrayindex == 40) {
+            if (jsonarrayindex == 20) {
                 jsonarrayindex = 0
                 jsonstageindex += 1
                 
@@ -353,7 +354,7 @@ extension FlippingHell: UpdateModelWinDelegate { // Implements update of model f
 extension FlippingHell: UpdateModelLevelsDelegate {
     // Receives request from Level screen for levels
     func requestLevelList() {
-        UpdateLevelViewDelegateInstance.receiveLevelList(StageID: 0, LevelList: stages[0], CurrentStage: currentStage, CurrentLevel: currentLevel)
+        UpdateLevelViewDelegateInstance.receiveLevelList(LevelList: stages, CurrentStage: currentStage, CurrentLevel: currentLevel)
     }
     
     func changeLevel(StageID: Int, LevelID: Int) {
