@@ -17,7 +17,7 @@ protocol UpdateMainViewDelegate: class {
 }
 
 protocol UpdateLevelViewDelegate: class {
-    func receiveLevelList(LevelList: [[Level]], CurrentStage: Int, CurrentLevel: Int)
+    func receiveLevelList(LevelList: [[Level]], CurrentStage: Int, CurrentLevel: Int, LevelsPerStage: Int)
 }
 
 protocol UpdateStageViewDelegate: class {
@@ -35,6 +35,8 @@ class FlippingHell {
     var currentLevel = 0
     var currentStage = 0
     
+    var levelsPerStage = 100 //TODO: Ensure that the total levels are a multiplier of this number
+    
     // TODO: Ensure these arrays are appropriately generated
     var stageUnlocks: [Bool] = []
     var stageStars: [Int] = [0] // number of stars obtained for each level
@@ -51,8 +53,6 @@ class FlippingHell {
     
     init() {
         loadLevels()
-        print(stages.count)
-        print(stages[0].count)
         /*
         let TestArray = [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0]
         
@@ -268,11 +268,11 @@ class FlippingHell {
 
         // Cycle through and create objects
         
-        var jsonarrayindex = 20 // index of levels to ensure each stage is only 20 items long
+        var jsonarrayindex = levelsPerStage // index of levels to ensure each stage is only 20 items long
         var jsonstageindex = -1 // index of stages to cycle through stages
         for jsonlevel in jsonarray {
             
-            if (jsonarrayindex == 20) {
+            if (jsonarrayindex == levelsPerStage) {
                 jsonarrayindex = 0
                 jsonstageindex += 1
                 
@@ -340,10 +340,10 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
 
 extension FlippingHell: UpdateModelWinDelegate { // Implements update of model from Win view
     func nextLevel() {
-        if (currentLevel < 19) {
+        if (currentLevel < levelsPerStage - 1) {
             currentLevel += 1
         } else {
-            if (currentStage < 62 ) { // TODO: remove this logic restriction, game won should generate new stage
+            if (currentStage < stages.count ) { // TODO: remove this logic restriction, game won should generate new stage
                 currentStage += 1
                 currentLevel = 0
             }
@@ -354,7 +354,7 @@ extension FlippingHell: UpdateModelWinDelegate { // Implements update of model f
 extension FlippingHell: UpdateModelLevelsDelegate {
     // Receives request from Level screen for levels
     func requestLevelList() {
-        UpdateLevelViewDelegateInstance.receiveLevelList(LevelList: stages, CurrentStage: currentStage, CurrentLevel: currentLevel)
+        UpdateLevelViewDelegateInstance.receiveLevelList(LevelList: stages, CurrentStage: currentStage, CurrentLevel: currentLevel, LevelsPerStage: levelsPerStage)
     }
     
     func changeLevel(StageID: Int, LevelID: Int) {

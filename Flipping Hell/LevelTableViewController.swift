@@ -31,6 +31,7 @@ class LevelTableViewController: UITableViewController {
     var levels: [[Level]] = [] // structure for level
     var CurrentStage = 0 // current stage for sorting sections
     var CurrentLevel = 0; // current level for basic highlighting
+    var LevelsPerStage = 0 // Number of levels per stage
     
     // ********************************** DELEGATES ********************************** //
     
@@ -57,7 +58,7 @@ class LevelTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return LevelsPerStage
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,7 +72,7 @@ class LevelTableViewController: UITableViewController {
         //  TODO: Should this reference be removed as it's accessing values directly?
         let thisLevel = levels[0][indexPath.row]
         
-        if (indexPath.row == 19) {
+        if (indexPath.row == LevelsPerStage - 1) {
             cell.levelIndex.setTitle("★", for: .normal)
         } else {
             cell.levelIndex.setTitle(String(indexPath.row + 1), for: .normal)
@@ -157,8 +158,9 @@ class LevelTableViewController: UITableViewController {
 // ********************************** EXTENSIONS ********************************** //
 
 extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and processes level list
-    func receiveLevelList(LevelList: [[Level]], CurrentStage: Int, CurrentLevel: Int) {
+    func receiveLevelList(LevelList: [[Level]], CurrentStage: Int, CurrentLevel: Int, LevelsPerStage: Int) {
         levels = LevelList
+        self.LevelsPerStage = LevelsPerStage
         self.CurrentStage = CurrentStage
         self.CurrentLevel = CurrentLevel
         self.tableView.reloadData()
