@@ -1,5 +1,5 @@
 //
-//  StageCollectionViewController.swift
+//  StageViewController.swift
 //  Flipping Hell
 //
 //  Created by Daniel Harlos on 07/01/2019.
@@ -17,7 +17,7 @@ protocol UpdateModelStagesDelegate: class {
 // ********************************** CLASS DEFINITION ********************************** //
 private let reuseIdentifier = "Cell"
 
-class ScoreViewControllerOld: UIViewController {
+class StageViewController: UICollectionViewController {
 
     // TODO: sum of stars and similar - summary elements?
     // TODO: Decide on how numbers by stags are going to be defined

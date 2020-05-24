@@ -35,7 +35,7 @@ class FlippingHell {
     var currentLevel = 0
     var currentStage = 0
     
-    var levelsPerStage = 100 //TODO: Ensure that the total levels are a multiplier of this number
+    var levelsPerStage = 20 //TODO: Ensure that the total levels are a multiplier of this number
     
     // TODO: Ensure these arrays are appropriately generated
     var stageUnlocks: [Bool] = []
