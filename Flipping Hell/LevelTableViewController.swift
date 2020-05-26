@@ -41,6 +41,11 @@ class LevelTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let FontNameList = UIFont.familyNames
+        let FontNamesFamily = UIFont.fontNames(forFamilyName: "Orbitron")
+        
+        print(FontNamesFamily)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -137,8 +142,15 @@ class LevelTableViewController: UITableViewController {
          
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "STAGE \(section + 1)"
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionView = UITableViewHeaderFooterView()
+        let background = UIView()
+        background.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        sectionView.backgroundView = background
+        sectionView.textLabel?.text = "STAGE \(section + 1)"
+        sectionView.textLabel?.textColor = UIColor.red
+        sectionView.textLabel?.font = UIFont(name: "Orbitron-Medium", size: 24.0)
+        return sectionView
     }
     
     

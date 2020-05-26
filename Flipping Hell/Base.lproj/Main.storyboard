@@ -1226,7 +1226,7 @@
                             <constraint firstItem="1eG-qR-93l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0aR-uF-ydv" secondAttribute="bottom" constant="25" id="qHW-1Q-S22"/>
                             <constraint firstItem="0aR-uF-ydv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NY4-jW-Iph" secondAttribute="bottom" constant="30" id="qOW-df-EGt"/>
                             <constraint firstItem="NY4-jW-Iph" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XoO-cJ-Gm3" secondAttribute="leading" constant="20" id="qeo-JR-sM5"/>
-                            <constraint firstItem="gK2-bn-1TJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NY4-jW-Iph" secondAttribute="bottom" constant="30" id="sue-by-pgR"/>
+                            <constraint firstItem="gK2-bn-1TJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NY4-jW-Iph" secondAttribute="bottom" priority="990" constant="30" id="sue-by-pgR"/>
                             <constraint firstItem="1eG-qR-93l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0aR-uF-ydv" secondAttribute="bottom" priority="900" constant="50" id="syt-BU-1e9"/>
                             <constraint firstItem="1eG-qR-93l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iid-da-cCA" secondAttribute="trailing" id="zDn-39-nFh"/>
                             <constraint firstItem="FRp-mO-Ld6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1eG-qR-93l" secondAttribute="trailing" constant="15" id="zXm-LD-sBP"/>
@@ -1453,19 +1453,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO PLAY" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-UZ-eW2">
-                                <rect key="frame" x="80" y="40" width="215.5" height="37.5"/>
+                                <rect key="frame" x="57" y="40" width="261.5" height="32"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This grid on the right shows the three buttons you'll flip, based on the centre button" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab2-Yk-Bbv">
-                                <rect key="frame" x="25" y="297.5" width="325" height="72"/>
+                                <rect key="frame" x="25" y="292" width="325" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiI-hl-itI">
-                                <rect key="frame" x="34.5" y="97.5" width="306.5" height="72"/>
+                                <rect key="frame" x="34.5" y="92" width="306.5" height="72"/>
                                 <string key="text">Click in the large grid to flip a set of three buttons to another colour
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1473,7 +1473,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This grid on the left shows the pattern you need to try to create" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjz-P1-H6K">
-                                <rect key="frame" x="49.5" y="209.5" width="276" height="48"/>
+                                <rect key="frame" x="49.5" y="204" width="276" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1691,7 +1691,7 @@
             </objects>
             <point key="canvasLocation" x="-80421" y="-4770"/>
         </scene>
-        <!--STAGE X-->
+        <!--SELECT STAGE-->
         <scene sceneID="9Wt-fz-d5I">
             <objects>
                 <collectionViewController id="9hu-iO-dZU" customClass="StageViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
@@ -1746,7 +1746,7 @@
                         </connections>
                     </collectionView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="STAGE X" largeTitleDisplayMode="never" id="NpV-Tr-vN7">
+                    <navigationItem key="navigationItem" title="SELECT STAGE" largeTitleDisplayMode="never" id="NpV-Tr-vN7">
                         <barButtonItem key="leftBarButtonItem" title="⮐ " id="Vy3-n6-6LI">
                             <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -1768,7 +1768,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="r9M-p1-mUc"/>
+        <segue reference="aP0-J5-p1D"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-restart-filled-60" width="60" height="60"/>
