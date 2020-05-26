@@ -148,8 +148,9 @@ class LevelTableViewController: UITableViewController {
         background.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
         sectionView.backgroundView = background
         sectionView.textLabel?.text = "STAGE \(section + 1)"
+        sectionView.textLabel?.font = UIFont(name: "ArialMT", size: 15.0)
         sectionView.textLabel?.textColor = UIColor.red
-        sectionView.textLabel?.font = UIFont(name: "Orbitron-Medium", size: 24.0)
+        print(sectionView.textLabel?.font)
         return sectionView
     }
     
