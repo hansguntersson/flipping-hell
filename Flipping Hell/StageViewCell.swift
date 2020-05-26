@@ -10,5 +10,6 @@ import UIKit
 
 class StageViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var cellButton: UIRoundedButton!
     
 }

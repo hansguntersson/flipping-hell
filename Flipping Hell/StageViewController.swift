@@ -89,10 +89,10 @@ class StageViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! StageViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StageCollectionViewCell", for: indexPath) as! StageViewCell
     
-        // Configure the cell
-        
+            // Configure the cell
+        cell.cellButton.setTitle("☆", for: .normal)
         
         return cell
     }
