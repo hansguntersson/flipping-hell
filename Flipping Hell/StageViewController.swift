@@ -20,19 +20,20 @@ private let reuseIdentifier = "Cell"
 class StageViewController: UICollectionViewController {
 
     // TODO: sum of stars and similar - summary elements?
-    // TODO: Decide on how numbers by stags are going to be defined
+    // TODO: Decide on how numbers by stars are going to be defined
     
     weak var game: FlippingHell?
-    var SelectedStage: Int = 40
+    var SelectedStage: Int = 0
     
-    var stages: [Int] = []
+    var stages: [Int] = [1, 2, 3, 4, 5]
     let cellIdentifier = "StageCollectionViewCell"
     
     // ********************************** DELEGATES ********************************** //
     
     weak var UpdateModelStagesDelegateInstance: UpdateModelStagesDelegate!
     
-    // ********************************** FUNCTIONS ********************************** //
+    
+    // ********************************** SETUP FUNCTION ********************************** //
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,22 +49,93 @@ class StageViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    // ********************************** ACTIONS ********************************** //
+    
+    @IBAction func backToScreen(_ sender: Any) { // Back to Win or Main screen from Level screen
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    // ********************************** SEGUES ********************************** //
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LoadLevelsSegue" {
+            if let vc = segue.destination as? UINavigationController {
+                let lvc = vc.children[0] as! LevelTableViewController
+                lvc.game = self.game
+                game?.UpdateLevelViewDelegateInstance = lvc
+                //lvc.DisplayedStage = self.game.currentStage ?? 0
+                
+            }
+        }
+    }
+    
+    
+    // ********************************** OVERRIDE FUNCTIONS ********************************** //
+
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return stages.count
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! StageViewCell
+    
+        // Configure the cell
+        
+        
+        return cell
+    }
+
+    // MARK: UICollectionViewDelegate
 
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    // Uncomment this method to specify if the specified item should be highlighted during tracking
+    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        return true
     }
     */
 
-    // MARK: UICollectionViewDataSource
     /*
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+    // Uncomment this method to specify if the specified item should be selected
+    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
     }
+    */
+
+    /*
+    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        return false
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+    
+    }
+    */
+    
+    
+    
+    
+    
+    
+    
+    
+ /*
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.stages.count
@@ -72,8 +144,7 @@ class StageViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! UICollectionViewCell
-    */
-    /*
+     
         // Configure the cell
         let thisStage = stages[indexPath.row]
         cell.CellIndex = indexPath.row
@@ -117,54 +188,7 @@ class StageViewController: UICollectionViewController {
 
         
         return cell
-    }
-    
-    @IBAction func unwindToLevelMenuFromStages(segue: UIStoryboardSegue) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "unwindFromStagesWithSegue" {
-            let buttonInstance = sender as! UIButton
-            let superView = buttonInstance.superview?.superview?.superview as! UICollectionViewCell
-            
-            if let vc = segue.destination as? LevelTableViewController {
-                vc.reloadInputViews()
-            }
-        }
-        
-    }
+    } */
 
-    // MARK: UICollectionViewDelegate
-     */
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionVieiw(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }

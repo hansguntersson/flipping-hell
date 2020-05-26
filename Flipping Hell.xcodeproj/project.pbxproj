@@ -14,6 +14,7 @@
 		E543F3F72162B77200329519 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F22162B77200329519 /* Orbitron-Regular.ttf */; };
 		E543F3F82162B77200329519 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F32162B77200329519 /* OFL.txt */; };
 		E543F3F92162B77200329519 /* Orbitron-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F42162B77200329519 /* Orbitron-Bold.ttf */; };
+		E54A9F0A247DA99600FCCEA5 /* StageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A9F09247DA99600FCCEA5 /* StageViewCell.swift */; };
 		E54E2957219A0F120042934E /* WinScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E2956219A0F120042934E /* WinScreenController.swift */; };
 		E55F560A223EE0D400BA673F /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = E55F5608223EE0D400BA673F /* success.wav */; };
 		E55F560B223EE0D400BA673F /* doubleclick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E55F5609223EE0D400BA673F /* doubleclick.mp3 */; };
@@ -59,6 +60,7 @@
 		E543F3F22162B77200329519 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
 		E543F3F32162B77200329519 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		E543F3F42162B77200329519 /* Orbitron-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Bold.ttf"; sourceTree = "<group>"; };
+		E54A9F09247DA99600FCCEA5 /* StageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewCell.swift; sourceTree = "<group>"; };
 		E54E2956219A0F120042934E /* WinScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinScreenController.swift; sourceTree = "<group>"; };
 		E55F5608223EE0D400BA673F /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		E55F5609223EE0D400BA673F /* doubleclick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = doubleclick.mp3; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				E5C106B6215408AF00947220 /* MainViewController.swift */,
 				E54E2956219A0F120042934E /* WinScreenController.swift */,
 				E5A1C1F021E36925001E8D90 /* StageViewController.swift */,
+				E54A9F09247DA99600FCCEA5 /* StageViewCell.swift */,
 				E5BDD8762473DD0000AC4EC7 /* ScoreViewController.swift */,
 				E505D579246D829200F0FD16 /* UIRoundedButton.swift */,
 				E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */,
@@ -348,6 +351,7 @@
 				E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */,
 				E56E325A21735E8200A16788 /* Level.swift in Sources */,
 				E5C106B5215408AF00947220 /* AppDelegate.swift in Sources */,
+				E54A9F0A247DA99600FCCEA5 /* StageViewCell.swift in Sources */,
 				E5BDD8772473DD0000AC4EC7 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

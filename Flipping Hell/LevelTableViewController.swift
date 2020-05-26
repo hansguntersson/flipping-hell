@@ -37,7 +37,7 @@ class LevelTableViewController: UITableViewController {
     
     weak var UpdateModelLevelsDelegateInstance: UpdateModelLevelsDelegate!
     
-    // ********************************** FUNCTIONs ********************************** //
+    // ********************************** LOAD FUNCTION ********************************** //
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +57,8 @@ class LevelTableViewController: UITableViewController {
         
         scrollToFirstRow()
     }
+    
+    // ********************************** OVERRIDE FUNCTIONS ********************************** //
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return levels.count
@@ -111,9 +113,27 @@ class LevelTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionView = UITableViewHeaderFooterView()
+        let background = UIView()
+        background.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        sectionView.backgroundView = background
+        sectionView.textLabel?.text = "STAGE \(section + 1)"
+        sectionView.textLabel?.font = UIFont(name: "ArialMT", size: 15.0)
+        sectionView.textLabel?.textColor = UIColor.red
+        print(sectionView.textLabel?.font)
+        return sectionView
+    }
+    
+    
+    // ********************************** ACTIONS ********************************** //
+    
     @IBAction func backToScreen(_ sender: Any) { // Back to Win or Main screen from Level screen
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    // ********************************** SEGUES ********************************** //
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -130,37 +150,10 @@ class LevelTableViewController: UITableViewController {
                 }
             }
         }
-        
-        /*else if segue.identifier == "LoadStagesSegue" {
-            if let vc = segue.destination as? UINavigationController {
-                let lvc = vc.children[0] as! ScoreViewController
-                lvc.game = game
-                lvc.SelectedStage = CurrentStage
-            }
-        } */
- 
          
     }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let sectionView = UITableViewHeaderFooterView()
-        let background = UIView()
-        background.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-        sectionView.backgroundView = background
-        sectionView.textLabel?.text = "STAGE \(section + 1)"
-        sectionView.textLabel?.font = UIFont(name: "ArialMT", size: 15.0)
-        sectionView.textLabel?.textColor = UIColor.red
-        print(sectionView.textLabel?.font)
-        return sectionView
-    }
-    
-    
-    /*override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let vw = UIView()
-        vw.backgroundColor = UIColor.white
-        return vw
-    }*/
-    
+
+    // ********************************** FUNCTIONS ********************************** //
     
     func scrollToFirstRow() {
         let indexPath = NSIndexPath(row: 0, section: 0)
