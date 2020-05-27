@@ -28,7 +28,7 @@ class LevelTableViewController: UITableViewController {
     // TODO: create custom navbaritem class and change formatting
     // TODO: Change output for orientation to show more text - goal and flips
     
-    var levels: [[Level]] = [] // structure for level
+    var levels: [Level] = [] // structure for level
     var CurrentStage = 0 // current stage for sorting sections
     var CurrentLevel = 0; // current level for basic highlighting
     var LevelsPerStage = 0 // Number of levels per stage
@@ -42,10 +42,6 @@ class LevelTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let FontNameList = UIFont.familyNames
-        let FontNamesFamily = UIFont.fontNames(forFamilyName: "Orbitron")
-        
-        print(FontNamesFamily)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -61,7 +57,7 @@ class LevelTableViewController: UITableViewController {
     // ********************************** OVERRIDE FUNCTIONS ********************************** //
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return levels.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,7 +73,7 @@ class LevelTableViewController: UITableViewController {
         }
         
         //  TODO: Should this reference be removed as it's accessing values directly?
-        let thisLevel = levels[0][indexPath.row]
+        let thisLevel = levels[indexPath.row]
         
         if (indexPath.row == LevelsPerStage - 1) {
             cell.levelIndex.setTitle("★", for: .normal)
@@ -113,6 +109,7 @@ class LevelTableViewController: UITableViewController {
         return cell
     }
     
+    /*
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionView = UITableViewHeaderFooterView()
         let background = UIView()
@@ -123,7 +120,7 @@ class LevelTableViewController: UITableViewController {
         sectionView.textLabel?.textColor = UIColor.red
         print(sectionView.textLabel?.font)
         return sectionView
-    }
+    } */
     
     
     // ********************************** ACTIONS ********************************** //
@@ -164,7 +161,7 @@ class LevelTableViewController: UITableViewController {
 // ********************************** EXTENSIONS ********************************** //
 
 extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and processes level list
-    func receiveLevelList(LevelList: [[Level]], CurrentStage: Int, CurrentLevel: Int, LevelsPerStage: Int) {
+    func receiveLevelList(LevelList: [Level], CurrentStage: Int, CurrentLevel: Int, LevelsPerStage: Int) {
         levels = LevelList
         self.LevelsPerStage = LevelsPerStage
         self.CurrentStage = CurrentStage
@@ -174,6 +171,6 @@ extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and pr
         // TODO: Navigate to the right level immediately
         scrollToFirstRow()
         
-        self.title = "LEVEL SELECT"
+        self.title = "STAGE \(CurrentStage + 1)"
     }
 }

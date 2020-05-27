@@ -225,8 +225,8 @@
                                     <action selector="resetLevel:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="g4N-kI-kh6"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NY4-jW-Iph">
-                                <rect key="frame" x="37.5" y="90" width="300" height="300"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NY4-jW-Iph">
+                                <rect key="frame" x="37.5" y="100" width="300" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dDI-kv-qJe">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="53.5"/>
@@ -1213,8 +1213,7 @@
                             <constraint firstItem="EdM-gL-kKL" firstAttribute="top" secondItem="XoO-cJ-Gm3" secondAttribute="top" constant="15" id="WLu-ZR-EeM"/>
                             <constraint firstItem="XoO-cJ-Gm3" firstAttribute="trailing" secondItem="FRp-mO-Ld6" secondAttribute="trailing" constant="15" id="XLE-Dj-D7T"/>
                             <constraint firstItem="NY4-jW-Iph" firstAttribute="width" secondItem="NY4-jW-Iph" secondAttribute="height" multiplier="1:1" id="Xtw-j9-9Bu"/>
-                            <constraint firstItem="NY4-jW-Iph" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KuN-GI-4L4" secondAttribute="bottom" constant="20" id="ZJO-hV-THd"/>
-                            <constraint firstItem="NY4-jW-Iph" firstAttribute="top" secondItem="KuN-GI-4L4" secondAttribute="bottom" priority="850" constant="50" id="aP6-7Q-FSF"/>
+                            <constraint firstItem="NY4-jW-Iph" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KuN-GI-4L4" secondAttribute="bottom" constant="30" id="ZJO-hV-THd"/>
                             <constraint firstItem="iid-da-cCA" firstAttribute="leading" secondItem="XoO-cJ-Gm3" secondAttribute="leading" constant="15" id="cRA-rK-byF"/>
                             <constraint firstItem="XoO-cJ-Gm3" firstAttribute="bottom" secondItem="iid-da-cCA" secondAttribute="bottom" constant="15" id="dEa-og-IGO"/>
                             <constraint firstItem="NY4-jW-Iph" firstAttribute="centerX" secondItem="XoO-cJ-Gm3" secondAttribute="centerX" id="ejI-pz-PPv"/>
@@ -1356,7 +1355,7 @@
         <scene sceneID="HW2-aE-ejK">
             <objects>
                 <tableViewController storyboardIdentifier="LevelScreen" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="9K6-qu-tf3" customClass="LevelTableViewController" customModule="Flipping_Hell" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" id="LwH-pP-zzk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" id="LwH-pP-zzk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1389,7 +1388,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS X/X" textAlignment="natural" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
-                                            <rect key="frame" x="80" y="23" width="138.5" height="24"/>
+                                            <rect key="frame" x="80" y="21" width="108.5" height="28"/>
                                             <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="24"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -1699,28 +1698,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uFz-aj-uaC">
-                            <size key="itemSize" width="128" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="5" id="uFz-aj-uaC">
+                            <size key="itemSize" width="135" height="165"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="StageCollectionViewCell" id="Xa4-KB-3xX" customClass="StageViewCell" customModule="Flipping_Hell" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                <rect key="frame" x="10" y="10" width="135" height="165"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lsJ-gl-fS0">
-                                    <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="lsJ-gl-fS0">
+                                    <rect key="frame" x="0.0" y="0.0" width="135" height="165"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="JgP-A9-xY2" customClass="UIRoundedButton" customModule="Flipping_Hell" customModuleProvider="target">
-                                            <rect key="frame" x="10" y="10" width="75" height="75"/>
+                                            <rect key="frame" x="30" y="10" width="75" height="75"/>
                                             <color key="backgroundColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="778-p4-VYe"/>
                                                 <constraint firstAttribute="width" secondItem="JgP-A9-xY2" secondAttribute="height" multiplier="1:1" id="J0s-GX-Mqt"/>
-                                                <constraint firstAttribute="width" constant="75" id="sfK-nb-UDb"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="28"/>
+                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="35"/>
                                             <state key="normal" title="0">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -1730,15 +1729,46 @@
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <segue destination="rAM-QS-TNW" kind="presentation" identifier="LoadLevelsSegue" modalTransitionStyle="flipHorizontal" id="jf7-3Z-Kgs"/>
+                                            </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars: XX" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZn-Zf-wK0">
+                                            <rect key="frame" x="32.5" y="105" width="70" height="50"/>
+                                            <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="JgP-A9-xY2" secondAttribute="trailing" constant="10" id="CLo-eG-RA3"/>
-                                        <constraint firstAttribute="bottom" secondItem="JgP-A9-xY2" secondAttribute="bottom" constant="10" id="XSN-Zo-dur"/>
+                                        <constraint firstItem="JgP-A9-xY2" firstAttribute="centerX" secondItem="lsJ-gl-fS0" secondAttribute="centerX" id="5ZZ-Rp-6et"/>
+                                        <constraint firstItem="iZn-Zf-wK0" firstAttribute="centerX" secondItem="lsJ-gl-fS0" secondAttribute="centerX" id="9in-Bb-hqt"/>
+                                        <constraint firstItem="iZn-Zf-wK0" firstAttribute="top" secondItem="JgP-A9-xY2" secondAttribute="bottom" constant="20" id="FFM-1N-fxH"/>
+                                        <constraint firstAttribute="bottom" secondItem="iZn-Zf-wK0" secondAttribute="bottom" constant="10" id="KDu-Cs-Hrs"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JgP-A9-xY2" secondAttribute="trailing" constant="5" id="LaF-n4-vun"/>
                                         <constraint firstItem="JgP-A9-xY2" firstAttribute="top" secondItem="lsJ-gl-fS0" secondAttribute="top" constant="10" id="beh-9t-iNK"/>
-                                        <constraint firstItem="JgP-A9-xY2" firstAttribute="leading" secondItem="lsJ-gl-fS0" secondAttribute="leading" constant="10" id="yqw-0e-80m"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iZn-Zf-wK0" secondAttribute="trailing" constant="10" id="lvK-Y9-4ZV"/>
+                                        <constraint firstItem="iZn-Zf-wK0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lsJ-gl-fS0" secondAttribute="leading" constant="10" id="qDK-VY-qaI"/>
+                                        <constraint firstItem="JgP-A9-xY2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lsJ-gl-fS0" secondAttribute="leading" constant="5" id="yqw-0e-80m"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </collectionViewCellContentView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="cellButton" destination="JgP-A9-xY2" id="j43-da-npo"/>
                                 </connections>
@@ -1764,14 +1794,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="StageCollectionView" destination="PRL-bJ-eSy" id="ViH-FM-0Wg"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ht-8s-S1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-80601" y="-5490"/>
+            <point key="canvasLocation" x="-80602.399999999994" y="-5490.4047976011998"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="r9M-p1-mUc"/>
+        <segue reference="aP0-J5-p1D"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-restart-filled-60" width="60" height="60"/>

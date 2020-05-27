@@ -17,7 +17,7 @@ protocol UpdateMainViewDelegate: class {
 }
 
 protocol UpdateLevelViewDelegate: class {
-    func receiveLevelList(LevelList: [[Level]], CurrentStage: Int, CurrentLevel: Int, LevelsPerStage: Int)
+    func receiveLevelList(LevelList: [Level], CurrentStage: Int, CurrentLevel: Int, LevelsPerStage: Int)
 }
 
 protocol UpdateStageViewDelegate: class {
@@ -354,7 +354,7 @@ extension FlippingHell: UpdateModelWinDelegate { // Implements update of model f
 extension FlippingHell: UpdateModelLevelsDelegate {
     // Receives request from Level screen for levels
     func requestLevelList() {
-        UpdateLevelViewDelegateInstance.receiveLevelList(LevelList: stages, CurrentStage: currentStage, CurrentLevel: currentLevel, LevelsPerStage: levelsPerStage)
+        UpdateLevelViewDelegateInstance.receiveLevelList(LevelList: stages[currentStage], CurrentStage: currentStage, CurrentLevel: currentLevel, LevelsPerStage: levelsPerStage)
     }
     
     func changeLevel(StageID: Int, LevelID: Int) {

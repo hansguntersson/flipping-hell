@@ -118,3 +118,27 @@ class GameViewController: UIViewController {
         }
     }
 }
+
+/*
+ 
+ { "levelid": 7551922, "flips": 15 },
+ { "levelid": 18221527, "flips": 15 },
+ { "levelid": 12115083, "flips": 15 },
+ { "levelid": 552944, "flips": 15 },
+ { "levelid": 8771812, "flips": 15 },
+ { "levelid": 14190825, "flips": 15 },
+ { "levelid": 24971880, "flips": 15 },
+ { "levelid": 20110960, "flips": 15 },
+ { "levelid": 32365929, "flips": 15 },
+ { "levelid": 340826, "flips": 15 },
+ { "levelid": 33476103, "flips": 15 },
+ { "levelid": 3639418, "flips": 15 },
+ { "levelid": 27578956, "flips": 15 },
+ { "levelid": 19549351, "flips": 15 },
+ { "levelid": 3330361, "flips": 15 },
+ { "levelid": 996632, "flips": 15 },
+ { "levelid": 996632, "flips": 15 },
+ { "levelid": 14680196, "flips": 2 },
+ { "levelid": 17338398, "flips": 14 },
+ { "levelid": 3582072, "flips": 12 }
+ */
