@@ -35,12 +35,12 @@ class FlippingHell {
     var currentLevel = 0
     var currentStage = 0
     
-    var levelsPerStage = 20 //TODO: Ensure that the total levels are a multiplier of this number
+    var levelsPerStage = 20 // Ensure that the total levels are a multiplier of this number
     
     // TODO: Ensure these arrays are appropriately generated
     var stageUnlocks: [Bool] = []
     var stageStars: [Int] = [0] // number of stars obtained for each level
-    /* 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none */
+    // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
     
     struct LevelJSON: Codable {
         let levelid: Int
@@ -305,10 +305,9 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         
         LevelSelected.completeLevel(Flips: Flips, completeSequence: ButtonsClicked)
         
-        // TODO: check completion of all levels in a stage to unlock and generate a new one
-        // TODO: check completed list of levels before generating one
-        
+        // TODO: check completion of all levels in a stage to unlock a new one
         // TODO: Count level stars in stages to see if the next stage should be unlocked
+        
         var StageWinTest = true
         for levelIndex in stages[currentStage] {
             if (levelIndex.isComplete == false) {
@@ -323,7 +322,7 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         
         saveData(levelid: LevelSelected.sequenceID, flips: Flips)
         
-        //let ItemList = loadData()
+        // let ItemList = loadData()
         // print(ItemList)
     }
     
@@ -340,10 +339,12 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
 
 extension FlippingHell: UpdateModelWinDelegate { // Implements update of model from Win view
     func nextLevel() {
+        // TODO: This shouldn't be possible to see as a button if the game has ended
+        // TODO: If there is no unlocked stage to navigate to, then there should be no button visible
         if (currentLevel < levelsPerStage - 1) {
             currentLevel += 1
         } else {
-            if (currentStage < stages.count ) { // TODO: remove this logic restriction, game won should generate new stage
+            if (currentStage < stages.count ) {
                 currentStage += 1
                 currentLevel = 0
             }

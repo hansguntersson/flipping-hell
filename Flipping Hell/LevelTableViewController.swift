@@ -21,12 +21,6 @@ class LevelTableViewController: UITableViewController {
     
     //MARK: Properties
     weak var game: FlippingHell?
-
-    // TODO: create new struct where it's only the level data required for view
-    // TODO: add in stage number to heading object
-    // TODO: font sizing if the integers are too big?
-    // TODO: create custom navbaritem class and change formatting
-    // TODO: Change output for orientation to show more text - goal and flips
     
     var levels: [Level] = [] // structure for level
     var CurrentStage = 0 // current stage for sorting sections
@@ -47,9 +41,6 @@ class LevelTableViewController: UITableViewController {
         
         UpdateModelLevelsDelegateInstance = game
         UpdateModelLevelsDelegateInstance.requestLevelList()
-        
-        // TODO: remove this - self.title = "STAGE " + "\(CurrentStage + 1)"
-        // TODO: Check if this needs to be amnended on unwind from stage selection too
         
         scrollToFirstRow()
     }
@@ -168,7 +159,6 @@ extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and pr
         self.CurrentLevel = CurrentLevel
         self.tableView.reloadData()
         
-        // TODO: Navigate to the current level immediately
         scrollToFirstRow()
         
         self.title = "STAGE \(CurrentStage + 1)"

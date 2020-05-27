@@ -19,9 +19,6 @@ protocol UpdateModelStagesDelegate: class {
 private let reuseIdentifier = "Cell"
 
 class StageViewController: UICollectionViewController {
-
-    // TODO: sum of stars and similar - summary elements?
-    // TODO: Decide on how numbers by stars are going to be defined
     
     weak var game: FlippingHell?
     var SelectedStage: Int = 0
@@ -62,7 +59,6 @@ class StageViewController: UICollectionViewController {
     @IBAction func backToScreen(_ sender: Any) { // Back to Win or Main screen from Level screen
         self.dismiss(animated: true, completion: nil)
     }
-    
     
     
     // ********************************** SEGUES ********************************** //

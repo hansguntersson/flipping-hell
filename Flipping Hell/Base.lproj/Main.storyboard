@@ -1298,6 +1298,7 @@
                         <outletCollection property="buttonFlipperCollection" destination="7A6-Gb-NCh" collectionClass="NSMutableArray" id="dzu-OO-OY9"/>
                         <outletCollection property="buttonFlipperCollection" destination="a4d-PX-KpI" collectionClass="NSMutableArray" id="ufd-Ad-BaG"/>
                         <outletCollection property="buttonFlipperCollection" destination="nqv-V5-x6h" collectionClass="NSMutableArray" id="vQy-CD-vwz"/>
+                        <segue destination="Wpg-a9-9ol" kind="presentation" identifier="GameWonSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="p5r-z3-7Sh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Y5-Qd-sCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1389,7 +1390,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIPS X/X" textAlignment="natural" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-9a-9hD" userLabel="Level Goal">
-                                            <rect key="frame" x="80" y="21" width="108.5" height="28"/>
+                                            <rect key="frame" x="80" y="23" width="138.5" height="24"/>
                                             <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="24"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -1517,8 +1518,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeR-sp-2XO">
                                 <rect key="frame" x="20" y="126.5" width="335" height="414"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELL DONE!" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znf-6u-XMq">
-                                        <rect key="frame" x="51.5" y="40" width="232.5" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELL DONE !" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znf-6u-XMq">
+                                        <rect key="frame" x="47" y="40" width="241" height="32"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1735,7 +1736,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars: XX" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZn-Zf-wK0">
-                                            <rect key="frame" x="32.5" y="105" width="70" height="50"/>
+                                            <rect key="frame" x="23" y="105" width="89" height="50"/>
                                             <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="17"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>

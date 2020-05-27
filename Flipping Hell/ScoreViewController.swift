@@ -14,6 +14,24 @@ class ScoreViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // TODO: decide what scores and stats are shown
+        /*
+                Summary of stars won for each type
+                Stages completed, Levels completed
+                Top ranking users, based on various metrics:
+                - most levels won
+                - most stars
+                - level completed most times
+                - score (based on stars)
+                - most attempts
+                - attempts / won ratio
+                
+                Should green stars indicate that you're the first person to complete a level?
+                Wnat's the highest number for any number of flips?
+        
+               */
+        
     }
     
     @IBAction func unwindToLevelMenuFromStages(segue: UIStoryboardSegue) {

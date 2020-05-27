@@ -18,24 +18,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: Add in score / ranking buttons and menus to the interface
-        
-        /*
-         Summary of stars won for each type
-         Stages completed, Levels completed
-         Top ranking users, based on various metrics:
-         - most levels won
-         - most stars
-         - level completed most times
-         - score (based on stars)
-         - most attempts
-         - attempts / won ratio
-         
-         Should green stars indicate that you're the first person to complete a level?
-         Wnat's the highest number for any number of flips?
- 
-        */
-        
     }
     
     // ********************************** SEGUES ********************************** //
@@ -57,7 +39,7 @@ class GameViewController: UIViewController {
     // ********************************** LINKS ********************************** //
     
     @IBAction func openTwitter(_ sender: UIButton) { // Twitter link on main screen
-        // TODO: Check  twitter works on info.plist
+        // TODO: Check twitter works on info.plist
         let screenName = "hansguntersson"
         let appURL = NSURL(string: "twitter://user?screen_name=\(screenName)")! as URL
         let webURL = NSURL(string: "https://twitter.com/\(screenName)")! as URL
