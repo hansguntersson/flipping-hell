@@ -226,7 +226,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NY4-jW-Iph">
-                                <rect key="frame" x="37.5" y="100" width="300" height="300"/>
+                                <rect key="frame" x="37.5" y="110" width="300" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dDI-kv-qJe">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="53.5"/>
@@ -726,7 +726,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gK2-bn-1TJ">
-                                <rect key="frame" x="37.5" y="432" width="135" height="135"/>
+                                <rect key="frame" x="37.5" y="440" width="135" height="135"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6mq-tx-Ias">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="24"/>
@@ -1081,7 +1081,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0aR-uF-ydv">
-                                <rect key="frame" x="202.5" y="432" width="135" height="135"/>
+                                <rect key="frame" x="202.5" y="440" width="135" height="135"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oLz-yO-hkp">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="39.5"/>
@@ -1135,8 +1135,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="4tS-Nx-mNu" secondAttribute="height" multiplier="1:1" id="2yZ-8S-y3r"/>
                                                 </constraints>
-                                                <state key="normal" title="⚫️">
-                                                    <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="◉">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
@@ -1213,7 +1214,7 @@
                             <constraint firstItem="EdM-gL-kKL" firstAttribute="top" secondItem="XoO-cJ-Gm3" secondAttribute="top" constant="15" id="WLu-ZR-EeM"/>
                             <constraint firstItem="XoO-cJ-Gm3" firstAttribute="trailing" secondItem="FRp-mO-Ld6" secondAttribute="trailing" constant="15" id="XLE-Dj-D7T"/>
                             <constraint firstItem="NY4-jW-Iph" firstAttribute="width" secondItem="NY4-jW-Iph" secondAttribute="height" multiplier="1:1" id="Xtw-j9-9Bu"/>
-                            <constraint firstItem="NY4-jW-Iph" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KuN-GI-4L4" secondAttribute="bottom" constant="30" id="ZJO-hV-THd"/>
+                            <constraint firstItem="NY4-jW-Iph" firstAttribute="top" secondItem="KuN-GI-4L4" secondAttribute="bottom" constant="40" id="ZJO-hV-THd"/>
                             <constraint firstItem="iid-da-cCA" firstAttribute="leading" secondItem="XoO-cJ-Gm3" secondAttribute="leading" constant="15" id="cRA-rK-byF"/>
                             <constraint firstItem="XoO-cJ-Gm3" firstAttribute="bottom" secondItem="iid-da-cCA" secondAttribute="bottom" constant="15" id="dEa-og-IGO"/>
                             <constraint firstItem="NY4-jW-Iph" firstAttribute="centerX" secondItem="XoO-cJ-Gm3" secondAttribute="centerX" id="ejI-pz-PPv"/>
