@@ -1771,6 +1771,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="cellButton" destination="JgP-A9-xY2" id="j43-da-npo"/>
+                                    <outlet property="cellText" destination="iZn-Zf-wK0" id="CBG-bp-T7s"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -1804,7 +1805,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aP0-J5-p1D"/>
+        <segue reference="r9M-p1-mUc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-restart-filled-60" width="60" height="60"/>

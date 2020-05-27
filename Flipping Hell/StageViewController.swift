@@ -26,7 +26,8 @@ class StageViewController: UICollectionViewController {
     weak var game: FlippingHell?
     var SelectedStage: Int = 0
     
-    var stages: [Int] = [1, 2, 3, 4, 5]
+    var stages: [Int] = []
+    var stagesunlocked = 6 // TODO: Implement locking icons based on what the game understands of status
     let cellIdentifier = "StageCollectionViewCell"
     
     // ********************************** DELEGATES ********************************** //
@@ -67,13 +68,15 @@ class StageViewController: UICollectionViewController {
     // ********************************** SEGUES ********************************** //
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // TODO: Account for segue only with buttons that do not have X's on them
+        let buttonInstance = sender as! UIButton
         if segue.identifier == "LoadLevelsSegue" {
+            // Correct for inert stages that are not yet unlocked
+            
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.game = self.game
                 game?.UpdateLevelViewDelegateInstance = lvc
-                
-                let buttonInstance = sender as! UIButton
                 UpdateModelStagesDelegateInstance.changeStage(StageID: Int(buttonInstance.currentTitle ?? "1")! - 1)
             }
         }
@@ -90,16 +93,21 @@ class StageViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return stages.count
+        return stagesunlocked
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StageCollectionViewCell", for: indexPath) as! StageViewCell
     
-            // Configure the cell
+        cell.cellButton.setTitle(String(indexPath.row + 1), for: .normal)
         
-        let cellIndex = String(indexPath.row + 1)
-        cell.cellButton.setTitle(cellIndex, for: .normal)
+            // Configure the cell
+        if (indexPath.row == 5) {
+            cell.cellButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            cell.cellButton.setTitle("✕", for: .normal)
+            cell.cellText.text = "LOCKED"
+        }
+        
         
         return cell
     }
