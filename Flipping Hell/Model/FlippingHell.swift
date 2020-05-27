@@ -382,4 +382,8 @@ extension FlippingHell: UpdateModelStagesDelegate {
         }
         return stageOutput
     }
+    
+    func changeStage(StageID: Int) {
+        currentStage = StageID
+    }
 }

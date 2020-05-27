@@ -12,6 +12,7 @@ import UIKit
 
 protocol UpdateModelStagesDelegate: class {
     func requestScores() -> [Int]
+    func changeStage(StageID: Int)
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -71,8 +72,9 @@ class StageViewController: UICollectionViewController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.game = self.game
                 game?.UpdateLevelViewDelegateInstance = lvc
-                //lvc.DisplayedStage = self.game.currentStage ?? 0
                 
+                let buttonInstance = sender as! UIButton
+                UpdateModelStagesDelegateInstance.changeStage(StageID: Int(buttonInstance.currentTitle ?? "1")! - 1)
             }
         }
     }

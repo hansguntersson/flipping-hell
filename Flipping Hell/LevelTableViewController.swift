@@ -168,7 +168,7 @@ extension LevelTableViewController: UpdateLevelViewDelegate { // Receives and pr
         self.CurrentLevel = CurrentLevel
         self.tableView.reloadData()
         
-        // TODO: Navigate to the right level immediately
+        // TODO: Navigate to the current level immediately
         scrollToFirstRow()
         
         self.title = "STAGE \(CurrentStage + 1)"
