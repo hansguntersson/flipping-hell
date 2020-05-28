@@ -1334,16 +1334,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of stars in each category, number of stars required to unlock next stage, with maximum" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pib-j1-bBT">
+                                <rect key="frame" x="62" y="432" width="262" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Pib-j1-bBT" firstAttribute="leading" secondItem="SYw-VJ-8ya" secondAttribute="leading" constant="62" id="5tl-MO-H3T"/>
                             <constraint firstItem="iCj-IQ-urG" firstAttribute="leading" secondItem="SYw-VJ-8ya" secondAttribute="leading" constant="80" id="CGo-sT-YbJ"/>
+                            <constraint firstItem="Pib-j1-bBT" firstAttribute="top" secondItem="iCj-IQ-urG" secondAttribute="bottom" constant="89.5" id="GKk-4n-DSV"/>
+                            <constraint firstItem="SYw-VJ-8ya" firstAttribute="trailing" secondItem="Pib-j1-bBT" secondAttribute="trailing" constant="51" id="IIL-9D-yMK"/>
                             <constraint firstItem="5uh-oN-0Dr" firstAttribute="top" secondItem="SYw-VJ-8ya" secondAttribute="top" constant="15" id="O2p-eK-UTH"/>
                             <constraint firstItem="5uh-oN-0Dr" firstAttribute="leading" secondItem="SYw-VJ-8ya" secondAttribute="leading" constant="15" id="VIB-Z7-RoI"/>
                             <constraint firstItem="iCj-IQ-urG" firstAttribute="top" secondItem="SYw-VJ-8ya" secondAttribute="top" constant="305" id="W1P-kw-vbq"/>
                             <constraint firstItem="SYw-VJ-8ya" firstAttribute="bottom" secondItem="iCj-IQ-urG" secondAttribute="bottom" constant="304.5" id="iOT-hT-hts"/>
                             <constraint firstItem="SYw-VJ-8ya" firstAttribute="trailing" secondItem="iCj-IQ-urG" secondAttribute="trailing" constant="79.5" id="nit-VZ-JhN"/>
                             <constraint firstItem="SYw-VJ-8ya" firstAttribute="trailing" secondItem="5uh-oN-0Dr" secondAttribute="trailing" constant="325" id="oMd-gx-m1P"/>
+                            <constraint firstItem="SYw-VJ-8ya" firstAttribute="bottom" secondItem="Pib-j1-bBT" secondAttribute="bottom" constant="143" id="pMr-Ln-m3Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SYw-VJ-8ya"/>
                     </view>
@@ -1351,7 +1361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMP-fS-ucr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79679" y="-4639"/>
+            <point key="canvasLocation" x="-79679.199999999997" y="-4639.4302848575717"/>
         </scene>
         <!--STAGE X-->
         <scene sceneID="HW2-aE-ejK">

@@ -38,9 +38,13 @@ class FlippingHell {
     var levelsPerStage = 20 // Ensure that the total levels are a multiplier of this number
     
     // TODO: Ensure these arrays are appropriately generated
-    var stageUnlocks: [Bool] = []
-    var stageStars: [Int] = [0] // number of stars obtained for each level
+    var stagesUnlockedInitial: Int = 2 // number of stages unlocked initially
+    var stagesUnlocked: Int = 0 // number of stages unlocked
+    var stagesVisible: Int = 0 // number of stages visible
+    var stageStars: [Int] = [0, 0] // number of stars obtained for each stage
+    var totalStars: Int = 0 // total tally of stars which drives stage unlocks
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
+    let unlockStarRatio = 4
     
     struct LevelJSON: Codable {
         let levelid: Int
@@ -52,6 +56,8 @@ class FlippingHell {
     }
     
     init() {
+        stagesUnlocked = stagesUnlockedInitial
+        
         loadLevels()
         /*
         let TestArray = [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0]
@@ -245,8 +251,7 @@ class FlippingHell {
     
     func calculateStars() {
         // Loop through stages
-        // loop through each level, and look at star score for minimum
-        
+        // loop through each level, and look at star score for number of instances of star values
     }
     
     func loadLevels() { // Load levels into game
@@ -279,8 +284,6 @@ class FlippingHell {
                 
                 let levelArray = [Level]()
                 stages.append(levelArray)
-                
-                stageUnlocks.append(true) // TODO: Turn this off for full game
                 stageStars.append(0)
             }
             
@@ -289,8 +292,6 @@ class FlippingHell {
             stages[jsonstageindex].append(levelinstance)
             
             jsonarrayindex += 1
-            
-            stageUnlocks[0] = true // ensures that the first level is available
             
         }
     }
@@ -306,20 +307,27 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         
         LevelSelected.completeLevel(Flips: Flips, completeSequence: ButtonsClicked)
         
-        // TODO: check completion of all levels in a stage to unlock a new one
-        // TODO: Count level stars in stages to see if the next stage should be unlocked
+        // Establish how many stages are unlocked
+        totalStars = 0
         
-        var StageWinTest = true
-        for levelIndex in stages[currentStage] {
-            if (levelIndex.isComplete == false) {
-                StageWinTest = false
-                break
+        for (index, stageindex)  in stages.enumerated() {
+            stageStars[index] = 0
+            for levelIndex in stageindex {
+                totalStars += levelIndex.starScore
+                stageStars[index] += levelIndex.starScore
             }
         }
         
-        if(StageWinTest == true) {
-            stageUnlocks[currentStage + 1] = true
-        }
+        stagesUnlocked = stagesUnlockedInitial + (totalStars / unlockStarRatio)
+        if (stagesUnlocked > stages.count) {stagesUnlocked = stages.count}
+        // TODO: Trigger alert to show level unlocked on win screen
+        
+        /*
+         20 levels per stage
+         60 all gold
+         40 all silver
+         20 all bronze
+         */
         
         saveData(levelid: LevelSelected.sequenceID, flips: Flips)
         
@@ -379,14 +387,22 @@ extension FlippingHell: UpdateModelStagesDelegate {
                     starMin = levelIndex.starScore
                 }
             }
-            if (stageUnlocks[stageCount] == true) {
-                stageOutput.append(starMin)
-            }
+            
+            stageOutput.append(starMin)
+            
             stageCount += 1
         }
         
+        
+        
+        if (stagesUnlocked >= stages.count) {
+            stagesVisible = stages.count
+        } else {
+            stagesVisible = stagesUnlocked + 1
+        }
+        
         // TODO: calculate total stars and unlocked stages etc
-        UpdateStageViewDelegateInstance.receiveStageList(StagesVisible: 12, StagesUnlocked: 9, StagesStars:[1, 2, 3, 4, 1, 2, 3, 4, 9])
+        UpdateStageViewDelegateInstance.receiveStageList(StagesVisible: stagesVisible, StagesUnlocked: stagesUnlocked, StagesStars: stageStars)
     }
     
     func changeStage(StageID: Int) {

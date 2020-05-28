@@ -38,6 +38,7 @@ class Level {
     var minFlips: Int16 = 0 // The minimum number of flips the level has been completed in
     var minMoves: Array<Int> = [0] // The minimum moves the level has been completed in
     var starScore: Int = 0 // Score of stars for the particular level
+    // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
     var isComplete = false // Whether the level has been completed
 
     static var levelsIndices = 0 // The class index for the levels

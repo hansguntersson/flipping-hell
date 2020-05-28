@@ -98,10 +98,9 @@ class StageViewController: UICollectionViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // TODO: Account for segue only with buttons that do not have X's on them
-        let buttonInstance = sender as! UIButton
         if segue.identifier == "LoadLevelsSegue" {
             // Correct for inert stages that are not yet unlocked
-            
+            let buttonInstance = sender as! UIButton
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
                 lvc.game = self.game
