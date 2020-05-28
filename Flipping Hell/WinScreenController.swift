@@ -34,15 +34,19 @@ class WinScreenController: UIViewController {
     
     var levels: [Level] = []
    
-    @IBOutlet var WinPopup: UIView! //TODO: What is this?
+    // @IBOutlet var WinPopup: UIView! //TODO: What is this?
     @IBOutlet var NextLevelText: UILabel!
     
     @IBOutlet var WinStarsText: UILabel!
     @IBOutlet var WinFlipsText: UILabel!
     @IBOutlet var GoalFlipsText: UILabel!
 
+    @IBOutlet weak var WinStarBoxOuter: UIView!
+    @IBOutlet weak var WinStarBoxInner: UIView!
+    
     var WinStarsString: String = "TBD"
     var WinStarColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+
     
     // ********************************** DELEGATES ********************************** //
     
@@ -63,15 +67,23 @@ class WinScreenController: UIViewController {
         if (WinFlips - GoalFlips > 2) {
             WinStarsText.text = "★"
             WinStarsText.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
+            WinStarBoxOuter.backgroundColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
+            WinStarBoxInner.backgroundColor = #colorLiteral(red: 1, green: 0.8517647059, blue: 0.65, alpha: 1)
         } else if (WinFlips - GoalFlips > 0) {
             WinStarsText.text = "★ ★"
-            WinStarsText.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            WinStarsText.textColor = #colorLiteral(red: 0.712579906, green: 0.712579906, blue: 0.712579906, alpha: 1)
+            WinStarBoxOuter.backgroundColor = #colorLiteral(red: 0.712579906, green: 0.712579906, blue: 0.712579906, alpha: 1)
+            WinStarBoxInner.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
         } else if (WinFlips - GoalFlips == 0) {
             WinStarsText.text = "★ ★ ★"
             WinStarsText.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+            WinStarBoxOuter.backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+            WinStarBoxInner.backgroundColor = #colorLiteral(red: 1, green: 0.94, blue: 0.7, alpha: 1)
         } else if (WinFlips - GoalFlips < 0) {
             WinStarsText.text = "✮ ✮ ✮"
             WinStarsText.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+            WinStarBoxOuter.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+            WinStarBoxInner.backgroundColor = #colorLiteral(red: 0.8300000012, green: 0.9364200405, blue: 0.9764705896, alpha: 1)
         }
         
         // New stage trigger
