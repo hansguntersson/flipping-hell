@@ -34,8 +34,8 @@ class WinScreenController: UIViewController {
     
     var levels: [Level] = []
    
-    @IBOutlet var WinPopup: UIView!
-    @IBOutlet var NextLevelButton: UIButton!
+    @IBOutlet var WinPopup: UIView! //TODO: What is this?
+    @IBOutlet var NextLevelText: UILabel!
     
     @IBOutlet var WinStarsText: UILabel!
     @IBOutlet var WinFlipsText: UILabel!
@@ -75,10 +75,12 @@ class WinScreenController: UIViewController {
         }
         
         // New stage trigger
-        if(LevelNumber == 9) {
-            NextLevelButton.setTitle("NEXT STAGE", for: .normal)
+        if(LevelNumber == 19) {
+            NextLevelText.text = "Next Stage"
+            // NextLevelText.numberOfLines = 2
         } else {
-            NextLevelButton.setTitle("NEXT LEVEL", for: .normal)
+            NextLevelText.text = "Next Level"
+            // NextLevelText.numberOfLines = 2
         }
     }
     
@@ -93,7 +95,7 @@ class WinScreenController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func selectLevel(_ sender: UIButton) {
+    @IBAction func selectLevel(_ sender: UIButton) { // TODO: Fix this to unwind to the right point
         self.performSegue(withIdentifier: "WinSelectLevelSegue", sender: self)
     }
     
