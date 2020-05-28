@@ -58,6 +58,15 @@ class GameViewController: UIViewController {
 
 @IBDesignable extension UIView {
     
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
     @IBInspectable var borderWidth: CGFloat {
         set {
             layer.borderWidth = newValue
@@ -84,20 +93,9 @@ class GameViewController: UIViewController {
     }
 }
 
- extension UIButton {
+extension UIButton {
     func cornerCalculation(r: CGFloat) {
         self.layer.cornerRadius = self.frame.height / 2 * r
-    }
-}
-
-@IBDesignable extension UIView {
-    @IBInspectable var cornerRadius: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-        }
-        get {
-            return layer.cornerRadius
-        }
     }
 }
 
