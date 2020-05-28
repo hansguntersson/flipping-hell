@@ -17,7 +17,6 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // ********************************** SEGUES ********************************** //
@@ -30,8 +29,8 @@ class GameViewController: UIViewController {
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! StageViewController
                 lvc.game = self.game
-                //game.UpdateLevelViewDelegateInstance = lvc
-                //lvc.DisplayedStage = self.game.currentStage ?? 0
+                game.UpdateStageViewDelegateInstance = lvc
+                // TODO: Automatically trigger action upon load
             }
         }
     }

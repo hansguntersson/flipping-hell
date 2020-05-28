@@ -113,10 +113,10 @@ class LevelTableViewController: UITableViewController {
         return sectionView
     } */
     
-    
     // ********************************** ACTIONS ********************************** //
     
     @IBAction func backToScreen(_ sender: Any) { // Back to Win or Main screen from Level screen
+        game?.requestStages()
         self.dismiss(animated: true, completion: nil)
     }
     

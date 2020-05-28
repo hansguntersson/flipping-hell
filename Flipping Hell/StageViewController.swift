@@ -11,7 +11,7 @@ import UIKit
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateModelStagesDelegate: class {
-    func requestScores() -> [Int]
+    func requestStages()
     func changeStage(StageID: Int)
 }
 
@@ -23,8 +23,9 @@ class StageViewController: UICollectionViewController {
     weak var game: FlippingHell?
     var SelectedStage: Int = 0
     
-    var stages: [Int] = []
-    var stagesunlocked = 6 // TODO: Implement locking icons based on what the game understands of status
+    var stagesStars: [Int] = [0, 0, 0]
+    var stagesVisible = 3
+    var stagesUnlocked = 3
     let cellIdentifier = "StageCollectionViewCell"
     
     // ********************************** DELEGATES ********************************** //
@@ -41,7 +42,7 @@ class StageViewController: UICollectionViewController {
         layout.itemSize = CGSize(width: width, height: (width * 1.2))
         
         UpdateModelStagesDelegateInstance = game
-        stages = UpdateModelStagesDelegateInstance.requestScores()
+        UpdateModelStagesDelegateInstance.requestStages()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -57,7 +58,39 @@ class StageViewController: UICollectionViewController {
     // ********************************** ACTIONS ********************************** //
     
     @IBAction func backToScreen(_ sender: Any) { // Back to Win or Main screen from Level screen
+        // TODO: Build reset routine to trigger when
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    // ********************************** OVERRIDE FUNCTIONS ********************************** //
+
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return stagesVisible
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StageCollectionViewCell", for: indexPath) as! StageViewCell
+        
+        // Configure the cell
+        if (indexPath.row < stagesUnlocked) {
+            cell.cellButton.backgroundColor = #colorLiteral(red: 1, green: 0.2705882353, blue: 0.2274509804, alpha: 1)
+            cell.cellButton.setTitle(String(indexPath.row + 1), for: .normal)
+            cell.cellText.text = "Stars: \(stagesStars[indexPath.row])"
+        } else {
+            cell.cellButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            cell.cellButton.setTitle("✕", for: .normal)
+            cell.cellText.text = "LOCKED"
+        }
+        
+        return cell
     }
     
     
@@ -77,36 +110,25 @@ class StageViewController: UICollectionViewController {
             }
         }
     }
+   
+}
+    
+// ********************************** EXTENSIONS ********************************** //
+
+extension StageViewController: UpdateStageViewDelegate {
+    func receiveStageList(StagesVisible: Int, StagesUnlocked: Int, StagesStars: [Int]) {
+        
+        self.stagesVisible = StagesVisible
+        self.stagesUnlocked = StagesUnlocked
+        self.stagesStars = StagesStars
+        
+        self.collectionView.reloadData()
+    }
+}
     
     
-    // ********************************** OVERRIDE FUNCTIONS ********************************** //
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return stagesunlocked
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StageCollectionViewCell", for: indexPath) as! StageViewCell
     
-        cell.cellButton.setTitle(String(indexPath.row + 1), for: .normal)
-        
-            // Configure the cell
-        if (indexPath.row == 5) {
-            cell.cellButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-            cell.cellButton.setTitle("✕", for: .normal)
-            cell.cellText.text = "LOCKED"
-        }
-        
-        
-        return cell
-    }
+    
 
     // MARK: UICollectionViewDelegate
 
@@ -140,4 +162,4 @@ class StageViewController: UICollectionViewController {
     */
 
 
-}
+

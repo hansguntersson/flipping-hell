@@ -21,7 +21,7 @@ protocol UpdateLevelViewDelegate: class {
 }
 
 protocol UpdateStageViewDelegate: class {
-    func receiveStageList(StageID: Int, LevelList: [Level])
+    func receiveStageList(StagesVisible: Int, StagesUnlocked: Int, StagesStars: [Int])
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -71,6 +71,7 @@ class FlippingHell {
     
     weak var UpdateMainViewDelegateInstance: UpdateMainViewDelegate!
     weak var UpdateLevelViewDelegateInstance: UpdateLevelViewDelegate!
+    weak var UpdateStageViewDelegateInstance: UpdateStageViewDelegate!
     
     
     // ********************************** CORE DATA ********************************** //
@@ -366,7 +367,9 @@ extension FlippingHell: UpdateModelLevelsDelegate {
 }
 
 extension FlippingHell: UpdateModelStagesDelegate {
-    func requestScores() -> [Int] {
+    func requestStages() {
+        
+        // TODO: Remove irrelevant code here
         var stageOutput: [Int] = []
         var stageCount = 0
         for stageIndex in stages {
@@ -381,7 +384,9 @@ extension FlippingHell: UpdateModelStagesDelegate {
             }
             stageCount += 1
         }
-        return stageOutput
+        
+        // TODO: calculate total stars and unlocked stages etc
+        UpdateStageViewDelegateInstance.receiveStageList(StagesVisible: 12, StagesUnlocked: 9, StagesStars:[1, 2, 3, 4, 1, 2, 3, 4, 9])
     }
     
     func changeStage(StageID: Int) {
