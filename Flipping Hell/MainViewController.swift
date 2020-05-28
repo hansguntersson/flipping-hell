@@ -79,18 +79,9 @@ class MainViewController: UIViewController {
     
     // ********************************** FUNCTIONS ********************************** //
     
-    @IBAction func backToMain(_ sender: UIButton) { // Dismisses view controller back to the level screen
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func unwindFromLevels(segue:UIStoryboardSegue) { // Level selected and unwind
-        UpdateModelDelegateInstance.requestLevel()
-        resetButtons()
-    }
-    
     @IBAction func resetLevel(_ sender: UIButton) { //Resets the level from the main screen
         if(FlipCount > 0) { // Only add to attempts if there have been flips made
-            // TODO: Ensure that the attempts are increased when a level is won, seems like this is dealt with in the model, make sure it's not done twice
+            // TODO: Ensure that the attempts are increased when a level is won, seems like this is already dealt with in the model, make sure it's not done twice
             UpdateModelDelegateInstance.gameReset()
             resetButtons()
         }
@@ -294,7 +285,14 @@ class MainViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func unwindToLevels(segue: UIStoryboardSegue) { // Dismisses view controller back to the level screen
+        game?.requestLevelList()
+        self.dismiss(animated: true, completion: nil)
+    }
 }
+
+
 
  // ********************************** EXTENSIONS ********************************** //
 

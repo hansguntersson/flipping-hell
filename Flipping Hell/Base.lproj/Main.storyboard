@@ -209,7 +209,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="backToMain:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="BIc-gy-qgj"/>
+                                    <action selector="unwindToLevelsWithSegue:" destination="eaX-Lf-uKk" eventType="touchUpInside" id="zrs-2J-jEw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FRp-mO-Ld6">
@@ -1907,7 +1907,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="r9M-p1-mUc"/>
+        <segue reference="aP0-J5-p1D"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-restart-filled-60" width="60" height="60"/>
