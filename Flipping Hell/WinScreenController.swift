@@ -30,13 +30,10 @@ class WinScreenController: UIViewController {
     var WinFlips: Int16 = 0
     var GoalFlips: Int16 = 0
     var LevelNumber = 0
-    //var StageNumber = 0 TODO: Remove this?
     
     var levels: [Level] = []
    
-    // @IBOutlet var WinPopup: UIView! //TODO: What is this?
     @IBOutlet var NextLevelText: UILabel!
-    
     @IBOutlet var WinStarsText: UILabel!
     @IBOutlet var WinFlipsText: UILabel!
     @IBOutlet var GoalFlipsText: UILabel!
@@ -44,7 +41,7 @@ class WinScreenController: UIViewController {
     @IBOutlet weak var WinStarBoxOuter: UIView!
     @IBOutlet weak var WinStarBoxInner: UIView!
     
-    var WinStarsString: String = "TBD"
+    var WinStarsString: String = ""
     var WinStarColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 
     
