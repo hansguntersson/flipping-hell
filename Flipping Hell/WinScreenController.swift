@@ -30,7 +30,7 @@ class WinScreenController: UIViewController {
     var WinFlips: Int16 = 0
     var GoalFlips: Int16 = 0
     var LevelNumber = 0
-    var StageNumber = 0
+    //var StageNumber = 0 TODO: Remove this?
     
     var levels: [Level] = []
    
@@ -109,17 +109,6 @@ class WinScreenController: UIViewController {
     
     @IBAction func selectLevel(_ sender: UIButton) { // TODO: Fix this to unwind to the right point
         self.performSegue(withIdentifier: "WinSelectLevelSegue", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "WinSelectLevelSegue" {
-            if let vc = segue.destination as? UINavigationController {
-                let lvc = vc.children[0] as! LevelTableViewController
-                lvc.game = self.game
-                // lvc.DisplayedStage = self.game?.currentStage ?? 0
-                game!.UpdateLevelViewDelegateInstance = lvc
-            }
-        }
     }
     
     /*

@@ -140,6 +140,11 @@ class LevelTableViewController: UITableViewController {
         }
          
     }
+    
+    @IBAction func unwindFromWintoLevel( _ seg: UIStoryboardSegue) {
+        game?.requestLevelList()
+    }
+    
 
     // ********************************** FUNCTIONS ********************************** //
     
