@@ -10,6 +10,14 @@ import UIKit
 
 // ********************************** CLASS DEFINITION ********************************** //
 
+// TODO: Acsount for ipad and larger displays
+// TODO: Load and save logic
+// TODO: Blue stars?
+// TODO: Next level button
+// TODO: Stage unlock alert
+// TODO: X buttons on stage screen
+
+
 class GameViewController: UIViewController {
     
     var game = FlippingHell()

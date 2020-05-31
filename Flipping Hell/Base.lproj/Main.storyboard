@@ -1986,7 +1986,7 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <segue destination="rAM-QS-TNW" kind="presentation" identifier="LoadLevelsSegue" modalTransitionStyle="flipHorizontal" id="jf7-3Z-Kgs"/>
+                                                <action selector="selectStage:" destination="9hu-iO-dZU" eventType="touchUpInside" id="st5-7o-xdu"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars: XX" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZn-Zf-wK0">
@@ -2053,6 +2053,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="StageCollectionView" destination="PRL-bJ-eSy" id="ViH-FM-0Wg"/>
+                        <segue destination="rAM-QS-TNW" kind="presentation" identifier="LoadLevelsSegue" modalTransitionStyle="flipHorizontal" id="qAs-J4-lJa"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ht-8s-S1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2061,7 +2062,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="70Q-gq-zrZ"/>
+        <segue reference="r9M-p1-mUc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icons8-restart-filled-60" width="60" height="60"/>

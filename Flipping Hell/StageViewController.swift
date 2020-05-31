@@ -61,6 +61,13 @@ class StageViewController: UICollectionViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func selectStage(_ sender: UIRoundedButton) {
+        let lockedLevel: String = sender.titleLabel!.text!
+        if (lockedLevel != "✕") {
+            performSegue(withIdentifier: "LoadLevelsSegue", sender: sender)
+        }
+    }
+    
     
     // ********************************** OVERRIDE FUNCTIONS ********************************** //
 
