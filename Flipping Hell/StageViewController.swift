@@ -102,7 +102,6 @@ class StageViewController: UICollectionViewController {
     // ********************************** SEGUES ********************************** //
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO: Account for segue only with buttons that do not have X's on them
         if segue.identifier == "LoadLevelsSegue" {
             let buttonInstance = sender as! UIButton
             if let vc = segue.destination as? UINavigationController {

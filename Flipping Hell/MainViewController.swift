@@ -273,9 +273,6 @@ class MainViewController: UIViewController {
             if let vc = segue.destination as? WinScreenController {
                 vc.game = self.game
                 vc.ReplayButtonsDelegateInstance = self
-                
-                // TODO: Implement protocol/delegate for win to game
-                
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum

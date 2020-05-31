@@ -333,7 +333,6 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         
         stagesUnlocked = stagesUnlockedInitial + (totalStars / unlockStarRatio)
         if (stagesUnlocked > stages.count) {stagesUnlocked = stages.count}
-        // TODO: Trigger alert to show stage unlocked on win screen
 
         saveData(levelid: LevelSelected.sequenceID, flips: Flips)
         
@@ -417,9 +416,6 @@ extension FlippingHell: UpdateModelScoresDelegate {
                     silverCount += levelIndex.starScore
                 } else if (tempScore == 3) {
                     goldCount += levelIndex.starScore
-                } else if (tempScore == 4) {
-                    print("blue star")
-                    // TODO: Account for blue stars?
                 }
             }
         }
