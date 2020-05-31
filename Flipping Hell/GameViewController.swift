@@ -12,8 +12,6 @@ import UIKit
 
 // TODO: Acsount for ipad and larger displays
 // TODO: Load and save logic
-// TODO: Blue stars?
-// TODO: Next level button
 // TODO: Stage unlock alert
 
 class GameViewController: UIViewController {

@@ -74,10 +74,8 @@ class Level {
                 starScore = 1
             } else if (minFlips - goalFlips > 0) {
                 starScore = 2
-            } else if (minFlips - goalFlips == 0) {
+            } else if (minFlips - goalFlips <= 0) {
                 starScore = 3
-            } else if (minFlips - goalFlips < 0) {
-                starScore = 4
             }
             
             // TODO: Still want to log sequences even if they're not a new record?

@@ -13,7 +13,7 @@ import CoreData
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateMainViewDelegate: class {
-    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool, FirstOpen: Bool)
+    func receiveLevel(LevelID: Int, StageID: Int, StageMax: Int, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool, FirstOpen: Bool)
 }
 
 protocol UpdateLevelViewDelegate: class {
@@ -348,7 +348,7 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
     func requestLevel() {
         let LevelSelected = stages[currentStage][currentLevel]
         let LevelArray = LevelSelected.numberToArray(NumberInput: LevelSelected.sequenceID)
-        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: LevelSelected.goalFlips, Sequence: LevelArray, IsCompleted: LevelSelected.isComplete, FirstOpen: firstOpen)
+        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, StageID: currentStage, StageMax: stagesUnlocked, GoalFlips: LevelSelected.goalFlips, Sequence: LevelArray, IsCompleted: LevelSelected.isComplete, FirstOpen: firstOpen)
         firstOpen = false
     }
 }

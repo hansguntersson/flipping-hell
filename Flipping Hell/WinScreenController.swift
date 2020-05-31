@@ -27,9 +27,12 @@ class WinScreenController: UIViewController {
     var WinFlips: Int16 = 0
     var GoalFlips: Int16 = 0
     var LevelNumber = 0
+    var StageNumber = 0
+    var StageMax = 2
     
     var levels: [Level] = []
    
+    @IBOutlet var NextLevelButton: UIRoundedButton!
     @IBOutlet var NextLevelText: UILabel!
     @IBOutlet var WinStarsText: UILabel!
     @IBOutlet var WinFlipsText: UILabel!
@@ -68,22 +71,19 @@ class WinScreenController: UIViewController {
             WinStarsText.textColor = #colorLiteral(red: 0.712579906, green: 0.712579906, blue: 0.712579906, alpha: 1)
             WinStarBoxOuter.backgroundColor = #colorLiteral(red: 0.712579906, green: 0.712579906, blue: 0.712579906, alpha: 1)
             WinStarBoxInner.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
-        } else if (WinFlips - GoalFlips == 0) {
+        } else if (WinFlips - GoalFlips <= 0) {
             WinStarsText.text = "★ ★ ★"
             WinStarsText.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
             WinStarBoxOuter.backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
             WinStarBoxInner.backgroundColor = #colorLiteral(red: 1, green: 0.94, blue: 0.7, alpha: 1)
-        } else if (WinFlips - GoalFlips < 0) {
-            WinStarsText.text = "✮ ✮ ✮"
-            WinStarsText.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-            WinStarBoxOuter.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-            WinStarBoxInner.backgroundColor = #colorLiteral(red: 0.8300000012, green: 0.9364200405, blue: 0.9764705896, alpha: 1)
         }
         
-        // TODO: For the last level on the last stage, there should be no button, ditto if the next stage isn't unlocked yet
         
-        // New stage or level button
-        if(LevelNumber == 19) {
+        // New stage or level button defined by current stage etc
+        if (StageNumber == (StageMax - 1) && LevelNumber == 19) {
+            NextLevelText.isHidden = true
+            NextLevelButton.isHidden = true
+        } else if (LevelNumber == 19) {
             NextLevelText.text = "Next Stage"
         } else {
             NextLevelText.text = "Next Level"

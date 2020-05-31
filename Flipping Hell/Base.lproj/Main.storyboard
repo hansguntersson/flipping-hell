@@ -1897,6 +1897,7 @@
                     </view>
                     <connections>
                         <outlet property="GoalFlipsText" destination="0jf-FW-Mk6" id="txJ-Xf-u28"/>
+                        <outlet property="NextLevelButton" destination="Ecb-LF-Rm8" id="24r-WM-pZv"/>
                         <outlet property="NextLevelText" destination="UcQ-Zs-q5B" id="4f3-I1-Xre"/>
                         <outlet property="WinFlipsText" destination="i9J-rc-fIT" id="x2K-Vh-fza"/>
                         <outlet property="WinStarBoxInner" destination="uC0-F5-Z1U" id="lWT-Za-akQ"/>
