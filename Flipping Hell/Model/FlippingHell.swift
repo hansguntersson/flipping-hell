@@ -42,14 +42,20 @@ class FlippingHell {
     var levelsPerStage = 20 // Ensure that the total levels are a multiplier of this number
     var firstOpen = true // whether or not the user is new
     
-    // TODO: Ensure these arrays are appropriately generated
     var stagesUnlockedInitial: Int = 2 // number of stages unlocked initially
     var stagesUnlocked: Int = 0 // number of stages unlocked
     var stagesVisible: Int = 0 // number of stages visible
     var stageStars: [Int] = [0, 0] // number of stars obtained for each stage
     var totalStars: Int = 0 // total tally of stars which drives stage unlocks
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
+    
     let unlockStarRatio = 15 // Number of stars per stage to unlock the next stage
+    /* Core numbers for review
+     20 levels per stage
+     60 all gold
+     40 all silver
+     20 all bronze
+    */
     
     struct LevelJSON: Codable {
         let levelid: Int
@@ -310,7 +316,6 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         
         gameAttemptAdd()
         
-        // TODO: process game won via level method, not via accessing elements directly
         let LevelSelected = stages[currentStage][currentLevel]
         
         LevelSelected.completeLevel(Flips: Flips, completeSequence: ButtonsClicked)
@@ -328,15 +333,8 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         
         stagesUnlocked = stagesUnlockedInitial + (totalStars / unlockStarRatio)
         if (stagesUnlocked > stages.count) {stagesUnlocked = stages.count}
-        // TODO: Trigger alert to show level unlocked on win screen
-        
-        /*
-         20 levels per stage
-         60 all gold
-         40 all silver
-         20 all bronze
-         */
-        
+        // TODO: Trigger alert to show stage unlocked on win screen
+
         saveData(levelid: LevelSelected.sequenceID, flips: Flips)
         
         // let ItemList = loadData()
@@ -344,9 +342,7 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
     }
     
     func gameAttemptAdd() {
-        // TODO: Check this is working
         stages[currentStage][currentLevel].attempts += 1
-        print(stages[currentStage][currentLevel].attempts)
     }
     
     func requestLevel() {
@@ -359,8 +355,6 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
 
 extension FlippingHell: UpdateModelWinDelegate { // Implements update of model from Win view
     func nextLevel() {
-        // TODO: This shouldn't be possible to see as a button if the game has ended
-        // TODO: If there is no unlocked stage to navigate to, then there should be no button visible
         if (currentLevel < levelsPerStage - 1) {
             currentLevel += 1
         } else {
@@ -430,7 +424,6 @@ extension FlippingHell: UpdateModelScoresDelegate {
             }
         }
         
-        // While the number is below total stages * 20
         if (stagesUnlocked < stages.count) {
             remainingCount = (stagesVisible * unlockStarRatio) - (stagesUnlockedInitial * unlockStarRatio) - totalCount
         } else {

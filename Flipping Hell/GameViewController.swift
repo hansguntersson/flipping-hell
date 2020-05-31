@@ -27,7 +27,6 @@ class GameViewController: UIViewController {
                 let lvc = vc.children[0] as! StageViewController
                 lvc.game = self.game
                 game.UpdateStageViewDelegateInstance = lvc
-                // TODO: Automatically trigger action upon load
             }
         }
     }

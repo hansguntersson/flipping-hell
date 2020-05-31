@@ -80,13 +80,13 @@ class WinScreenController: UIViewController {
             WinStarBoxInner.backgroundColor = #colorLiteral(red: 0.8300000012, green: 0.9364200405, blue: 0.9764705896, alpha: 1)
         }
         
-        // New stage trigger
+        // TODO: For the last level on the last stage, there should be no button, ditto if the next stage isn't unlocked yet
+        
+        // New stage or level button
         if(LevelNumber == 19) {
             NextLevelText.text = "Next Stage"
-            // NextLevelText.numberOfLines = 2
         } else {
             NextLevelText.text = "Next Level"
-            // NextLevelText.numberOfLines = 2
         }
     }
     

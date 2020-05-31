@@ -45,7 +45,7 @@ class ScoreViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        // TODO: decide what scores and stats are shown
+        // TODO: Decide what scores and stats are shown
         /*
                 Summary of stars won for each type
                 Stages completed, Levels completed
@@ -63,17 +63,6 @@ class ScoreViewController: UIViewController {
         */
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 // ********************************** EXTENSIONS ********************************** //

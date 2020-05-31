@@ -138,7 +138,7 @@ class MainViewController: UIViewController {
         WinSequence = []
     }
     
-    @IBAction func clickButton(_ sender: UIButton) { // Flips buttons based on the button clicked
+    @IBAction func clickButton(_ sender: UIButton) { // Triggers button flips based on the button clicked
         let button = sender
         var WinVal = false
         
@@ -284,7 +284,7 @@ class MainViewController: UIViewController {
       }
     }
     
-    @IBAction func unwindToLevels(segue: UIStoryboardSegue) { // Dismisses view controller back to the level screen
+    @IBAction func unwindToLevels(segue: UIStoryboardSegue) { // Unwinds view  back to the level screen
         game?.requestLevelList()
         self.dismiss(animated: true, completion: nil)
     }
@@ -312,10 +312,8 @@ extension MainViewController: UpdateMainViewDelegate { // Updates main view via 
         for winVal in 0 ..< CurrentSequence.count {
             if(CurrentSequence[winVal] == 0) {
                 buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
-                // buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
             } else {
                 buttonWinCollection[winVal].backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
-                // buttonWinCollection[winVal].layer.cornerRadius = buttonWinCollection[winVal].frame.size.width / 2
             }
         }
         levelTitle.text = "LEVEL \(LevelNum + 1)"
