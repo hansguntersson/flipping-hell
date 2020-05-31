@@ -8,10 +8,40 @@
 
 import UIKit
 
-class ScoreViewController: UIViewController {
+// ********************************** PROTOCOLS ********************************** //
 
+protocol UpdateModelScoresDelegate: class {
+    func requestScores()
+}
+    
+
+// ********************************** CLASS DEFINITION ********************************** //
+
+class ScoreViewController: UIViewController {
+    
+    weak var game: FlippingHell?
+    
+    
+    // ********************************** DELEGATES ********************************** //
+    
+    weak var UpdateModelScoresDelegateInstance: UpdateModelScoresDelegate!
+    
+    
+     // ********************************** OUTLETS ********************************** //
+
+    @IBOutlet weak var GoldStars: UILabel!
+    @IBOutlet weak var SilverStars: UILabel!
+    @IBOutlet weak var BronzeStars: UILabel!
+    @IBOutlet weak var TotalStars: UILabel!
+    @IBOutlet weak var StarsToNextStage: UILabel!
+    
+    
+     // ********************************** LOAD FUNCTION ********************************** //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UpdateModelScoresDelegateInstance = game
 
         // Do any additional setup after loading the view.
         
@@ -30,16 +60,9 @@ class ScoreViewController: UIViewController {
                 Should green stars indicate that you're the first person to complete a level?
                 Wnat's the highest number for any number of flips?
         
-               */
+        */
         
     }
-    
-    @IBOutlet weak var GoldStars: UILabel!
-    @IBOutlet weak var SilverStars: UILabel!
-    @IBOutlet weak var BronzeStars: UILabel!
-    @IBOutlet weak var TotalStars: UILabel!
-    @IBOutlet weak var StarsToNextStage: UILabel!
-    
     
     /*
     // MARK: - Navigation

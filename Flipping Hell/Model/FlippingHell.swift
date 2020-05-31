@@ -24,6 +24,10 @@ protocol UpdateStageViewDelegate: class {
     func receiveStageList(StagesVisible: Int, StagesUnlocked: Int, StagesStars: [Int])
 }
 
+protocol UpdateScoreViewDelegate: class {
+    func receiveScores()
+}
+
 // ********************************** CLASS DEFINITION ********************************** //
 
 class FlippingHell {
@@ -78,6 +82,7 @@ class FlippingHell {
     weak var UpdateMainViewDelegateInstance: UpdateMainViewDelegate!
     weak var UpdateLevelViewDelegateInstance: UpdateLevelViewDelegate!
     weak var UpdateStageViewDelegateInstance: UpdateStageViewDelegate!
+    weak var UpdateScoreViewDelegateInstance: UpdateScoreViewDelegate!
     
     
     // ********************************** CORE DATA ********************************** //
@@ -378,6 +383,7 @@ extension FlippingHell: UpdateModelStagesDelegate {
     func requestStages() {
         
         // TODO: Remove irrelevant code here
+        /*
         var stageOutput: [Int] = []
         var stageCount = 0
         for stageIndex in stages {
@@ -392,8 +398,7 @@ extension FlippingHell: UpdateModelStagesDelegate {
             
             stageCount += 1
         }
-        
-        
+        */
         
         if (stagesUnlocked >= stages.count) {
             stagesVisible = stages.count
@@ -401,11 +406,17 @@ extension FlippingHell: UpdateModelStagesDelegate {
             stagesVisible = stagesUnlocked + 1
         }
         
-        // TODO: calculate total stars and unlocked stages etc
         UpdateStageViewDelegateInstance.receiveStageList(StagesVisible: stagesVisible, StagesUnlocked: stagesUnlocked, StagesStars: stageStars)
     }
     
     func changeStage(StageID: Int) {
         currentStage = StageID
+    }
+}
+
+
+extension FlippingHell: UpdateModelScoresDelegate {
+    // Provides scores to Score controller
+    func requestScores() {
     }
 }
