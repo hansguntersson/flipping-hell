@@ -21,7 +21,6 @@ class ScoreViewController: UIViewController {
     
     weak var game: FlippingHell?
     
-    
     // ********************************** DELEGATES ********************************** //
     
     weak var UpdateModelScoresDelegateInstance: UpdateModelScoresDelegate!
@@ -42,7 +41,8 @@ class ScoreViewController: UIViewController {
         super.viewDidLoad()
         
         UpdateModelScoresDelegateInstance = game
-
+        UpdateModelScoresDelegateInstance.requestScores()
+        
         // Do any additional setup after loading the view.
         
         // TODO: decide what scores and stats are shown
@@ -74,4 +74,16 @@ class ScoreViewController: UIViewController {
     }
     */
 
+}
+
+// ********************************** EXTENSIONS ********************************** //
+
+extension ScoreViewController: UpdateScoreViewDelegate { // Receives and processes level list
+    func receiveScores(GoldStars: Int, SilverStars: Int, BronzeStars: Int, TotalStars: Int, RemainingStars: Int) {
+        self.GoldStars.text = "★★★: \(GoldStars)"
+        self.SilverStars.text = " ★★: \(SilverStars)"
+        self.BronzeStars.text = "  ★: \(BronzeStars)"
+        self.TotalStars.text = "★ Total: \(TotalStars) ★"
+        self.StarsToNextStage.text = "Stars required to unlock next stage: \(RemainingStars)"
+    }
 }

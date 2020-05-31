@@ -25,7 +25,7 @@ protocol UpdateStageViewDelegate: class {
 }
 
 protocol UpdateScoreViewDelegate: class {
-    func receiveScores()
+    func receiveScores(GoldStars: Int, SilverStars: Int, BronzeStars: Int, TotalStars: Int, RemainingStars: Int)
 }
 
 // ********************************** CLASS DEFINITION ********************************** //
@@ -418,5 +418,6 @@ extension FlippingHell: UpdateModelStagesDelegate {
 extension FlippingHell: UpdateModelScoresDelegate {
     // Provides scores to Score controller
     func requestScores() {
+        UpdateScoreViewDelegateInstance.receiveScores(GoldStars: 40, SilverStars: 20, BronzeStars: 10, TotalStars: 50, RemainingStars: 30)
     }
 }
