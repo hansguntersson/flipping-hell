@@ -72,7 +72,7 @@ extension ScoreViewController: UpdateScoreViewDelegate { // Receives and process
         self.GoldStars.text = "\(GoldStars)"
         self.SilverStars.text = "\(SilverStars)"
         self.BronzeStars.text = "\(BronzeStars)"
-        self.TotalStars.text = "★ Total: \(TotalStars) ★"
+        self.TotalStars.text = "\(TotalStars)"
         self.StarsToNextStage.text = "Stars required to unlock next stage: \(RemainingStars)"
     }
 }
