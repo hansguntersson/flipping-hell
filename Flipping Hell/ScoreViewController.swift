@@ -34,9 +34,12 @@ class ScoreViewController: UIViewController {
         
     }
     
-    @IBAction func unwindToLevelMenuFromStages(segue: UIStoryboardSegue) {
-           self.dismiss(animated: true, completion: nil)
-    }
+    @IBOutlet weak var GoldStars: UILabel!
+    @IBOutlet weak var SilverStars: UILabel!
+    @IBOutlet weak var BronzeStars: UILabel!
+    @IBOutlet weak var TotalStars: UILabel!
+    @IBOutlet weak var StarsToNextStage: UILabel!
+    
     
     /*
     // MARK: - Navigation
