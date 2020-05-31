@@ -48,7 +48,7 @@ class FlippingHell {
     var stageStars: [Int] = [0, 0] // number of stars obtained for each stage
     var totalStars: Int = 0 // total tally of stars which drives stage unlocks
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
-    let unlockStarRatio = 4
+    let unlockStarRatio = 15 // Number of stars per stage to unlock the next stage
     
     struct LevelJSON: Codable {
         let levelid: Int
@@ -418,6 +418,44 @@ extension FlippingHell: UpdateModelStagesDelegate {
 extension FlippingHell: UpdateModelScoresDelegate {
     // Provides scores to Score controller
     func requestScores() {
-        UpdateScoreViewDelegateInstance.receiveScores(GoldStars: 40, SilverStars: 20, BronzeStars: 10, TotalStars: 50, RemainingStars: 30)
+        
+        var goldCount: Int = 0
+        var silverCount: Int = 0
+        var bronzeCount: Int = 0
+        var totalCount: Int = 0
+        var remainingCount: Int = 0
+        
+        // Count stars of each type
+        
+        for (stageindex)  in stages {
+            for levelIndex in stageindex {
+                totalCount += levelIndex.starScore
+                let tempScore = levelIndex.starScore
+                if (tempScore == 1) {
+                    bronzeCount += levelIndex.starScore
+                } else if (tempScore == 2) {
+                    silverCount += levelIndex.starScore
+                } else if (tempScore == 3) {
+                    goldCount += levelIndex.starScore
+                } else if (tempScore == 4) {
+                    print("blue star")
+                    // TODO: Account for blue stars?
+                }
+            }
+        }
+        
+        // While the number is below total stages * 20
+        if (stagesUnlocked < stages.count) {
+            remainingCount = (stagesVisible * unlockStarRatio) - (stagesUnlockedInitial * unlockStarRatio) - totalCount
+        } else {
+            remainingCount = 0
+        }
+        
+        print(totalCount)
+        print(stagesVisible)
+        print(stagesUnlocked)
+        print(remainingCount)
+        
+        UpdateScoreViewDelegateInstance.receiveScores(GoldStars: goldCount, SilverStars: silverCount, BronzeStars: bronzeCount, TotalStars: totalCount, RemainingStars: remainingCount)
     }
 }

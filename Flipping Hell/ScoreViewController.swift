@@ -80,9 +80,9 @@ class ScoreViewController: UIViewController {
 
 extension ScoreViewController: UpdateScoreViewDelegate { // Receives and processes level list
     func receiveScores(GoldStars: Int, SilverStars: Int, BronzeStars: Int, TotalStars: Int, RemainingStars: Int) {
-        self.GoldStars.text = "★★★: \(GoldStars)"
-        self.SilverStars.text = " ★★: \(SilverStars)"
-        self.BronzeStars.text = "  ★: \(BronzeStars)"
+        self.GoldStars.text = "\(GoldStars)"
+        self.SilverStars.text = "\(SilverStars)"
+        self.BronzeStars.text = "\(BronzeStars)"
         self.TotalStars.text = "★ Total: \(TotalStars) ★"
         self.StarsToNextStage.text = "Stars required to unlock next stage: \(RemainingStars)"
     }

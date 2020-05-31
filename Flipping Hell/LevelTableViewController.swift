@@ -137,8 +137,12 @@ class LevelTableViewController: UITableViewController {
                     UpdateModelLevelsDelegateInstance.changeLevel(StageID: CurrentStage, LevelID: Int(buttonInstance.currentTitle ?? "0")! - 1)
                 }
             }
-        }
-         
+        } else if segue.identifier == "LoadScoresFromLevelsSegue" {
+            if let vc = segue.destination as? ScoreViewController {
+                vc.game = self.game
+                game?.UpdateScoreViewDelegateInstance = vc
+            }
+       }
     }
     
     @IBAction func unwindFromWintoLevel( _ seg: UIStoryboardSegue) {

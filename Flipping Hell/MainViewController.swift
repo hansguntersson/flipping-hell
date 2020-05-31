@@ -273,9 +273,6 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameWonSegue" {
-            // TODO: indicate if new record
-            // TODO: indicate if new stage unlocked
-            
             if let vc = segue.destination as? WinScreenController {
                 vc.game = self.game
                 vc.ResetButtonsDelegateInstance = self
@@ -283,7 +280,12 @@ class MainViewController: UIViewController {
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum
             }
-        }
+        } else if segue.identifier == "LoadScoresFromMainSegue" {
+            if let vc = segue.destination as? ScoreViewController {
+                vc.game = self.game
+                game?.UpdateScoreViewDelegateInstance = vc
+            }
+      }
     }
     
     @IBAction func unwindToLevels(segue: UIStoryboardSegue) { // Dismisses view controller back to the level screen
