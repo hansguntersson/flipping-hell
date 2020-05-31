@@ -68,7 +68,6 @@ class StageViewController: UICollectionViewController {
         }
     }
     
-    
     // ********************************** OVERRIDE FUNCTIONS ********************************** //
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

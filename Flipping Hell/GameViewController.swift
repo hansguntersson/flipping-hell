@@ -15,8 +15,6 @@ import UIKit
 // TODO: Blue stars?
 // TODO: Next level button
 // TODO: Stage unlock alert
-// TODO: X buttons on stage screen
-
 
 class GameViewController: UIViewController {
     
