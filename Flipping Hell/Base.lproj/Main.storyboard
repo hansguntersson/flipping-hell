@@ -1332,14 +1332,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORES" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCj-IQ-urG">
-                                <rect key="frame" x="102" y="40" width="171" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★  STARS  ★" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCj-IQ-urG">
+                                <rect key="frame" x="62" y="40" width="251" height="35"/>
                                 <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZc-Tu-eXH">
-                                <rect key="frame" x="30" y="125" width="315" height="335"/>
+                                <rect key="frame" x="30" y="190" width="315" height="335"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-Zw-nfx">
                                         <rect key="frame" x="30" y="30" width="255" height="275"/>
@@ -1401,7 +1401,7 @@
                                                         <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4G-gx-z92">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4G-gx-z92">
                                                         <rect key="frame" x="138.5" y="190" width="66.5" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="iNB-Cz-Ljy"/>
@@ -1486,23 +1486,34 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars required to unlock next stage: 30" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ea-AT-84b">
-                                <rect key="frame" x="37.5" y="490" width="300.5" height="50"/>
-                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="25"/>
+                                <rect key="frame" x="51" y="555" width="273" height="40"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete levels in as few flips as possible to earn stars and unlock stages" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v49-qK-0MO">
+                                <rect key="frame" x="44" y="110" width="287.5" height="60"/>
+                                <fontDescription key="fontDescription" name="Orbitron-Regular" family="Orbitron" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kZc-Tu-eXH" firstAttribute="leading" secondItem="SYw-VJ-8ya" secondAttribute="leading" constant="30" id="1CA-Sf-HCJ"/>
+                            <constraint firstItem="v49-qK-0MO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SYw-VJ-8ya" secondAttribute="leading" constant="30" id="0D5-xJ-Gir"/>
+                            <constraint firstItem="kZc-Tu-eXH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SYw-VJ-8ya" secondAttribute="leading" constant="30" id="1CA-Sf-HCJ"/>
                             <constraint firstItem="iCj-IQ-urG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SYw-VJ-8ya" secondAttribute="leading" constant="15" id="CGo-sT-YbJ"/>
                             <constraint firstItem="8Ea-AT-84b" firstAttribute="centerX" secondItem="SYw-VJ-8ya" secondAttribute="centerX" id="Czy-Ti-e7R"/>
                             <constraint firstItem="SYw-VJ-8ya" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8Ea-AT-84b" secondAttribute="bottom" constant="20" id="OOA-AO-9Ye"/>
                             <constraint firstItem="8Ea-AT-84b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SYw-VJ-8ya" secondAttribute="leading" constant="30" id="T5C-6R-FaK"/>
+                            <constraint firstItem="kZc-Tu-eXH" firstAttribute="top" secondItem="v49-qK-0MO" secondAttribute="bottom" constant="20" id="T9u-aq-OeE"/>
                             <constraint firstItem="iCj-IQ-urG" firstAttribute="top" secondItem="SYw-VJ-8ya" secondAttribute="top" constant="40" id="W1P-kw-vbq"/>
+                            <constraint firstItem="v49-qK-0MO" firstAttribute="centerX" secondItem="SYw-VJ-8ya" secondAttribute="centerX" id="ZaD-74-fMU"/>
+                            <constraint firstItem="v49-qK-0MO" firstAttribute="top" secondItem="iCj-IQ-urG" secondAttribute="bottom" constant="35" id="Zel-3I-XCh"/>
+                            <constraint firstItem="SYw-VJ-8ya" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="v49-qK-0MO" secondAttribute="trailing" constant="30" id="fVK-j7-A9Q"/>
                             <constraint firstItem="8Ea-AT-84b" firstAttribute="top" secondItem="kZc-Tu-eXH" secondAttribute="bottom" constant="30" id="gg3-BS-Bql"/>
-                            <constraint firstItem="kZc-Tu-eXH" firstAttribute="top" secondItem="iCj-IQ-urG" secondAttribute="bottom" constant="50" id="huY-21-lYu"/>
-                            <constraint firstItem="SYw-VJ-8ya" firstAttribute="trailing" secondItem="kZc-Tu-eXH" secondAttribute="trailing" constant="30" id="maG-8s-PeQ"/>
+                            <constraint firstItem="kZc-Tu-eXH" firstAttribute="centerX" secondItem="SYw-VJ-8ya" secondAttribute="centerX" id="kdt-vc-9B7"/>
+                            <constraint firstItem="SYw-VJ-8ya" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kZc-Tu-eXH" secondAttribute="trailing" constant="30" id="maG-8s-PeQ"/>
                             <constraint firstItem="SYw-VJ-8ya" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iCj-IQ-urG" secondAttribute="trailing" constant="15" id="nit-VZ-JhN"/>
                             <constraint firstItem="SYw-VJ-8ya" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Ea-AT-84b" secondAttribute="trailing" constant="30" id="oLM-ah-6zc"/>
                             <constraint firstItem="iCj-IQ-urG" firstAttribute="centerX" secondItem="SYw-VJ-8ya" secondAttribute="centerX" id="pHG-SB-t7S"/>

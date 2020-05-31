@@ -42,14 +42,14 @@ class FlippingHell {
     var levelsPerStage = 20 // Ensure that the total levels are a multiplier of this number
     var firstOpen = true // whether or not the user is new
     
-    var stagesUnlockedInitial: Int = 2 // number of stages unlocked initially
+    var stagesUnlockedInitial: Int = 1 // number of stages unlocked initially
     var stagesUnlocked: Int = 0 // number of stages unlocked
     var stagesVisible: Int = 0 // number of stages visible
     var stageStars: [Int] = [0, 0] // number of stars obtained for each stage
     var totalStars: Int = 0 // total tally of stars which drives stage unlocks
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
-    
-    let unlockStarRatio = 15 // Number of stars per stage to unlock the next stage
+    var remainingStars: Int = 0 // Stars remaining to the next level
+    let unlockStarRatio = 6 // Number of stars per stage to unlock the next stage
     /* Core numbers for review
      20 levels per stage
      60 all gold
@@ -332,6 +332,11 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         }
         
         stagesUnlocked = stagesUnlockedInitial + (totalStars / unlockStarRatio)
+        
+        if (totalStars == (stagesUnlocked * unlockStarRatio)) {
+            stagesUnlocked += 1
+        }
+        
         if (stagesUnlocked > stages.count) {stagesUnlocked = stages.count}
 
         saveData(levelid: LevelSelected.sequenceID, flips: Flips)
@@ -366,7 +371,6 @@ extension FlippingHell: UpdateModelWinDelegate { // Implements update of model f
 }
 
 extension FlippingHell: UpdateModelLevelsDelegate {
-    // Receives request from Level screen for levels
     func requestLevelList() {
         UpdateLevelViewDelegateInstance.receiveLevelList(LevelList: stages[currentStage], CurrentStage: currentStage, CurrentLevel: currentLevel, LevelsPerStage: levelsPerStage)
     }
@@ -401,14 +405,11 @@ extension FlippingHell: UpdateModelScoresDelegate {
         var goldCount: Int = 0
         var silverCount: Int = 0
         var bronzeCount: Int = 0
-        var totalCount: Int = 0
-        var remainingCount: Int = 0
         
         // Count stars of each type
         
         for (stageindex)  in stages {
             for levelIndex in stageindex {
-                totalCount += levelIndex.starScore
                 let tempScore = levelIndex.starScore
                 if (tempScore == 1) {
                     bronzeCount += levelIndex.starScore
@@ -420,12 +421,23 @@ extension FlippingHell: UpdateModelScoresDelegate {
             }
         }
         
+        /* // TODO: Remove this bollocks
         if (stagesUnlocked < stages.count) {
-            remainingCount = (stagesVisible * unlockStarRatio) - (stagesUnlockedInitial * unlockStarRatio) - totalCount
+            let tallysofar = totalCount + (unlockStarRatio * stagesUnlockedInitial)
+            let totalneeded = (stagesUnlocked + 1) * unlockStarRatio
+            
+            // print(tallysofar)
+            // print(totalneeded)
+            
+            remainingCount = totalneeded - tallysofar
+            // print(remainingCount)
+            
         } else {
-            remainingCount = 0
+            remainingCount = 100
         }
         
-        UpdateScoreViewDelegateInstance.receiveScores(GoldStars: goldCount, SilverStars: silverCount, BronzeStars: bronzeCount, TotalStars: totalCount, RemainingStars: remainingCount)
+        */
+        
+        UpdateScoreViewDelegateInstance.receiveScores(GoldStars: goldCount, SilverStars: silverCount, BronzeStars: bronzeCount, TotalStars: totalStars, RemainingStars: remainingStars)
     }
 }

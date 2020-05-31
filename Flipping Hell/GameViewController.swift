@@ -14,6 +14,8 @@ import UIKit
 // TODO: Load and save logic
 // TODO: Stage unlock alert
 // TODO: Check twitter link works on info.plist
+// TODO: Fix the issue around remaining stars after unlocking new stages, when it's exactly the correct amount it also fucks up
+// TODO: fix bug where if you select level button from win screen the help menu appears
 // TODO: Still want to log sequences even if they're not a new record?
 
 // TODO: Decide what scores and stats are shown
