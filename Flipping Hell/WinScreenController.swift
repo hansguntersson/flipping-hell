@@ -8,8 +8,8 @@
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol ResetLevelDelegate: class {
-    func resetLevel()
+protocol ReplayLevelDelegate: class {
+    func replayLevel()
 }
 
 protocol UpdateModelWinDelegate: class {
@@ -44,7 +44,7 @@ class WinScreenController: UIViewController {
     
     // ********************************** DELEGATES ********************************** //
     
-    weak var ResetButtonsDelegateInstance: ResetLevelDelegate!
+    weak var ReplayButtonsDelegateInstance: ReplayLevelDelegate!
     weak var UpdateModelWinDelegateInstance: UpdateModelWinDelegate!
     
     // ********************************** FUNCTIONS ********************************** //
@@ -91,13 +91,13 @@ class WinScreenController: UIViewController {
     }
     
     @IBAction func replayLevel(_ sender: UIButton) {
-        ResetButtonsDelegateInstance.resetLevel()
+        ReplayButtonsDelegateInstance.replayLevel()
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func nextLevel(_ sender: UIButton) {
         UpdateModelWinDelegateInstance.nextLevel()
-        ResetButtonsDelegateInstance.resetLevel()
+        ReplayButtonsDelegateInstance.replayLevel()
         self.dismiss(animated: true, completion: nil)
     }
     

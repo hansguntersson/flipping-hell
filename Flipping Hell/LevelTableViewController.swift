@@ -19,7 +19,6 @@ protocol UpdateModelLevelsDelegate: class {
 
 class LevelTableViewController: UITableViewController {
     
-    //MARK: Properties
     weak var game: FlippingHell?
     
     var levels: [Level] = [] // structure for level
@@ -63,7 +62,6 @@ class LevelTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of LevelTableViewCell.")
         }
         
-        //  TODO: Should this reference be removed as it's accessing values directly?
         let thisLevel = levels[indexPath.row]
         
         if (indexPath.row == LevelsPerStage - 1) {
@@ -100,19 +98,6 @@ class LevelTableViewController: UITableViewController {
         return cell
     }
     
-    /*
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let sectionView = UITableViewHeaderFooterView()
-        let background = UIView()
-        background.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-        sectionView.backgroundView = background
-        sectionView.textLabel?.text = "STAGE \(section + 1)"
-        sectionView.textLabel?.font = UIFont(name: "ArialMT", size: 15.0)
-        sectionView.textLabel?.textColor = UIColor.red
-        print(sectionView.textLabel?.font)
-        return sectionView
-    } */
-    
     // ********************************** ACTIONS ********************************** //
     
     @IBAction func backToScreen(_ sender: Any) { // Back to Win or Main screen from Level screen
@@ -123,7 +108,6 @@ class LevelTableViewController: UITableViewController {
     
     // ********************************** SEGUES ********************************** //
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameStartSegue" {
             if let vc = segue.destination as? MainViewController {

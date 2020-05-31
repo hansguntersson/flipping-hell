@@ -13,7 +13,7 @@ import CoreData
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateMainViewDelegate: class {
-    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool)
+    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool, FirstOpen: Bool)
 }
 
 protocol UpdateLevelViewDelegate: class {
@@ -40,6 +40,7 @@ class FlippingHell {
     var currentStage = 0
     
     var levelsPerStage = 20 // Ensure that the total levels are a multiplier of this number
+    var firstOpen = true // whether or not the user is new
     
     // TODO: Ensure these arrays are appropriately generated
     var stagesUnlockedInitial: Int = 2 // number of stages unlocked initially
@@ -307,6 +308,8 @@ class FlippingHell {
 extension FlippingHell: UpdateModelDelegate { // Implements update of model from main view
     func gameWon(LevelID: Int, Flips: Int16, ButtonsClicked: [Int]) {
         
+        gameAttemptAdd()
+        
         // TODO: process game won via level method, not via accessing elements directly
         let LevelSelected = stages[currentStage][currentLevel]
         
@@ -340,14 +343,17 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         // print(ItemList)
     }
     
-    func gameReset() {
+    func gameAttemptAdd() {
+        // TODO: Check this is working
         stages[currentStage][currentLevel].attempts += 1
+        print(stages[currentStage][currentLevel].attempts)
     }
     
     func requestLevel() {
         let LevelSelected = stages[currentStage][currentLevel]
         let LevelArray = LevelSelected.numberToArray(NumberInput: LevelSelected.sequenceID)
-        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: LevelSelected.goalFlips, Sequence: LevelArray, IsCompleted: LevelSelected.isComplete)
+        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, GoalFlips: LevelSelected.goalFlips, Sequence: LevelArray, IsCompleted: LevelSelected.isComplete, FirstOpen: firstOpen)
+        firstOpen = false
     }
 }
 
@@ -375,31 +381,11 @@ extension FlippingHell: UpdateModelLevelsDelegate {
     func changeLevel(StageID: Int, LevelID: Int) {
         currentStage = StageID
         currentLevel = LevelID
-        stages[currentStage][currentLevel].attempts += 1
     }
 }
 
 extension FlippingHell: UpdateModelStagesDelegate {
     func requestStages() {
-        
-        // TODO: Remove irrelevant code here
-        /*
-        var stageOutput: [Int] = []
-        var stageCount = 0
-        for stageIndex in stages {
-            var starMin = 4
-            for levelIndex in stageIndex {
-                if (levelIndex.starScore < starMin) {
-                    starMin = levelIndex.starScore
-                }
-            }
-            
-            stageOutput.append(starMin)
-            
-            stageCount += 1
-        }
-        */
-        
         if (stagesUnlocked >= stages.count) {
             stagesVisible = stages.count
         } else {
@@ -450,11 +436,6 @@ extension FlippingHell: UpdateModelScoresDelegate {
         } else {
             remainingCount = 0
         }
-        
-        print(totalCount)
-        print(stagesVisible)
-        print(stagesUnlocked)
-        print(remainingCount)
         
         UpdateScoreViewDelegateInstance.receiveScores(GoldStars: goldCount, SilverStars: silverCount, BronzeStars: bronzeCount, TotalStars: totalCount, RemainingStars: remainingCount)
     }

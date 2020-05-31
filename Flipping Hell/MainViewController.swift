@@ -13,7 +13,7 @@ import AVFoundation
 
 protocol UpdateModelDelegate: class {
     func gameWon(LevelID: Int, Flips: Int16, ButtonsClicked: [Int])
-    func gameReset()
+    func gameAttemptAdd()
     func requestLevel()
 }
 
@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
     
-    var FirstOpen: Bool = false // TODO: implement such that the game knows if the user is new
+    var FirstOpen: Bool = false // whether or not the game is freshly opened
     
     var StageNum = 0
     var LevelNum = 0
@@ -81,20 +81,17 @@ class MainViewController: UIViewController {
     
     @IBAction func resetLevel(_ sender: UIButton) { //Resets the level from the main screen
         if(FlipCount > 0) { // Only add to attempts if there have been flips made
-            // TODO: Ensure that the attempts are increased when a level is won, seems like this is already dealt with in the model, make sure it's not done twice
-            UpdateModelDelegateInstance.gameReset()
+            UpdateModelDelegateInstance.gameAttemptAdd()
             resetButtons()
         }
     }
     
     override func viewDidLoad() { // Sets up game on load
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view, typically from a nib.
         
         for mainButton in buttonCollection
         {
-            // mainButton.layer.cornerRadius = mainButton.frame.size.width / 2.0
             mainButton.cornerCalculation(r: 1)
         }
         
@@ -115,12 +112,11 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if (FirstOpen == true) {
             performSegue(withIdentifier: "GameHelpSegue", sender: nil)
-            FirstOpen = false
-            // TODO: Make this part of the game rather than linked to view
         }
     }
     
     func resetButtons() { // Resets buttons
+        
         // Reset flip and flipper
         FlipperOrientation = 1 // set to 1 so that the update flipper display moves it back to 0
         updateFlipperDisplay()
@@ -275,7 +271,7 @@ class MainViewController: UIViewController {
         if segue.identifier == "GameWonSegue" {
             if let vc = segue.destination as? WinScreenController {
                 vc.game = self.game
-                vc.ResetButtonsDelegateInstance = self
+                vc.ReplayButtonsDelegateInstance = self
                 vc.WinFlips = FlipCount
                 vc.GoalFlips = GoalFlips
                 vc.LevelNumber = LevelNum
@@ -298,19 +294,20 @@ class MainViewController: UIViewController {
 
  // ********************************** EXTENSIONS ********************************** //
 
-extension MainViewController: ResetLevelDelegate {
+extension MainViewController: ReplayLevelDelegate {
     // Resets level to whatever the current level is
-    func resetLevel() {
+    func replayLevel() {
         UpdateModelDelegateInstance.requestLevel()
     }
 }
 
 extension MainViewController: UpdateMainViewDelegate { // Updates main view via model
-    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool) {
+    func receiveLevel(LevelID: Int, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool, FirstOpen: Bool) {
         CurrentSequence = Sequence
         self.GoalFlips = GoalFlips
         LevelNum = LevelID
         levelCompleted = IsCompleted
+        self.FirstOpen = FirstOpen
         
         for winVal in 0 ..< CurrentSequence.count {
             if(CurrentSequence[winVal] == 0) {

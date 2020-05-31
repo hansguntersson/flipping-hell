@@ -113,7 +113,6 @@ class StageViewController: UICollectionViewController {
             }
         }
     }
-   
 }
     
 // ********************************** EXTENSIONS ********************************** //

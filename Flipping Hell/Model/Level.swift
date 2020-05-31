@@ -64,8 +64,6 @@ class Level {
     
     func completeLevel(Flips: Int16, completeSequence: Array<Int>) { // Actions when level is completed
         isComplete = true
-        attempts += 1
-        
         
         // What to do when theres a new record, also flag up with mains screen?
         if (Flips < minFlips || minFlips == 0) {
@@ -82,7 +80,7 @@ class Level {
                 starScore = 4
             }
             
-            // TODO: Still want to log attempts and sequences even if they're not a new record?
+            // TODO: Still want to log sequences even if they're not a new record?
         }
     }
     
