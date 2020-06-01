@@ -118,7 +118,7 @@ extension UIButton {
 }
 
 /*
- 
+ RESIDUAL LEVELS CUT FROM GAME BASED ON TIME
  { "levelid": 7551922, "flips": 15 },
  { "levelid": 18221527, "flips": 15 },
  { "levelid": 12115083, "flips": 15 },
