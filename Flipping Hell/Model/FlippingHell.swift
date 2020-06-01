@@ -43,9 +43,12 @@ class FlippingHell {
     var firstOpen = true // whether or not the user is new
     
     var stagesUnlockedInitial: Int = 1 // number of stages unlocked initially
-    var stagesUnlocked: Int = 0 // number of stages unlocked
-    var stagesVisible: Int = 0 // number of stages visible
-    var stageStars: [Int] = [0, 0] // number of stars obtained for each stage
+    var stagesUnlocked: Int = 1 // number of stages unlocked
+    var stagesVisible: Int = 2 // number of stages visible
+    var goldCount: Int = 0
+    var silverCount: Int = 0
+    var bronzeCount: Int = 0
+    var stageStars: [Int] = [0] // number of stars obtained for each stage
     var totalStars: Int = 0 // total tally of stars which drives stage unlocks
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
     var remainingStars: Int = 0 // Stars remaining to the next level
@@ -321,23 +324,45 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         LevelSelected.completeLevel(Flips: Flips, completeSequence: ButtonsClicked)
         
         // Establish how many stages are unlocked
+        goldCount = 0
+        silverCount = 0
+        bronzeCount = 0
         totalStars = 0
         
         for (index, stageindex)  in stages.enumerated() {
             stageStars[index] = 0
             for levelIndex in stageindex {
-                totalStars += levelIndex.starScore
-                stageStars[index] += levelIndex.starScore
+                let tempScore = levelIndex.starScore
+                if (tempScore == 1) {
+                    bronzeCount += tempScore
+                } else if (tempScore == 2) {
+                    silverCount += tempScore
+                } else if (tempScore == 3) {
+                    goldCount += tempScore
+                }
+                totalStars += tempScore
+                stageStars[index] += tempScore
             }
         }
         
+        // Calculate number of unlocked stages based on total stars etc
         stagesUnlocked = stagesUnlockedInitial + (totalStars / unlockStarRatio)
         
+        // If the number of stars is exactly the number required, unlock the next stage
         if (totalStars == (stagesUnlocked * unlockStarRatio)) {
             stagesUnlocked += 1
         }
         
-        if (stagesUnlocked > stages.count) {stagesUnlocked = stages.count}
+        // Adds visible locked stage and residual stars provided the maximum number of stages isn't reached
+        if (stagesUnlocked >= stages.count) {
+            stagesUnlocked = stages.count
+            stagesVisible = stages.count
+            remainingStars = 0
+        } else {
+            print("-- Else statement triggered -- ")
+            stagesVisible = stagesUnlocked + 1
+            remainingStars = (stagesUnlocked * unlockStarRatio) - totalStars
+        }
 
         saveData(levelid: LevelSelected.sequenceID, flips: Flips)
         
@@ -383,12 +408,6 @@ extension FlippingHell: UpdateModelLevelsDelegate {
 
 extension FlippingHell: UpdateModelStagesDelegate {
     func requestStages() {
-        if (stagesUnlocked >= stages.count) {
-            stagesVisible = stages.count
-        } else {
-            stagesVisible = stagesUnlocked + 1
-        }
-        
         UpdateStageViewDelegateInstance.receiveStageList(StagesVisible: stagesVisible, StagesUnlocked: stagesUnlocked, StagesStars: stageStars)
     }
     
@@ -399,45 +418,7 @@ extension FlippingHell: UpdateModelStagesDelegate {
 
 
 extension FlippingHell: UpdateModelScoresDelegate {
-    // Provides scores to Score controller
     func requestScores() {
-        
-        var goldCount: Int = 0
-        var silverCount: Int = 0
-        var bronzeCount: Int = 0
-        
-        // Count stars of each type
-        
-        for (stageindex)  in stages {
-            for levelIndex in stageindex {
-                let tempScore = levelIndex.starScore
-                if (tempScore == 1) {
-                    bronzeCount += levelIndex.starScore
-                } else if (tempScore == 2) {
-                    silverCount += levelIndex.starScore
-                } else if (tempScore == 3) {
-                    goldCount += levelIndex.starScore
-                }
-            }
-        }
-        
-        /* // TODO: Remove this bollocks
-        if (stagesUnlocked < stages.count) {
-            let tallysofar = totalCount + (unlockStarRatio * stagesUnlockedInitial)
-            let totalneeded = (stagesUnlocked + 1) * unlockStarRatio
-            
-            // print(tallysofar)
-            // print(totalneeded)
-            
-            remainingCount = totalneeded - tallysofar
-            // print(remainingCount)
-            
-        } else {
-            remainingCount = 100
-        }
-        
-        */
-        
         UpdateScoreViewDelegateInstance.receiveScores(GoldStars: goldCount, SilverStars: silverCount, BronzeStars: bronzeCount, TotalStars: totalStars, RemainingStars: remainingStars)
     }
 }

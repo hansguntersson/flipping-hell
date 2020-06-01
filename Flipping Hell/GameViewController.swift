@@ -14,24 +14,23 @@ import UIKit
 // TODO: Load and save logic
 // TODO: Stage unlock alert
 // TODO: Check twitter link works on info.plist
-// TODO: Fix the issue around remaining stars after unlocking new stages, when it's exactly the correct amount it also fucks up
 // TODO: fix bug where if you select level button from win screen the help menu appears
 // TODO: Still want to log sequences even if they're not a new record?
 
 // TODO: Decide what scores and stats are shown
 /*
-        Summary of stars won for each type
-        Stages completed, Levels completed
-        Top ranking users, based on various metrics:
-        - most levels won
-        - most stars
-        - level completed most times
-        - score (based on stars)
-        - most attempts
-        - attempts / won ratio
-        
-        Should green stars indicate that you're the first person to complete a level?
-        Wnat's the highest number for any number of flips?
+    Summary of stars won for each type
+    Stages completed, Levels completed
+    Top ranking users, based on various metrics:
+    - most levels won
+    - most stars
+    - level completed most times
+    - score (based on stars)
+    - most attempts
+    - attempts / won ratio
+    
+    Should green stars indicate that you're the first person to complete a level?
+    Wnat's the highest number for any number of flips?
 
 */
 
