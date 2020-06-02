@@ -27,9 +27,9 @@ class LevelTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    @IBAction func clickLevelButton(_ sender: UIButton) {
+    /* @IBAction func clickLevelButton(_ sender: UIButton) {
         print("clicked")
-    }
+    } */
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

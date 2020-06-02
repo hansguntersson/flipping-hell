@@ -94,7 +94,6 @@ class Level {
         let BinaryArray = Array(BinaryOutput)
         
         let AdditionalElements = 25 - BinaryArray.count
-        // print(AdditionalElements)
         
         for _ in 0..<AdditionalElements {
             IntOutput.append(0)
@@ -104,21 +103,19 @@ class Level {
             IntOutput.append(Int(String(BinaryArray[index]))!)
         }
         
-        /*
-        let tempSum = IntOutput[0] + IntOutput[1] + IntOutput[3] + IntOutput[4] + IntOutput[5] + IntOutput[6] + IntOutput[8] + IntOutput[9] + IntOutput[15] + IntOutput[16] + IntOutput[18] + IntOutput[19] + IntOutput[20] + IntOutput[21] + IntOutput[23] + IntOutput[24]
-        
-        
-        if tempSum % 2 == 0 {
-            print("even")
-        } else {
-            print("odd")
-        }
-        */
-    
-        // print(NumberInput)
-        // print(IntOutput)
-        
         return IntOutput
     }
     
 }
+
+// TODO: Rationalise this data - it calculates whether the level is valid or not
+/*
+let tempSum = IntOutput[0] + IntOutput[1] + IntOutput[3] + IntOutput[4] + IntOutput[5] + IntOutput[6] + IntOutput[8] + IntOutput[9] + IntOutput[15] + IntOutput[16] + IntOutput[18] + IntOutput[19] + IntOutput[20] + IntOutput[21] + IntOutput[23] + IntOutput[24]
+
+
+if tempSum % 2 == 0 {
+    print("even")
+} else {
+    print("odd")
+}
+*/

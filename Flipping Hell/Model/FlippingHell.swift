@@ -73,13 +73,6 @@ class FlippingHell {
         stagesUnlocked = stagesUnlockedInitial
         
         loadLevels()
-        /*
-        let TestArray = [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0]
-        
-        let templevel = Level(sequence: TestArray, goalFlips: 2)
-        print(templevel.sequenceID)
- 
-        */
         
         // deleteData()
         // getFromURL()
@@ -359,7 +352,6 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
             stagesVisible = stages.count
             remainingStars = 0
         } else {
-            print("-- Else statement triggered -- ")
             stagesVisible = stagesUnlocked + 1
             remainingStars = (stagesUnlocked * unlockStarRatio) - totalStars
         }

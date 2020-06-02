@@ -113,6 +113,7 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if (FirstOpen == true) {
             performSegue(withIdentifier: "GameHelpSegue", sender: nil)
+            FirstOpen = false
         }
     }
     
