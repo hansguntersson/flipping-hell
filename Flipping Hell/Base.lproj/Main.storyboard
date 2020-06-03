@@ -2147,7 +2147,7 @@
         <segue reference="r9M-p1-mUc"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="FH_Help" width="788" height="1360"/>
+        <image name="FH_Help" width="788" height="1385"/>
         <image name="icons8-restart-filled-60" width="60" height="60"/>
     </resources>
 </document>
