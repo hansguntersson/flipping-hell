@@ -1631,7 +1631,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO PLAY" textAlignment="center" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-UZ-eW2">
-                                <rect key="frame" x="70" y="40" width="235.5" height="50"/>
+                                <rect key="frame" x="44.5" y="40" width="286" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EII-1P-jS9"/>
                                 </constraints>
@@ -1930,7 +1930,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5j-AZ-hZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79678" y="-5490"/>
+            <point key="canvasLocation" x="-79687" y="-5480"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uJK-Lq-2gp">
