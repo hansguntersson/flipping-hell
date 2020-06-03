@@ -10,6 +10,7 @@ import UIKit
 
 class StageViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var cellContainer: UIView!
     @IBOutlet weak var cellButton: UIRoundedButton!
     @IBOutlet weak var cellText: UILabel!
     

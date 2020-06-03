@@ -30,7 +30,6 @@ class MainViewController: UIViewController {
     var FirstOpen: Bool = false // whether or not the game is freshly opened
     
     var StageNum = 0
-    var StageMax = 2
     var LevelNum = 0
     
     var GoalFlips: Int16 = 0
@@ -275,17 +274,14 @@ class MainViewController: UIViewController {
                 vc.game = self.game
                 vc.ReplayButtonsDelegateInstance = self
                 vc.WinFlips = FlipCount
-                vc.GoalFlips = GoalFlips
-                vc.LevelNumber = LevelNum
-                vc.StageNumber = StageNum
-                vc.StageMax = self.StageMax
+                game?.UpdateWinViewDelegateInstance = vc
             }
         } else if segue.identifier == "LoadScoresFromMainSegue" {
             if let vc = segue.destination as? ScoreViewController {
                 vc.game = self.game
                 game?.UpdateScoreViewDelegateInstance = vc
             }
-      }
+        }
     }
     
     @IBAction func unwindToLevels(segue: UIStoryboardSegue) { // Unwinds view  back to the level screen
@@ -306,12 +302,11 @@ extension MainViewController: ReplayLevelDelegate {
 }
 
 extension MainViewController: UpdateMainViewDelegate { // Updates main view via model
-    func receiveLevel(LevelID: Int, StageID: Int, StageMax: Int, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool, FirstOpen: Bool) {
+    func receiveLevel(LevelID: Int, StageID: Int, StageMax: Int, newStage: Bool, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool, FirstOpen: Bool) {
         CurrentSequence = Sequence
         self.GoalFlips = GoalFlips
         LevelNum = LevelID
         StageNum = StageID
-        self.StageMax = StageMax
         levelCompleted = IsCompleted
         self.FirstOpen = FirstOpen
         

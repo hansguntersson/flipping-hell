@@ -13,7 +13,7 @@ import CoreData
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateMainViewDelegate: class {
-    func receiveLevel(LevelID: Int, StageID: Int, StageMax: Int, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool, FirstOpen: Bool)
+    func receiveLevel(LevelID: Int, StageID: Int, StageMax: Int, newStage: Bool, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool, FirstOpen: Bool)
 }
 
 protocol UpdateLevelViewDelegate: class {
@@ -22,6 +22,10 @@ protocol UpdateLevelViewDelegate: class {
 
 protocol UpdateStageViewDelegate: class {
     func receiveStageList(StagesVisible: Int, StagesUnlocked: Int, StagesStars: [Int])
+}
+
+protocol UpdateWinViewDelegate: class {
+    func receiveWin(GoalFlips: Int16, LevelID: Int, StageID: Int, StageMax: Int, NewStage: Bool)
 }
 
 protocol UpdateScoreViewDelegate: class {
@@ -45,13 +49,15 @@ class FlippingHell {
     var stagesUnlockedInitial: Int = 1 // number of stages unlocked initially
     var stagesUnlocked: Int = 1 // number of stages unlocked
     var stagesVisible: Int = 2 // number of stages visible
+    var newStageUnlocked: Bool = false // Whether a new stage is unlocked
+    
     var goldCount: Int = 0
     var silverCount: Int = 0
     var bronzeCount: Int = 0
     var stageStars: [Int] = [0] // number of stars obtained for each stage
     var totalStars: Int = 0 // total tally of stars which drives stage unlocks
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
-    var remainingStars: Int = 0 // Stars remaining to the next level
+    var remainingStars: Int = 6 // Stars remaining to the next level
     let unlockStarRatio = 6 // Number of stars per stage to unlock the next stage
     /* Core numbers for review
      20 levels per stage
@@ -86,6 +92,7 @@ class FlippingHell {
     weak var UpdateLevelViewDelegateInstance: UpdateLevelViewDelegate!
     weak var UpdateStageViewDelegateInstance: UpdateStageViewDelegate!
     weak var UpdateScoreViewDelegateInstance: UpdateScoreViewDelegate!
+    weak var UpdateWinViewDelegateInstance: UpdateWinViewDelegate!
     
     
     // ********************************** CORE DATA ********************************** //
@@ -339,11 +346,21 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         }
         
         // Calculate number of unlocked stages based on total stars etc
-        stagesUnlocked = stagesUnlockedInitial + (totalStars / unlockStarRatio)
+        let newStageCalc = stagesUnlockedInitial + (totalStars / unlockStarRatio)
+        
+        if (newStageCalc == stagesUnlocked) {
+            newStageUnlocked = false
+        } else {
+            newStageUnlocked = true
+        }
+        
+        // Calculate number of unlocked stages based on total stars etc
+        stagesUnlocked = newStageCalc
         
         // If the number of stars is exactly the number required, unlock the next stage
         if (totalStars == (stagesUnlocked * unlockStarRatio)) {
             stagesUnlocked += 1
+            newStageUnlocked = true
         }
         
         // Adds visible locked stage and residual stars provided the maximum number of stages isn't reached
@@ -369,7 +386,7 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
     func requestLevel() {
         let LevelSelected = stages[currentStage][currentLevel]
         let LevelArray = LevelSelected.numberToArray(NumberInput: LevelSelected.sequenceID)
-        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, StageID: currentStage, StageMax: stagesUnlocked, GoalFlips: LevelSelected.goalFlips, Sequence: LevelArray, IsCompleted: LevelSelected.isComplete, FirstOpen: firstOpen)
+        UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, StageID: currentStage, StageMax: stagesUnlocked, newStage: newStageUnlocked, GoalFlips: LevelSelected.goalFlips, Sequence: LevelArray, IsCompleted: LevelSelected.isComplete, FirstOpen: firstOpen)
         firstOpen = false
     }
 }
@@ -384,6 +401,9 @@ extension FlippingHell: UpdateModelWinDelegate { // Implements update of model f
                 currentLevel = 0
             }
         }
+    }
+    func requestWin() {
+        UpdateWinViewDelegateInstance.receiveWin(GoalFlips: stages[currentStage][currentLevel].goalFlips, LevelID: currentLevel, StageID: currentStage, StageMax: stagesUnlocked, NewStage: newStageUnlocked)
     }
 }
 

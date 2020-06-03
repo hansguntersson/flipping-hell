@@ -14,6 +14,7 @@ protocol ReplayLevelDelegate: class {
 
 protocol UpdateModelWinDelegate: class {
     func nextLevel()
+    func requestWin()
 }
 
 import UIKit
@@ -26,9 +27,10 @@ class WinScreenController: UIViewController {
     
     var WinFlips: Int16 = 0
     var GoalFlips: Int16 = 0
-    var LevelNumber = 0
-    var StageNumber = 0
-    var StageMax = 2
+    var LevelNumber: Int = 0
+    var StageNumber: Int = 0
+    var StageMax: Int = 2
+    var newStage: Bool = false
     
     var levels: [Level] = []
    
@@ -40,10 +42,10 @@ class WinScreenController: UIViewController {
 
     @IBOutlet weak var WinStarBoxOuter: UIView!
     @IBOutlet weak var WinStarBoxInner: UIView!
+    @IBOutlet weak var NewStageView: UIView!
     
     var WinStarsString: String = ""
     var WinStarColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-
     
     // ********************************** DELEGATES ********************************** //
     
@@ -57,6 +59,7 @@ class WinScreenController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         UpdateModelWinDelegateInstance = game
+        game?.requestWin()
         
         GoalFlipsText.text = "GOAL: \(GoalFlips)"
         WinFlipsText.text = "FLIPS: \(WinFlips)"
@@ -88,6 +91,14 @@ class WinScreenController: UIViewController {
         } else {
             NextLevelText.text = "Next Level"
         }
+        
+        // Show or hide new stage unlocked
+        if (newStage == false) { // TODO: Fix this
+            NewStageView.isHidden = true
+        } else {
+            NewStageView.isHidden = false
+        }
+        
     }
     
     @IBAction func replayLevel(_ sender: UIButton) {
@@ -108,4 +119,14 @@ class WinScreenController: UIViewController {
         // Drawing code
     }
     */
+}
+
+extension WinScreenController: UpdateWinViewDelegate { // Updates win view via model
+    func receiveWin(GoalFlips: Int16, LevelID: Int, StageID: Int, StageMax: Int, NewStage: Bool) {
+        self.GoalFlips = GoalFlips
+        self.LevelNumber = LevelID
+        self.StageNumber = StageID
+        self.StageMax = StageMax
+        self.newStage = NewStage
+    }
 }

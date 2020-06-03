@@ -12,11 +12,9 @@ import UIKit
 
 // TODO: Acsount for ipad and larger displays
 // TODO: Add sound effects and ensure they turn off when on silent
-// TODO: Implement higher resolution help screen?
 // TODO: Load and save logic
-// TODO: Stage unlock alert
 // TODO: Check twitter link works on info.plist
-// TODO: Still want to log sequences even if they're not a new record?
+// TODO: Implement higher resolution help screen
 
 // TODO: Decide what scores and stats are shown
 /*
