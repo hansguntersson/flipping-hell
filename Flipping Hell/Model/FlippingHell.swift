@@ -86,11 +86,7 @@ class FlippingHell {
     init() {
         
         stagesUnlocked = stagesUnlockedInitial
-
-        deleteData()
-        
         loadLevels()
-   
     }
     
     // ********************************** DELEGATES ********************************** //
@@ -110,6 +106,7 @@ class FlippingHell {
         
         // Get app delegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            print("Could not get save delegate")
             return
         }
         
@@ -133,18 +130,21 @@ class FlippingHell {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
-        
     }
     
     func loadData() -> [Levels] { // LOAD DATA FROM CORE DATA
         
         // Get app delegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            print("Delegate failed")
             return []
         }
         
         // Get managed object context
         let context = appDelegate.persistentContainer.viewContext
+        
+        // TODO: Temporary data delete
+        // context.deleteAllData()
         
         // TODO: What happens if the data isn't there?
         let request: NSFetchRequest<Levels> = Levels.fetchRequest()
@@ -158,27 +158,6 @@ class FlippingHell {
             return SavedItems
         }  catch {
             fatalError("This was not supposed to happen")
-        }
-    }
-    
-    
-    
-    func deleteData() { // DELETE DATA FROM CORE DATA
-        
-        // Get app delegate
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        // Get managed object context
-        let context = appDelegate.persistentContainer.viewContext
-        
-        // Load data into memory
-        let items = loadData()
-        
-        // Delete the items
-        items.forEach { item in
-            context.delete(item)
         }
     }
     
@@ -306,8 +285,8 @@ class FlippingHell {
                 {
                     if (item.flips < MinFlips || MinFlips == 0) {
                         MinFlips = item.flips
-                        print(item.levelid)
-                        print(item.flips)
+                        // print(item.levelid)
+                        // print(item.flips)
                     }
                 }
             }
@@ -316,7 +295,7 @@ class FlippingHell {
             let levelinstance = Level(sequenceID: Int32(jsonlevel.levelid), goalFlips: Int16(jsonlevel.flips))
             
             if (MinFlips != 0) { // If the level has been won before, ensure level is marked as complete
-                // TODO: Add sequence to the load and save function
+                // TODO: Add sequence to the load and save function?
                 levelinstance.completeLevel(Flips: MinFlips)
             }
             
@@ -402,12 +381,9 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         LevelSelected.completeLevel(Flips: Flips)
         
         calculateStars()
-        
-        // TODO: Only save if it's a new record?
-        
-        if (Flips < LevelSelected.minFlips) {
-            saveData(levelid: LevelSelected.sequenceID, flips: Flips, minmoves: ButtonsClicked)
-        }
+    
+        saveData(levelid: LevelSelected.sequenceID, flips: Flips, minmoves: ButtonsClicked)
+
     }
     
     func gameAttemptAdd() {
@@ -462,5 +438,29 @@ extension FlippingHell: UpdateModelStagesDelegate {
 extension FlippingHell: UpdateModelScoresDelegate {
     func requestScores() {
         UpdateScoreViewDelegateInstance.receiveScores(GoldStars: goldCount, SilverStars: silverCount, BronzeStars: bronzeCount, TotalStars: totalStars, RemainingStars: remainingStars)
+    }
+}
+
+extension NSManagedObjectContext
+{
+    func deleteAllData() {
+        guard let persistentStore = persistentStoreCoordinator?.persistentStores.last else {
+            return
+        }
+
+        guard let url = persistentStoreCoordinator?.url(for: persistentStore) else   {
+            return
+        }
+
+        performAndWait { () -> Void in
+            self.reset()
+             do
+            {
+                try self.persistentStoreCoordinator?.remove(persistentStore)
+                try FileManager.default.removeItem(at: url)
+                try self.persistentStoreCoordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
+             }
+            catch { /*dealing with errors up to the usage*/ }
+         }
     }
 }
