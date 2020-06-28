@@ -33,10 +33,10 @@ class Level {
 
     var sequenceID: Int32 = 0 // The unique sequence ID
     var goalFlips: Int16 // The goal flips for the level
-    let levelIndex: Int // Which index the level is at
+    // let levelIndex: Int // Which index the level is at
     var attempts = 0 // Hpw many attempts were made
     var minFlips: Int16 = 0 // The minimum number of flips the level has been completed in
-    var minMoves: Array<Int> = [0] // The minimum moves the level has been completed in
+    var minMoves: [Int] = [] // The minimum moves the level has been completed in
     var starScore: Int = 0 // Score of stars for the particular level
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
     var isComplete = false // Whether the level has been completed
@@ -45,29 +45,19 @@ class Level {
     
     init(sequence: Array<Int>, goalFlips: Int16) { // Initialiser when array is available
         self.goalFlips = goalFlips
-        levelIndex = Level.getLevelNumber()
         self.sequenceID = arrayToNumber(ArrayInput: sequence)
     }
     
     init(sequenceID: Int32, goalFlips: Int16) { // Initialiser when number is available
         self.sequenceID = sequenceID
         self.goalFlips = goalFlips
-        levelIndex = Level.getLevelNumber()
-        // self.sequence = numberToArray(NumberInput: sequenceID)
     }
     
-    static func getLevelNumber() -> Int { // Get level for display on table etc
-        // TODO: - Remove as the array will dictate index
-        levelsIndices += 1
-        return levelsIndices
-    }
-    
-    func completeLevel(Flips: Int16, completeSequence: Array<Int>) { // Actions when level is completed
+    func completeLevel(Flips: Int16) { // Actions when level is completed
         isComplete = true
         
         if (Flips < minFlips || minFlips == 0) {
             minFlips = Flips
-            minMoves = completeSequence
             
             if (minFlips - goalFlips > 2) {
                 starScore = 1
@@ -111,7 +101,6 @@ class Level {
 // TODO: Rationalise this data - it calculates whether the level is valid or not
 /*
 let tempSum = IntOutput[0] + IntOutput[1] + IntOutput[3] + IntOutput[4] + IntOutput[5] + IntOutput[6] + IntOutput[8] + IntOutput[9] + IntOutput[15] + IntOutput[16] + IntOutput[18] + IntOutput[19] + IntOutput[20] + IntOutput[21] + IntOutput[23] + IntOutput[24]
-
 
 if tempSum % 2 == 0 {
     print("even")

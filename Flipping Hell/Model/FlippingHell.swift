@@ -6,6 +6,14 @@
 //  Copyright © 2018 Hans Guntersson Ltd. All rights reserved.
 //
 
+
+
+/*
+ - Load base data from JSON
+ - Update any records based on array of saved scores
+ - When a new record is created, save / overwrite the score in memory
+ */
+
 import Foundation
 import UIKit
 import CoreData
@@ -76,13 +84,12 @@ class FlippingHell {
     }
     
     init() {
+        
         stagesUnlocked = stagesUnlockedInitial
+
+        deleteData()
         
         loadLevels()
-        
-        // deleteData()
-        // getFromURL()
-        // sendResults()
    
     }
     
@@ -97,7 +104,7 @@ class FlippingHell {
     
     // ********************************** CORE DATA ********************************** //
     
-    func saveData(levelid: Int32, flips: Int16) { // SAVE DATA TO CORE DATA
+    func saveData(levelid: Int32, flips: Int16, minmoves: [Int]) { // SAVE DATA TO CORE DATA
         
         var levelsTest: [NSManagedObject] = []
         
@@ -109,7 +116,7 @@ class FlippingHell {
         // Get managed object context
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        // Create entity named Test
+        // Create entity named Levels
         let entity = NSEntityDescription.entity(forEntityName: "Levels", in: managedContext)!
         
         // Create entry in Test table
@@ -126,8 +133,8 @@ class FlippingHell {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+        
     }
-    
     
     func loadData() -> [Levels] { // LOAD DATA FROM CORE DATA
         
@@ -139,24 +146,16 @@ class FlippingHell {
         // Get managed object context
         let context = appDelegate.persistentContainer.viewContext
         
-        // 1
+        // TODO: What happens if the data isn't there?
         let request: NSFetchRequest<Levels> = Levels.fetchRequest()
         
-        // 2
-        //        request.predicate = NSPredicate(format: "title = %@", "MEDIUM")
+        // TODO: Work out what this is
+        //  request.predicate = NSPredicate(format: "title = %@", "MEDIUM")
+        
+        // Return contents
         do {
-            // 3
-            let TestItems = try context.fetch(request)
-            
-            // 4
-            TestItems.forEach { item in
-                // let levelid = item.levelid
-                // print(levelid)
-                // let flips = item.flips
-                // print(flips)
-            }
- 
-            return TestItems
+            let SavedItems = try context.fetch(request)
+            return SavedItems
         }  catch {
             fatalError("This was not supposed to happen")
         }
@@ -261,23 +260,17 @@ class FlippingHell {
         print(url)
     }
     
-    
     // ********************************** FUNCTIONS ********************************** //
-    
-    func calculateStars() {
-        // Loop through stages
-        // loop through each level, and look at star score for number of instances of star values
-    }
     
     func loadLevels() { // Load levels into game
         
         // Get url of file
-        guard let url = Bundle.main.url(forResource: "FH_data", withExtension: "json") else{
+        guard let url = Bundle.main.url(forResource: "FH_data", withExtension: "json") else {
             print("url try didn't work")
             return
         }
         
-        // turn contents JSON file at url into data
+        // Turn contents JSON file at url into data type
         guard let data = try? Data(contentsOf: url) else {
             print("data try didn't work")
             return
@@ -287,27 +280,112 @@ class FlippingHell {
         
         let jsonarray = jsonoutput.levelfeed
 
-        // Cycle through and create objects
+        // Load data from memory
+        let SavedData = loadData()
         
+        // Cycle through and create objects
         var jsonarrayindex = levelsPerStage // index of levels to ensure each stage is only 20 items long
         var jsonstageindex = -1 // index of stages to cycle through stages
         for jsonlevel in jsonarray {
             
+            // Create set of Arrays for each stage
             if (jsonarrayindex == levelsPerStage) {
                 jsonarrayindex = 0
                 jsonstageindex += 1
                 
-                let levelArray = [Level]()
-                stages.append(levelArray)
-                stageStars.append(0)
+                let levelArray = [Level]() // Create array of levels
+                stages.append(levelArray) // Add array of levels to stages
+                stageStars.append(0) // initialise stage with 0 stars
+            }
+
+            var MinFlips: Int16 = 0
+            
+            // Overwrite the minflips based on stored value
+            SavedData.forEach { item in
+                if (jsonlevel.levelid == item.levelid)
+                {
+                    if (item.flips < MinFlips || MinFlips == 0) {
+                        MinFlips = item.flips
+                        print(item.levelid)
+                        print(item.flips)
+                    }
+                }
             }
             
+            // Initialise the level based on the id and flip count, mincount
             let levelinstance = Level(sequenceID: Int32(jsonlevel.levelid), goalFlips: Int16(jsonlevel.flips))
-
+            
+            if (MinFlips != 0) { // If the level has been won before, ensure level is marked as complete
+                // TODO: Add sequence to the load and save function
+                levelinstance.completeLevel(Flips: MinFlips)
+            }
+            
+            // Add level to the relevant stage array
             stages[jsonstageindex].append(levelinstance)
-            
+        
             jsonarrayindex += 1
-            
+        }
+        
+        calculateStars()
+        
+        // getFromURL()
+        // sendResults()
+    }
+    
+    func calculateStars() { // Load levels into game
+        
+        // Establish how many stages are unlocked
+        goldCount = 0
+        silverCount = 0
+        bronzeCount = 0
+        totalStars = 0
+
+        for (index, stageindex)  in stages.enumerated() {
+           stageStars[index] = 0
+           for levelIndex in stageindex {
+               let tempScore = levelIndex.starScore
+               if (tempScore == 1) {
+                   bronzeCount += tempScore
+               } else if (tempScore == 2) {
+                   silverCount += tempScore
+               } else if (tempScore == 3) {
+                   goldCount += tempScore
+               }
+               totalStars += tempScore
+               stageStars[index] += tempScore
+           }
+        }
+
+        // Calculate number of unlocked stages based on total stars etc
+        let newStageCalc = stagesUnlockedInitial + (totalStars / unlockStarRatio)
+        
+        if (newStageCalc == stagesUnlocked) {
+                   newStageUnlocked = false
+        } else {
+           newStageUnlocked = true
+        }
+
+        // Calculate number of unlocked stages based on total stars etc
+        stagesUnlocked = newStageCalc
+
+        // If the number of stars is exactly the number required, unlock the next stage
+        if (totalStars == (stagesUnlocked * unlockStarRatio)) {
+           stagesUnlocked += 1
+           newStageUnlocked = true
+        }
+
+        // Adds visible locked stage and residual stars provided the maximum number of stages isn't reached
+        if (stagesUnlocked >= stages.count) {
+           stagesUnlocked = stages.count
+           stagesVisible = stages.count
+           remainingStars = 0
+        } else {
+           stagesVisible = stagesUnlocked + 1
+           remainingStars = (stagesUnlocked * unlockStarRatio) - totalStars
+        }
+        
+        if (totalStars > 0) {
+            firstOpen = false
         }
     }
 }
@@ -321,62 +399,15 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         
         let LevelSelected = stages[currentStage][currentLevel]
         
-        LevelSelected.completeLevel(Flips: Flips, completeSequence: ButtonsClicked)
+        LevelSelected.completeLevel(Flips: Flips)
         
-        // Establish how many stages are unlocked
-        goldCount = 0
-        silverCount = 0
-        bronzeCount = 0
-        totalStars = 0
+        calculateStars()
         
-        for (index, stageindex)  in stages.enumerated() {
-            stageStars[index] = 0
-            for levelIndex in stageindex {
-                let tempScore = levelIndex.starScore
-                if (tempScore == 1) {
-                    bronzeCount += tempScore
-                } else if (tempScore == 2) {
-                    silverCount += tempScore
-                } else if (tempScore == 3) {
-                    goldCount += tempScore
-                }
-                totalStars += tempScore
-                stageStars[index] += tempScore
-            }
+        // TODO: Only save if it's a new record?
+        
+        if (Flips < LevelSelected.minFlips) {
+            saveData(levelid: LevelSelected.sequenceID, flips: Flips, minmoves: ButtonsClicked)
         }
-        
-        // Calculate number of unlocked stages based on total stars etc
-        let newStageCalc = stagesUnlockedInitial + (totalStars / unlockStarRatio)
-        
-        if (newStageCalc == stagesUnlocked) {
-            newStageUnlocked = false
-        } else {
-            newStageUnlocked = true
-        }
-        
-        // Calculate number of unlocked stages based on total stars etc
-        stagesUnlocked = newStageCalc
-        
-        // If the number of stars is exactly the number required, unlock the next stage
-        if (totalStars == (stagesUnlocked * unlockStarRatio)) {
-            stagesUnlocked += 1
-            newStageUnlocked = true
-        }
-        
-        // Adds visible locked stage and residual stars provided the maximum number of stages isn't reached
-        if (stagesUnlocked >= stages.count) {
-            stagesUnlocked = stages.count
-            stagesVisible = stages.count
-            remainingStars = 0
-        } else {
-            stagesVisible = stagesUnlocked + 1
-            remainingStars = (stagesUnlocked * unlockStarRatio) - totalStars
-        }
-
-        saveData(levelid: LevelSelected.sequenceID, flips: Flips)
-        
-        // let ItemList = loadData()
-        // print(ItemList)
     }
     
     func gameAttemptAdd() {
@@ -387,7 +418,6 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
         let LevelSelected = stages[currentStage][currentLevel]
         let LevelArray = LevelSelected.numberToArray(NumberInput: LevelSelected.sequenceID)
         UpdateMainViewDelegateInstance.receiveLevel(LevelID: currentLevel, StageID: currentStage, StageMax: stagesUnlocked, newStage: newStageUnlocked, GoalFlips: LevelSelected.goalFlips, Sequence: LevelArray, IsCompleted: LevelSelected.isComplete, FirstOpen: firstOpen)
-        firstOpen = false
     }
 }
 

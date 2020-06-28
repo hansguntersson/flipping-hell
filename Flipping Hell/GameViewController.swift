@@ -14,7 +14,8 @@ import UIKit
 // TODO: Add sound effects and ensure they turn off when on silent
 // TODO: Load and save logic
 // TODO: Check twitter link works on info.plist
-// TODO: Implement higher resolution help screen
+// TODO: Implement higher resolution help screen?
+// TODO: Tweak stage screen colour - too yellow
 
 // TODO: Decide what scores and stats are shown
 /*
@@ -30,7 +31,6 @@ import UIKit
     
     Should green stars indicate that you're the first person to complete a level?
     Wnat's the highest number for any number of flips?
-
 */
 
 class GameViewController: UIViewController {
