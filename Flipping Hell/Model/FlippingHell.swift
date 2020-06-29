@@ -65,8 +65,8 @@ class FlippingHell {
     var stageStars: [Int] = [0] // number of stars obtained for each stage
     var totalStars: Int = 0 // total tally of stars which drives stage unlocks
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
-    var remainingStars: Int = 6 // Stars remaining to the next level
-    let unlockStarRatio = 6 // Number of stars per stage to unlock the next stage
+    var remainingStars: Int = 20 // Stars remaining to the next level
+    let unlockStarRatio = 20 // Number of stars per stage to unlock the next stage
     /* Core numbers for review
      20 levels per stage
      60 all gold

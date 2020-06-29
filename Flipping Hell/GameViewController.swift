@@ -12,10 +12,9 @@ import UIKit
 
 // TODO: Acsount for ipad and larger displays
 // TODO: Add sound effects and ensure they turn off when on silent
-// TODO: Save sequence, current stage/level?
+// TODO: Save sequence with level?
+// TODO: Save current level per stage?
 // TODO: Check twitter link works on info.plist
-// TODO: Implement higher resolution help screen?
-// TODO: Tweak stage screen colour - too yellow
 
 // TODO: Decide what scores and stats are shown
 /*

@@ -86,13 +86,15 @@ class StageViewController: UICollectionViewController {
         
         // Configure the cell
         if (indexPath.row < stagesUnlocked) {
-            cell.cellContainer.backgroundColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.03921568627, alpha: 1)
+            cell.cellContainer.borderColor = #colorLiteral(red: 1, green: 0.8392156863, blue: 0.03921568627, alpha: 1)
+            cell.cellContainer.backgroundColor = #colorLiteral(red: 1, green: 0.9416666666, blue: 0.65, alpha: 1)
             cell.cellButton.backgroundColor = #colorLiteral(red: 1, green: 0.2705882353, blue: 0.2274509804, alpha: 1)
             cell.cellButton.setTitle(String(indexPath.row + 1), for: .normal)
             cell.cellText.text = "Stars: \(stagesStars[indexPath.row])"
         } else {
+            cell.cellContainer.borderColor = #colorLiteral(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)
             cell.cellContainer.backgroundColor = #colorLiteral(red: 0.9026113014, green: 0.9026113014, blue: 0.9026113014, alpha: 1)
-            cell.cellButton.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            cell.cellButton.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             cell.cellButton.setTitle("✕", for: .normal)
             cell.cellText.text = "LOCKED"
         }

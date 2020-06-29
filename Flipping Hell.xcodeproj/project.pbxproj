@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E505D57A246D829200F0FD16 /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E505D579246D829200F0FD16 /* UIRoundedButton.swift */; };
 		E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508CECC216FD98C0029408A /* LevelTableViewCell.swift */; };
+		E51AA7C124AA7DFC00D10090 /* flipsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = E51AA7C024AA7DFC00D10090 /* flipsound.wav */; };
+		E51AA7C324AA82AD00D10090 /* flipsound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E51AA7C224AA82AD00D10090 /* flipsound2.wav */; };
 		E543F3F52162B77200329519 /* Orbitron-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F02162B77200329519 /* Orbitron-Black.ttf */; };
 		E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F12162B77200329519 /* Orbitron-Medium.ttf */; };
 		E543F3F72162B77200329519 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F22162B77200329519 /* Orbitron-Regular.ttf */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		E505D579246D829200F0FD16 /* UIRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedButton.swift; sourceTree = "<group>"; };
 		E508CECC216FD98C0029408A /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
+		E51AA7C024AA7DFC00D10090 /* flipsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = flipsound.wav; path = "Flipping Hell/Assets.xcassets/flipsound.wav"; sourceTree = SOURCE_ROOT; };
+		E51AA7C224AA82AD00D10090 /* flipsound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = flipsound2.wav; path = "Flipping Hell/Assets.xcassets/flipsound2.wav"; sourceTree = SOURCE_ROOT; };
 		E543F3F02162B77200329519 /* Orbitron-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Black.ttf"; sourceTree = "<group>"; };
 		E543F3F12162B77200329519 /* Orbitron-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Medium.ttf"; sourceTree = "<group>"; };
 		E543F3F22162B77200329519 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				E543F3F02162B77200329519 /* Orbitron-Black.ttf */,
 				E55F5609223EE0D400BA673F /* doubleclick.mp3 */,
 				E55F5608223EE0D400BA673F /* success.wav */,
+				E51AA7C224AA82AD00D10090 /* flipsound2.wav */,
+				E51AA7C024AA7DFC00D10090 /* flipsound.wav */,
 				E543F3F12162B77200329519 /* Orbitron-Medium.ttf */,
 				E543F3F22162B77200329519 /* Orbitron-Regular.ttf */,
 				E543F3F42162B77200329519 /* Orbitron-Bold.ttf */,
@@ -305,7 +311,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51AA7C324AA82AD00D10090 /* flipsound2.wav in Resources */,
 				E5DABA502280530E005F6287 /* FH_data.json in Resources */,
+				E51AA7C124AA7DFC00D10090 /* flipsound.wav in Resources */,
 				E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */,
 				E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */,
 				E5C106BC215408B000947220 /* Assets.xcassets in Resources */,

@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+var audioPlayer: AVAudioPlayer!
+
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateModelDelegate: class {
@@ -24,8 +26,6 @@ class MainViewController: UIViewController {
     // ********************************** VARIABLES ********************************** //
     
     weak var game: FlippingHell?
-    
-    var audioPlayer = AVAudioPlayer()
     
     var FirstOpen: Bool = false // whether or not the game is freshly opened
     
@@ -72,6 +72,10 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonWinCollection: [UIButton]!
     @IBOutlet var buttonFlipperCollection: [UIButton]!
     @IBOutlet var winScreen: UIView!
+    
+    // ********************************** SOUNDS ********************************** //
+    
+    let flipsoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "flipsound2.wav", ofType: nil)!)
     
     // ********************************** DELEGATES ********************************** //
     
@@ -146,9 +150,13 @@ class MainViewController: UIViewController {
         let idNum: Int = Int(button.accessibilityIdentifier ?? "0") ?? 0
         WinSequence.append(idNum)
         
+        self.flipSound()
+        
         flipButton(button, buttonIndex: idNum)
+            
 
         if (FlipperOrientation == 0) {
+            
             if (leftValidNums.contains(idNum)) {
                 let idNumLeft = idNum - 1
                 let buttonLeft = buttonCollection[idNumLeft]
@@ -160,6 +168,7 @@ class MainViewController: UIViewController {
                 flipButton(buttonRight, buttonIndex: idNumRight)
             }
         } else {
+            
             if (idNum > 4) {
                 let idNumTop = idNum - 5
                 let buttonTop = buttonCollection[idNumTop]
@@ -192,6 +201,7 @@ class MainViewController: UIViewController {
     }
     
     func flipButton(_ sender: UIButton, buttonIndex: Int) { // Flips the corresponding button
+        
         let button = sender
         
         let widthVal = button.frame.size.width
@@ -238,6 +248,18 @@ class MainViewController: UIViewController {
             })
         }
     }
+    
+    func flipSound() { // Play sound when button is clicked
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: self.flipsoundurl)
+            audioPlayer?.volume = 1
+            audioPlayer?.play()
+    
+        } catch {
+            print("Unable to locate audio file")
+        }
+    }
+    
     
     func updateFlipperDisplay() { // Updates the flipper based on the orientation
         if(FlipperOrientation == 0) {

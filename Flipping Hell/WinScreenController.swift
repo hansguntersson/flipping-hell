@@ -18,6 +18,7 @@ protocol UpdateModelWinDelegate: class {
 }
 
 import UIKit
+import AVFoundation
 
 // ********************************** CLASS DEFINITION ********************************** //
 
@@ -47,6 +48,8 @@ class WinScreenController: UIViewController {
     var WinStarsString: String = ""
     var WinStarColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     
+    let winsoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "success.wav", ofType: nil)!)
+    
     // ********************************** DELEGATES ********************************** //
     
     weak var ReplayButtonsDelegateInstance: ReplayLevelDelegate!
@@ -69,16 +72,19 @@ class WinScreenController: UIViewController {
             WinStarsText.textColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
             WinStarBoxOuter.backgroundColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
             WinStarBoxInner.backgroundColor = #colorLiteral(red: 1, green: 0.8517647059, blue: 0.65, alpha: 1)
+            self.winSound(Stars: 1)
         } else if (WinFlips - GoalFlips > 0) {
             WinStarsText.text = "★ ★"
             WinStarsText.textColor = #colorLiteral(red: 0.712579906, green: 0.712579906, blue: 0.712579906, alpha: 1)
             WinStarBoxOuter.backgroundColor = #colorLiteral(red: 0.712579906, green: 0.712579906, blue: 0.712579906, alpha: 1)
             WinStarBoxInner.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
+            self.winSound(Stars: 2)
         } else if (WinFlips - GoalFlips <= 0) {
             WinStarsText.text = "★ ★ ★"
             WinStarsText.textColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
             WinStarBoxOuter.backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
             WinStarBoxInner.backgroundColor = #colorLiteral(red: 1, green: 0.94, blue: 0.7, alpha: 1)
+            self.winSound(Stars: 3)
         }
         
         
@@ -110,6 +116,47 @@ class WinScreenController: UIViewController {
         UpdateModelWinDelegateInstance.nextLevel()
         ReplayButtonsDelegateInstance.replayLevel()
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func winSound (Stars: Int) { // Play sound when level is won
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: winsoundurl)
+            audioPlayer?.volume = 0.5
+            audioPlayer?.play()
+        } catch {
+            print("Unable to locate audio file")
+        }
+        
+        if (Stars >= 1) {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: self.winsoundurl)
+                audioPlayer?.volume = 0.5
+                audioPlayer?.play()
+            } catch {
+                print("Unable to locate audio file")
+            }
+        }
+        
+        if (Stars >= 2) {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: winsoundurl)
+                audioPlayer?.volume = 0.5
+                audioPlayer?.play()
+            } catch {
+                print("Unable to locate audio file")
+            }
+        }
+        
+        if (Stars == 3) {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: winsoundurl)
+                audioPlayer?.volume = 0.5
+                audioPlayer?.play()
+            } catch {
+                print("Unable to locate audio file")
+            }
+        }
+        
     }
     
     /*
