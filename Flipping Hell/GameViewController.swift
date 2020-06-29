@@ -11,7 +11,7 @@ import UIKit
 // ********************************** CLASS DEFINITION ********************************** //
 
 // TODO: Acsount for ipad and larger displays
-// TODO: Add sound effects and ensure they turn off when on silent
+// TODO: Add sound effects for flip, win and new stage and ensure they turn off when on silent
 // TODO: Save sequence with level?
 // TODO: Save current level per stage?
 // TODO: Check twitter link works on info.plist
