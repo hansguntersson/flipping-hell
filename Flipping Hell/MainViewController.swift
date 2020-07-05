@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-var audioPlayer: AVAudioPlayer!
+var audioPlayer: AVAudioPlayer?
 
 // ********************************** PROTOCOLS ********************************** //
 
