@@ -14,6 +14,12 @@
  - When a new record is created, save / overwrite the score in memory
  */
 
+/* Errors:
+ 2021-03-14 21:15:47.751333+0000 Flipping Hell[6412:329627] [aqsrv] AQServer.cpp:68:APIResult: Exception caught in AudioQueueInternalNotifyRunning - error -66671
+ */
+
+
+
 import Foundation
 import UIKit
 import CoreData
@@ -67,7 +73,7 @@ class FlippingHell {
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
     var remainingStars: Int = 20 // Stars remaining to the next level
     let unlockStarRatio = 20 // Number of stars per stage to unlock the next stage
-    /* Core numbers for review
+    /* //TODO: Core numbers for review
      20 levels per stage
      60 all gold
      40 all silver
