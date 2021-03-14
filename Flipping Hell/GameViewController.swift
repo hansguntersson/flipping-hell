@@ -11,6 +11,7 @@ import UIKit
 // ********************************** CLASS DEFINITION ********************************** //
 
 // TODO: Acsount for ipad and larger displays
+// TODO: Fix plugin error
 // TODO: Add sound effects for flip, win and new stage and ensure they turn off when on silent
 // TODO: Save sequence with level?
 // TODO: Save current level per stage?

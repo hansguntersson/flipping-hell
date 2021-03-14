@@ -135,6 +135,7 @@
 		E5AB86EB21DE6C3800337825 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */,
 				E5B2FB6D216A8A8400A13D18 /* FlippingHell.swift */,
 				E56E325921735E8200A16788 /* Level.swift */,
 				E5DABA4F2280530E005F6287 /* FH_data.json */,
@@ -178,7 +179,6 @@
 				E54A9F09247DA99600FCCEA5 /* StageViewCell.swift */,
 				E5BDD8762473DD0000AC4EC7 /* ScoreViewController.swift */,
 				E505D579246D829200F0FD16 /* UIRoundedButton.swift */,
-				E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */,
 				E5AB86EB21DE6C3800337825 /* Model */,
 				E543F3EF2162B77200329519 /* resources */,
 				E5C106BB215408B000947220 /* Assets.xcassets */,
