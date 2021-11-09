@@ -10,7 +10,7 @@ import UIKit
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol SelectLevel: class {
+protocol SelectLevel: AnyObject {
     func selectLevelFromButton(LevelSelected: Int)
 }
 

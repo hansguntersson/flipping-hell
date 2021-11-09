@@ -8,11 +8,11 @@
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol ReplayLevelDelegate: class {
+protocol ReplayLevelDelegate: AnyObject {
     func replayLevel()
 }
 
-protocol UpdateModelWinDelegate: class {
+protocol UpdateModelWinDelegate: AnyObject {
     func nextLevel()
     func requestWin()
 }

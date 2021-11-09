@@ -13,7 +13,7 @@ var audioPlayer: AVAudioPlayer!
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol UpdateModelDelegate: class {
+protocol UpdateModelDelegate: AnyObject {
     func gameWon(LevelID: Int, Flips: Int16, ButtonsClicked: [Int])
     func gameAttemptAdd()
     func requestLevel()

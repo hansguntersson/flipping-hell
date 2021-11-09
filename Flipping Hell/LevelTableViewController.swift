@@ -10,7 +10,7 @@ import UIKit
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol UpdateModelLevelsDelegate: class {
+protocol UpdateModelLevelsDelegate:AnyObject {
     func requestLevelList()
     func changeLevel(StageID: Int, LevelID: Int)
 }

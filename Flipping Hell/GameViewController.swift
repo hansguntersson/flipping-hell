@@ -12,12 +12,10 @@ import UIKit
 
 // TODO: Acsount for ipad and larger displays
 // TODO: Fix plugin error
-// TODO: Add sound effects for flip, win and new stage and ensure they turn off when on silent
-// TODO: Save sequence with level?
+// TODO: Add sound effects for flip, win and new stage
+// TODO: Save sequence with level, display upon selecting stars
 // TODO: Save current level per stage?
 // TODO: Check twitter link works on info.plist
-
-// TODO: Decide what scores and stats are shown
 /*
     Summary of stars won for each type
     Stages completed, Levels completed

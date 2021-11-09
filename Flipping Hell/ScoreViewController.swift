@@ -10,7 +10,7 @@ import UIKit
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol UpdateModelScoresDelegate: class {
+protocol UpdateModelScoresDelegate: AnyObject {
     func requestScores()
 }
     

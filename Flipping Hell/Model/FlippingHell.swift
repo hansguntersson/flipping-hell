@@ -26,23 +26,23 @@ import CoreData
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol UpdateMainViewDelegate: class {
+protocol UpdateMainViewDelegate: AnyObject {
     func receiveLevel(LevelID: Int, StageID: Int, StageMax: Int, newStage: Bool, GoalFlips: Int16, Sequence: [Int], IsCompleted: Bool, FirstOpen: Bool)
 }
 
-protocol UpdateLevelViewDelegate: class {
+protocol UpdateLevelViewDelegate: AnyObject {
     func receiveLevelList(LevelList: [Level], CurrentStage: Int, CurrentLevel: Int, LevelsPerStage: Int)
 }
 
-protocol UpdateStageViewDelegate: class {
+protocol UpdateStageViewDelegate: AnyObject {
     func receiveStageList(StagesVisible: Int, StagesUnlocked: Int, StagesStars: [Int])
 }
 
-protocol UpdateWinViewDelegate: class {
+protocol UpdateWinViewDelegate: AnyObject {
     func receiveWin(GoalFlips: Int16, LevelID: Int, StageID: Int, StageMax: Int, NewStage: Bool)
 }
 
-protocol UpdateScoreViewDelegate: class {
+protocol UpdateScoreViewDelegate: AnyObject {
     func receiveScores(GoldStars: Int, SilverStars: Int, BronzeStars: Int, TotalStars: Int, RemainingStars: Int)
 }
 

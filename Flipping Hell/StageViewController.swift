@@ -10,7 +10,7 @@ import UIKit
 
 // ********************************** PROTOCOLS ********************************** //
 
-protocol UpdateModelStagesDelegate: class {
+protocol UpdateModelStagesDelegate: AnyObject {
     func requestStages()
     func changeStage(StageID: Int)
 }
