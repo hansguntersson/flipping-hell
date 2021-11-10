@@ -9,8 +9,6 @@
 import UIKit
 import AVFoundation
 
-var audioPlayer: AVAudioPlayer!
-
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateModelDelegate: AnyObject {
@@ -75,7 +73,9 @@ class MainViewController: UIViewController {
     
     // ********************************** SOUNDS ********************************** //
     
-    let flipsoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "flipsound2.wav", ofType: nil)!)
+    let flipsoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "flipsound.wav", ofType: nil)!)
+    let pagesoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "pageturn.mp3", ofType: nil)!)
+    let swooshsoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "swoosh.mp3", ofType: nil)!)
     
     // ********************************** DELEGATES ********************************** //
     
@@ -302,13 +302,57 @@ class MainViewController: UIViewController {
             if let vc = segue.destination as? ScoreViewController {
                 vc.game = self.game
                 game?.UpdateScoreViewDelegateInstance = vc
+                
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: self.swooshsoundurl)
+                    audioPlayer?.volume = 1
+                    audioPlayer?.play()
+                } catch {
+                    print("Unable to locate audio file")
+                }
+                
             }
+        }  else if segue.identifier == "GameHelpSegue" {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: self.swooshsoundurl)
+                audioPlayer?.volume = 1
+                audioPlayer?.play()
+            } catch {
+                print("Unable to locate audio file")
+            }
+        
         }
+    }
+    
+    @IBAction func unwindFromWintoMain( _ seg: UIStoryboardSegue) {
+        game?.requestLevelList()
+        self.dismiss(animated: true, completion: nil)
+        let seconds = 0.7 //Time To Delay
+        let when = DispatchTime.now() + seconds
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: self.pagesoundurl)
+
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                audioPlayer?.play()
+            }
+            
+        } catch {
+            print("Unable to locate audio file")
+        }
+        
     }
     
     @IBAction func unwindToLevels(segue: UIStoryboardSegue) { // Unwinds view  back to the level screen
         game?.requestLevelList()
         self.dismiss(animated: true, completion: nil)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: self.pagesoundurl)
+            audioPlayer?.volume = 1
+            audioPlayer?.play()
+        } catch {
+            print("Unable to locate audio file")
+        }
     }
 }
 

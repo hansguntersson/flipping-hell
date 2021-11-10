@@ -7,37 +7,49 @@
 //
 
 import UIKit
+import AVFoundation
+
+var audioPlayer: AVAudioPlayer!
 
 // ********************************** CLASS DEFINITION ********************************** //
 
 // TODO: Acsount for ipad and larger displays
 // TODO: Fix plugin error below
-// TODO: Add sound effects for flip, win and new stage
+// TODO: Add sound effects for dismiss of win screen
+// TODO: Fix visual error when unwinding from win screen to levels
 // TODO: Save sequence with level, display upon selecting stars
 // TODO: Check twitter link works on info.plist
 /*
-    Summary of stars won for each type
-    Stages completed, Levels completed
-    Top ranking users, based on various metrics:
-    - most levels won
-    - most stars
-    - level completed most times
-    - score (based on stars)
-    - most attempts
-    - attempts / won ratio
-    
-    Should green stars indicate that you're the first person to complete a level?
-    Wnat's the highest number for any number of flips?
  
+ 
+ Tasks:
+ - Flip sound when segueing
+ - Sound on/off option
+ - Show sequence when clicking on star
+ - Don’t show flips on level select, save for detail screen
+ - Numbers not centred properly
+ - Review stars screen to clarify how many levels have been won, and total stars
+ 
+ 
+ Other:
   - Load base data from JSON
   - Update any records based on array of saved scores
   - When a new record is created, save / overwrite the score in memory
+ 
+  Hyperlink error:
+ 
+    2021-11-10 14:17:16.243791+0000 Flipping Hell[3423:586911] -canOpenURL: failed for URL: "twitter://user?screen_name=hansguntersson" - error: "This app is not allowed to query for scheme twitter"
+     Message from debugger: Terminated due to signal 9
   */
 
 class GameViewController: UIViewController {
     
     var game = FlippingHell()
     @IBOutlet var playButton: UIButton!
+    
+    // ********************************** SOUNDS ********************************** //
+    
+    let pagesoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "pageturn.mp3", ofType: nil)!)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +63,14 @@ class GameViewController: UIViewController {
                 let lvc = vc.children[0] as! StageViewController
                 lvc.game = self.game
                 game.UpdateStageViewDelegateInstance = lvc
+                
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: self.pagesoundurl)
+                    audioPlayer?.volume = 1
+                    audioPlayer?.play()
+                } catch {
+                    print("Unable to locate audio file")
+                }
             }
         }
     }

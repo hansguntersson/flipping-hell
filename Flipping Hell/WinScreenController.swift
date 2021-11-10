@@ -48,7 +48,12 @@ class WinScreenController: UIViewController {
     var WinStarsString: String = ""
     var WinStarColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     
+    // ********************************** SOUNDS ********************************** //
+    
+    let swooshsoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "swoosh.mp3", ofType: nil)!)
     let winsoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "success.wav", ofType: nil)!)
+    let pagesoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "pageturn.mp3", ofType: nil)!)
+
     
     // ********************************** DELEGATES ********************************** //
     
@@ -105,6 +110,19 @@ class WinScreenController: UIViewController {
             NewStageView.isHidden = false
         }
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isBeingDismissed {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: self.swooshsoundurl)
+                audioPlayer?.volume = 1
+                audioPlayer?.play()
+            } catch {
+                print("Unable to locate audio file")
+            }
+        }
     }
     
     @IBAction func replayLevel(_ sender: UIButton) {

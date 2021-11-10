@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 // ********************************** PROTOCOLS ********************************** //
 
@@ -21,6 +22,7 @@ private let reuseIdentifier = "Cell"
 class StageViewController: UICollectionViewController {
     
     weak var game: FlippingHell?
+    
     var SelectedStage: Int = 0
     
     var stagesStars: [Int] = [0, 0, 0]
@@ -33,6 +35,11 @@ class StageViewController: UICollectionViewController {
     weak var UpdateModelStagesDelegateInstance: UpdateModelStagesDelegate!
     @IBOutlet weak var StageCollectionView: UICollectionView!
     
+    // ********************************** SOUNDS ********************************** //
+    
+    let pagesoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "pageturn.mp3", ofType: nil)!)
+    let swooshsoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "swoosh.mp3", ofType: nil)!)
+
     // ********************************** SETUP FUNCTION ********************************** //
     
     override func viewDidLoad() {
@@ -59,6 +66,13 @@ class StageViewController: UICollectionViewController {
     
     @IBAction func backToScreen(_ sender: Any) { // Back to Title screen
         self.dismiss(animated: true, completion: nil)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: self.pagesoundurl)
+            audioPlayer?.volume = 1
+            audioPlayer?.play()
+        } catch {
+            print("Unable to locate audio file")
+        }
     }
     
     @IBAction func selectStage(_ sender: UIRoundedButton) {
@@ -115,11 +129,28 @@ class StageViewController: UICollectionViewController {
                 lvc.StageSelected = StageSelected
                 game?.UpdateLevelViewDelegateInstance = lvc
                 UpdateModelStagesDelegateInstance.changeStage(StageID: StageSelected)
+                
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: self.pagesoundurl)
+                    audioPlayer?.volume = 1
+                    audioPlayer?.play()
+                } catch {
+                    print("Unable to locate audio file")
+                }
+                
             }
         } else if segue.identifier == "LoadScoresFromStagesSegue" {
             if let vc = segue.destination as? ScoreViewController {
                 vc.game = self.game
                 game?.UpdateScoreViewDelegateInstance = vc
+                
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: self.swooshsoundurl)
+                    audioPlayer?.volume = 1
+                    audioPlayer?.play()
+                } catch {
+                    print("Unable to locate audio file")
+                }
             }
         }
     }

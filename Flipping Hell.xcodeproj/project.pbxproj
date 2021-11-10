@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		E505D57A246D829200F0FD16 /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E505D579246D829200F0FD16 /* UIRoundedButton.swift */; };
 		E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508CECC216FD98C0029408A /* LevelTableViewCell.swift */; };
-		E51AA7C124AA7DFC00D10090 /* flipsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = E51AA7C024AA7DFC00D10090 /* flipsound.wav */; };
-		E51AA7C324AA82AD00D10090 /* flipsound2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E51AA7C224AA82AD00D10090 /* flipsound2.wav */; };
+		E51AA7C124AA7DFC00D10090 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = E51AA7C024AA7DFC00D10090 /* click.wav */; };
+		E51AA7C324AA82AD00D10090 /* flipsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = E51AA7C224AA82AD00D10090 /* flipsound.wav */; };
 		E543F3F52162B77200329519 /* Orbitron-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F02162B77200329519 /* Orbitron-Black.ttf */; };
 		E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F12162B77200329519 /* Orbitron-Medium.ttf */; };
 		E543F3F72162B77200329519 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F22162B77200329519 /* Orbitron-Regular.ttf */; };
@@ -33,6 +33,9 @@
 		E5C106CA215408B100947220 /* Flipping_HellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106C9215408B100947220 /* Flipping_HellTests.swift */; };
 		E5C106D5215408B100947220 /* Flipping_HellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106D4215408B100947220 /* Flipping_HellUITests.swift */; };
 		E5DABA502280530E005F6287 /* FH_data.json in Resources */ = {isa = PBXBuildFile; fileRef = E5DABA4F2280530E005F6287 /* FH_data.json */; };
+		E5DBC33F273C239400860212 /* pageturn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5DBC33E273C239400860212 /* pageturn.mp3 */; };
+		E5DBC341273C283400860212 /* swoosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5DBC340273C283400860212 /* swoosh.mp3 */; };
+		E5DBC343273C329D00860212 /* GameHelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBC342273C329D00860212 /* GameHelpController.swift */; };
 		E5EB0F0A223E47330012EEFD /* FlippingHell.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */; };
 		E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F12CC021B94949004D0176 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
@@ -57,8 +60,8 @@
 /* Begin PBXFileReference section */
 		E505D579246D829200F0FD16 /* UIRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedButton.swift; sourceTree = "<group>"; };
 		E508CECC216FD98C0029408A /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
-		E51AA7C024AA7DFC00D10090 /* flipsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = flipsound.wav; path = "Flipping Hell/Assets.xcassets/flipsound.wav"; sourceTree = SOURCE_ROOT; };
-		E51AA7C224AA82AD00D10090 /* flipsound2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = flipsound2.wav; path = "Flipping Hell/Assets.xcassets/flipsound2.wav"; sourceTree = SOURCE_ROOT; };
+		E51AA7C024AA7DFC00D10090 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = click.wav; path = "Flipping Hell/Assets.xcassets/click.wav"; sourceTree = SOURCE_ROOT; };
+		E51AA7C224AA82AD00D10090 /* flipsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = flipsound.wav; path = "Flipping Hell/Assets.xcassets/flipsound.wav"; sourceTree = SOURCE_ROOT; };
 		E543F3F02162B77200329519 /* Orbitron-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Black.ttf"; sourceTree = "<group>"; };
 		E543F3F12162B77200329519 /* Orbitron-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Medium.ttf"; sourceTree = "<group>"; };
 		E543F3F22162B77200329519 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
@@ -87,6 +90,9 @@
 		E5C106D4215408B100947220 /* Flipping_HellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flipping_HellUITests.swift; sourceTree = "<group>"; };
 		E5C106D6215408B100947220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DABA4F2280530E005F6287 /* FH_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FH_data.json; sourceTree = "<group>"; };
+		E5DBC33E273C239400860212 /* pageturn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pageturn.mp3; sourceTree = "<group>"; };
+		E5DBC340273C283400860212 /* swoosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swoosh.mp3; sourceTree = "<group>"; };
+		E5DBC342273C329D00860212 /* GameHelpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelpController.swift; sourceTree = "<group>"; };
 		E5EB0F09223E47330012EEFD /* FlippingHell.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlippingHell.xcdatamodel; sourceTree = "<group>"; };
 		E5F12CC021B94949004D0176 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,9 +127,11 @@
 			children = (
 				E543F3F02162B77200329519 /* Orbitron-Black.ttf */,
 				E55F5609223EE0D400BA673F /* doubleclick.mp3 */,
+				E5DBC340273C283400860212 /* swoosh.mp3 */,
 				E55F5608223EE0D400BA673F /* success.wav */,
-				E51AA7C224AA82AD00D10090 /* flipsound2.wav */,
-				E51AA7C024AA7DFC00D10090 /* flipsound.wav */,
+				E5DBC33E273C239400860212 /* pageturn.mp3 */,
+				E51AA7C224AA82AD00D10090 /* flipsound.wav */,
+				E51AA7C024AA7DFC00D10090 /* click.wav */,
 				E543F3F12162B77200329519 /* Orbitron-Medium.ttf */,
 				E543F3F22162B77200329519 /* Orbitron-Regular.ttf */,
 				E543F3F42162B77200329519 /* Orbitron-Bold.ttf */,
@@ -170,6 +178,7 @@
 				E5C106B4215408AF00947220 /* AppDelegate.swift */,
 				E5C106BD215408B000947220 /* LaunchScreen.storyboard */,
 				E5C106B8215408AF00947220 /* Main.storyboard */,
+				E5DBC342273C329D00860212 /* GameHelpController.swift */,
 				E5F12CC021B94949004D0176 /* GameViewController.swift */,
 				E56E325B2173612500A16788 /* LevelTableViewController.swift */,
 				E508CECC216FD98C0029408A /* LevelTableViewCell.swift */,
@@ -311,14 +320,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E51AA7C324AA82AD00D10090 /* flipsound2.wav in Resources */,
+				E51AA7C324AA82AD00D10090 /* flipsound.wav in Resources */,
 				E5DABA502280530E005F6287 /* FH_data.json in Resources */,
-				E51AA7C124AA7DFC00D10090 /* flipsound.wav in Resources */,
+				E51AA7C124AA7DFC00D10090 /* click.wav in Resources */,
 				E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */,
 				E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */,
 				E5C106BC215408B000947220 /* Assets.xcassets in Resources */,
+				E5DBC33F273C239400860212 /* pageturn.mp3 in Resources */,
 				E55F560B223EE0D400BA673F /* doubleclick.mp3 in Resources */,
 				E5C106BA215408AF00947220 /* Main.storyboard in Resources */,
+				E5DBC341273C283400860212 /* swoosh.mp3 in Resources */,
 				E543F3F52162B77200329519 /* Orbitron-Black.ttf in Resources */,
 				E543F3F92162B77200329519 /* Orbitron-Bold.ttf in Resources */,
 				E55F560A223EE0D400BA673F /* success.wav in Resources */,
@@ -355,6 +366,7 @@
 				E5C106B7215408AF00947220 /* MainViewController.swift in Sources */,
 				E54E2957219A0F120042934E /* WinScreenController.swift in Sources */,
 				E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */,
+				E5DBC343273C329D00860212 /* GameHelpController.swift in Sources */,
 				E5A1C1F121E36925001E8D90 /* StageViewController.swift in Sources */,
 				E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */,
 				E56E325A21735E8200A16788 /* Level.swift in Sources */,

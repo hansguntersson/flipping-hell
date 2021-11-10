@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 // ********************************** PROTOCOLS ********************************** //
 
@@ -30,6 +31,12 @@ class LevelTableViewController: UITableViewController {
     // ********************************** DELEGATES ********************************** //
     
     weak var UpdateModelLevelsDelegateInstance: UpdateModelLevelsDelegate!
+    
+    // ********************************** SOUNDS ********************************** //
+    
+    let pagesoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "pageturn.mp3", ofType: nil)!)
+    let swooshsoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "swoosh.mp3", ofType: nil)!)
+
     
     // ********************************** LOAD FUNCTION ********************************** //
     
@@ -104,6 +111,14 @@ class LevelTableViewController: UITableViewController {
     @IBAction func backToScreen(_ sender: Any) { // Back to Win or Main screen from Level screen
         game?.requestStages()
         self.dismiss(animated: true, completion: nil)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: self.pagesoundurl)
+            audioPlayer?.volume = 1
+            audioPlayer?.play()
+        } catch {
+            print("Unable to locate audio file")
+        }
     }
     
     
@@ -121,17 +136,29 @@ class LevelTableViewController: UITableViewController {
                 } else {
                     UpdateModelLevelsDelegateInstance.changeLevel(StageID: CurrentStage, LevelID: Int(buttonInstance.currentTitle ?? "0")! - 1)
                 }
+                
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: self.pagesoundurl)
+                    audioPlayer?.volume = 1
+                    audioPlayer?.play()
+                } catch {
+                    print("Unable to locate audio file")
+                }
             }
         } else if segue.identifier == "LoadScoresFromLevelsSegue" {
             if let vc = segue.destination as? ScoreViewController {
                 vc.game = self.game
                 game?.UpdateScoreViewDelegateInstance = vc
+                
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: self.swooshsoundurl)
+                    audioPlayer?.volume = 1
+                    audioPlayer?.play()
+                } catch {
+                    print("Unable to locate audio file")
+                }
             }
        }
-    }
-    
-    @IBAction func unwindFromWintoLevel( _ seg: UIStoryboardSegue) {
-        game?.requestLevelList()
     }
     
 

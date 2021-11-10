@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateModelScoresDelegate: AnyObject {
     func requestScores()
 }
-    
 
 // ********************************** CLASS DEFINITION ********************************** //
 
@@ -21,12 +21,15 @@ class ScoreViewController: UIViewController {
     
     weak var game: FlippingHell?
     
+    // ********************************** SOUNDS ********************************** //
+
+    let swooshsoundurl = URL(fileURLWithPath: Bundle.main.path(forResource: "swoosh.mp3", ofType: nil)!)
+
     // ********************************** DELEGATES ********************************** //
     
     weak var UpdateModelScoresDelegateInstance: UpdateModelScoresDelegate!
     
-    
-     // ********************************** OUTLETS ********************************** //
+    // ********************************** OUTLETS ********************************** //
 
     @IBOutlet weak var GoldStars: UILabel!
     @IBOutlet weak var SilverStars: UILabel!
@@ -45,6 +48,19 @@ class ScoreViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isBeingDismissed {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: self.swooshsoundurl)
+                audioPlayer?.volume = 1
+                audioPlayer?.play()
+            } catch {
+                print("Unable to locate audio file")
+            }
+        }
+    }
 }
 
 // ********************************** EXTENSIONS ********************************** //
@@ -58,3 +74,4 @@ extension ScoreViewController: UpdateScoreViewDelegate { // Receives and process
         self.StarsToNextStage.text = "★ \(RemainingStars)"
     }
 }
+
