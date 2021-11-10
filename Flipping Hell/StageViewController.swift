@@ -110,9 +110,11 @@ class StageViewController: UICollectionViewController {
             let buttonInstance = sender as! UIButton
             if let vc = segue.destination as? UINavigationController {
                 let lvc = vc.children[0] as! LevelTableViewController
+                let StageSelected = Int(buttonInstance.currentTitle ?? "1")! - 1
                 lvc.game = self.game
+                lvc.StageSelected = StageSelected
                 game?.UpdateLevelViewDelegateInstance = lvc
-                UpdateModelStagesDelegateInstance.changeStage(StageID: Int(buttonInstance.currentTitle ?? "1")! - 1)
+                UpdateModelStagesDelegateInstance.changeStage(StageID: StageSelected)
             }
         } else if segue.identifier == "LoadScoresFromStagesSegue" {
             if let vc = segue.destination as? ScoreViewController {

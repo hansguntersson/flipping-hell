@@ -8,18 +8,6 @@
 
 
 
-/*
- - Load base data from JSON
- - Update any records based on array of saved scores
- - When a new record is created, save / overwrite the score in memory
- */
-
-/* Errors:
- 2021-03-14 21:15:47.751333+0000 Flipping Hell[6412:329627] [aqsrv] AQServer.cpp:68:APIResult: Exception caught in AudioQueueInternalNotifyRunning - error -66671
- */
-
-
-
 import Foundation
 import UIKit
 import CoreData
@@ -56,6 +44,7 @@ class FlippingHell {
     
     var currentLevel = 0
     var currentStage = 0
+    var currentLevelperStage: [Int] = [] // Current level for each stage
     
     var levelsPerStage = 20 // Ensure that the total levels are a multiplier of this number
     var firstOpen = true // whether or not the user is new
@@ -281,6 +270,8 @@ class FlippingHell {
                 let levelArray = [Level]() // Create array of levels
                 stages.append(levelArray) // Add array of levels to stages
                 stageStars.append(0) // initialise stage with 0 stars
+                
+                currentLevelperStage.append(0) // add current level value per stage
             }
 
             var MinFlips: Int16 = 0
@@ -405,6 +396,7 @@ extension FlippingHell: UpdateModelDelegate { // Implements update of model from
 
 extension FlippingHell: UpdateModelWinDelegate { // Implements update of model from Win view
     func nextLevel() {
+        // TODO: Update level per stage
         if (currentLevel < levelsPerStage - 1) {
             currentLevel += 1
         } else {
@@ -425,6 +417,7 @@ extension FlippingHell: UpdateModelLevelsDelegate {
     }
     
     func changeLevel(StageID: Int, LevelID: Int) {
+        currentLevelperStage[currentStage] = currentLevel
         currentStage = StageID
         currentLevel = LevelID
     }
@@ -436,7 +429,9 @@ extension FlippingHell: UpdateModelStagesDelegate {
     }
     
     func changeStage(StageID: Int) {
+        currentLevelperStage[currentStage] = currentLevel
         currentStage = StageID
+        currentLevel = currentLevelperStage[currentStage]
     }
 }
 

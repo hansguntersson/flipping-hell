@@ -11,10 +11,9 @@ import UIKit
 // ********************************** CLASS DEFINITION ********************************** //
 
 // TODO: Acsount for ipad and larger displays
-// TODO: Fix plugin error
+// TODO: Fix plugin error below
 // TODO: Add sound effects for flip, win and new stage
 // TODO: Save sequence with level, display upon selecting stars
-// TODO: Save current level per stage?
 // TODO: Check twitter link works on info.plist
 /*
     Summary of stars won for each type
@@ -29,7 +28,11 @@ import UIKit
     
     Should green stars indicate that you're the first person to complete a level?
     Wnat's the highest number for any number of flips?
-*/
+ 
+  - Load base data from JSON
+  - Update any records based on array of saved scores
+  - When a new record is created, save / overwrite the score in memory
+  */
 
 class GameViewController: UIViewController {
     

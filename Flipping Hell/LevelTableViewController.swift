@@ -22,9 +22,10 @@ class LevelTableViewController: UITableViewController {
     weak var game: FlippingHell?
     
     var levels: [Level] = [] // structure for level
+    var LevelsPerStage = 0 // Number of levels per stage
     var CurrentStage = 0 // current stage for sorting sections
     var CurrentLevel = 0; // current level for basic highlighting
-    var LevelsPerStage = 0 // Number of levels per stage
+    var StageSelected = 0 // Selected level passed from Stage select
     
     // ********************************** DELEGATES ********************************** //
     
@@ -90,7 +91,7 @@ class LevelTableViewController: UITableViewController {
             cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         }
         
-        if (indexPath.row == CurrentLevel && CurrentStage == CurrentStage) {
+        if (indexPath.row == CurrentLevel && CurrentStage == StageSelected) {
             cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             cell.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.9372549057, blue: 0.9568627477, alpha: 1)
         }
