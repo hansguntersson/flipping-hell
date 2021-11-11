@@ -79,27 +79,31 @@ class LevelTableViewController: UITableViewController {
         }
         
         cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cell.levelGoal.text = "FLIPS " + "\(thisLevel.minFlips)" + " | " + "\(thisLevel.goalFlips)"
+        cell.levelGoal.text = "Best: \(thisLevel.minFlips) | \(thisLevel.goalFlips)"
+        
+        let greyColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        let darkGreyColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        let blueColour = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         
         if(thisLevel.starScore == 0) {
-            cell.levelStars.text = "☆ ☆ ☆"
-            cell.levelStars.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            cell.levelStars.setTitle("☆ ☆ ☆", for: .normal)
+            cell.levelStars.setTitleColor(greyColor, for: .normal)
         } else if (thisLevel.starScore == 1) {
-            cell.levelStars.text = "★ ☆ ☆"
-            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            cell.levelStars.setTitle("★ ☆ ☆", for: .normal)
+            cell.levelStars.setTitleColor(darkGreyColor, for: .normal)
         } else if (thisLevel.starScore == 2) {
-            cell.levelStars.text = "★ ★ ☆"
-            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            cell.levelStars.setTitle("★ ★ ☆", for: .normal)
+            cell.levelStars.setTitleColor(darkGreyColor, for: .normal)
         } else if (thisLevel.starScore == 3) {
-            cell.levelStars.text = "★ ★ ★"
-            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            cell.levelStars.setTitle("★ ★ ★", for: .normal)
+            cell.levelStars.setTitleColor(darkGreyColor, for: .normal)
         } else if (thisLevel.starScore == 4) {
-            cell.levelStars.text = "✮ ✮ ✮"
-            cell.levelStars.textColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+            cell.levelStars.setTitle("✮ ✮ ✮", for: .normal)
+            cell.levelStars.setTitleColor(blueColour, for: .normal)
         }
         
         if (indexPath.row == CurrentLevel && CurrentStage == StageSelected) {
-            cell.levelStars.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            cell.levelStars.setTitleColor(darkGreyColor, for: .normal)
             cell.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.9372549057, blue: 0.9568627477, alpha: 1)
         }
         

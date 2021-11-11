@@ -99,8 +99,13 @@ class StageViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StageCollectionViewCell", for: indexPath) as! StageViewCell
         
         // Configure the cell
-        if (indexPath.row < stagesUnlocked) {
-            cell.cellContainer.borderColor = #colorLiteral(red: 1, green: 0.6229766597, blue: 0.6006795805, alpha: 1)
+        if (stagesStars[indexPath.row] == 60) {
+            cell.cellContainer.backgroundColor = #colorLiteral(red: 1, green: 0.8696650257, blue: 0.3483251284, alpha: 1)
+            cell.cellButton.backgroundColor = #colorLiteral(red: 1, green: 0.6235294118, blue: 0.03921568627, alpha: 1)
+            cell.cellButton.setTitle(String(indexPath.row + 1), for: .normal)
+            cell.cellText.text = "★ \(stagesStars[indexPath.row])"
+        } else if (indexPath.row < stagesUnlocked) {
+            // cell.cellContainer.borderColor = #colorLiteral(red: 1, green: 0.6229766597, blue: 0.6006795805, alpha: 1)
             cell.cellContainer.backgroundColor = #colorLiteral(red: 0.9026113014, green: 0.9026113014, blue: 0.9026113014, alpha: 1)
             cell.cellButton.backgroundColor = #colorLiteral(red: 1, green: 0.2705882353, blue: 0.2274509804, alpha: 1)
             cell.cellButton.setTitle(String(indexPath.row + 1), for: .normal)

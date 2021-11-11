@@ -329,17 +329,16 @@ class MainViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         let seconds = 0.7 //Time To Delay
         let when = DispatchTime.now() + seconds
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: self.pagesoundurl)
-
-            DispatchQueue.main.asyncAfter(deadline: when) {
-                audioPlayer?.play()
-            }
-            
-        } catch {
-            print("Unable to locate audio file")
-        }
         
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: self.pagesoundurl)
+                    audioPlayer?.volume = 1
+                    audioPlayer?.play()
+                } catch {
+                    print("Unable to locate audio file")
+                }
+            }
     }
     
     @IBAction func unwindToLevels(segue: UIStoryboardSegue) { // Unwinds view  back to the level screen
