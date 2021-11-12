@@ -62,12 +62,6 @@ class FlippingHell {
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
     var remainingStars: Int = 20 // Stars remaining to the next level
     let unlockStarRatio = 20 // Number of stars per stage to unlock the next stage
-    /* //TODO: Core numbers for review
-     20 levels per stage
-     60 all gold
-     40 all silver
-     20 all bronze
-    */
     
     struct LevelJSON: Codable {
         let levelid: Int
@@ -95,7 +89,7 @@ class FlippingHell {
     
     // ********************************** CORE DATA ********************************** //
     
-    func saveData(levelid: Int32, flips: Int16, minmoves: [Int]) { // SAVE DATA TO CORE DATA
+    func saveData(levelid: Int32, flips: Int16, minmoves: String) { // SAVE DATA TO CORE DATA
         
         var levelsTest: [NSManagedObject] = []
         
@@ -117,6 +111,7 @@ class FlippingHell {
         // Set values for the fields in the table
         entry.setValue(levelid, forKeyPath: "levelid")
         entry.setValue(flips, forKeyPath: "flips")
+        entry.setValue(minmoves, forKeyPath: "minmoves")
         
         // save the context
         do {
@@ -275,6 +270,7 @@ class FlippingHell {
             }
 
             var MinFlips: Int16 = 0
+            var MinMoves: String = ""
             
             // Overwrite the minflips based on stored value
             SavedData.forEach { item in
@@ -282,6 +278,7 @@ class FlippingHell {
                 {
                     if (item.flips < MinFlips || MinFlips == 0) {
                         MinFlips = item.flips
+                        MinMoves = item.minmoves ?? ""
                         // print(item.levelid)
                         // print(item.flips)
                         
@@ -294,7 +291,7 @@ class FlippingHell {
             
             if (MinFlips != 0) { // If the level has been won before, ensure level is marked as complete
                 // TODO: Add sequence to the load and save function?
-                levelinstance.completeLevel(Flips: MinFlips)
+                levelinstance.completeLevel(Flips: MinFlips, Moves: MinMoves)
             }
             
             // Add level to the relevant stage array
@@ -370,13 +367,13 @@ class FlippingHell {
 // ********************************** EXTENSIONS ********************************** //
 
 extension FlippingHell: UpdateModelDelegate { // Implements update of model from main view
-    func gameWon(LevelID: Int, Flips: Int16, ButtonsClicked: [Int]) {
+    func gameWon(LevelID: Int, Flips: Int16, ButtonsClicked: String) {
         
         gameAttemptAdd()
         
         let LevelSelected = stages[currentStage][currentLevel]
         
-        LevelSelected.completeLevel(Flips: Flips)
+        LevelSelected.completeLevel(Flips: Flips, Moves: ButtonsClicked)
         
         calculateStars()
     

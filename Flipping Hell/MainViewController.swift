@@ -12,7 +12,7 @@ import AVFoundation
 // ********************************** PROTOCOLS ********************************** //
 
 protocol UpdateModelDelegate: AnyObject {
-    func gameWon(LevelID: Int, Flips: Int16, ButtonsClicked: [Int])
+    func gameWon(LevelID: Int, Flips: Int16, ButtonsClicked: String)
     func gameAttemptAdd()
     func requestLevel()
 }
@@ -48,7 +48,7 @@ class MainViewController: UIViewController {
                            0, 0, 0, 0, 0,
                            0, 0, 0, 0, 0] // Current array sequence loaded
     
-    var WinSequence: [Int] = [] // The sequence of moves
+    var WinSequence: String = "" // The sequence of moves
     
     let leftValidNums = [1, 2, 3, 4,
                          6, 7, 8, 9,
@@ -140,7 +140,7 @@ class MainViewController: UIViewController {
             buttonCollection[buttonIndex].backgroundColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
         }
         
-        WinSequence = []
+        WinSequence = ""
     }
     
     @IBAction func clickButton(_ sender: UIButton) { // Triggers button flips based on the button clicked
@@ -148,7 +148,7 @@ class MainViewController: UIViewController {
         var WinVal = false
         
         let idNum: Int = Int(button.accessibilityIdentifier ?? "0") ?? 0
-        WinSequence.append(idNum)
+        WinSequence += "\(idNum + 1)."
         
         self.flipSound()
         

@@ -1634,6 +1634,7 @@
                     <connections>
                         <outlet property="Flips" destination="QT4-ka-vnX" id="s0B-kK-Zx3"/>
                         <outlet property="Sequence" destination="2my-s6-EXZ" id="ATm-UT-ULF"/>
+                        <outlet property="SequenceTitle" destination="rgg-Tp-UHJ" id="TeF-75-i4K"/>
                         <outlet property="Stars" destination="w2Q-sy-6qX" id="qDG-cg-rmJ"/>
                     </connections>
                 </viewController>

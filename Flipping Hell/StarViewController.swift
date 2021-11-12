@@ -29,6 +29,7 @@ class StarViewController: UIViewController {
     @IBOutlet weak var Stars: UILabel!
     @IBOutlet weak var Flips: UILabel!
     @IBOutlet weak var Sequence: UILabel!
+    @IBOutlet weak var SequenceTitle: UILabel!
     
     // ********************************** LOAD FUNCTION ********************************** //
     
@@ -39,7 +40,14 @@ class StarViewController: UIViewController {
         
         Stars.text = StarsInput
         Flips.text = FlipsInput
-        Sequence.text = SequenceInput
+        if (SequenceInput == "") {
+            Sequence.text = ""
+            SequenceTitle.text = "No games won yet!"
+        } else {
+            SequenceTitle.text = "Button Sequence:"
+            Sequence.text = SequenceInput
+        }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

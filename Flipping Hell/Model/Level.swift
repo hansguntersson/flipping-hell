@@ -36,7 +36,7 @@ class Level {
     // let levelIndex: Int // Which index the level is at
     var attempts = 0 // Hpw many attempts were made
     var minFlips: Int16 = 0 // The minimum number of flips the level has been completed in
-    var minMoves: [Int] = [] // The minimum moves the level has been completed in
+    var minMoves: String = "" // The minimum moves the level has been completed in
     var starScore: Int = 0 // Score of stars for the particular level
     // 4 stars is blue, 3 stars is gold, 2 stars is silver, 1 star is bronze, 0 stars is none
     var isComplete = false // Whether the level has been completed
@@ -53,7 +53,7 @@ class Level {
         self.goalFlips = goalFlips
     }
     
-    func completeLevel(Flips: Int16) { // Actions when level is completed
+    func completeLevel(Flips: Int16, Moves: String) { // Actions when level is completed
         isComplete = true
         
         if (Flips < minFlips || minFlips == 0) {
@@ -66,6 +66,8 @@ class Level {
             } else if (minFlips - goalFlips <= 0) {
                 starScore = 3
             }
+            
+            minMoves = Moves
         }
     }
     
