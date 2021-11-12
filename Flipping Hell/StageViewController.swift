@@ -100,22 +100,24 @@ class StageViewController: UICollectionViewController {
         
         // Configure the cell
         if (stagesStars[indexPath.row] == 60) {
-            cell.cellContainer.backgroundColor = #colorLiteral(red: 1, green: 0.8696650257, blue: 0.3483251284, alpha: 1)
-            cell.cellButton.backgroundColor = #colorLiteral(red: 1, green: 0.6235294118, blue: 0.03921568627, alpha: 1)
+            cell.cellContainer.backgroundColor = #colorLiteral(red: 1, green: 0.9210685055, blue: 0.6053425276, alpha: 1)
+            cell.cellButton.backgroundColor = #colorLiteral(red: 0.9507014476, green: 0.5781816967, blue: 0, alpha: 1)
             cell.cellButton.setTitle(String(indexPath.row + 1), for: .normal)
             cell.cellText.text = "★ \(stagesStars[indexPath.row])"
+            cell.cellText.textColor = #colorLiteral(red: 0.9507014476, green: 0.5781816967, blue: 0, alpha: 1)
+            
         } else if (indexPath.row < stagesUnlocked) {
-            // cell.cellContainer.borderColor = #colorLiteral(red: 1, green: 0.6229766597, blue: 0.6006795805, alpha: 1)
-            cell.cellContainer.backgroundColor = #colorLiteral(red: 0.9026113014, green: 0.9026113014, blue: 0.9026113014, alpha: 1)
+            cell.cellContainer.backgroundColor = #colorLiteral(red: 0.9213842275, green: 0.9213842275, blue: 0.9213842275, alpha: 1)
             cell.cellButton.backgroundColor = #colorLiteral(red: 1, green: 0.2705882353, blue: 0.2274509804, alpha: 1)
             cell.cellButton.setTitle(String(indexPath.row + 1), for: .normal)
             cell.cellText.text = "★ \(stagesStars[indexPath.row])"
+            cell.cellText.textColor = #colorLiteral(red: 0.262745098, green: 0.262745098, blue: 0.262745098, alpha: 1)
         } else {
-            cell.cellContainer.borderColor = #colorLiteral(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)
-            cell.cellContainer.backgroundColor = #colorLiteral(red: 0.9026113014, green: 0.9026113014, blue: 0.9026113014, alpha: 1)
+            cell.cellContainer.backgroundColor = #colorLiteral(red: 0.9213842275, green: 0.9213842275, blue: 0.9213842275, alpha: 1)
             cell.cellButton.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             cell.cellButton.setTitle("✕", for: .normal)
             cell.cellText.text = "LOCKED"
+            cell.cellText.textColor = #colorLiteral(red: 0.262745098, green: 0.262745098, blue: 0.262745098, alpha: 1)
         }
         
         return cell

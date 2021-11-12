@@ -1,5 +1,5 @@
 //
-//  ScoreViewController.swift
+//  GameHelpViewController.swift
 //  Flipping Hell
 //
 //  Created by Daniel Harlos on 19/05/2020.

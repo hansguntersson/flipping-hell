@@ -102,6 +102,8 @@ class LevelTableViewController: UITableViewController {
             cell.levelStars.setTitleColor(blueColour, for: .normal)
         }
         
+        cell.levelStars.tag = indexPath.row
+        
         if (indexPath.row == CurrentLevel && CurrentStage == StageSelected) {
             cell.levelStars.setTitleColor(darkGreyColor, for: .normal)
             cell.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.9372549057, blue: 0.9568627477, alpha: 1)
@@ -162,7 +164,35 @@ class LevelTableViewController: UITableViewController {
                     print("Unable to locate audio file")
                 }
             }
-       }
+       } else if segue.identifier == "LoadStarsFromLevelsSegue" {
+           let buttonInstance = sender as! UIButton
+           let starLevel = levels[buttonInstance.tag]
+           if let vc = segue.destination as? StarViewController {
+               
+               vc.FlipsInput = "\(starLevel.minFlips) out of \(starLevel.goalFlips)"
+               vc.SequenceInput = "\(starLevel.minMoves)"
+               
+               if(starLevel.starScore == 0) {
+                   vc.StarsInput = "☆ ☆ ☆"
+               } else if (starLevel.starScore == 1) {
+                   vc.StarsInput = "★ ☆ ☆"
+               } else if (starLevel.starScore == 2) {
+                   vc.StarsInput = "★ ★ ☆"
+               } else if (starLevel.starScore == 3) {
+                   vc.StarsInput = "★ ★ ★"
+               } else if (starLevel.starScore == 4) {
+                   vc.StarsInput = "✮ ✮ ✮"
+               }
+               
+               do {
+                   audioPlayer = try AVAudioPlayer(contentsOf: self.swooshsoundurl)
+                   audioPlayer?.volume = 1
+                   audioPlayer?.play()
+               } catch {
+                   print("Unable to locate audio file")
+               }
+           }
+      }
     }
     
 

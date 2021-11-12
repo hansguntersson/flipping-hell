@@ -18,6 +18,7 @@
 		E543F3F92162B77200329519 /* Orbitron-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F42162B77200329519 /* Orbitron-Bold.ttf */; };
 		E54A9F0A247DA99600FCCEA5 /* StageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A9F09247DA99600FCCEA5 /* StageViewCell.swift */; };
 		E54E2957219A0F120042934E /* WinScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E2956219A0F120042934E /* WinScreenController.swift */; };
+		E55800B7273DA4640045C657 /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55800B6273DA4640045C657 /* StarViewController.swift */; };
 		E55F560A223EE0D400BA673F /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = E55F5608223EE0D400BA673F /* success.wav */; };
 		E55F560B223EE0D400BA673F /* doubleclick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E55F5609223EE0D400BA673F /* doubleclick.mp3 */; };
 		E56E325A21735E8200A16788 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E325921735E8200A16788 /* Level.swift */; };
@@ -69,6 +70,7 @@
 		E543F3F42162B77200329519 /* Orbitron-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Bold.ttf"; sourceTree = "<group>"; };
 		E54A9F09247DA99600FCCEA5 /* StageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewCell.swift; sourceTree = "<group>"; };
 		E54E2956219A0F120042934E /* WinScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinScreenController.swift; sourceTree = "<group>"; };
+		E55800B6273DA4640045C657 /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
 		E55F5608223EE0D400BA673F /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		E55F5609223EE0D400BA673F /* doubleclick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = doubleclick.mp3; sourceTree = "<group>"; };
 		E56E325921735E8200A16788 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				E5A1C1F021E36925001E8D90 /* StageViewController.swift */,
 				E54A9F09247DA99600FCCEA5 /* StageViewCell.swift */,
 				E5BDD8762473DD0000AC4EC7 /* ScoreViewController.swift */,
+				E55800B6273DA4640045C657 /* StarViewController.swift */,
 				E505D579246D829200F0FD16 /* UIRoundedButton.swift */,
 				E5AB86EB21DE6C3800337825 /* Model */,
 				E543F3EF2162B77200329519 /* resources */,
@@ -363,6 +366,7 @@
 				E505D57A246D829200F0FD16 /* UIRoundedButton.swift in Sources */,
 				E5EB0F0A223E47330012EEFD /* FlippingHell.xcdatamodeld in Sources */,
 				E5B2FB6E216A8A8400A13D18 /* FlippingHell.swift in Sources */,
+				E55800B7273DA4640045C657 /* StarViewController.swift in Sources */,
 				E5C106B7215408AF00947220 /* MainViewController.swift in Sources */,
 				E54E2957219A0F120042934E /* WinScreenController.swift in Sources */,
 				E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */,

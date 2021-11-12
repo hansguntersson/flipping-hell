@@ -284,6 +284,7 @@ class FlippingHell {
                         MinFlips = item.flips
                         // print(item.levelid)
                         // print(item.flips)
+                        
                     }
                 }
             }
