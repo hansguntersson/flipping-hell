@@ -104,7 +104,7 @@ class WinScreenController: UIViewController {
         }
         
         // Show or hide new stage unlocked
-        if (newStage == false) { // TODO: Fix this
+        if (newStage == false) {
             NewStageView.isHidden = true
         } else {
             NewStageView.isHidden = false

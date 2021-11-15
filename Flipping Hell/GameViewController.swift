@@ -13,25 +13,6 @@ var audioPlayer: AVAudioPlayer!
 
 // ********************************** CLASS DEFINITION ********************************** //
 
-// TODO: Account for ipad and larger displays
-// TODO: Display best sequence upon selecting stars
-// TODO: Check twitter link works on info.plist, error
-// TODO: Sound on/off option
-// TODO: Fix numbers not centred properly
-// TODO: Review stars screen to clarify how many levels have been won, and total stars
-
-/*
- Other:
-  - Load base data from JSON
-  - Update any records based on array of saved scores
-  - When a new record is created, save / overwrite the score in memory
- 
-  Hyperlink error:
- 
-    2021-11-10 14:17:16.243791+0000 Flipping Hell[3423:586911] -canOpenURL: failed for URL: "twitter://user?screen_name=hansguntersson" - error: "This app is not allowed to query for scheme twitter"
-     Message from debugger: Terminated due to signal 9
-*/
-
 class GameViewController: UIViewController {
     
     var game = FlippingHell()
