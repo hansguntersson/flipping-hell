@@ -156,7 +156,7 @@
 		E5C106A8215408AF00947220 = {
 			isa = PBXGroup;
 			children = (
-				E5C106B3215408AF00947220 /* Flipping Hell */,
+				E5C106B3215408AF00947220 /* Flipping Hell! */,
 				E5C106C8215408B100947220 /* Flipping HellTests */,
 				E5C106D3215408B100947220 /* Flipping HellUITests */,
 				E5C106B2215408AF00947220 /* Products */,
@@ -173,7 +173,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E5C106B3215408AF00947220 /* Flipping Hell */ = {
+		E5C106B3215408AF00947220 /* Flipping Hell! */ = {
 			isa = PBXGroup;
 			children = (
 				E5C106C0215408B000947220 /* Info.plist */,
@@ -195,7 +195,7 @@
 				E543F3EF2162B77200329519 /* resources */,
 				E5C106BB215408B000947220 /* Assets.xcassets */,
 			);
-			path = "Flipping Hell";
+			path = "Flipping Hell!";
 			sourceTree = "<group>";
 		};
 		E5C106C8215408B100947220 /* Flipping HellTests */ = {
