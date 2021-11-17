@@ -7,25 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E505D57A246D829200F0FD16 /* UIRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E505D579246D829200F0FD16 /* UIRoundedButton.swift */; };
 		E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508CECC216FD98C0029408A /* LevelTableViewCell.swift */; };
-		E51AA7C124AA7DFC00D10090 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = E51AA7C024AA7DFC00D10090 /* click.wav */; };
-		E51AA7C324AA82AD00D10090 /* flipsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = E51AA7C224AA82AD00D10090 /* flipsound.wav */; };
 		E543F3F52162B77200329519 /* Orbitron-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F02162B77200329519 /* Orbitron-Black.ttf */; };
 		E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F12162B77200329519 /* Orbitron-Medium.ttf */; };
 		E543F3F72162B77200329519 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F22162B77200329519 /* Orbitron-Regular.ttf */; };
 		E543F3F82162B77200329519 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F32162B77200329519 /* OFL.txt */; };
 		E543F3F92162B77200329519 /* Orbitron-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E543F3F42162B77200329519 /* Orbitron-Bold.ttf */; };
-		E54A9F0A247DA99600FCCEA5 /* StageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A9F09247DA99600FCCEA5 /* StageViewCell.swift */; };
 		E54E2957219A0F120042934E /* WinScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E2956219A0F120042934E /* WinScreenController.swift */; };
-		E55800B7273DA4640045C657 /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55800B6273DA4640045C657 /* StarViewController.swift */; };
 		E55F560A223EE0D400BA673F /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = E55F5608223EE0D400BA673F /* success.wav */; };
 		E55F560B223EE0D400BA673F /* doubleclick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E55F5609223EE0D400BA673F /* doubleclick.mp3 */; };
 		E56E325A21735E8200A16788 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E325921735E8200A16788 /* Level.swift */; };
 		E56E325C2173612500A16788 /* LevelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E325B2173612500A16788 /* LevelTableViewController.swift */; };
-		E5A1C1F121E36925001E8D90 /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1C1F021E36925001E8D90 /* StageViewController.swift */; };
+		E5A1C1F121E36925001E8D90 /* StageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */; };
+		E5A1C1F321E6292C001E8D90 /* StageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1C1F221E6292C001E8D90 /* StageCollectionViewCell.swift */; };
+		E5AB86E221DE625300337825 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB86E121DE625300337825 /* OptionsViewController.swift */; };
+		E5AB86E421DE627400337825 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB86E321DE627400337825 /* AboutViewController.swift */; };
+		E5AB86E621DE634900337825 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB86E521DE634900337825 /* HelpViewController.swift */; };
 		E5B2FB6E216A8A8400A13D18 /* FlippingHell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2FB6D216A8A8400A13D18 /* FlippingHell.swift */; };
-		E5BDD8772473DD0000AC4EC7 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BDD8762473DD0000AC4EC7 /* ScoreViewController.swift */; };
 		E5C106B5215408AF00947220 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106B4215408AF00947220 /* AppDelegate.swift */; };
 		E5C106B7215408AF00947220 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106B6215408AF00947220 /* MainViewController.swift */; };
 		E5C106BA215408AF00947220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C106B8215408AF00947220 /* Main.storyboard */; };
@@ -34,9 +32,6 @@
 		E5C106CA215408B100947220 /* Flipping_HellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106C9215408B100947220 /* Flipping_HellTests.swift */; };
 		E5C106D5215408B100947220 /* Flipping_HellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C106D4215408B100947220 /* Flipping_HellUITests.swift */; };
 		E5DABA502280530E005F6287 /* FH_data.json in Resources */ = {isa = PBXBuildFile; fileRef = E5DABA4F2280530E005F6287 /* FH_data.json */; };
-		E5DBC33F273C239400860212 /* pageturn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5DBC33E273C239400860212 /* pageturn.mp3 */; };
-		E5DBC341273C283400860212 /* swoosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5DBC340273C283400860212 /* swoosh.mp3 */; };
-		E5DBC343273C329D00860212 /* GameHelpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBC342273C329D00860212 /* GameHelpController.swift */; };
 		E5EB0F0A223E47330012EEFD /* FlippingHell.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */; };
 		E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F12CC021B94949004D0176 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
@@ -59,25 +54,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E505D579246D829200F0FD16 /* UIRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRoundedButton.swift; sourceTree = "<group>"; };
 		E508CECC216FD98C0029408A /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
-		E51AA7C024AA7DFC00D10090 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = click.wav; path = "Flipping Hell/Assets.xcassets/click.wav"; sourceTree = SOURCE_ROOT; };
-		E51AA7C224AA82AD00D10090 /* flipsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = flipsound.wav; path = "Flipping Hell/Assets.xcassets/flipsound.wav"; sourceTree = SOURCE_ROOT; };
 		E543F3F02162B77200329519 /* Orbitron-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Black.ttf"; sourceTree = "<group>"; };
 		E543F3F12162B77200329519 /* Orbitron-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Medium.ttf"; sourceTree = "<group>"; };
 		E543F3F22162B77200329519 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
 		E543F3F32162B77200329519 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		E543F3F42162B77200329519 /* Orbitron-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Bold.ttf"; sourceTree = "<group>"; };
-		E54A9F09247DA99600FCCEA5 /* StageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewCell.swift; sourceTree = "<group>"; };
 		E54E2956219A0F120042934E /* WinScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinScreenController.swift; sourceTree = "<group>"; };
-		E55800B6273DA4640045C657 /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
 		E55F5608223EE0D400BA673F /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		E55F5609223EE0D400BA673F /* doubleclick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = doubleclick.mp3; sourceTree = "<group>"; };
 		E56E325921735E8200A16788 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		E56E325B2173612500A16788 /* LevelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewController.swift; sourceTree = "<group>"; };
-		E5A1C1F021E36925001E8D90 /* StageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewController.swift; sourceTree = "<group>"; };
+		E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCollectionViewController.swift; sourceTree = "<group>"; };
+		E5A1C1F221E6292C001E8D90 /* StageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5AB86E121DE625300337825 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		E5AB86E321DE627400337825 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		E5AB86E521DE634900337825 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		E5B2FB6D216A8A8400A13D18 /* FlippingHell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippingHell.swift; sourceTree = "<group>"; };
-		E5BDD8762473DD0000AC4EC7 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		E5C106B1215408AF00947220 /* Flipping Hell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flipping Hell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C106B4215408AF00947220 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C106B6215408AF00947220 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -92,9 +85,6 @@
 		E5C106D4215408B100947220 /* Flipping_HellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flipping_HellUITests.swift; sourceTree = "<group>"; };
 		E5C106D6215408B100947220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5DABA4F2280530E005F6287 /* FH_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FH_data.json; sourceTree = "<group>"; };
-		E5DBC33E273C239400860212 /* pageturn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pageturn.mp3; sourceTree = "<group>"; };
-		E5DBC340273C283400860212 /* swoosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swoosh.mp3; sourceTree = "<group>"; };
-		E5DBC342273C329D00860212 /* GameHelpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelpController.swift; sourceTree = "<group>"; };
 		E5EB0F09223E47330012EEFD /* FlippingHell.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlippingHell.xcdatamodel; sourceTree = "<group>"; };
 		E5F12CC021B94949004D0176 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,11 +119,7 @@
 			children = (
 				E543F3F02162B77200329519 /* Orbitron-Black.ttf */,
 				E55F5609223EE0D400BA673F /* doubleclick.mp3 */,
-				E5DBC340273C283400860212 /* swoosh.mp3 */,
 				E55F5608223EE0D400BA673F /* success.wav */,
-				E5DBC33E273C239400860212 /* pageturn.mp3 */,
-				E51AA7C224AA82AD00D10090 /* flipsound.wav */,
-				E51AA7C024AA7DFC00D10090 /* click.wav */,
 				E543F3F12162B77200329519 /* Orbitron-Medium.ttf */,
 				E543F3F22162B77200329519 /* Orbitron-Regular.ttf */,
 				E543F3F42162B77200329519 /* Orbitron-Bold.ttf */,
@@ -145,12 +131,21 @@
 		E5AB86EB21DE6C3800337825 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */,
 				E5B2FB6D216A8A8400A13D18 /* FlippingHell.swift */,
 				E56E325921735E8200A16788 /* Level.swift */,
 				E5DABA4F2280530E005F6287 /* FH_data.json */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E5AB86EC21DE6C4F00337825 /* Options & About & Help */ = {
+			isa = PBXGroup;
+			children = (
+				E5AB86E521DE634900337825 /* HelpViewController.swift */,
+				E5AB86E121DE625300337825 /* OptionsViewController.swift */,
+				E5AB86E321DE627400337825 /* AboutViewController.swift */,
+			);
+			path = "Options & About & Help";
 			sourceTree = "<group>";
 		};
 		E5C106A8215408AF00947220 = {
@@ -181,17 +176,15 @@
 				E5C106BD215408B000947220 /* LaunchScreen.storyboard */,
 				E5C106B8215408AF00947220 /* Main.storyboard */,
 				E5F12CC021B94949004D0176 /* GameViewController.swift */,
-				E5DBC342273C329D00860212 /* GameHelpController.swift */,
-				E56E325B2173612500A16788 /* LevelTableViewController.swift */,
-				E508CECC216FD98C0029408A /* LevelTableViewCell.swift */,
 				E5C106B6215408AF00947220 /* MainViewController.swift */,
 				E54E2956219A0F120042934E /* WinScreenController.swift */,
-				E5A1C1F021E36925001E8D90 /* StageViewController.swift */,
-				E54A9F09247DA99600FCCEA5 /* StageViewCell.swift */,
-				E5BDD8762473DD0000AC4EC7 /* ScoreViewController.swift */,
-				E55800B6273DA4640045C657 /* StarViewController.swift */,
-				E505D579246D829200F0FD16 /* UIRoundedButton.swift */,
+				E56E325B2173612500A16788 /* LevelTableViewController.swift */,
+				E508CECC216FD98C0029408A /* LevelTableViewCell.swift */,
+				E5A1C1F021E36925001E8D90 /* StageCollectionViewController.swift */,
+				E5A1C1F221E6292C001E8D90 /* StageCollectionViewCell.swift */,
+				E5EB0F08223E47330012EEFD /* FlippingHell.xcdatamodeld */,
 				E5AB86EB21DE6C3800337825 /* Model */,
+				E5AB86EC21DE6C4F00337825 /* Options & About & Help */,
 				E543F3EF2162B77200329519 /* resources */,
 				E5C106BB215408B000947220 /* Assets.xcassets */,
 			);
@@ -279,7 +272,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Hans Guntersson Ltd";
 				TargetAttributes = {
 					E5C106B0215408AF00947220 = {
@@ -323,16 +316,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E51AA7C324AA82AD00D10090 /* flipsound.wav in Resources */,
 				E5DABA502280530E005F6287 /* FH_data.json in Resources */,
-				E51AA7C124AA7DFC00D10090 /* click.wav in Resources */,
 				E5C106BF215408B000947220 /* LaunchScreen.storyboard in Resources */,
 				E543F3F62162B77200329519 /* Orbitron-Medium.ttf in Resources */,
 				E5C106BC215408B000947220 /* Assets.xcassets in Resources */,
-				E5DBC33F273C239400860212 /* pageturn.mp3 in Resources */,
 				E55F560B223EE0D400BA673F /* doubleclick.mp3 in Resources */,
 				E5C106BA215408AF00947220 /* Main.storyboard in Resources */,
-				E5DBC341273C283400860212 /* swoosh.mp3 in Resources */,
 				E543F3F52162B77200329519 /* Orbitron-Black.ttf in Resources */,
 				E543F3F92162B77200329519 /* Orbitron-Bold.ttf in Resources */,
 				E55F560A223EE0D400BA673F /* success.wav in Resources */,
@@ -363,20 +352,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56E325C2173612500A16788 /* LevelTableViewController.swift in Sources */,
-				E505D57A246D829200F0FD16 /* UIRoundedButton.swift in Sources */,
 				E5EB0F0A223E47330012EEFD /* FlippingHell.xcdatamodeld in Sources */,
 				E5B2FB6E216A8A8400A13D18 /* FlippingHell.swift in Sources */,
-				E55800B7273DA4640045C657 /* StarViewController.swift in Sources */,
+				E5A1C1F321E6292C001E8D90 /* StageCollectionViewCell.swift in Sources */,
+				E5AB86E421DE627400337825 /* AboutViewController.swift in Sources */,
 				E5C106B7215408AF00947220 /* MainViewController.swift in Sources */,
 				E54E2957219A0F120042934E /* WinScreenController.swift in Sources */,
 				E5F12CC121B94949004D0176 /* GameViewController.swift in Sources */,
-				E5DBC343273C329D00860212 /* GameHelpController.swift in Sources */,
-				E5A1C1F121E36925001E8D90 /* StageViewController.swift in Sources */,
+				E5A1C1F121E36925001E8D90 /* StageCollectionViewController.swift in Sources */,
+				E5AB86E621DE634900337825 /* HelpViewController.swift in Sources */,
 				E508CECD216FD98C0029408A /* LevelTableViewCell.swift in Sources */,
 				E56E325A21735E8200A16788 /* Level.swift in Sources */,
 				E5C106B5215408AF00947220 /* AppDelegate.swift in Sources */,
-				E54A9F0A247DA99600FCCEA5 /* StageViewCell.swift in Sources */,
-				E5BDD8772473DD0000AC4EC7 /* ScoreViewController.swift in Sources */,
+				E5AB86E221DE625300337825 /* OptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +445,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -483,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -519,7 +506,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -539,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -553,19 +539,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NCTH68755D;
 				INFOPLIST_FILE = "Flipping Hell/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-Hell-new";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-Hell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -573,19 +558,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NCTH68755D;
 				INFOPLIST_FILE = "Flipping Hell/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-Hell-new";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hansguntersson.Flipping-Hell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
